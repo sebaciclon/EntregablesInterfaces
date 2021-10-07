@@ -5,29 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 <body>
-    <div>
-        <div>
-            <div>
+    <div class="contenedor">
+        <div class="subcontenedor">
+            <div class="herramientas">
                 <h5><b>ELEGIR MODO DE JUEGO</b></h5>
                 <button id="4" class="btn btn-warning margen"><b>4 EN LINEA</b></button>
                 <button id="5" class="btn btn-warning margen"><b>5 EN LINEA</b></button>
                 <button id="6" class="btn btn-warning margen"><b>6 EN LINEA</b></button> 
 
-                <h5><b>ELEGIR FORMA DE FICHAS</b></h5>
-                <button id="cuadrada" class="btn btn-warning margen"><b>CUADRADA</b></button>
-                <button id="redonda" class="btn btn-warning margen"><b>REDONDA</b></button>
-
                 <h5><b>ELEGIR FICHAS</b></h5>
+                <button id="fichaNegra" class="btn btn-warning margen"><b>FICHA NEGRA</b></button>
+                <button id="fichaRoja" class="btn btn-warning margen"><b>FICHA ROJA</b></button>
+                <button id="fichaAzul" class="btn btn-warning margen"><b>FICHA AZUL</b></button>
+                <button id="fichaVerde" class="btn btn-warning margen"><b>FICHA VERDE</b></button>
+
+                <h5><b>TURNO JUGADOR</b></h5>
                 <button id="jugador1" class="btn btn-warning margen"><b>JUGADOR 1</b></button>
                 <button id="jugador2" class="btn btn-warning margen"><b>JUGADOR 2</b></button>
                 
             </div>
-            <div>
-                <canvas id="canvas" width="600" height="600" style="border: #000 solid 1px"></canvas>
+            <div class="divCanvas">
+                <canvas id="canvas" width="1000" height="800" style="border: #000 solid 5px"></canvas>
+                <img src="images/casillero.png" alt="casillero" id="casillero" hidden>
+                <img src="images/negra.png" alt="negra" id="negra" hidden>
+			    <img src="images/roja.jpg" alt="roja" id="roja" hidden>
             </div>
-            <div>
+            <div class="filtros">
                 
                 
             </div>

@@ -22,34 +22,30 @@ canvas.addEventListener('mousemove', onMouseMove, false);
 
 function agregarFicha() {
     if(i < cantFichas / 2) {
-        
-        agregarFichaCuadrada();
+        agregarFichaRedondaAzul();
         i ++;
     } else {
-        agregarFichaRedonda();
-            
-            i ++;
-        
+        agregarFichaRedondaRoja();
+        i ++;
     }
-
     drawFicha();
 }
 
-function agregarFichaCuadrada() {
-    let posX = width - 30;
-    let posY = height - 30;
+function agregarFichaRedondaAzul() {
+    let posX = width - 60;
+    let posY = height - 60;
     let color = 'blue';
 
-    let cuadrado = new FichaCuadrada(posX, posY, 20, 20, color, ctx);
-    fichas.push(cuadrado);
+    let circulo = new FichaRedonda(posX, posY, 40, color, ctx);
+    fichas.push(circulo);
 }
 
-function agregarFichaRedonda() {
-    let posX = 20;
-    let posY = height - 20;
+function agregarFichaRedondaRoja() {
+    let posX = 60;
+    let posY = height - 60;
     let color = 'red';
 
-    let circulo = new FichaRedonda(posX, posY, 10, color, ctx);
+    let circulo = new FichaRedonda(posX, posY, 40, color, ctx);
     fichas.push(circulo);
 }
 
@@ -69,6 +65,7 @@ function drawFicha() {
 
 function limpiarCanvas() {
     ctx.clearRect(0, 0, width, height);
+    dibujarTablero();
 }
 
 function findClickedFigura(x, y) {
@@ -107,7 +104,28 @@ function onMouseUp(e) {
     mouse = false;
 }
 
+function dibujarTablero() {
+    //let i = (width - 200) / columnas;
+    //let j = (height - 200) / filas;
+    let aux = width / 4;
+    let tamañoancho = (width / 2) / columnas;
+    //console.log(tamañoancho);
+    let tamañoAlto = (height - 100) / filas;
+    //console.log(tamañoAlto);
 
+    for(let x = 0; x < columnas; x++) {
+        for(let y = 0; y < filas; y ++) {
+            //ctx.rect(100 + 57 * i, 0 * 57, 57, 66);
+            
+            ctx.fillStyle = 'green';
+            
+            ctx.fillRect(width / 4 - 100, 100 , 2 * (width / 4) + 200, height);
+            //ctx.fillRect(aux - 100 + (x * tamañoancho), 100 + tamañoAlto * y , tamañoancho, tamañoAlto * (y + 1));
+            
+
+        }
+    }
+}
 
 
 agregarFichas();

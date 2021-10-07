@@ -1,0 +1,86 @@
+html{
+  
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+
+
+body{
+    
+    background-position: center center;
+    background-size: 100vw 100vh; /*para que la imagen siempre tenga el 100% de la ventana*/
+    background-attachment: fixed; /*para que la imagen quede fija en el scroll*/
+    background-size: cover; /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+#canvas{
+    border: black solid 5px ;
+    background-color: white;
+}
+
+h5{
+    color: cornsilk;
+    background-color: crimson;
+}
+
+.divCanvas{
+    width: 600px;
+    float: left;
+}
+
+.logo{
+    border-radius: 10px;
+    margin-top: 25px;
+    width: 180px;
+    height: 180px;
+}
+
+.contenedor{
+    width: 80%;
+    border-radius: 20px;
+    padding-top: 12px;
+    display: table-cell;
+    text-align: center; /* requerido para alineación horizontal */
+    background-color: rgba(219, 176, 96, 0.3);
+}
+
+.subcontenedor{
+    width: 95%;
+    margin:0px auto;
+}
+
+.cargarDescargar{
+    width: 550px;
+    margin:0px auto;
+}
+
+.herramientas{
+    margin-top: 15px;
+    margin-left: 70px;
+    margin-right: 35px;
+    text-align: center;
+    width: 180px;
+    background-color: rgb(235, 207, 51, 0.3);
+    border-color: crimson;
+    float: left;
+}
+
+.filtros{
+    background-color: rgb(235, 207, 51, 0.3);
+    margin-top: 15px;
+    margin-left: 35px;
+    text-align: center;
+    width: 180px;
+    float: left;
+}
+
+.margen{
+    margin: 10px;
+}
+
