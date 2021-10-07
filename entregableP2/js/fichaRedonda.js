@@ -25,6 +25,7 @@ class FichaRedonda extends Ficha{
             this.ctx.stroke();
         }
         this.ctx.closePath();
+        this.ctx.drawImage(this.fill, this.posX - this.radio, this.posY - this.radio, this.radio * 2, this.radio * 2);
     }
 
     isPointInside(x, y) {
