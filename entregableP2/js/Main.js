@@ -30,12 +30,12 @@ let casillero = document.getElementById("casillero");
 //BOTONES PARA ELEGIR LAS FICHAS
 let btn = document.getElementById("fichaNegra");
 btn.addEventListener('click', fichaNegra);
-let btn1 = document.getElementById("fichaRoja");
-btn1.addEventListener('click', fichaRoja);
+let btn1 = document.getElementById("fichaNaranja");
+btn1.addEventListener('click', fichaNaranja);
 let btn2 = document.getElementById("fichaAzul");
 btn2.addEventListener('click', fichaAzul);
-let btn3 = document.getElementById("fichaVerde");
-btn3.addEventListener('click', fichaVerde);
+let btn3 = document.getElementById("fichaRoja");
+btn3.addEventListener('click', fichaRoja);
 
 //FUNCIONES DEL MOUSE
 canvas.addEventListener('mousedown', onMouseDown, false);
@@ -123,14 +123,14 @@ function fichaNegra() {
 }
 
 //METODO DEL BOTON DE ELECCION DE LAS FICHAS ROJAS
-function fichaRoja() {
+function fichaNaranja() {
     if(cont == 2) {
         alert("ya eligieron fichas los dos jugadores");
     }
     else {
         btn1.style.display = 'none';
         let distancia = 0;
-        let roja = document.getElementById("roja");
+        let naranja = document.getElementById("naranja");
         //let roja = 'red';
         if(cont == 0) {
             cont ++;
@@ -138,7 +138,7 @@ function fichaRoja() {
             let posY = height - 60;
             
             for (let i = 0; i < cantFichas / 2; i++) {
-                agregarFicha(posX, posY - distancia, roja);
+                agregarFicha(posX, posY - distancia, naranja);
                 distancia += 30;
             }
         }
@@ -149,7 +149,7 @@ function fichaRoja() {
                 let posY = height - 60;
                 
                 for (let i = 0; i < cantFichas / 2; i++) {
-                    agregarFicha(posX, posY - distancia, roja);
+                    agregarFicha(posX, posY - distancia, naranja);
                     distancia += 30;
                 }
             }
@@ -194,7 +194,41 @@ function fichaAzul() {
     }
 }
 
-
+//METODO DEL BOTON DE ELECCION DE LAS FICHAS ROSAS
+function fichaRoja() {
+    if(cont == 2) {
+        alert("ya eligieron fichas los dos jugadores");
+    }
+    else {
+        btn2.style.display = 'none';
+        let distancia = 0;
+        let roja = document.getElementById("roja");
+        //let azul = 'blue';
+        if(cont == 0) {
+            cont ++;
+            let posX = (width / 4 - 100) / 2;
+            let posY = height - 60;
+            
+            for (let i = 0; i < cantFichas / 2; i++) {
+                agregarFicha(posX, posY - distancia, roja);
+                distancia += 30;
+            }
+        }
+        else {
+            if(cont == 1) {
+                cont ++;
+                let posX = width - (width / 4 - 100) + (width / 4 - 100)/2;
+                let posY = height - 60;
+                
+                for (let i = 0; i < cantFichas / 2; i++) {
+                    agregarFicha(posX, posY - distancia, roja);
+                    distancia += 30;
+                }
+            }
+        }
+        drawFicha();
+    }
+}
 
 
 
@@ -208,19 +242,21 @@ function findClickedFigura(x, y) {
 }
 
 function onMouseDown(e) {
-    mouse = true;
+    if(cont == 2) {
+        mouse = true;
 
-    if(clickearFicha != null) {
-        clickearFicha.setResaltado(false);
-        clickearFicha = null;
-    }
+        if(clickearFicha != null) {
+            clickearFicha.setResaltado(false);
+            clickearFicha = null;
+        }
 
-    let clickFigura = findClickedFigura(e.layerX, e.layerY);
-    if(clickFigura != null) {
-        clickFigura.setResaltado(true);
-        clickearFicha = clickFigura;
+        let clickFigura = findClickedFigura(e.layerX, e.layerY);
+        if(clickFigura != null) {
+            clickFigura.setResaltado(true);
+            clickearFicha = clickFigura;
+        }
+        drawFicha();
     }
-    drawFicha();
 }
 
 function onMouseMove(e) {
