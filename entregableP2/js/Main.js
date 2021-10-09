@@ -312,6 +312,7 @@ function onMouseDown(e) {
             clickearFicha = clickFigura;
         }
         drawFichas();
+        console.log(tablero.getColunmaEnJuego(clickFigura));
         
     }
 }

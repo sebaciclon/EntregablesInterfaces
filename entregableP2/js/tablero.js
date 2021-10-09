@@ -33,19 +33,24 @@ class Tablero{
                 this.ctx.closePath();
             }
         }
-        console.log(this.zonaSueltaDeFichas);
+        //console.log(this.zonaSueltaDeFichas);
     }
 
     //Devuelve la columna en la cual tiene que ir la ficha soltada. Si es un lugar inválido retorna -1
     getColunmaEnJuego(ficha){
         let x = ficha.getPosicionX();
         let y = ficha.getPosicionY();
-        for(let i=0; i<this.columnas; i++){
-            if(x >= this.zonaSueltaDeFichas[i][0] && x <= this.zonaSueltaDeFichas[i][1])
-                return i;
+
+        if(y > 0 && y < marginTopTablero) {
+            for(let i=0; i<this.columnas; i++){
+                if(x >= this.zonaSueltaDeFichas[i][0] && x <= this.zonaSueltaDeFichas[i][1])
+                    return i;
+            }
+            return -1;
         }
-        return -1;
     }
+
+    
 
     /*dibujarFichaEnCasillero(ficha, xInicial, yInicial){
         let imagFicha = ficha.getFill();
