@@ -4,13 +4,35 @@
 
 class Ficha {
 
-    constructor(posX, posY, fill, ctx) {    //posicion x e y, color y el contexto
+    constructor(posX, posY, fill, ctx, jugador) {    //posicion x e y, imagen, contexto y jugador
         this.posX = posX;
         this.posY = posY;
         this.fill = fill;
         this.resaltado = false;             //variable para saber si la figura esta resaltada o no
         this.resaltadoEstilo = 'black';     //se puede agregar un metodo para cambiar de color
         this.ctx = ctx;
+        this.jugador = jugador;
+        this.disponible = true;
+    }
+
+    //metodo para modificar la variable jugador
+    setJugador(jugador) {
+        this.jugador = jugador
+    }
+
+    //obtengo el nombre del jugador
+    getJugador() {
+        return this.jugador;
+    }
+
+    //metodo para modificar la variable disponible
+    setDisponible(disponible) {
+        this.disponible = disponible
+    }
+
+    //obtengo si una ficha esta disponible o no
+    getDisponible() {
+        return this.disponible;
     }
 
     //metodo para modificar la variable fill

@@ -4,8 +4,8 @@
 
 class FichaRedonda extends Ficha{
 
-    constructor(posX, posY, radio, fill, ctx) {
-        super(posX, posY, fill, ctx);
+    constructor(posX, posY, radio, fill, ctx, jugador) {
+        super(posX, posY, fill, ctx, jugador);
         this.radio = radio;
     }
 
@@ -18,14 +18,15 @@ class FichaRedonda extends Ficha{
         this.ctx.beginPath();
         this.ctx.arc(this.posX, this.posY, this.radio, 0, 2 * Math.PI);
         this.ctx.fill();
-
+        
+        this.ctx.drawImage(this.fill, this.posX - this.radio, this.posY - this.radio, this.radio * 2, this.radio * 2);
         if(this.resaltado === true) {
             this.ctx.strokeStyle = this.resaltadoEstilo;
             this.ctx.lineWidth = 5;
             this.ctx.stroke();
         }
         this.ctx.closePath();
-        this.ctx.drawImage(this.fill, this.posX - this.radio, this.posY - this.radio, this.radio * 2, this.radio * 2);
+        
     }
 
     isPointInside(x, y) {
