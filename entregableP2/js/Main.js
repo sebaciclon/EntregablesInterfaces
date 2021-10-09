@@ -46,6 +46,13 @@ canvas.addEventListener('mousedown', onMouseDown, false);
 canvas.addEventListener('mouseup', onMouseUp, false);
 canvas.addEventListener('mousemove', onMouseMove, false);
 
+
+let tablero = new Tablero(ctx, width, height, filas, columnas, casillero);
+const tamanioCasillero = 90;
+const marginTopTablero = 150;
+tablero.drawTablero();
+
+
 //************************************************************************************************** */
 
 //REINICIAR TABLERO --> NO FUNCIONA
@@ -66,7 +73,7 @@ canvas.addEventListener('mousemove', onMouseMove, false);
 
 //METODO PARA AGREGAR UNA FICHA AL ARREGLO DE FICHAS
 function agregarFicha(posX, posY, imgFicha, jugador) {
-    let ficha = new FichaRedonda(posX, posY, 40, imgFicha, ctx, jugador);
+    let ficha = new FichaRedonda(posX, posY, 33, imgFicha, ctx, jugador);
     fichas.push(ficha); 
 }
 
@@ -83,13 +90,13 @@ function drawFichas() {
 //METODO QUE LIMPIA EL CANVAS Y DIBUJA EL TABLERO
 function limpiarCanvas() {
     ctx.clearRect(0, 0, width, height);
-    dibujarTablero();
+    tablero.drawTablero();
 }
 
 //******************************************************************************************************* */
 
 //METODO QUE DIBUJA EL TABLERO
-function dibujarTablero() {
+/*function dibujarTablero() {
     //let i = (width - 200) / columnas;
     //let j = (height - 200) / filas;
     let aux = width / 4;
@@ -110,7 +117,7 @@ function dibujarTablero() {
             //ctx.fillRect(aux - 100 + (x * tamañoancho), 100 + tamañoAlto * y , tamañoancho, tamañoAlto * (y + 1));
         }
     }
-}
+}*/
 
 //***************************************************************************************************** */
 
@@ -326,7 +333,7 @@ function onMouseUp(e) {
     
 }
 
-dibujarTablero();
+//dibujarTablero();
 
 
 
