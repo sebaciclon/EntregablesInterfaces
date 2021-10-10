@@ -61,17 +61,17 @@ canvas.addEventListener('mouseup', onMouseUp, false);
 canvas.addEventListener('mousemove', onMouseMove, false);
 
 //EMPEZAMOS EL JUEGO CON EL TABLERO 4 EN LINEA
-const tamanioCasillero = 90;
-const marginTopTablero = 100;
-let inicioTabX = (width - tamanioCasillero * columnas) / 2;
+const TAMANIO_CASILLERO = 90;
+const MARGIN_TOP_TABLERO = 100;
+let inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
 let tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
 tablero.drawTablero();
 
 
-let tablero = new Tablero(ctx, width, height, filas, columnas, casillero);
+/*let tablero = new Tablero(ctx, width, height, filas, columnas, casillero);
 const TAMANIO_CASILLERO = 90;
 const MARGIN_TOP_TABLERO = 150;
-tablero.drawTablero();
+tablero.drawTablero();*/
 
 
 //************************************************************************************************** */
@@ -120,7 +120,7 @@ function limpiarCanvas() {
 function cincoEnLinea() {
     filas ++;
     columnas ++;
-    inicioTabX = (width - tamanioCasillero * columnas) / 2;
+    inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
     tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
     tablero.drawTablero();
     btn4.style.display = 'none';
@@ -133,7 +133,7 @@ function cincoEnLinea() {
 function seisEnLinea() {
     filas = filas + 2;
     columnas = columnas + 2;
-    inicioTabX = (width - tamanioCasillero * columnas) / 2;
+    inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
     tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
     tablero.drawTablero();
     btn4.style.display = 'none';
@@ -146,7 +146,7 @@ function seisEnLinea() {
 function sieteEnLinea() {
     filas = filas + 3;
     columnas = columnas + 3;
-    inicioTabX = (width - tamanioCasillero * columnas) / 2;
+    inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
     tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
     tablero.drawTablero();
     btn4.style.display = 'none';
@@ -169,7 +169,7 @@ function fichaNegra() {
         if(cont == 0) {
             cont ++;
             let posX = inicioTabX / 2;
-            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
+            let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
                 agregarFicha(posX, posY, negra, jugador1);
             }
@@ -177,7 +177,7 @@ function fichaNegra() {
         else {
             cont ++;
             let posX = (width - inicioTabX) + inicioTabX / 2;
-            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
+            let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
                 agregarFicha(posX, posY, negra, jugador2);
             }
@@ -198,7 +198,7 @@ function fichaNaranja() {
         if(cont == 0) {
             cont ++;
             let posX = inicioTabX / 2;
-            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
+            let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
                 agregarFicha(posX, posY, naranja, jugador1);
             }
@@ -206,7 +206,7 @@ function fichaNaranja() {
         else {
             cont ++;
             let posX = (width - inicioTabX) + inicioTabX / 2;
-            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
+            let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
                 agregarFicha(posX, posY, naranja, jugador2);
             }
@@ -227,7 +227,7 @@ function fichaAzul() {
         if(cont == 0) {
             cont ++;
             let posX = inicioTabX / 2;
-            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
+            let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
                 agregarFicha(posX, posY, azul, jugador1);
             }
@@ -235,7 +235,7 @@ function fichaAzul() {
         else {
             cont ++;
             let posX = (width - inicioTabX) + inicioTabX / 2;
-            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
+            let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
                 agregarFicha(posX, posY, azul, jugador2);
             }
@@ -256,7 +256,7 @@ function fichaRoja() {
         if(cont == 0) {
             cont ++;
             let posX = inicioTabX / 2;
-            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
+            let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
                 agregarFicha(posX, posY, roja, jugador1);
             }
@@ -264,7 +264,7 @@ function fichaRoja() {
         else {
             cont ++;
             let posX = (width - inicioTabX) + inicioTabX / 2;
-            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
+            let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
                 agregarFicha(posX, posY, roja, jugador2);
             }

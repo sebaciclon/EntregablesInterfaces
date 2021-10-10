@@ -15,48 +15,16 @@ class Tablero{
         //this.matriz = [];
         this.zonaSueltaDeFichas = [];
         this.inicioTableroX = inicioTableroX;
-        
-    }
-
-    //Dibuja el tablero y carga el arreglo de rangos para saber dónde se suelta cada ficha
-    drawTablero(){
-        let inicioX = this.inicioTableroX;
-        let xInicial = inicioX;
-        for (let i = 0; i < this.columnas; i++) {
-            let finX = tamanioCasillero + inicioX;
-            let rango = [inicioX, finX];
-            this.zonaSueltaDeFichas[i] = rango;
-            inicioX = finX + 1;
-            for (let j = 0; j <this.filas; j++) {
-                this.ctx.beginPath();
-                this.ctx.drawImage(this.imgCasillero, xInicial + i * tamanioCasillero, 
-                                   marginTopTablero + j * tamanioCasillero);
-                this.ctx.fill();
-                this.ctx.closePath();
-            }
-        }
-        //console.log(this.zonaSueltaDeFichas);
-    }
-
-    /*constructor(ctx, width, height, filas, columnas,img){
-        this.width = width;
-        this.height = height;
-        this.ctx = ctx;
-        this.filas = filas;
-        this.columnas = columnas;       
-        this.imgCasillero = img;       
-        //this.casilla = null;
         this.tableroLogico = [];
-        this.zonaSueltaDeFichas = [];
-        
     }
 
     // Dibuja el tablero.
     // Inicializa el arreglo de rangos que usaremos para saber dónde se suelta cada ficha
     // Inicializa la matriz para la logica del juego
     drawTablero(){
-        let inicioX = this.width/4;
-        let xInicial = this.width/4;
+        
+        let inicioX = this.inicioTableroX;
+        let xInicial = inicioX;
         for (let i = 0; i < this.columnas; i++) {
             let finX = TAMANIO_CASILLERO + inicioX;
             let rango = [xInicial, finX];
@@ -74,8 +42,9 @@ class Tablero{
             inicioX = finX;
             xInicial = inicioX + 1;
         }
-        //console.log(this.zonaSueltaDeFichas);
-    }*/
+        console.log(this.tableroLogico);
+        console.log(this.zonaSueltaDeFichas);
+    }
 
     //Devuelve la columna en la cual tiene que ir la ficha soltada. Si es un lugar inválido retorna -1
     getColunmaEnJuego(ficha){
@@ -87,8 +56,10 @@ class Tablero{
                 if(x >= this.zonaSueltaDeFichas[i][0] && x <= this.zonaSueltaDeFichas[i][1])
                     return i;
             }
+        } else {
             return -1;
         }
+
     }
 
     // Dada una columna en la cual se quiere jugar la ficha,
