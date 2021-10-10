@@ -48,8 +48,8 @@ canvas.addEventListener('mousemove', onMouseMove, false);
 
 
 let tablero = new Tablero(ctx, width, height, filas, columnas, casillero);
-const tamanioCasillero = 90;
-const marginTopTablero = 150;
+const TAMANIO_CASILLERO = 90;
+const MARGIN_TOP_TABLERO = 150;
 tablero.drawTablero();
 
 

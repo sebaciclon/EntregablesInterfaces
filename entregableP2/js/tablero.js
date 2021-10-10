@@ -12,28 +12,36 @@ class Tablero{
         this.columnas = columnas;       
         this.imgCasillero = img;       
         //this.casilla = null;
-        //this.matriz = [];
+        this.tableroLogico = [];
         this.zonaSueltaDeFichas = [];
         
     }
 
-    //Dibuja el tablero y carga el arreglo de rangos para saber dónde se suelta cada ficha
+    // Dibuja el tablero.
+    // Inicializa el arreglo de rangos que usaremos para saber dónde se suelta cada ficha
+    // Inicializa la matriz para la logica del juego
     drawTablero(){
         let inicioX = this.width/4;
         let xInicial = this.width/4;
         for (let i = 0; i < this.columnas; i++) {
-            let finX = tamanioCasillero + inicioX;
-            let rango = [inicioX, finX];
+            let finX = TAMANIO_CASILLERO + inicioX;
+            let rango = [xInicial, finX];
             this.zonaSueltaDeFichas[i] = rango;
-            inicioX = finX + 1;
+            let yInicial = MARGIN_TOP_TABLERO;
             for (let j = 0; j <this.filas; j++) {
                 this.ctx.beginPath();
-                this.ctx.drawImage(this.imgCasillero, xInicial + i * tamanioCasillero, marginTopTablero + j * tamanioCasillero);
+                this.ctx.drawImage(this.imgCasillero, inicioX, MARGIN_TOP_TABLERO + j * TAMANIO_CASILLERO);
                 this.ctx.fill();
                 this.ctx.closePath();
+                let casillero = new Casillero(inicioX, yInicial,j, i);
+                this.tableroLogico.push(casillero);
+                yInicial = yInicial + TAMANIO_CASILLERO;
             }
+            inicioX = finX;
+            xInicial = inicioX + 1;
         }
         //console.log(this.zonaSueltaDeFichas);
+        
     }
 
     //Devuelve la columna en la cual tiene que ir la ficha soltada. Si es un lugar inválido retorna -1
@@ -41,13 +49,39 @@ class Tablero{
         let x = ficha.getPosicionX();
         let y = ficha.getPosicionY();
 
-        if(y > 0 && y < marginTopTablero) {
+        if(y > 0 && y < MARGIN_TOP_TABLERO) {
             for(let i=0; i<this.columnas; i++){
                 if(x >= this.zonaSueltaDeFichas[i][0] && x <= this.zonaSueltaDeFichas[i][1])
                     return i;
             }
             return -1;
         }
+    }
+
+    // Dada una columna en la cual se quiere jugar la ficha,
+    // retorna un arreglo con las posiciones de x e y para dibujar el nuevo casillero
+    ultimoCasilleroVacio(columna, ficha){   
+        for (let i = 0; i < filas * columnas; i++){ // Por cada posición de la matriz
+            if(this.tableroLogico[i].getCol() == columna){ // Si corresponde a la columna que se quiere jugar la ficha
+                if (this.tableroLogico[i].getOcupado()){ // Si el casillero está ocupado 
+                    if (this.tableroLogico[i].getFila() == 0){ // Si además es la fila 0 => (columna completa)
+                        alert("La columna está completa");
+                        return null;
+                    }
+                    else{ // Si es una fila distinta a la 0, se setea el casillero como ocupado y se retorna la posición (x,y)
+                        this.tableroLogico[i-1].setOcupado(true); 
+                        this.tableroLogico[i-1].setJugador(ficha.getJugador());
+                        return this.tableroLogico[i-1].getPosition();
+                    }
+                }
+                if (this.tableroLogico[i].getFila() == filas -1){ // Si no está ocupado, se setea el casillero como ocupado y se retorna la posición (x,y)
+                    this.tableroLogico[i].setOcupado(true);
+                    this.tableroLogico[i].setJugador(ficha.getJugador());
+                    return this.tableroLogico[i].getPosition();                
+                }
+            }
+        } 
+        return null;     //Se recorrió toda la matriz y no encontró casillero libre
     }
 
     
