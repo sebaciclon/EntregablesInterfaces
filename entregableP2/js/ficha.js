@@ -69,6 +69,7 @@ class Ficha {
 
     //dibuja
     draw() {
+        this.ctx.fillStyle = "white";
         this.ctx.fillStyle = this.fill;
     }
 
