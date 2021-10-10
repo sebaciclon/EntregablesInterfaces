@@ -2,7 +2,6 @@
 
 /**@type {HTMLCanvasElement} */
 
-
 //CANVAS
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
@@ -11,6 +10,9 @@ let height = canvas.height;
 
 //ARREGLO PARA GUARDAR LAS FICHAS
 let fichas = [];
+
+//VARIABLE PARA CONTROLAR EL TURNO DE CADA JUGADOR
+let juega = true;
 
 //VARIABLE PARA CONTROLAR QUE ELIJAN FICHAS LOS DOS JUGADORES SOLO UNA VEZ
 let cont = 0;
@@ -22,10 +24,14 @@ let mouse = false;
 //VARIABLES PARA EL TAMAÑO DEL TABLERO Y CANTIDAD DE FICHAS PARA EL JUEGO
 let filas = 6;
 let columnas = 7;
-const cantFichas = filas * columnas;
+let cantFichas = filas * columnas;
 
 //IMAGEN QUE VA A LLEVAR EL TABLERO
 let casillero = document.getElementById("casillero");
+
+//VARIABLES PARA GUARDAR LA POSICION ORIGINAL DE LA FICHA
+let posOriginalX;
+let posOriginalY;
 
 //NOMBRE DE LOS JUGADORES
 let jugador1 = "Jugador1";
@@ -41,13 +47,28 @@ btn2.addEventListener('click', fichaAzul);
 let btn3 = document.getElementById("fichaRoja");
 btn3.addEventListener('click', fichaRoja);
 
+//BOTONES PARA ELEGIR EL TAMAÑO DEL TABLERO
+let btn4 = document.getElementById("5");
+btn4.addEventListener('click', cincoEnLinea);
+let btn5 = document.getElementById("6");
+btn5.addEventListener('click', seisEnLinea);
+let btn6 = document.getElementById("7");
+btn6.addEventListener('click', sieteEnLinea);
+
 //FUNCIONES DEL MOUSE
 canvas.addEventListener('mousedown', onMouseDown, false);
 canvas.addEventListener('mouseup', onMouseUp, false);
 canvas.addEventListener('mousemove', onMouseMove, false);
 
+//EMPEZAMOS EL JUEGO CON EL TABLERO 4 EN LINEA
+const tamanioCasillero = 90;
+const marginTopTablero = 100;
+let inicioTabX = (width - tamanioCasillero * columnas) / 2;
+let tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
+tablero.drawTablero();
 
-let tablero = new Tablero(ctx, width, height, filas, columnas, casillero);
+
+/*let tablero = new Tablero(ctx, width, height, filas, columnas, casillero);
 const tamanioCasillero = 90;
 const marginTopTablero = 150;
 tablero.drawTablero();
@@ -95,62 +116,70 @@ function limpiarCanvas() {
 
 //******************************************************************************************************* */
 
-//METODO QUE DIBUJA EL TABLERO
-/*function dibujarTablero() {
-    //let i = (width - 200) / columnas;
-    //let j = (height - 200) / filas;
-    let aux = width / 4;
-    let tamañoancho = (width / 2) / columnas;
-    //console.log(tamañoancho);
-    let tamañoAlto = (height - 100) / filas;
-    //console.log(tamañoAlto);
+//METODO DEL BOTON PARA JUGAR 5 EN LINEA
+function cincoEnLinea() {
+    filas ++;
+    columnas ++;
+    inicioTabX = (width - tamanioCasillero * columnas) / 2;
+    tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
+    tablero.drawTablero();
+    btn4.style.display = 'none';
+    btn5.style.display = 'none';
+    btn6.style.display = 'none';
+    cantFichas = filas * columnas;
+}
 
-    for(let x = 0; x < columnas; x++) {
-        for(let y = 0; y < filas; y ++) {
-            //ctx.rect(100 + 57 * i, 0 * 57, 57, 66);
-            
-            ctx.fillStyle = 'blue';
-            let inicio = width / 4 - 100;
-            let fin = width - inicio*2;
-            ctx.fillRect(inicio, 100 , fin, height);
-            //ctx.fillRect(width / 4 - 100, 100 , 2 * (width / 4) + 200, height);
-            //ctx.fillRect(aux - 100 + (x * tamañoancho), 100 + tamañoAlto * y , tamañoancho, tamañoAlto * (y + 1));
-        }
-    }
-}*/
+//METODO DEL BOTON PARA JUGAR 6 EN LINEA
+function seisEnLinea() {
+    filas = filas + 2;
+    columnas = columnas + 2;
+    inicioTabX = (width - tamanioCasillero * columnas) / 2;
+    tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
+    tablero.drawTablero();
+    btn4.style.display = 'none';
+    btn5.style.display = 'none';
+    btn6.style.display = 'none';
+    cantFichas = filas * columnas;
+}
 
-//***************************************************************************************************** */
+//METODO DEL BOTON PARA JUGAR 7 EN LINEA
+function sieteEnLinea() {
+    filas = filas + 3;
+    columnas = columnas + 3;
+    inicioTabX = (width - tamanioCasillero * columnas) / 2;
+    tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
+    tablero.drawTablero();
+    btn4.style.display = 'none';
+    btn5.style.display = 'none';
+    btn6.style.display = 'none';
+    cantFichas = filas * columnas;
+}
 
-//METODO DEL BOTON DE ELECCION DE LAS FICHAS NEGRAS
+
+//************************************************************************************************** */
+
 function fichaNegra() {
     if(cont == 2) {
         alert("ya eligieron fichas los dos jugadores");
     }
     else {
         btn.style.display = 'none';
-        let distancia = 0;
         let negra = document.getElementById("negra");
-        //let negra = 'black';
+        
         if(cont == 0) {
             cont ++;
-            let posX = (width / 4 - 100) / 2;
-            let posY = height - 60;
-            
+            let posX = inicioTabX / 2;
+            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
-                agregarFicha(posX, posY - distancia, negra, jugador1);
-                distancia += 30;
+                agregarFicha(posX, posY, negra, jugador1);
             }
         }
         else {
-            if(cont == 1) {
-                cont ++;
-                let posX = width - (width / 4 - 100) + (width / 4 - 100)/2;
-                let posY = height - 60;
-                
-                for (let i = 0; i < cantFichas / 2; i++) {
-                    agregarFicha(posX, posY - distancia, negra, jugador2);
-                    distancia += 30;
-                }
+            cont ++;
+            let posX = (width - inicioTabX) + inicioTabX / 2;
+            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
+            for (let i = 0; i < cantFichas / 2; i++) {
+                agregarFicha(posX, posY, negra, jugador2);
             }
         }
         drawFichas();
@@ -164,29 +193,22 @@ function fichaNaranja() {
     }
     else {
         btn1.style.display = 'none';
-        let distancia = 0;
         let naranja = document.getElementById("naranja");
-        //let roja = 'red';
+        
         if(cont == 0) {
             cont ++;
-            let posX = (width / 4 - 100) / 2;
-            let posY = height - 60;
-            
+            let posX = inicioTabX / 2;
+            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
-                agregarFicha(posX, posY - distancia, naranja, jugador1);
-                distancia += 30;
+                agregarFicha(posX, posY, naranja, jugador1);
             }
         }
         else {
-            if(cont == 1) {
-                cont ++;
-                let posX = width - (width / 4 - 100) + (width / 4 - 100)/2;
-                let posY = height - 60;
-                
-                for (let i = 0; i < cantFichas / 2; i++) {
-                    agregarFicha(posX, posY - distancia, naranja, jugador2);
-                    distancia += 30;
-                }
+            cont ++;
+            let posX = (width - inicioTabX) + inicioTabX / 2;
+            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
+            for (let i = 0; i < cantFichas / 2; i++) {
+                agregarFicha(posX, posY, naranja, jugador2);
             }
         }
         drawFichas();
@@ -200,29 +222,22 @@ function fichaAzul() {
     }
     else {
         btn2.style.display = 'none';
-        let distancia = 0;
         let azul = document.getElementById("azul");
-        //let azul = 'blue';
+        
         if(cont == 0) {
             cont ++;
-            let posX = (width / 4 - 100) / 2;
-            let posY = height - 60;
-            
+            let posX = inicioTabX / 2;
+            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
-                agregarFicha(posX, posY - distancia, azul, jugador1);
-                distancia += 30;
+                agregarFicha(posX, posY, azul, jugador1);
             }
         }
         else {
-            if(cont == 1) {
-                cont ++;
-                let posX = width - (width / 4 - 100) + (width / 4 - 100)/2;
-                let posY = height - 60;
-                
-                for (let i = 0; i < cantFichas / 2; i++) {
-                    agregarFicha(posX, posY - distancia, azul, jugador2);
-                    distancia += 30;
-                }
+            cont ++;
+            let posX = (width - inicioTabX) + inicioTabX / 2;
+            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
+            for (let i = 0; i < cantFichas / 2; i++) {
+                agregarFicha(posX, posY, azul, jugador2);
             }
         }
         drawFichas();
@@ -235,30 +250,23 @@ function fichaRoja() {
         alert("ya eligieron fichas los dos jugadores");
     }
     else {
-        btn2.style.display = 'none';
-        let distancia = 0;
+        btn3.style.display = 'none';
         let roja = document.getElementById("roja");
-        //let azul = 'blue';
+        
         if(cont == 0) {
             cont ++;
-            let posX = (width / 4 - 100) / 2;
-            let posY = height - 60;
-            
+            let posX = inicioTabX / 2;
+            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
-                agregarFicha(posX, posY - distancia, roja, jugador1);
-                distancia += 30;
+                agregarFicha(posX, posY, roja, jugador1);
             }
         }
         else {
-            if(cont == 1) {
-                cont ++;
-                let posX = width - (width / 4 - 100) + (width / 4 - 100)/2;
-                let posY = height - 60;
-                
-                for (let i = 0; i < cantFichas / 2; i++) {
-                    agregarFicha(posX, posY - distancia, roja, jugador2);
-                    distancia += 30;
-                }
+            cont ++;
+            let posX = (width - inicioTabX) + inicioTabX / 2;
+            let posY = marginTopTablero + (tamanioCasillero * filas) / 2;
+            for (let i = 0; i < cantFichas / 2; i++) {
+                agregarFicha(posX, posY, roja, jugador2);
             }
         }
         drawFichas();
@@ -290,29 +298,30 @@ function hacerDisponible(jugador) {
     }
 }
 
-let juega = true;
-//MIRAR ACA
+//METODO PARA SELECCIONAR UNA FICHA
 function onMouseDown(e) {
     if(cont == 2) {
         
         mouse = true;
-        console.log(juega);
+        //console.log(juega);
         if(juega){
             hacerDisponible(jugador1);
         } else {
             hacerDisponible(jugador2);
         }
         if (clickearFicha != null) {// se dejó de seleccionar una ficha
-            clickearFicha.setResaltado(false);
+            //clickearFicha.setResaltado(false);
             clickearFicha = null;
         }
         let clickFigura = findClickedFigura(e.layerX, e.layerY);
-        if (clickFigura != null && clickFigura.getDisponible()) {   
-            clickFigura.setResaltado(true);
+        if (clickFigura != null && clickFigura.getDisponible()) { 
+            posOriginalX = clickFigura.getPosicionX();  
+            posOriginalY = clickFigura.getPosicionY();
+            //clickFigura.setResaltado(true);
             clickearFicha = clickFigura;
         }
         drawFichas();
-        console.log(tablero.getColunmaEnJuego(clickFigura));
+        //console.log(tablero.getColunmaEnJuego(clickFigura));
         
     }
 }
@@ -325,16 +334,43 @@ function onMouseMove(e) {
 }
 
 function onMouseUp(e) {
-    mouse = false;
-    if(juega === true) {
-        juega = false;
-    } else {
-        juega = true;
-    }
-    
+    if(clickearFicha != null) {
+        if(juega) {
+            mouse = false;
+            
+                let c = tablero.getColunmaEnJuego(clickearFicha);
+                if(c == -1) {
+                    clickearFicha.setPosicion(posOriginalX, posOriginalY);
+                    drawFichas();
+                    
+                } else {
+                    //clickearFicha.setPosicion(tablero.zonaSueltaDeFichas[c], height - 50);
+                    juega = false;
+                    clickearFicha.setPosicion(600, height - 200);
+                    drawFichas();
+                }
+            
+        }
+        else {
+            mouse = false;
+            
+            //if(clickearFicha != null) {
+                let c = tablero.getColunmaEnJuego(clickearFicha);
+                if(c == -1) {
+                    clickearFicha.setPosicion(posOriginalX, posOriginalY);
+                    drawFichas();
+                    //clickearFicha.setResaltado(false);
+                } else {
+                    //clickearFicha.setPosicion(tablero.zonaSueltaDeFichas[c], height - 50);
+                    juega = true;
+                    clickearFicha.setPosicion(600, height - 200);
+                    drawFichas();
+                }
+            //}
+        }
+            //console.log(tablero.getColunmaEnJuego(clickearFicha));
+    }    
 }
-
-//dibujarTablero();
 
 
 
