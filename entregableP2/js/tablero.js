@@ -15,7 +15,7 @@ class Tablero{
         //this.matriz = [];
         this.zonaSueltaDeFichas = [];
         this.inicioTableroX = inicioTableroX;
-        this.matrizJuego = [];
+        this.matrizJuego = [];      //esta
         this.matrizCoordenadas = [];
     }
 
@@ -76,6 +76,8 @@ class Tablero{
 
     }
 
+    
+
     casilleroVacio(columna, ficha){
         for(let i = filas -1; i >= 0; i--){
             if(this.matrizJuego[columna][i] == 0){
@@ -87,41 +89,4 @@ class Tablero{
         alert("La columna seleccionada ya está completa");
         return null;
     }
-
-/*
-    // Dada una columna en la cual se quiere jugar la ficha,
-    // retorna un arreglo con las posiciones de x e y para dibujar el nuevo casillero
-    ultimoCasilleroVacio(columna, ficha){   
-        for (let i = 0; i < filas * columnas; i++){ // Por cada posición de la matriz
-            if(this.matrizJuego[i].getCol() == columna){ // Si corresponde a la columna que se quiere jugar la ficha
-                if (matriztrizJuego[i].getOcupado()){ // Si el casillero está ocupado 
-                    if (tmatrizrizJuego[i].getFila() == 0){ // Si además es la fila 0 => (columna completa)
-                        alert("matriz está completa");
-                        return null;
-                    }
-                    else{ // Si es una fila distinta a la 0, se setea el casillero como ocupado y se retorna la posición (x,y)
-                        this.matrizJuego[i-1].setOcupado(true); 
-                        this.matrizuego[i-1].setJugador(ficha.getJugador());
-                        returmatrizmatrizJuego[i-1].getPosition();
-          matriz   }
-                }
-                if (this.matrizJuego[i].getFila() == filas -1){ // Si no está ocupado, se setea el casillero como ocupado y se retorna la posición (x,y)
-                    this.matrizuego[i].setOcupado(true);
-                    this.matrizuego[i].setJugador(ficha.getJugador());
-                    returmatrizmatrizJuego[i].getPosition();                
-      matriz   }
-            }
-        } 
-        return null;     //Se recorrió toda la matriz y no encontró casillero libre
-    }*/
-
-    
-
-    /*dibujarFichaEnCasillero(ficha, xInicial, yInicial){
-        let imagFicha = ficha.getFill();
-        this.ctx.beginPath();
-        this.ctx.drawImage(imagFicha, xInicial, yInicial);
-        this.ctx.fill();
-        this.ctx.closePath();
-    }*/
 }

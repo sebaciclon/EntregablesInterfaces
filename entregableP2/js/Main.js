@@ -124,6 +124,7 @@ function limpiarCanvas() {
 
 //METODO DEL BOTON PARA JUGAR 5 EN LINEA
 function cincoEnLinea() {
+    inicializado = false;
     filas ++;
     columnas ++;
     inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
@@ -137,6 +138,7 @@ function cincoEnLinea() {
 
 //METODO DEL BOTON PARA JUGAR 6 EN LINEA
 function seisEnLinea() {
+    inicializado = false;
     filas = filas + 2;
     columnas = columnas + 2;
     inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
@@ -150,6 +152,7 @@ function seisEnLinea() {
 
 //METODO DEL BOTON PARA JUGAR 7 EN LINEA
 function sieteEnLinea() {
+    inicializado = false;
     filas = filas + 3;
     columnas = columnas + 3;
     inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
@@ -343,6 +346,46 @@ function onMouseUp(e) {
     if(obtenerFichaClekeada != null) {
         if(juega) {
             mouse = false;
+            let c = tablero.getColunmaEnJuego(obtenerFichaClekeada);
+            if(c == -1) {
+                obtenerFichaClekeada.setPosicion(posOriginalX, posOriginalY);
+                drawFichas();
+            } else {
+                let casillero = tablero.casilleroVacio(c, obtenerFichaClekeada);
+                let x = casillero.getXInicial() + TAMANIO_CASILLERO / 2;
+                let y = casillero.getYInicial() + TAMANIO_CASILLERO / 2;
+                obtenerFichaClekeada.setPosicion(x, y);
+                juega = false;
+                drawFichas();
+                document.getElementById('jugador2').style.color = "blue";
+                document.getElementById('jugador1').style.color = "black";
+            }
+        }
+        else {
+            mouse = false;
+            let c = tablero.getColunmaEnJuego(obtenerFichaClekeada);
+            if(c == -1) {
+                obtenerFichaClekeada.setPosicion(posOriginalX, posOriginalY);
+                drawFichas();
+            } else {
+                let casillero = tablero.casilleroVacio(c, obtenerFichaClekeada);
+                let x = casillero.getXInicial() + TAMANIO_CASILLERO / 2;
+                let y = casillero.getYInicial() + TAMANIO_CASILLERO / 2;
+                obtenerFichaClekeada.setPosicion(x, y);
+                juega = true;
+                drawFichas();
+                document.getElementById('jugador1').style.color = "blue";
+                document.getElementById('jugador2').style.color = "black";
+            }
+        }
+    }  
+}
+
+
+/*function onMouseUp(e) {
+    if(obtenerFichaClekeada != null) {
+        if(juega) {
+            mouse = false;
             
                 let c = tablero.getColunmaEnJuego(obtenerFichaClekeada);
                 if(c == -1) {
@@ -362,6 +405,8 @@ function onMouseUp(e) {
                     ctx.drawImage(obtenerFichaClekeada, x, y);
                     ctx.fill();
                     ctx.closePath();
+                    document.getElementById('jugador2').style.color = "blue";
+                    document.getElementById('jugador1').style.color = "black";
                 }
             
         }
@@ -386,18 +431,15 @@ function onMouseUp(e) {
                     ctx.drawImage(obtenerFichaClekeada, x, y);
                     ctx.fill();
                     ctx.closePath();
+                    document.getElementById('jugador1').style.color = "blue";
+                    document.getElementById('jugador2').style.color = "black";
 
                 }
             //}
         }
             //console.log(tablero.getColunmaEnJuego(obtenerFichaClekeada));
     }  
-    
-    
-
-   
-
-}
+}*/
 
 
 
