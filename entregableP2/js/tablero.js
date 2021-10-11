@@ -73,7 +73,7 @@ class Tablero{
         } else {
             return -1;
         }
-
+        return -1;
     }
 
     
@@ -86,7 +86,9 @@ class Tablero{
                 return this.matrizCoordenadas[columna][i];
             }
         }
-        alert("La columna seleccionada ya está completa");
+        swal("YA ESTA COMPLETA", "Prueba en otra columna" );
+        obtenerFichaClekeada.setPosicion(posOriginalX, posOriginalY);
+        drawFichas();
         return null;
     }
 }

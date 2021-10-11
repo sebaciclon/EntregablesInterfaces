@@ -40,6 +40,9 @@ let posOriginalY;
 let jugador1 = "Jugador1";
 let jugador2 = "Jugador2"
 
+//HABILITA EL JUEGO
+let juegoHabilitado = false;
+
 //BOTONES PARA ELEGIR LAS FICHAS
 let btn = document.getElementById("fichaNegra");
 btn.addEventListener('click', fichaNegra);
@@ -62,6 +65,10 @@ btn6.addEventListener('click', sieteEnLinea);
 canvas.addEventListener('mousedown', onMouseDown, false);
 canvas.addEventListener('mouseup', onMouseUp, false);
 canvas.addEventListener('mousemove', onMouseMove, false);
+
+//BOTON PARA INCIAR EL JUEGO
+let btn7 = document.getElementById("iniciar");
+btn7.addEventListener('click', iniciarJuego);
 
 //SE UTILIZA PARA INICIALIZAR EL ARREGLO DE ZONA DE JUEGO Y LA MATRIZ DE TABLERO UNA SOLA VEZ
 let inicializado = false;
@@ -309,6 +316,7 @@ function hacerDisponible(jugador) {
 
 //METODO PARA SELECCIONAR UNA FICHA
 function onMouseDown(e) {
+    if(juegoHabilitado){
     if(cont == 2) {
         
         mouse = true;
@@ -333,6 +341,7 @@ function onMouseDown(e) {
         //console.log(tablero.getColunmaEnJuego(fichaClikeada));
         
     }
+}
 }
 
 function onMouseMove(e) {
@@ -379,6 +388,37 @@ function onMouseUp(e) {
             }
         }
     }  
+}
+
+function refrescar(){
+    location.reload();
+}
+
+function terminarJuego(){
+    juegoHabilitado = false;
+    swal("TIEMPO CUMPLIDO", "No hubo ganador!!");
+    setTimeout(refrescar, 5000);
+}
+
+function iniciarJuego(){
+    if(cont == 2){
+        juegoHabilitado = true;
+        let hoy = new Date();
+        let minutos = 30000;
+        let suma = hoy.getTime() + minutos;
+        let fechaLimite = new Date(suma);
+        setTimeout(terminarJuego, minutos);
+        countdown(fechaLimite, 'clock', '¡Terminó la partida!');
+        btn.style.display = 'none';
+        btn1.style.display = 'none';
+        btn2.style.display = 'none';
+        btn3.style.display = 'none';
+        btn4.style.display = 'none';
+        btn5.style.display = 'none';
+        btn6.style.display = 'none';
+    }
+    else
+    swal("ESCOGER FICHA PARA JUGAR", "Ambos jugadores deben elegir su ficha!!");
 }
 
 

@@ -88,3 +88,8 @@ h5{
     display: none;
 }
 
+.clock{
+    font-weight: bold;
+    font-size: 4em;
+}
+
