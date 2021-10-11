@@ -80,6 +80,7 @@ class Tablero{
         for(let i = filas -1; i >= 0; i--){
             if(this.matrizJuego[columna][i] == 0){
                 this.matrizJuego[columna][i] = ficha.getNumeroJugador();
+                console.log(this.matrizJuego);
                 return this.matrizCoordenadas[columna][i];
             }
         }

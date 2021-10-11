@@ -99,8 +99,8 @@ tablero.drawTablero();*/
 //FICHAS
 
 //METODO PARA AGREGAR UNA FICHA AL ARREGLO DE FICHAS
-function agregarFicha(posX, posY, imgFicha, jugador) {
-    let ficha = new FichaRedonda(posX, posY, 33, imgFicha, ctx, jugador);
+function agregarFicha(posX, posY, imgFicha, jugador, num) {
+    let ficha = new FichaRedonda(posX, posY, 33, imgFicha, ctx, jugador, num);
     fichas.push(ficha); 
 }
 
@@ -344,51 +344,53 @@ function onMouseUp(e) {
         if(juega) {
             mouse = false;
             
-                let c = tablero.getColunmaEnJuego(clickearFicha);
+                let c = tablero.getColunmaEnJuego(obtenerFichaClekeada);
                 if(c == -1) {
-                    clickearFicha.setPosicion(posOriginalX, posOriginalY);
+                    obtenerFichaClekeada.setPosicion(posOriginalX, posOriginalY);
                     drawFichas();
                     
                 } else {
-                    let coordColocarFicha = tablero.ultimoCasilleroVacio(c, clickearFicha);
-                    let x = coordColocarFicha[0];
-                    let y = coordColocarFicha[1];
-                    clickearFicha.setPosicion(x, y);
+                    let casillero = tablero.casilleroVacio(c, obtenerFichaClekeada);
+                    let x = casillero.getXInicial() + TAMANIO_CASILLERO / 2;
+                    let y = casillero.getYInicial() + TAMANIO_CASILLERO / 2;
+                    obtenerFichaClekeada.setPosicion(x, y);
                     juega = false;
-                    //clickearFicha.setPosicion(600, height - 200);
+                    //obtenerFichaClekeada.setPosicion(600, height - 200);
                     //drawFichas();
-                    let roja = document.getElementById("casillero_naranja");
-                    this.ctx.beginPath();
-                    this.ctx.drawImage(roja, x, y);
-                    this.ctx.fill();
-                    this.ctx.closePath();
+                    //let roja = document.getElementById("casillero_naranja");
+                    ctx.beginPath();
+                    ctx.drawImage(obtenerFichaClekeada, x, y);
+                    ctx.fill();
+                    ctx.closePath();
                 }
             
         }
         else {
             mouse = false;
             
-            //if(clickearFicha != null) {
-                let c = tablero.getColunmaEnJuego(clickearFicha);
+            //if(obtenerFichaClekeada != null) {
+                let c = tablero.getColunmaEnJuego(obtenerFichaClekeada);
                 if(c == -1) {
-                    clickearFicha.setPosicion(posOriginalX, posOriginalY);
+                    obtenerFichaClekeada.setPosicion(posOriginalX, posOriginalY);
                     drawFichas();
-                    //clickearFicha.setResaltado(false);
+                    //obtenerFichaClekeada.setResaltado(false);
                 } else {
-                    //clickearFicha.setPosicion(tablero.zonaSueltaDeFichas[c], height - 50);
+                    let casillero = tablero.casilleroVacio(c, obtenerFichaClekeada);
+                    let x = casillero.getXInicial() + TAMANIO_CASILLERO / 2;
+                    let y = casillero.getYInicial() + TAMANIO_CASILLERO / 2;
+                    obtenerFichaClekeada.setPosicion(x, y);
                     juega = true;
-                    //clickearFicha.setPosicion(600, height - 200);
+                    //obtenerFichaClekeada.setPosicion(600, height - 200);
                     //drawFichas();
-                    let roja = document.getElementById("casillero_naranja");
-                    this.ctx.beginPath();
-                    this.ctx.drawImage(roja, x, y);
-                    this.ctx.fill();
-                    this.ctx.closePath();
+                    ctx.beginPath();
+                    ctx.drawImage(obtenerFichaClekeada, x, y);
+                    ctx.fill();
+                    ctx.closePath();
 
                 }
             //}
         }
-            //console.log(tablero.getColunmaEnJuego(clickearFicha));
+            //console.log(tablero.getColunmaEnJuego(obtenerFichaClekeada));
     }  
     
     
