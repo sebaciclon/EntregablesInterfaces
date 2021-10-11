@@ -343,7 +343,6 @@ function onMouseUp(e) {
     if(obtenerFichaClekeada != null) {
         if(juega) {
             mouse = false;
-<<<<<<< HEAD
             
                 let c = tablero.getColunmaEnJuego(clickearFicha);
                 if(c == -1) {
@@ -396,39 +395,6 @@ function onMouseUp(e) {
 
    
 
-=======
-            let c = tablero.getColunmaEnJuego(obtenerFichaClekeada);
-            if(c == -1) {
-                obtenerFichaClekeada.setPosicion(posOriginalX, posOriginalY);
-                drawFichas();
-            } else {
-                //obtenerFichaClekeada.setPosicion(tablero.zonaSueltaDeFichas[c], height - 50);
-                juega = false;
-                obtenerFichaClekeada.setPosicion(600, height - 200);
-                drawFichas();
-                document.getElementById('jugador2').style.color = "blue";
-                document.getElementById('jugador1').style.color = "black";
-            }
-        }
-        else {
-            mouse = false;
-            let c = tablero.getColunmaEnJuego(obtenerFichaClekeada);
-            if(c == -1) {
-                obtenerFichaClekeada.setPosicion(posOriginalX, posOriginalY);
-                drawFichas();
-                //obtenerFichaClekeada.setResaltado(false);
-            } else {
-                //obtenerFichaClekeada.setPosicion(tablero.zonaSueltaDeFichas[c], height - 50);
-                juega = true;
-                obtenerFichaClekeada.setPosicion(600, height - 200);
-                drawFichas();
-                document.getElementById('jugador1').style.color = "blue";
-                document.getElementById('jugador2').style.color = "black";
-            }
-        }
-        //console.log(tablero.getColunmaEnJuego(obtenerFichaClekeada));
-    }    
->>>>>>> aa91ac1f0bc6feca023109594578ee982e221229
 }
 
 
