@@ -4,8 +4,8 @@
 
 class FichaRedonda extends Ficha{
 
-    constructor(posX, posY, radio, fill, ctx, jugador) {
-        super(posX, posY, fill, ctx, jugador);
+    constructor(posX, posY, radio, fill, ctx, jugador, num) {
+        super(posX, posY, fill, ctx, jugador, num);
         this.radio = radio;
     }
 

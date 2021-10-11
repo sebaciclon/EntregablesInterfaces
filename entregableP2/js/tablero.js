@@ -15,7 +15,8 @@ class Tablero{
         //this.matriz = [];
         this.zonaSueltaDeFichas = [];
         this.inicioTableroX = inicioTableroX;
-        this.tableroLogico = [];
+        this.matrizJuego = [];
+        this.matrizCoordenadas = [];
     }
 
     // Dibuja el tablero.
@@ -26,23 +27,36 @@ class Tablero{
         let inicioX = this.inicioTableroX;
         let xInicial = inicioX;
         for (let i = 0; i < this.columnas; i++) {
-            let finX = TAMANIO_CASILLERO + inicioX;
-            let rango = [xInicial, finX];
-            this.zonaSueltaDeFichas[i] = rango;
+            let finX = TAMANIO_CASILLERO + xInicial;
+            if(!inicializado){ // Para inicializar el arreglo una sola vez
+                let rango = [xInicial, finX];
+                this.zonaSueltaDeFichas[i] = rango;
+            }
             let yInicial = MARGIN_TOP_TABLERO;
+            let arreFilasJuego = [];
+            let arreFilasCoord = [];
             for (let j = 0; j <this.filas; j++) {
                 this.ctx.beginPath();
                 this.ctx.drawImage(this.imgCasillero, inicioX, MARGIN_TOP_TABLERO + j * TAMANIO_CASILLERO);
                 this.ctx.fill();
                 this.ctx.closePath();
-                let casillero = new Casillero(inicioX, yInicial,j, i);
-                this.tableroLogico.push(casillero);
+                if(!inicializado){ // Para inicializar el arreglo una sola vez
+                    let casillero = new Casillero(xInicial, yInicial);
+                    arreFilasJuego.push(0);
+                    arreFilasCoord.push(casillero);
+                }
                 yInicial = yInicial + TAMANIO_CASILLERO;
+            }
+            if(!inicializado){
+                this.matrizJuego.push(arreFilasJuego);
+                this.matrizCoordenadas.push(arreFilasCoord);
             }
             inicioX = finX;
             xInicial = inicioX + 1;
         }
-        console.log(this.tableroLogico);
+        inicializado = true; // Ya se inicalizaron los arreglos de tablero
+        console.log(this.matrizJuego);
+        console.log(this.matrizCoordenadas);
         console.log(this.zonaSueltaDeFichas);
     }
 
@@ -62,31 +76,43 @@ class Tablero{
 
     }
 
+    casilleroVacio(columna, ficha){
+        for(let i = filas -1; i >= 0; i--){
+            if(this.matrizJuego[columna][i] == 0){
+                this.matrizJuego[columna][i] = ficha.getNumeroJugador();
+                return this.matrizCoordenadas[columna][i];
+            }
+        }
+        alert("La columna seleccionada ya está completa");
+        return null;
+    }
+
+/*
     // Dada una columna en la cual se quiere jugar la ficha,
     // retorna un arreglo con las posiciones de x e y para dibujar el nuevo casillero
     ultimoCasilleroVacio(columna, ficha){   
         for (let i = 0; i < filas * columnas; i++){ // Por cada posición de la matriz
-            if(this.tableroLogico[i].getCol() == columna){ // Si corresponde a la columna que se quiere jugar la ficha
-                if (this.tableroLogico[i].getOcupado()){ // Si el casillero está ocupado 
-                    if (this.tableroLogico[i].getFila() == 0){ // Si además es la fila 0 => (columna completa)
-                        alert("La columna está completa");
+            if(this.matrizJuego[i].getCol() == columna){ // Si corresponde a la columna que se quiere jugar la ficha
+                if (matriztrizJuego[i].getOcupado()){ // Si el casillero está ocupado 
+                    if (tmatrizrizJuego[i].getFila() == 0){ // Si además es la fila 0 => (columna completa)
+                        alert("matriz está completa");
                         return null;
                     }
                     else{ // Si es una fila distinta a la 0, se setea el casillero como ocupado y se retorna la posición (x,y)
-                        this.tableroLogico[i-1].setOcupado(true); 
-                        this.tableroLogico[i-1].setJugador(ficha.getJugador());
-                        return this.tableroLogico[i-1].getPosition();
-                    }
+                        this.matrizJuego[i-1].setOcupado(true); 
+                        this.matrizuego[i-1].setJugador(ficha.getJugador());
+                        returmatrizmatrizJuego[i-1].getPosition();
+          matriz   }
                 }
-                if (this.tableroLogico[i].getFila() == filas -1){ // Si no está ocupado, se setea el casillero como ocupado y se retorna la posición (x,y)
-                    this.tableroLogico[i].setOcupado(true);
-                    this.tableroLogico[i].setJugador(ficha.getJugador());
-                    return this.tableroLogico[i].getPosition();                
-                }
+                if (this.matrizJuego[i].getFila() == filas -1){ // Si no está ocupado, se setea el casillero como ocupado y se retorna la posición (x,y)
+                    this.matrizuego[i].setOcupado(true);
+                    this.matrizuego[i].setJugador(ficha.getJugador());
+                    returmatrizmatrizJuego[i].getPosition();                
+      matriz   }
             }
         } 
         return null;     //Se recorrió toda la matriz y no encontró casillero libre
-    }
+    }*/
 
     
 

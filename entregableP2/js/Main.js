@@ -60,6 +60,9 @@ canvas.addEventListener('mousedown', onMouseDown, false);
 canvas.addEventListener('mouseup', onMouseUp, false);
 canvas.addEventListener('mousemove', onMouseMove, false);
 
+//SE UTILIZA PARA INICIALIZAR EL ARREGLO DE ZONA DE JUEGO Y LA MATRIZ DE TABLERO UNA SOLA VEZ
+let inicializado = false;
+
 //EMPEZAMOS EL JUEGO CON EL TABLERO 4 EN LINEA
 const TAMANIO_CASILLERO = 90;
 const MARGIN_TOP_TABLERO = 100;
@@ -171,7 +174,7 @@ function fichaNegra() {
             let posX = inicioTabX / 2;
             let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
-                agregarFicha(posX, posY, negra, jugador1);
+                agregarFicha(posX, posY, negra, jugador1, 1);
             }
         }
         else {
@@ -179,7 +182,7 @@ function fichaNegra() {
             let posX = (width - inicioTabX) + inicioTabX / 2;
             let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
-                agregarFicha(posX, posY, negra, jugador2);
+                agregarFicha(posX, posY, negra, jugador2, 2);
             }
         }
         drawFichas();
@@ -200,7 +203,7 @@ function fichaNaranja() {
             let posX = inicioTabX / 2;
             let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
-                agregarFicha(posX, posY, naranja, jugador1);
+                agregarFicha(posX, posY, naranja, jugador1, 1);
             }
         }
         else {
@@ -208,7 +211,7 @@ function fichaNaranja() {
             let posX = (width - inicioTabX) + inicioTabX / 2;
             let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
-                agregarFicha(posX, posY, naranja, jugador2);
+                agregarFicha(posX, posY, naranja, jugador2, 2);
             }
         }
         drawFichas();
@@ -229,7 +232,7 @@ function fichaAzul() {
             let posX = inicioTabX / 2;
             let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
-                agregarFicha(posX, posY, azul, jugador1);
+                agregarFicha(posX, posY, azul, jugador1, 1);
             }
         }
         else {
@@ -237,7 +240,7 @@ function fichaAzul() {
             let posX = (width - inicioTabX) + inicioTabX / 2;
             let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
-                agregarFicha(posX, posY, azul, jugador2);
+                agregarFicha(posX, posY, azul, jugador2, 2);
             }
         }
         drawFichas();
@@ -258,7 +261,7 @@ function fichaRoja() {
             let posX = inicioTabX / 2;
             let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
-                agregarFicha(posX, posY, roja, jugador1);
+                agregarFicha(posX, posY, roja, jugador1, 1);
             }
         }
         else {
@@ -266,7 +269,7 @@ function fichaRoja() {
             let posX = (width - inicioTabX) + inicioTabX / 2;
             let posY = MARGIN_TOP_TABLERO + (TAMANIO_CASILLERO * filas) / 2;
             for (let i = 0; i < cantFichas / 2; i++) {
-                agregarFicha(posX, posY, roja, jugador2);
+                agregarFicha(posX, posY, roja, jugador2, 2);
             }
         }
         drawFichas();
@@ -290,7 +293,7 @@ function findClickedFigura(x, y) {
 //METODO QUE CAMBIA LA DISPONIBILIDAD DE UNA FICHA PARA JUGARLA
 function hacerDisponible(jugador) {
     for(let i = 0; i < fichas.length; i ++) {
-        if(fichas[i].getJugador() == jugador) {
+        if(fichas[i].getNombreJugador() == jugador) {
             fichas[i].setDisponible(true);
         } else {
             fichas[i].setDisponible(false);
@@ -344,10 +347,18 @@ function onMouseUp(e) {
                     drawFichas();
                     
                 } else {
-                    //clickearFicha.setPosicion(tablero.zonaSueltaDeFichas[c], height - 50);
+                    let coordColocarFicha = tablero.ultimoCasilleroVacio(c, clickearFicha);
+                    let x = coordColocarFicha[0];
+                    let y = coordColocarFicha[1];
+                    clickearFicha.setPosicion(x, y);
                     juega = false;
-                    clickearFicha.setPosicion(600, height - 200);
-                    drawFichas();
+                    //clickearFicha.setPosicion(600, height - 200);
+                    //drawFichas();
+                    let roja = document.getElementById("casillero_naranja");
+                    this.ctx.beginPath();
+                    this.ctx.drawImage(roja, x, y);
+                    this.ctx.fill();
+                    this.ctx.closePath();
                 }
             
         }
@@ -363,13 +374,24 @@ function onMouseUp(e) {
                 } else {
                     //clickearFicha.setPosicion(tablero.zonaSueltaDeFichas[c], height - 50);
                     juega = true;
-                    clickearFicha.setPosicion(600, height - 200);
-                    drawFichas();
+                    //clickearFicha.setPosicion(600, height - 200);
+                    //drawFichas();
+                    let roja = document.getElementById("casillero_naranja");
+                    this.ctx.beginPath();
+                    this.ctx.drawImage(roja, x, y);
+                    this.ctx.fill();
+                    this.ctx.closePath();
+
                 }
             //}
         }
             //console.log(tablero.getColunmaEnJuego(clickearFicha));
-    }    
+    }  
+    
+    
+
+   
+
 }
 
 
