@@ -18,7 +18,7 @@ let juega = true;
 let cont = 0;
 
 //VARIABLES PARA USAR CON EL MOUSE
-let clickearFicha = null;
+let obtenerFichaClekeada = null;
 let mouse = false;
 
 //VARIABLES PARA EL TAMAÑO DEL TABLERO Y CANTIDAD DE FICHAS PARA EL JUEGO
@@ -28,6 +28,9 @@ let cantFichas = filas * columnas;
 
 //IMAGEN QUE VA A LLEVAR EL TABLERO
 let casillero = document.getElementById("casillero");
+
+//SE PINTA EL JUGADOR 1 AZUL PARA INDICAR QUE ES SU TURNO DE JUEGO
+document.getElementById('jugador1').style.color = "blue";
 
 //VARIABLES PARA GUARDAR LA POSICION ORIGINAL DE LA FICHA
 let posOriginalX;
@@ -160,7 +163,7 @@ function sieteEnLinea() {
 
 function fichaNegra() {
     if(cont == 2) {
-        alert("ya eligieron fichas los dos jugadores");
+        swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
     }
     else {
         btn.style.display = 'none';
@@ -189,7 +192,7 @@ function fichaNegra() {
 //METODO DEL BOTON DE ELECCION DE LAS FICHAS ROJAS
 function fichaNaranja() {
     if(cont == 2) {
-        alert("ya eligieron fichas los dos jugadores");
+        swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
     }
     else {
         btn1.style.display = 'none';
@@ -218,7 +221,7 @@ function fichaNaranja() {
 //METODO DEL BOTON DE ELECCION DE LAS FICHAS AZULES
 function fichaAzul() {
     if(cont == 2) {
-        alert("ya eligieron fichas los dos jugadores");
+        swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
     }
     else {
         btn2.style.display = 'none';
@@ -247,7 +250,7 @@ function fichaAzul() {
 //METODO DEL BOTON DE ELECCION DE LAS FICHAS ROSAS
 function fichaRoja() {
     if(cont == 2) {
-        alert("ya eligieron fichas los dos jugadores");
+        swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
     }
     else {
         btn3.style.display = 'none';
@@ -309,66 +312,64 @@ function onMouseDown(e) {
         } else {
             hacerDisponible(jugador2);
         }
-        if (clickearFicha != null) {// se dejó de seleccionar una ficha
-            //clickearFicha.setResaltado(false);
-            clickearFicha = null;
+        if (obtenerFichaClekeada != null) {// se dejó de seleccionar una ficha
+            //obtenerFichaClekeada.setResaltado(false);
+            obtenerFichaClekeada = null;
         }
-        let clickFigura = findClickedFigura(e.layerX, e.layerY);
-        if (clickFigura != null && clickFigura.getDisponible()) { 
-            posOriginalX = clickFigura.getPosicionX();  
-            posOriginalY = clickFigura.getPosicionY();
-            //clickFigura.setResaltado(true);
-            clickearFicha = clickFigura;
+        let fichaClikeada = findClickedFigura(e.layerX, e.layerY);
+        if (fichaClikeada != null && fichaClikeada.getDisponible()) { 
+            posOriginalX = fichaClikeada.getPosicionX();  
+            posOriginalY = fichaClikeada.getPosicionY();
+            //fichaClikeada.setResaltado(true);
+            obtenerFichaClekeada = fichaClikeada;
         }
         drawFichas();
-        //console.log(tablero.getColunmaEnJuego(clickFigura));
+        //console.log(tablero.getColunmaEnJuego(fichaClikeada));
         
     }
 }
 
 function onMouseMove(e) {
-    if(mouse && clickearFicha != null) {
-        clickearFicha.setPosicion(e.layerX, e.layerY);
+    if(mouse && obtenerFichaClekeada != null) {
+        obtenerFichaClekeada.setPosicion(e.layerX, e.layerY);
         drawFichas();
     }
 }
 
 function onMouseUp(e) {
-    if(clickearFicha != null) {
+    if(obtenerFichaClekeada != null) {
         if(juega) {
             mouse = false;
-            
-                let c = tablero.getColunmaEnJuego(clickearFicha);
-                if(c == -1) {
-                    clickearFicha.setPosicion(posOriginalX, posOriginalY);
-                    drawFichas();
-                    
-                } else {
-                    //clickearFicha.setPosicion(tablero.zonaSueltaDeFichas[c], height - 50);
-                    juega = false;
-                    clickearFicha.setPosicion(600, height - 200);
-                    drawFichas();
-                }
-            
+            let c = tablero.getColunmaEnJuego(obtenerFichaClekeada);
+            if(c == -1) {
+                obtenerFichaClekeada.setPosicion(posOriginalX, posOriginalY);
+                drawFichas();
+            } else {
+                //obtenerFichaClekeada.setPosicion(tablero.zonaSueltaDeFichas[c], height - 50);
+                juega = false;
+                obtenerFichaClekeada.setPosicion(600, height - 200);
+                drawFichas();
+                document.getElementById('jugador2').style.color = "blue";
+                document.getElementById('jugador1').style.color = "black";
+            }
         }
         else {
             mouse = false;
-            
-            //if(clickearFicha != null) {
-                let c = tablero.getColunmaEnJuego(clickearFicha);
-                if(c == -1) {
-                    clickearFicha.setPosicion(posOriginalX, posOriginalY);
-                    drawFichas();
-                    //clickearFicha.setResaltado(false);
-                } else {
-                    //clickearFicha.setPosicion(tablero.zonaSueltaDeFichas[c], height - 50);
-                    juega = true;
-                    clickearFicha.setPosicion(600, height - 200);
-                    drawFichas();
-                }
-            //}
+            let c = tablero.getColunmaEnJuego(obtenerFichaClekeada);
+            if(c == -1) {
+                obtenerFichaClekeada.setPosicion(posOriginalX, posOriginalY);
+                drawFichas();
+                //obtenerFichaClekeada.setResaltado(false);
+            } else {
+                //obtenerFichaClekeada.setPosicion(tablero.zonaSueltaDeFichas[c], height - 50);
+                juega = true;
+                obtenerFichaClekeada.setPosicion(600, height - 200);
+                drawFichas();
+                document.getElementById('jugador1').style.color = "blue";
+                document.getElementById('jugador2').style.color = "black";
+            }
         }
-            //console.log(tablero.getColunmaEnJuego(clickearFicha));
+        //console.log(tablero.getColunmaEnJuego(obtenerFichaClekeada));
     }    
 }
 
