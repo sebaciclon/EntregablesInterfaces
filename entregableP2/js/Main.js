@@ -369,9 +369,11 @@ function onMouseUp(e) {
                 obtenerFichaClekeada.setFichaJugada(true);
                 juega = false;
                 drawFichas();
-                if(tablero.buscarFichasIgualesVertical(c, obtenerFichaClekeada) >= cantFichasABuscar) {
+                if(tablero.buscarFichasIgualesHorizontal(obtenerFichaClekeada) >= cantFichasABuscar || 
+                    tablero.buscarFichasIgualesVertical(c, obtenerFichaClekeada) >= cantFichasABuscar) {
                     swal('Termino el juego, gano el jugador ', 'Jugador 1!!!', 'success');
                 }
+                
                 document.getElementById('jugador2').style.color = "blue";
                 document.getElementById('jugador1').style.color = "black";
             }
@@ -395,7 +397,8 @@ function onMouseUp(e) {
                     swal('Termino el juego, empataron!!', ' ', 'success');
                     //minutos = 0;
                 }
-                if(tablero.buscarFichasIgualesVertical(c, obtenerFichaClekeada) >= cantFichasABuscar) {
+                if(tablero.buscarFichasIgualesHorizontal(obtenerFichaClekeada) >= cantFichasABuscar || 
+                    tablero.buscarFichasIgualesVertical(c, obtenerFichaClekeada) >= cantFichasABuscar) {
                     swal('Termino el juego, gano el jugador ', 'Jugador 2!!!', 'success');
                 }
                 document.getElementById('jugador1').style.color = "blue";

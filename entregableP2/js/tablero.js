@@ -76,8 +76,6 @@ class Tablero{
         return -1;
     }
 
-    
-
     casilleroVacio(columna, ficha){
         for(let i = filas -1; i >= 0; i--){
             if(this.matrizJuego[columna][i] == 0){
@@ -95,12 +93,33 @@ class Tablero{
     //BUSCA LAS FICHAS IGUALES VERTICALMENTE DE LA FICHA INGRESADA
     buscarFichasIgualesVertical(columna, ficha){
         let contJug = 0;
-        //let contJug2 = 0;
+        
         for(let i = filas -1; i >= 0; i--){
             if(this.matrizJuego[columna][i] != 0){
                 if(this.matrizJuego[columna][i] == ficha.getNumeroJugador())
                     contJug ++;
             }
+        }
+        return contJug;
+    }
+
+    //BUSCA LAS FICHAS IGUALES HORIZONTALMENTE DE LA FICHA INGRESADA
+    buscarFichasIgualesHorizontal(ficha) {
+        let contJug = 0;
+
+        for(let i = 0; i < this.filas; i ++) {
+            for(let j = 0; j < this.columnas; j ++) {
+                if(this.matrizJuego[j][i] != 0) {
+                    if(this.matrizJuego[j][i] == ficha.getNumeroJugador()) {
+                        contJug ++;
+                        console.log(contJug);
+                    }
+                }
+            }
+            if(contJug >= cantFichasABuscar) {
+                return contJug;
+            }
+            contJug = 0;
         }
         return contJug;
     }
