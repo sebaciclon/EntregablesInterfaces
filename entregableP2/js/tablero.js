@@ -73,7 +73,7 @@ class Tablero{
 
         if(y > 0 && y < MARGIN_TOP_TABLERO) {
             for(let i=0; i<this.columnas; i++){
-                if(x >= this.zonaSueltaDeFichas[i][0] && x <= this.zonaSueltaDeFichas[i][1])
+                if(x >= this.zonaSueltaDeFichas[i][0] + 15 && x <= this.zonaSueltaDeFichas[i][1] - 15)
                     return i;
             }
         } else {

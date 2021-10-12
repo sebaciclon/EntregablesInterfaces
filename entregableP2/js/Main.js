@@ -457,34 +457,38 @@ function terminarJuego(){
 
 function iniciarJuego(){
     if(cont == 2){
-        juegoHabilitado = true;
-        let hoy = new Date();
-        let minutos = tiempoDeJuego * 60000;
-        let suma = hoy.getTime() + minutos;
-        let fechaLimite = new Date(suma);
-        setTimeout(terminarJuego, minutos);
-        countdown(fechaLimite, 'clock', '¡Terminó la partida!');
-        /*btn.style.display = 'none';
-        btn1.style.display = 'none';
-        btn2.style.display = 'none';
-        btn3.style.display = 'none';
-        btn4.style.display = 'none';
-        btn5.style.display = 'none';
-        btn6.style.display = 'none';
-        btn7.style.display = 'none';*/
-        btn.disabled = true;
-        btn1.disabled = true;
-        btn2.disabled = true;
-        btn3.disabled = true;
-        btn4.disabled = true;
-        btn5.disabled = true;
-        btn6.disabled = true;
-        btn7.disabled = true;
-        btn8.style.display = 'inline'; 
-        //tiempoRestante.style.display = 'flex';
-        clock.style.display = 'inline';
-        tituloTiempo.style.display = 'none';
-        rango.style.display = 'none';
+        if(tiempoDeJuego > 0){
+            juegoHabilitado = true;
+            let hoy = new Date();
+            let minutos = tiempoDeJuego * 60000;
+            let suma = hoy.getTime() + minutos;
+            let fechaLimite = new Date(suma);
+            setTimeout(terminarJuego, minutos);
+            countdown(fechaLimite, 'clock', '¡FIN...!');
+            /*btn.style.display = 'none';
+            btn1.style.display = 'none';
+            btn2.style.display = 'none';
+            btn3.style.display = 'none';
+            btn4.style.display = 'none';
+            btn5.style.display = 'none';
+            btn6.style.display = 'none';
+            btn7.style.display = 'none';*/
+            btn.disabled = true;
+            btn1.disabled = true;
+            btn2.disabled = true;
+            btn3.disabled = true;
+            btn4.disabled = true;
+            btn5.disabled = true;
+            btn6.disabled = true;
+            btn7.disabled = true;
+            btn8.style.display = 'inline'; 
+            //tiempoRestante.style.display = 'flex';
+            clock.style.display = 'inline';
+            tituloTiempo.style.display = 'none';
+            rango.style.display = 'none';
+        }
+        else
+        swal("TIEMPO DE JUEGO", "Se debe seleccionar un tiempo de juego!!");
     }
     else
         if(cont == 0)

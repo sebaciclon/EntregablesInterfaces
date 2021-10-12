@@ -21,7 +21,7 @@ const getRemainingTime = deadline => {
     const el = document.getElementById(elem);
     const timerUpdate = setInterval( () => {
       let t = getRemainingTime(deadline);
-      el.innerHTML = `${t.remainMinutes}m:${t.remainSeconds}s`;
+      el.innerHTML = `${t.remainMinutes}:${t.remainSeconds}`;
   
       if(t.remainTime <= 1) {
         clearInterval(timerUpdate);
