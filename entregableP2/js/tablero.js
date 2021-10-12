@@ -93,17 +93,21 @@ class Tablero{
     //BUSCA LAS FICHAS IGUALES VERTICALMENTE DE LA FICHA INGRESADA
     buscarFichasIgualesVertical(columna, ficha){
         let contJug = 0;
-        
+        //let contJug2 = 0;
         for(let i = filas -1; i >= 0; i--){
             if(this.matrizJuego[columna][i] != 0){
-                if(this.matrizJuego[columna][i] == ficha.getNumeroJugador())
+                if(this.matrizJuego[columna][i] == ficha.getNumeroJugador()) {
                     contJug ++;
+                } else {
+                    contJug = 0;
+                }
+
             }
         }
         return contJug;
     }
 
-    //BUSCA LAS FICHAS IGUALES HORIZONTALMENTE DE LA FICHA INGRESADA
+    //BUSCA LAS FICHAS IGUALES HORIZONTALMENTE
     buscarFichasIgualesHorizontal(ficha) {
         let contJug = 0;
 
@@ -112,15 +116,101 @@ class Tablero{
                 if(this.matrizJuego[j][i] != 0) {
                     if(this.matrizJuego[j][i] == ficha.getNumeroJugador()) {
                         contJug ++;
-                        console.log(contJug);
+                        //if(contJug >= cantFichasABuscar)
+                        //    return contJug;
+                        //console.log(contJug);
+                    } else {
+                        if(contJug >= cantFichasABuscar) {
+                            return contJug;
+                        }
+                        contJug = 0;
                     }
                 }
-            }
-            if(contJug >= cantFichasABuscar) {
-                return contJug;
+                contJug = 0;
             }
             contJug = 0;
         }
         return contJug;
     }
+
+    //BUSCA LAS FICHAS IGUALES EN DIAGONAL DERECHA
+    buscarFichasIgualesDiagDer(ficha) {
+        let contJug = 0;
+        let auxi = 0;
+        let auxj;
+        let i = 0;
+        let j = 0;
+
+        while(i < this.filas) {
+            while(j < this.columnas) {
+                auxi = i;
+                auxj = j;
+                while(auxi < this.filas && auxj < this.columnas) {
+                    if(this.matrizJuego[auxj][auxi] != 0) {
+                        if(this.matrizJuego[auxj][auxi] == ficha.getNumeroJugador()) {
+                            contJug ++;
+                            if(contJug >= cantFichasABuscar) {
+                                return contJug;
+                            }
+                        } else {
+                            contJug = 0;
+                        }
+                    }
+                    //contJug = 0;
+                    auxj ++;
+                    auxi ++;
+                }
+                j ++;
+                contJug = 0;
+            }
+            if(contJug >= cantFichasABuscar) {
+                return contJug;
+            }
+            contJug = 0;
+            i++;
+            j = 0;
+        }
+        return contJug;    
+    }
+
+    //BUSCA LAS FICHAS IGUALES EN DIAGONAL IZQUIERDA
+    buscarFichasIgualesDiagIzq(ficha) {
+        let contJug = 0;
+        let auxi;
+        let auxj;
+        let i = 0;
+        let j = this.columnas - 1;
+
+        while(i < this.filas) {
+            while(j >= 0) {
+                auxi = i;
+                auxj = j;
+                while(auxi < this.filas && auxj >= 0) {
+                    if(this.matrizJuego[auxj][auxi] != 0) {
+                        if(this.matrizJuego[auxj][auxi] == ficha.getNumeroJugador()) {
+                            contJug ++;
+                            if(contJug >= cantFichasABuscar) {
+                                return contJug;
+                            }
+                        } else {
+                            contJug = 0;
+                        }
+                    }
+                    //contJug = 0;
+                    auxj --;
+                    auxi ++;
+                }
+                j --;
+                contJug = 0;
+            }
+            if(contJug >= cantFichasABuscar) {
+                return contJug;
+            }
+            contJug = 0;
+            i ++;
+            j = this.columnas - 1;;
+        }
+        return contJug;    
+    }
+
 }
