@@ -25,6 +25,7 @@ let mouse = false;
 let filas = 6;
 let columnas = 7;
 let cantFichas = filas * columnas;
+let cantFichasPorJugador = cantFichas / 2;
 
 //IMAGEN QUE VA A LLEVAR EL TABLERO
 let casillero = document.getElementById("casillero");
@@ -38,7 +39,7 @@ let posOriginalY;
 
 //NOMBRE DE LOS JUGADORES
 let jugador1 = "Jugador1";
-let jugador2 = "Jugador2"
+let jugador2 = "Jugador2";
 
 //HABILITA EL JUEGO
 let juegoHabilitado = false;
@@ -61,14 +62,14 @@ btn5.addEventListener('click', seisEnLinea);
 let btn6 = document.getElementById("7");
 btn6.addEventListener('click', sieteEnLinea);
 
+//BOTON PARA INCIAR EL JUEGO
+let btn7 = document.getElementById("iniciar");
+btn7.addEventListener('click', iniciarJuego);
+
 //FUNCIONES DEL MOUSE
 canvas.addEventListener('mousedown', onMouseDown, false);
 canvas.addEventListener('mouseup', onMouseUp, false);
 canvas.addEventListener('mousemove', onMouseMove, false);
-
-//BOTON PARA INCIAR EL JUEGO
-let btn7 = document.getElementById("iniciar");
-btn7.addEventListener('click', iniciarJuego);
 
 //SE UTILIZA PARA INICIALIZAR EL ARREGLO DE ZONA DE JUEGO Y LA MATRIZ DE TABLERO UNA SOLA VEZ
 let inicializado = false;
@@ -79,13 +80,6 @@ const MARGIN_TOP_TABLERO = 100;
 let inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
 let tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
 tablero.drawTablero();
-
-
-/*let tablero = new Tablero(ctx, width, height, filas, columnas, casillero);
-const TAMANIO_CASILLERO = 90;
-const MARGIN_TOP_TABLERO = 150;
-tablero.drawTablero();*/
-
 
 //************************************************************************************************** */
 
@@ -141,6 +135,7 @@ function cincoEnLinea() {
     btn5.style.display = 'none';
     btn6.style.display = 'none';
     cantFichas = filas * columnas;
+    cantFichasPorJugador = cantFichas / 2;
 }
 
 //METODO DEL BOTON PARA JUGAR 6 EN LINEA
@@ -155,6 +150,7 @@ function seisEnLinea() {
     btn5.style.display = 'none';
     btn6.style.display = 'none';
     cantFichas = filas * columnas;
+    cantFichasPorJugador = cantFichas / 2;
 }
 
 //METODO DEL BOTON PARA JUGAR 7 EN LINEA
@@ -169,11 +165,13 @@ function sieteEnLinea() {
     btn5.style.display = 'none';
     btn6.style.display = 'none';
     cantFichas = filas * columnas;
+    cantFichasPorJugador = cantFichas / 2;
 }
 
 
 //************************************************************************************************** */
 
+//METODO DEL BOTON DE ELECCION DE LAS FICHAS NEGRAS
 function fichaNegra() {
     if(cont == 2) {
         swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
@@ -202,7 +200,7 @@ function fichaNegra() {
     }
 }
 
-//METODO DEL BOTON DE ELECCION DE LAS FICHAS ROJAS
+//METODO DEL BOTON DE ELECCION DE LAS FICHAS NARANJAS
 function fichaNaranja() {
     if(cont == 2) {
         swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
@@ -260,7 +258,7 @@ function fichaAzul() {
     }
 }
 
-//METODO DEL BOTON DE ELECCION DE LAS FICHAS ROSAS
+//METODO DEL BOTON DE ELECCION DE LAS FICHAS ROJAS
 function fichaRoja() {
     if(cont == 2) {
         swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
@@ -306,7 +304,7 @@ function findClickedFigura(x, y) {
 //METODO QUE CAMBIA LA DISPONIBILIDAD DE UNA FICHA PARA JUGARLA
 function hacerDisponible(jugador) {
     for(let i = 0; i < fichas.length; i ++) {
-        if(fichas[i].getNombreJugador() == jugador) {
+        if(fichas[i].getNombreJugador() == jugador && fichas[i].getFichaJugada() === false) {
             fichas[i].setDisponible(true);
         } else {
             fichas[i].setDisponible(false);
@@ -364,6 +362,7 @@ function onMouseUp(e) {
                 let x = casillero.getXInicial() + TAMANIO_CASILLERO / 2;
                 let y = casillero.getYInicial() + TAMANIO_CASILLERO / 2;
                 obtenerFichaClekeada.setPosicion(x, y);
+                obtenerFichaClekeada.setFichaJugada(true);
                 juega = false;
                 drawFichas();
                 document.getElementById('jugador2').style.color = "blue";
@@ -381,8 +380,14 @@ function onMouseUp(e) {
                 let x = casillero.getXInicial() + TAMANIO_CASILLERO / 2;
                 let y = casillero.getYInicial() + TAMANIO_CASILLERO / 2;
                 obtenerFichaClekeada.setPosicion(x, y);
+                obtenerFichaClekeada.setFichaJugada(true);
                 juega = true;
                 drawFichas();
+                cantFichasPorJugador --;
+                if(cantFichasPorJugador == 0) {
+                    swal('Termino el juego, empataron!!', ' ', 'success');
+                    //minutos = 0;
+                }
                 document.getElementById('jugador1').style.color = "blue";
                 document.getElementById('jugador2').style.color = "black";
             }
@@ -404,7 +409,7 @@ function iniciarJuego(){
     if(cont == 2){
         juegoHabilitado = true;
         let hoy = new Date();
-        let minutos = 30000;
+        let minutos = 3000000;
         let suma = hoy.getTime() + minutos;
         let fechaLimite = new Date(suma);
         setTimeout(terminarJuego, minutos);

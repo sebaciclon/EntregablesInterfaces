@@ -14,6 +14,15 @@ class Ficha {
         this.nombreJugador = nombreJugador;
         this.numJugador = numJugador;
         this.disponible = true;
+        this.fichaJugada = false;
+    }
+
+    getFichaJugada() {
+        return this.fichaJugada;
+    }
+
+    setFichaJugada(fichaJugada) {
+        this.fichaJugada = fichaJugada;
     }
 
     //obtengo el nombre del jugador
