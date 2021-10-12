@@ -26,13 +26,21 @@ class Tablero{
         
         let inicioX = this.inicioTableroX;
         let xInicial = inicioX;
+        let yInicial = MARGIN_TOP_TABLERO - TAMANIO_CASILLERO;
+        // Dibuja la zona de lanzamiento
+        for (let i = 0; i < this.columnas; i++) {
+            this.ctx.beginPath();
+            this.ctx.drawImage(zonaLanzamiento, inicioX + TAMANIO_CASILLERO * i, yInicial);
+            this.ctx.fill();
+            this.ctx.closePath();
+        }
         for (let i = 0; i < this.columnas; i++) {
             let finX = TAMANIO_CASILLERO + xInicial;
             if(!inicializado){ // Para inicializar el arreglo una sola vez
                 let rango = [xInicial, finX];
                 this.zonaSueltaDeFichas[i] = rango;
             }
-            let yInicial = MARGIN_TOP_TABLERO;
+            yInicial = MARGIN_TOP_TABLERO;
             let arreFilasJuego = [];
             let arreFilasCoord = [];
             for (let j = 0; j <this.filas; j++) {

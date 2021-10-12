@@ -34,6 +34,9 @@ let cantFichasABuscar = 4;
 //IMAGEN QUE VA A LLEVAR EL TABLERO
 let casillero = document.getElementById("casillero");
 
+//IMAGEN PARA LA ZONA DE LANZAMIENTO
+let zonaLanzamiento = document.getElementById("zonaLanzamiento");
+
 //SE PINTA EL JUGADOR 1 AZUL PARA INDICAR QUE ES SU TURNO DE JUEGO
 document.getElementById('jugador1').style.color = "blue";
 
@@ -78,6 +81,10 @@ btn8.addEventListener('click', interrumpirJuego);
 let tiempoRestante = document.getElementById("tiempoRestante");
 let clock = document.getElementById("clock");
 
+//PARA PODER OCULTARLOS UNA VEZ QUE INICIA LA PARTIDA
+let tituloTiempo = document.getElementById("tituloTiempo");
+let rango = document.getElementById("tiempoDeJuego");
+
 //FUNCIONES DEL MOUSE
 canvas.addEventListener('mousedown', onMouseDown, false);
 canvas.addEventListener('mouseup', onMouseUp, false);
@@ -88,7 +95,7 @@ let inicializado = false;
 
 //EMPEZAMOS EL JUEGO CON EL TABLERO 4 EN LINEA
 const TAMANIO_CASILLERO = 90;
-const MARGIN_TOP_TABLERO = 100;
+const MARGIN_TOP_TABLERO = 90;
 let inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
 let tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
 tablero.drawTablero();
@@ -384,10 +391,12 @@ function onMouseUp(e) {
                     tablero.buscarFichasIgualesVertical(c, obtenerFichaClekeada) >= cantFichasABuscar ||
                     tablero.buscarFichasIgualesDiagDer(obtenerFichaClekeada) >= cantFichasABuscar ||
                     tablero.buscarFichasIgualesDiagIzq(obtenerFichaClekeada) >= cantFichasABuscar ) {
-                        swal('Termino el juego, gano el jugador ', 'Jugador 1!!!', 'success');
-
+                    swal('Termino el juego, gano el jugador ', 'Jugador 1!!!', 'success');
+                    juegoHabilitado = false;
                 }
-                //ACA VA EL RESETEO DEL JUEGO
+                if(!juegoHabilitado){
+                    setTimeout(refrescar, 5000);
+                }
                 document.getElementById('jugador2').style.color = "blue";
                 document.getElementById('jugador1').style.color = "black";
             }
@@ -409,16 +418,21 @@ function onMouseUp(e) {
                 cantFichasPorJugador --;
                 if(cantFichasPorJugador == 0) {
                     swal('Termino el juego, empataron!!', ' ', 'success');
-                    //minutos = 0;
-                }
+                    juegoHabilitado = false;
+                    if(!juegoHabilitado){
+                        setTimeout(refrescar, 5000);
+                    }
+                    }
                 if(tablero.buscarFichasIgualesHorizontal(obtenerFichaClekeada) >= cantFichasABuscar || 
                     tablero.buscarFichasIgualesVertical(c, obtenerFichaClekeada) >= cantFichasABuscar ||
                     tablero.buscarFichasIgualesDiagDer(obtenerFichaClekeada) >= cantFichasABuscar ||
                     tablero.buscarFichasIgualesDiagIzq(obtenerFichaClekeada) >= cantFichasABuscar ) {
-                        swal('Termino el juego, gano el jugador ', 'Jugador 2!!!', 'success');
-
+                    swal('Termino el juego, gano el jugador ', 'Jugador 2!!!', 'success');
+                    juegoHabilitado = false;
                 }
-                //ACA VA EL RESETEO DEL JUEGO
+                if(!juegoHabilitado){
+                    setTimeout(refrescar, 5000);
+                }
                 document.getElementById('jugador1').style.color = "blue";
                 document.getElementById('jugador2').style.color = "black";
             }
@@ -467,6 +481,8 @@ function iniciarJuego(){
         btn8.style.display = 'inline'; 
         //tiempoRestante.style.display = 'flex';
         clock.style.display = 'inline';
+        tituloTiempo.style.display = 'none';
+        rango.style.display = 'none';
     }
     else
         if(cont == 0)

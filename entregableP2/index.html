@@ -36,8 +36,16 @@
                 <h5 id="jugador2" class="btn btn-warning margen"><b>JUGADOR 2</b></h5>
 
                 <h5><b>JUEGO</b></h5>
-                <h5>Tiempo de juego</h5>
-                <input type="range" id="tiempoDeJuego" oninput="inicializarTiempoDeJuego(this.value);" min="1" max="5" value="1" class="btn btn-warning margen">
+                <h5 id="tituloTiempo">Tiempo de juego</h5>
+                <input type="range" id="tiempoDeJuego" oninput="inicializarTiempoDeJuego(this.value);" min="0" max="5" value="0" list="valores" class="btn btn-warning margen">
+                    <datalist id="valores">
+                        <option value="0" label="0">
+                        <option value="1" label="1">
+                        <option value="2" label="2">
+                        <option value="3" label="3">
+                        <option value="4" label="4">
+                        <option value="5" label="5">
+                    </datalist>
                 <button id="iniciar" class="btn btn-warning margen"><b>INICIAR PARTIDA</b></button>
                 <button id="interrumpir" class="btn btn-warning margen"><b>INTERRUMPIR PARTIDA</b></button>
 
@@ -48,6 +56,7 @@
             <div class="divCanvas">
                 <canvas id="canvas" width="1300" height="900" style="border: #000 solid 5px"></canvas>
                 <img class="ocultar" src="images/casillero.png" alt="casillero" id="casillero" >
+                <img class="ocultar" src="images/zonaLanzamiento.png" alt="casillero" id="zonaLanzamiento" >
                 <img class="ocultar" src="images/fichaNegra.png" alt="negra" id="negra" >
 			    <img class="ocultar" src="images/fichaNaranja.png" alt="naranja" id="naranja" >
                 <img class="ocultar" src="images/fichaAzul.png" alt="azul" id="azul" >
