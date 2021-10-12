@@ -13,27 +13,36 @@
     <div class="contenedor">
         <div class="subcontenedor">
             <div class="herramientas">
-                <h5><b>ELEGIR MODO DE JUEGO</b></h5>
+
+                <h3 class="cuatroEnLinea"><b>4 en linea!!</b></h3>
+
+                <h5><b>MODALIDAD</b></h5>
                 <button id="5" class="btn btn-warning margen"><b>5 EN LINEA</b></button>
                 <button id="6" class="btn btn-warning margen"><b>6 EN LINEA</b></button>
                 <button id="7" class="btn btn-warning margen"><b>7 EN LINEA</b></button> 
 
-                <h5><b>ELEGIR FICHAS</b></h5>
-                <button id="fichaNegra" class="btn btn-warning margen"><b>FICHA NEGRA</b></button>
+                <h5><b>FICHAS</b></h5>
+                <button id="fichaNegra" class="btnRedondeado"><img class="btnRedondo" src="images/fichaNegra.png" alt=""></button>
+                <button id="fichaNaranja" class="btnRedondeado"><img class="btnRedondo" src="images/fichaNaranja.png" alt=""></button>
+                <button id="fichaAzul" class="btnRedondeado"><img class="btnRedondo" src="images/fichaAzul.png" alt=""></button>
+                <button id="fichaRoja" class="btnRedondeado"><img class="btnRedondo" src="images/fichaRoja.png" alt=""></button>
+                <!--<button id="fichaNegra" class="btn btn-warning margen"><b>FICHA NEGRA</b></button>
                 <button id="fichaNaranja" class="btn btn-warning margen"><b>FICHA NARANJA</b></button>
                 <button id="fichaAzul" class="btn btn-warning margen"><b>FICHA AZUL</b></button>
-                <button id="fichaRoja" class="btn btn-warning margen"><b>FICHA ROJA</b></button>
+                <button id="fichaRoja" class="btn btn-warning margen"><b>FICHA ROJA</b></button>-->
 
                 <h5><b>TURNO JUGADOR</b></h5>
                 <h5 id="jugador1" class="btn btn-warning margen"><b>JUGADOR 1</b></h5>
-                <h3 id="ganador" class="btn btn-warning margen"><b>GANADOR</b></h3>
                 <h5 id="jugador2" class="btn btn-warning margen"><b>JUGADOR 2</b></h5>
 
-                <h5><b>INICIAR JUEGO</b></h5>
+                <h5><b>JUEGO</b></h5>
+                <h5>Tiempo de juego</h5>
+                <input type="range" id="tiempoDeJuego" oninput="inicializarTiempoDeJuego(this.value);" min="1" max="5" value="1" class="btn btn-warning margen">
                 <button id="iniciar" class="btn btn-warning margen"><b>INICIAR PARTIDA</b></button>
+                <button id="interrumpir" class="btn btn-warning margen"><b>INTERRUMPIR PARTIDA</b></button>
 
-                <h5><b>TIEMPO RESTANTE...</b></h5>
-                <div id="clock" class="btn btn-warning margen"></div>
+                <!--<h5 id="tiempoRestante"><b>TIEMPO RESTANTE...</b></h5>-->
+                <div id="clock" class="btn-warning margen reloj"></div>
                 
             </div>
             <div class="divCanvas">
@@ -43,7 +52,7 @@
 			    <img class="ocultar" src="images/fichaNaranja.png" alt="naranja" id="naranja" >
                 <img class="ocultar" src="images/fichaAzul.png" alt="azul" id="azul" >
                 <img class="ocultar" src="images/fichaRoja.png" alt="roja" id="roja" >
-                <img class="ocultar" src="images/casilleroNaranja.png" alt="naranja" id="casillero_naranja" >
+                
             </div>
             <div class="filtros">
                 

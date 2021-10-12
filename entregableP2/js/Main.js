@@ -17,6 +17,9 @@ let juega = true;
 //VARIABLE PARA CONTROLAR QUE ELIJAN FICHAS LOS DOS JUGADORES SOLO UNA VEZ
 let cont = 0;
 
+//VARIABLE PARA CONTROLAR EL TIEMPO DE JUEGO
+let tiempoDeJuego = 0;
+
 //VARIABLES PARA USAR CON EL MOUSE
 let obtenerFichaClekeada = null;
 let mouse = false;
@@ -66,6 +69,14 @@ btn6.addEventListener('click', sieteEnLinea);
 //BOTON PARA INCIAR EL JUEGO
 let btn7 = document.getElementById("iniciar");
 btn7.addEventListener('click', iniciarJuego);
+
+//BOTON PARA INTERRUMPIR EL JUEGO
+let btn8 = document.getElementById("interrumpir");
+btn8.addEventListener('click', interrumpirJuego);
+
+//PARA PODER OCULTARLOS HASTA INICIAR LA PARTIDA
+let tiempoRestante = document.getElementById("tiempoRestante");
+let clock = document.getElementById("clock");
 
 //FUNCIONES DEL MOUSE
 canvas.addEventListener('mousedown', onMouseDown, false);
@@ -408,9 +419,20 @@ function onMouseUp(e) {
     }  
 }
 
+function inicializarTiempoDeJuego(tiempo){
+    tiempoDeJuego = tiempo;
+}
+
 function refrescar(){
     location.reload();
 }
+
+function interrumpirJuego(){
+    swal("JUEGO INTERRUMPIDO", "Inténtalo nuevamente!!");
+    juegoHabilitado = false;
+    setTimeout(refrescar, 5000);
+}
+
 
 function terminarJuego(){
     juegoHabilitado = false;
@@ -422,7 +444,7 @@ function iniciarJuego(){
     if(cont == 2){
         juegoHabilitado = true;
         let hoy = new Date();
-        let minutos = 3000000;
+        let minutos = tiempoDeJuego * 60000;
         let suma = hoy.getTime() + minutos;
         let fechaLimite = new Date(suma);
         setTimeout(terminarJuego, minutos);
@@ -434,10 +456,26 @@ function iniciarJuego(){
         btn4.style.display = 'none';
         btn5.style.display = 'none';
         btn6.style.display = 'none';
+        btn7.style.display = 'none';
+        btn8.style.display = 'inline'; 
+        //tiempoRestante.style.display = 'flex';
+        clock.style.display = 'inline';
     }
     else
-    swal("ESCOGER FICHA PARA JUGAR", "Ambos jugadores deben elegir su ficha!!");
+        if(cont == 0)
+            swal("ESCOGER FICHA PARA JUGAR", "Ambos jugadores deben elegir su ficha!!");
+        else
+            if(cont == 1)
+                swal("ESCOGER FICHA PARA JUGAR", "El jugador 2 falta elegir su ficha!!");
 }
+
+function esconderInterrumpirJuego(){
+    btn8.style.display = 'none';
+    //tiempoRestante.style.display = 'none';
+    clock.style.display = 'none';
+}
+
+esconderInterrumpirJuego();
 
 
 /*function onMouseUp(e) {

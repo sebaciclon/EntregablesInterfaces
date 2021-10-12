@@ -93,3 +93,23 @@ h5{
     font-size: 4em;
 }
 
+.btnRedondo{
+    width: 60px;
+}
+
+.btnRedondeado{
+    width: 64px;
+    padding: 0;
+    margin: 10px;
+    border-radius: 50px;
+    background-color:white;
+}
+.cuatroEnLinea{
+    font-family: Brush Script MT;
+    font-size: 40px;
+}
+
+.reloj{
+    width: 550px;
+}
+
