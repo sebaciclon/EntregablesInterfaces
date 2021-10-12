@@ -91,4 +91,17 @@ class Tablero{
         drawFichas();
         return null;
     }
+
+    //BUSCA LAS FICHAS IGUALES VERTICALMENTE DE LA FICHA INGRESADA
+    buscarFichasIgualesVertical(columna, ficha){
+        let contJug = 0;
+        //let contJug2 = 0;
+        for(let i = filas -1; i >= 0; i--){
+            if(this.matrizJuego[columna][i] != 0){
+                if(this.matrizJuego[columna][i] == ficha.getNumeroJugador())
+                    contJug ++;
+            }
+        }
+        return contJug;
+    }
 }

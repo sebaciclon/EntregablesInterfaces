@@ -26,6 +26,7 @@ let filas = 6;
 let columnas = 7;
 let cantFichas = filas * columnas;
 let cantFichasPorJugador = cantFichas / 2;
+let cantFichasABuscar = 4;
 
 //IMAGEN QUE VA A LLEVAR EL TABLERO
 let casillero = document.getElementById("casillero");
@@ -136,6 +137,7 @@ function cincoEnLinea() {
     btn6.style.display = 'none';
     cantFichas = filas * columnas;
     cantFichasPorJugador = cantFichas / 2;
+    cantFichasABuscar = 5;
 }
 
 //METODO DEL BOTON PARA JUGAR 6 EN LINEA
@@ -151,6 +153,7 @@ function seisEnLinea() {
     btn6.style.display = 'none';
     cantFichas = filas * columnas;
     cantFichasPorJugador = cantFichas / 2;
+    cantFichasABuscar = 6;
 }
 
 //METODO DEL BOTON PARA JUGAR 7 EN LINEA
@@ -166,6 +169,7 @@ function sieteEnLinea() {
     btn6.style.display = 'none';
     cantFichas = filas * columnas;
     cantFichasPorJugador = cantFichas / 2;
+    cantFichasABuscar = 7;
 }
 
 
@@ -365,6 +369,9 @@ function onMouseUp(e) {
                 obtenerFichaClekeada.setFichaJugada(true);
                 juega = false;
                 drawFichas();
+                if(tablero.buscarFichasIgualesVertical(c, obtenerFichaClekeada) >= cantFichasABuscar) {
+                    swal('Termino el juego, gano el jugador ', 'Jugador 1!!!', 'success');
+                }
                 document.getElementById('jugador2').style.color = "blue";
                 document.getElementById('jugador1').style.color = "black";
             }
@@ -387,6 +394,9 @@ function onMouseUp(e) {
                 if(cantFichasPorJugador == 0) {
                     swal('Termino el juego, empataron!!', ' ', 'success');
                     //minutos = 0;
+                }
+                if(tablero.buscarFichasIgualesVertical(c, obtenerFichaClekeada) >= cantFichasABuscar) {
+                    swal('Termino el juego, gano el jugador ', 'Jugador 2!!!', 'success');
                 }
                 document.getElementById('jugador1').style.color = "blue";
                 document.getElementById('jugador2').style.color = "black";
