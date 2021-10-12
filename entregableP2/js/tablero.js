@@ -52,7 +52,7 @@ class Tablero{
                 this.matrizCoordenadas.push(arreFilasCoord);
             }
             inicioX = finX;
-            xInicial = inicioX + 1;
+            xInicial = inicioX;
         }
         inicializado = true; // Ya se inicalizaron los arreglos de tablero
         console.log(this.matrizJuego);
