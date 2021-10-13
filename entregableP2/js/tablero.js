@@ -119,7 +119,7 @@ class Tablero{
 
         for(let i = 0; i < this.filas; i ++) {
             for(let j = 0; j < this.columnas; j ++) {
-                if(this.matrizJuego[j][i] != 0) {
+                //if(this.matrizJuego[j][i] != 0) {
                     if(this.matrizJuego[j][i] == ficha.getNumeroJugador()) {
                         contJug ++;
                     } else {
@@ -128,7 +128,7 @@ class Tablero{
                         }
                         contJug = 0;
                     }
-                }
+                //}
                 contJug = 0;
             }
             contJug = 0;
