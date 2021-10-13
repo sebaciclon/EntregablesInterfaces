@@ -149,7 +149,7 @@ class Tablero{
                 auxi = i;
                 auxj = j;
                 while(auxi < this.filas && auxj < this.columnas) {
-                    if(this.matrizJuego[auxj][auxi] != 0) {
+                    //if(this.matrizJuego[auxj][auxi] != 0) {
                         if(this.matrizJuego[auxj][auxi] == ficha.getNumeroJugador()) {
                             contJug ++;
                             if(contJug >= cantFichasABuscar) {
@@ -158,7 +158,7 @@ class Tablero{
                         } else {
                             contJug = 0;
                         }
-                    }
+                    //}
                     //contJug = 0;
                     auxj ++;
                     auxi ++;
@@ -189,7 +189,7 @@ class Tablero{
                 auxi = i;
                 auxj = j;
                 while(auxi < this.filas && auxj >= 0) {
-                    if(this.matrizJuego[auxj][auxi] != 0) {
+                    //if(this.matrizJuego[auxj][auxi] != 0) {
                         if(this.matrizJuego[auxj][auxi] == ficha.getNumeroJugador()) {
                             contJug ++;
                             if(contJug >= cantFichasABuscar) {
@@ -198,7 +198,7 @@ class Tablero{
                         } else {
                             contJug = 0;
                         }
-                    }
+                    //}
                     //contJug = 0;
                     auxj --;
                     auxi ++;
