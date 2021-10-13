@@ -122,6 +122,9 @@ class Tablero{
                 //if(this.matrizJuego[j][i] != 0) {
                     if(this.matrizJuego[j][i] == ficha.getNumeroJugador()) {
                         contJug ++;
+                        if(contJug >= cantFichasABuscar) {
+                            return contJug;
+                        }
                     } else {
                         if(contJug >= cantFichasABuscar) {
                             return contJug;
