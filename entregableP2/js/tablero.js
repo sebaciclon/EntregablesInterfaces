@@ -129,7 +129,7 @@ class Tablero{
                         contJug = 0;
                     }
                 //}
-                contJug = 0;
+                //contJug = 0;
             }
             contJug = 0;
         }
