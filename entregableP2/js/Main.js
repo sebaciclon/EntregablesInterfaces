@@ -102,20 +102,6 @@ tablero.drawTablero();
 
 //************************************************************************************************** */
 
-//REINICIAR TABLERO --> NO FUNCIONA
-/*function reiniciar() {
-    //dibujarTablero();
-    limpiarCanvas();
-    btn.style.display = 'inline';
-    btn1.style.display = 'inline';
-    btn2.style.display = 'inline';
-    btn3.style.display = 'inline';
-    cont = 0;
-    
-}*/
-
-//****************************************************************************************************** */
-
 //FICHAS
 
 //METODO PARA AGREGAR UNA FICHA AL ARREGLO DE FICHAS
@@ -150,9 +136,12 @@ function cincoEnLinea() {
     inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
     tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
     tablero.drawTablero();
-    btn4.style.display = 'none';
-    btn5.style.display = 'none';
-    btn6.style.display = 'none';
+    //btn4.style.display = 'none';
+    //btn5.style.display = 'none';
+    //btn6.style.display = 'none';
+    btn4.disabled = true;
+    btn5.disabled = true;
+    btn6.disabled = true;
     cantFichas = filas * columnas;
     cantFichasPorJugador = cantFichas / 2;
     cantFichasABuscar = 5;
@@ -166,9 +155,12 @@ function seisEnLinea() {
     inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
     tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
     tablero.drawTablero();
-    btn4.style.display = 'none';
-    btn5.style.display = 'none';
-    btn6.style.display = 'none';
+    //btn4.style.display = 'none';
+    //btn5.style.display = 'none';
+    //btn6.style.display = 'none';
+    btn4.disabled = true;
+    btn5.disabled = true;
+    btn6.disabled = true;
     cantFichas = filas * columnas;
     cantFichasPorJugador = cantFichas / 2;
     cantFichasABuscar = 6;
@@ -182,9 +174,12 @@ function sieteEnLinea() {
     inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
     tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
     tablero.drawTablero();
-    btn4.style.display = 'none';
-    btn5.style.display = 'none';
-    btn6.style.display = 'none';
+    //btn4.style.display = 'none';
+    //btn5.style.display = 'none';
+    //btn6.style.display = 'none';
+    btn4.disabled = true;
+    btn5.disabled = true;
+    btn6.disabled = true;
     cantFichas = filas * columnas;
     cantFichasPorJugador = cantFichas / 2;
     cantFichasABuscar = 7;
@@ -199,7 +194,8 @@ function fichaNegra() {
         swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
     }
     else {
-        btn.style.display = 'none';
+        //btn.style.display = 'none';
+        btn.disabled = true;
         let negra = document.getElementById("negra");
         
         if(cont == 0) {
@@ -228,7 +224,8 @@ function fichaNaranja() {
         swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
     }
     else {
-        btn1.style.display = 'none';
+        //btn1.style.display = 'none';
+        btn1.disabled = true;
         let naranja = document.getElementById("naranja");
         
         if(cont == 0) {
@@ -257,7 +254,8 @@ function fichaAzul() {
         swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
     }
     else {
-        btn2.style.display = 'none';
+        //btn2.style.display = 'none';
+        btn2.disabled = true;
         let azul = document.getElementById("azul");
         
         if(cont == 0) {
@@ -286,7 +284,8 @@ function fichaRoja() {
         swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
     }
     else {
-        btn3.style.display = 'none';
+        //btn3.style.display = 'none';
+        btn3.disabled = true;
         let roja = document.getElementById("roja");
         
         if(cont == 0) {
@@ -337,31 +336,26 @@ function hacerDisponible(jugador) {
 //METODO PARA SELECCIONAR UNA FICHA
 function onMouseDown(e) {
     if(juegoHabilitado){
-    if(cont == 2) {
-        
-        mouse = true;
-        //console.log(juega);
-        if(juega){
-            hacerDisponible(jugador1);
-        } else {
-            hacerDisponible(jugador2);
+        if(cont == 2) {
+            mouse = true;
+            
+            if(juega){
+                hacerDisponible(jugador1);
+            } else {
+                hacerDisponible(jugador2);
+            }
+            if(obtenerFichaClekeada != null) {
+                obtenerFichaClekeada = null;
+            }
+            let fichaClikeada = findClickedFigura(e.layerX, e.layerY);
+            if (fichaClikeada != null && fichaClikeada.getDisponible()) { 
+                posOriginalX = fichaClikeada.getPosicionX();  
+                posOriginalY = fichaClikeada.getPosicionY();
+                obtenerFichaClekeada = fichaClikeada;
+            }
+            drawFichas();
         }
-        if (obtenerFichaClekeada != null) {// se dejó de seleccionar una ficha
-            //obtenerFichaClekeada.setResaltado(false);
-            obtenerFichaClekeada = null;
-        }
-        let fichaClikeada = findClickedFigura(e.layerX, e.layerY);
-        if (fichaClikeada != null && fichaClikeada.getDisponible()) { 
-            posOriginalX = fichaClikeada.getPosicionX();  
-            posOriginalY = fichaClikeada.getPosicionY();
-            //fichaClikeada.setResaltado(true);
-            obtenerFichaClekeada = fichaClikeada;
-        }
-        drawFichas();
-        //console.log(tablero.getColunmaEnJuego(fichaClikeada));
-        
     }
-}
 }
 
 function onMouseMove(e) {
@@ -470,14 +464,22 @@ function iniciarJuego(){
         let fechaLimite = new Date(suma);
         setTimeout(terminarJuego, minutos);
         countdown(fechaLimite, 'clock', '¡Terminó la partida!');
-        btn.style.display = 'none';
+        /*btn.style.display = 'none';
         btn1.style.display = 'none';
         btn2.style.display = 'none';
         btn3.style.display = 'none';
         btn4.style.display = 'none';
         btn5.style.display = 'none';
         btn6.style.display = 'none';
-        btn7.style.display = 'none';
+        btn7.style.display = 'none';*/
+        btn.disabled = true;
+        btn1.disabled = true;
+        btn2.disabled = true;
+        btn3.disabled = true;
+        btn4.disabled = true;
+        btn5.disabled = true;
+        btn6.disabled = true;
+        btn7.disabled = true;
         btn8.style.display = 'inline'; 
         //tiempoRestante.style.display = 'flex';
         clock.style.display = 'inline';
@@ -494,71 +496,15 @@ function iniciarJuego(){
 
 function esconderInterrumpirJuego(){
     btn8.style.display = 'none';
-    //tiempoRestante.style.display = 'none';
     clock.style.display = 'none';
 }
 
 esconderInterrumpirJuego();
 
 
-/*function onMouseUp(e) {
-    if(obtenerFichaClekeada != null) {
-        if(juega) {
-            mouse = false;
-            
-                let c = tablero.getColunmaEnJuego(obtenerFichaClekeada);
-                if(c == -1) {
-                    obtenerFichaClekeada.setPosicion(posOriginalX, posOriginalY);
-                    drawFichas();
-                    
-                } else {
-                    let casillero = tablero.casilleroVacio(c, obtenerFichaClekeada);
-                    let x = casillero.getXInicial() + TAMANIO_CASILLERO / 2;
-                    let y = casillero.getYInicial() + TAMANIO_CASILLERO / 2;
-                    obtenerFichaClekeada.setPosicion(x, y);
-                    juega = false;
-                    //obtenerFichaClekeada.setPosicion(600, height - 200);
-                    //drawFichas();
-                    //let roja = document.getElementById("casillero_naranja");
-                    ctx.beginPath();
-                    ctx.drawImage(obtenerFichaClekeada, x, y);
-                    ctx.fill();
-                    ctx.closePath();
-                    document.getElementById('jugador2').style.color = "blue";
-                    document.getElementById('jugador1').style.color = "black";
-                }
-            
-        }
-        else {
-            mouse = false;
-            
-            //if(obtenerFichaClekeada != null) {
-                let c = tablero.getColunmaEnJuego(obtenerFichaClekeada);
-                if(c == -1) {
-                    obtenerFichaClekeada.setPosicion(posOriginalX, posOriginalY);
-                    drawFichas();
-                    //obtenerFichaClekeada.setResaltado(false);
-                } else {
-                    let casillero = tablero.casilleroVacio(c, obtenerFichaClekeada);
-                    let x = casillero.getXInicial() + TAMANIO_CASILLERO / 2;
-                    let y = casillero.getYInicial() + TAMANIO_CASILLERO / 2;
-                    obtenerFichaClekeada.setPosicion(x, y);
-                    juega = true;
-                    //obtenerFichaClekeada.setPosicion(600, height - 200);
-                    //drawFichas();
-                    ctx.beginPath();
-                    ctx.drawImage(obtenerFichaClekeada, x, y);
-                    ctx.fill();
-                    ctx.closePath();
-                    document.getElementById('jugador1').style.color = "blue";
-                    document.getElementById('jugador2').style.color = "black";
 
-                }
-            //}
-        }
-            //console.log(tablero.getColunmaEnJuego(obtenerFichaClekeada));
-    }  
-}*/
+        
+
 
 
 
