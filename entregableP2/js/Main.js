@@ -136,9 +136,6 @@ function cincoEnLinea() {
     inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
     tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
     tablero.drawTablero();
-    //btn4.style.display = 'none';
-    //btn5.style.display = 'none';
-    //btn6.style.display = 'none';
     btn4.disabled = true;
     btn5.disabled = true;
     btn6.disabled = true;
@@ -155,9 +152,6 @@ function seisEnLinea() {
     inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
     tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
     tablero.drawTablero();
-    //btn4.style.display = 'none';
-    //btn5.style.display = 'none';
-    //btn6.style.display = 'none';
     btn4.disabled = true;
     btn5.disabled = true;
     btn6.disabled = true;
@@ -174,9 +168,6 @@ function sieteEnLinea() {
     inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
     tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
     tablero.drawTablero();
-    //btn4.style.display = 'none';
-    //btn5.style.display = 'none';
-    //btn6.style.display = 'none';
     btn4.disabled = true;
     btn5.disabled = true;
     btn6.disabled = true;
@@ -188,14 +179,283 @@ function sieteEnLinea() {
 
 //************************************************************************************************** */
 
-//METODO DEL BOTON DE ELECCION DE LAS FICHAS NEGRAS
+function ubicarFichas(ficha) {
+    if(cont == 0) {
+        cont ++;
+        if(cantFichasABuscar == 4) {
+            let posX = inicioTabX / 2;
+            let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+            let distancia = 0;
+            for (let i = 0; i < cantFichas / 2; i++) {
+                agregarFicha(posX, posY + i + distancia, ficha, jugador1, 1);
+                distancia += 35;
+            }
+        } else {
+            if(cantFichasABuscar == 5) {
+                let posX = inicioTabX / 2;
+                let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                let distancia = 0;
+                for (let i = 0; i < cantFichas / 2; i++) {
+                    agregarFicha(posX, posY + i + distancia, ficha, jugador1, 1);
+                    distancia += 25;
+                }
+            } else {
+                if(cantFichasABuscar == 6) {
+                    let posX = inicioTabX / 4;
+                    let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                    let distancia = 0;
+
+                    for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                        agregarFicha(posX, posY + i + distancia, ficha, jugador1, 1);
+                        distancia += 30;
+                    }
+                    distancia = 0;
+                    posX = inicioTabX - inicioTabX / 4;
+                    for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                        agregarFicha(posX, posY + i + distancia, ficha, jugador1, 1);
+                        distancia += 30;
+                    }
+                } else {
+                    let posX = inicioTabX / 4;
+                    let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                    let distancia = 0;
+
+                    for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                        agregarFicha(posX, posY + i + distancia, ficha, jugador1, 1);
+                        distancia += 30;
+                    }
+                    distancia = 0;
+                    posX = inicioTabX - inicioTabX / 4;
+                    for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                        agregarFicha(posX, posY + i + distancia, ficha, jugador1, 1);
+                        distancia += 30;
+                    }
+                }
+            } 
+        }
+    }
+    else {
+        cont ++;
+        if(cantFichasABuscar == 4) {
+            let posX = (width - inicioTabX) + inicioTabX / 2;
+            let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+            let distancia = 0;
+            for (let i = 0; i < cantFichas / 2; i++) {
+                agregarFicha(posX, posY + i + distancia, ficha, jugador2, 2);
+                distancia += 35;
+            }
+        } else {
+            if(cantFichasABuscar == 5) {
+                let posX = (width - inicioTabX) + inicioTabX / 2;
+                let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                let distancia = 0;
+                for (let i = 0; i < cantFichas / 2; i++) {
+                    agregarFicha(posX, posY + i + distancia, ficha, jugador2, 2);
+                    distancia += 25;
+                }
+            } else {
+                if(cantFichasABuscar == 6) {
+                    let posX = (width - inicioTabX) + inicioTabX / 4;
+                    let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                    let distancia = 0;
+
+                    for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                        agregarFicha(posX, posY + i + distancia, ficha, jugador2, 2);
+                        distancia += 30;
+                    }
+                    distancia = 0;
+                    posX = (width - inicioTabX) + inicioTabX / 4 + inicioTabX / 2;
+                    for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                        agregarFicha(posX, posY + i + distancia, ficha, jugador2, 2);
+                        distancia += 30;
+                    }
+                } else {
+                    let posX = (width - inicioTabX) + inicioTabX / 4;
+                    let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                    let distancia = 0;
+
+                    for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                        agregarFicha(posX, posY + i + distancia, ficha, jugador2, 2);
+                        distancia += 30;
+                    }
+                    distancia = 0;
+                    posX = (width - inicioTabX) + inicioTabX / 4 + inicioTabX / 2; 
+                    for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                        agregarFicha(posX, posY + i + distancia, ficha, jugador2, 2);
+                        distancia += 30;
+                    }
+                }
+            } 
+        }
+    }
+}
+
 function fichaNegra() {
     if(cont == 2) {
         swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
     }
     else {
-        //btn.style.display = 'none';
-        btn.disabled = true;
+        btn.style.display = 'none';
+        let negra = document.getElementById("negra");
+        ubicarFichas(negra);
+        /*if(cont == 0) {
+            cont ++;
+            if(cantFichasABuscar == 4) {
+                let posX = inicioTabX / 2;
+                let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                let distancia = 0;
+                for (let i = 0; i < cantFichas / 2; i++) {
+                    agregarFicha(posX, posY + i + distancia, negra, jugador1, 1);
+                    distancia += 35;
+                }
+            } else {
+                if(cantFichasABuscar == 5) {
+                    let posX = inicioTabX / 2;
+                    let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                    let distancia = 0;
+                    for (let i = 0; i < cantFichas / 2; i++) {
+                        agregarFicha(posX, posY + i + distancia, negra, jugador1, 1);
+                        distancia += 25;
+                    }
+                } else {
+                    if(cantFichasABuscar == 6) {
+                        let posX = inicioTabX / 4;
+                        let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                        let distancia = 0;
+
+                        for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                            agregarFicha(posX, posY + i + distancia, negra, jugador1, 1);
+                            distancia += 30;
+                        }
+                        distancia = 0;
+                        posX = inicioTabX - inicioTabX / 4;
+                        for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                            agregarFicha(posX, posY + i + distancia, negra, jugador1, 1);
+                            distancia += 30;
+                        }
+                    } else {
+                        let posX = inicioTabX / 4;
+                        let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                        let distancia = 0;
+
+                        for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                            agregarFicha(posX, posY + i + distancia, negra, jugador1, 1);
+                            distancia += 30;
+                        }
+                        distancia = 0;
+                        posX = inicioTabX - inicioTabX / 4;
+                        for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                            agregarFicha(posX, posY + i + distancia, negra, jugador1, 1);
+                            distancia += 30;
+                        }
+                    }
+                } 
+            }
+        }
+        else {
+            cont ++;
+            if(cantFichasABuscar == 4) {
+                let posX = (width - inicioTabX) + inicioTabX / 2;
+                let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                let distancia = 0;
+                for (let i = 0; i < cantFichas / 2; i++) {
+                    agregarFicha(posX, posY + i + distancia, negra, jugador2, 2);
+                    distancia += 35;
+                }
+            } else {
+                if(cantFichasABuscar == 5) {
+                    let posX = (width - inicioTabX) + inicioTabX / 2;
+                    let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                    let distancia = 0;
+                    for (let i = 0; i < cantFichas / 2; i++) {
+                        agregarFicha(posX, posY + i + distancia, negra, jugador2, 2);
+                        distancia += 25;
+                    }
+                } else {
+                    if(cantFichasABuscar == 6) {
+                        let posX = (width - inicioTabX) + inicioTabX / 4;
+                        let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                        let distancia = 0;
+
+                        for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                            agregarFicha(posX, posY + i + distancia, negra, jugador2, 2);
+                            distancia += 30;
+                        }
+                        distancia = 0;
+                        posX = (width - inicioTabX) + inicioTabX / 4 + inicioTabX / 2;
+                        for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                            agregarFicha(posX, posY + i + distancia, negra, jugador2, 2);
+                            distancia += 30;
+                        }
+                    } else {
+                        let posX = (width - inicioTabX) + inicioTabX / 4;
+                        let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                        let distancia = 0;
+
+                        for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                            agregarFicha(posX, posY + i + distancia, negra, jugador2, 2);
+                            distancia += 30;
+                        }
+                        distancia = 0;
+                        posX = (width - inicioTabX) + inicioTabX / 4 + inicioTabX / 2; 
+                        for (let i = 0; i < cantFichasPorJugador / 2; i++) {
+                            agregarFicha(posX, posY + i + distancia, negra, jugador2, 2);
+                            distancia += 30;
+                        }
+                    }
+                } 
+            }
+        }*/
+        
+    }
+    drawFichas();
+}
+
+function fichaNaranja() {
+    if(cont == 2) {
+        swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
+    }
+    else {
+        btn1.style.display = 'none';
+        let naranja = document.getElementById("naranja");
+        ubicarFichas(naranja);
+    }
+    drawFichas();
+}
+
+function fichaAzul() {
+    if(cont == 2) {
+        swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
+    }
+    else {
+        btn2.style.display = 'none';
+        let azul = document.getElementById("azul");
+        ubicarFichas(azul);
+    }
+    drawFichas();
+}
+
+function fichaRoja() {
+    if(cont == 2) {
+        swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
+    }
+    else {
+        btn3.style.display = 'none';
+        let roja = document.getElementById("roja");
+        ubicarFichas(roja);
+    }
+    drawFichas();
+}
+
+
+//METODO DEL BOTON DE ELECCION DE LAS FICHAS NEGRAS
+/*function fichaNegra() {
+    if(cont == 2) {
+        swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
+    }
+    else {
+        btn.style.display = 'none';
+        //btn.disabled = true;
         let negra = document.getElementById("negra");
         
         if(cont == 0) {
@@ -224,8 +484,8 @@ function fichaNaranja() {
         swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
     }
     else {
-        //btn1.style.display = 'none';
-        btn1.disabled = true;
+        btn1.style.display = 'none';
+        //btn1.disabled = true;
         let naranja = document.getElementById("naranja");
         
         if(cont == 0) {
@@ -254,8 +514,8 @@ function fichaAzul() {
         swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
     }
     else {
-        //btn2.style.display = 'none';
-        btn2.disabled = true;
+        btn2.style.display = 'none';
+        //btn2.disabled = true;
         let azul = document.getElementById("azul");
         
         if(cont == 0) {
@@ -284,7 +544,7 @@ function fichaRoja() {
         swal('Ya eligieron fichas', 'Los dos jugadores', 'error');
     }
     else {
-        //btn3.style.display = 'none';
+        btn3.style.display = 'none';
         btn3.disabled = true;
         let roja = document.getElementById("roja");
         
@@ -306,7 +566,7 @@ function fichaRoja() {
         }
         drawFichas();
     }
-}
+}*/
 
 //*************************************************************************************************/
 
@@ -465,22 +725,14 @@ function iniciarJuego(){
             let fechaLimite = new Date(suma);
             setTimeout(terminarJuego, minutos);
             countdown(fechaLimite, 'clock', '¡FIN...!');
-            /*btn.style.display = 'none';
+            btn.style.display = 'none';
             btn1.style.display = 'none';
             btn2.style.display = 'none';
             btn3.style.display = 'none';
-            btn4.style.display = 'none';
-            btn5.style.display = 'none';
-            btn6.style.display = 'none';
-            btn7.style.display = 'none';*/
-            btn.disabled = true;
-            btn1.disabled = true;
-            btn2.disabled = true;
-            btn3.disabled = true;
             btn4.disabled = true;
             btn5.disabled = true;
             btn6.disabled = true;
-            btn7.disabled = true;
+            btn7.style.display = 'none';
             btn8.style.display = 'inline'; 
             //tiempoRestante.style.display = 'flex';
             clock.style.display = 'inline';
