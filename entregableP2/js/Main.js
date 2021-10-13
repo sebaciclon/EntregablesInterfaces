@@ -381,10 +381,13 @@ function onMouseUp(e) {
                 juega = false;
                 drawFichas();
                 if(tablero.buscarFichasIgualesHorizontal(obtenerFichaClekeada) >= cantFichasABuscar || 
-                    tablero.buscarFichasIgualesVertical(c, obtenerFichaClekeada) >= cantFichasABuscar) {
-                    swal('Termino el juego, gano el jugador ', 'Jugador 1!!!', 'success');
+                    tablero.buscarFichasIgualesVertical(c, obtenerFichaClekeada) >= cantFichasABuscar ||
+                    tablero.buscarFichasIgualesDiagDer(obtenerFichaClekeada) >= cantFichasABuscar ||
+                    tablero.buscarFichasIgualesDiagIzq(obtenerFichaClekeada) >= cantFichasABuscar ) {
+                        swal('Termino el juego, gano el jugador ', 'Jugador 1!!!', 'success');
+
                 }
-                
+                //ACA VA EL RESETEO DEL JUEGO
                 document.getElementById('jugador2').style.color = "blue";
                 document.getElementById('jugador1').style.color = "black";
             }
@@ -409,9 +412,13 @@ function onMouseUp(e) {
                     //minutos = 0;
                 }
                 if(tablero.buscarFichasIgualesHorizontal(obtenerFichaClekeada) >= cantFichasABuscar || 
-                    tablero.buscarFichasIgualesVertical(c, obtenerFichaClekeada) >= cantFichasABuscar) {
-                    swal('Termino el juego, gano el jugador ', 'Jugador 2!!!', 'success');
+                    tablero.buscarFichasIgualesVertical(c, obtenerFichaClekeada) >= cantFichasABuscar ||
+                    tablero.buscarFichasIgualesDiagDer(obtenerFichaClekeada) >= cantFichasABuscar ||
+                    tablero.buscarFichasIgualesDiagIzq(obtenerFichaClekeada) >= cantFichasABuscar ) {
+                        swal('Termino el juego, gano el jugador ', 'Jugador 1!!!', 'success');
+
                 }
+                //ACA VA EL RESETEO DEL JUEGO
                 document.getElementById('jugador1').style.color = "blue";
                 document.getElementById('jugador2').style.color = "black";
             }
