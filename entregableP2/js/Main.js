@@ -415,7 +415,7 @@ function onMouseUp(e) {
                     tablero.buscarFichasIgualesVertical(c, obtenerFichaClekeada) >= cantFichasABuscar ||
                     tablero.buscarFichasIgualesDiagDer(obtenerFichaClekeada) >= cantFichasABuscar ||
                     tablero.buscarFichasIgualesDiagIzq(obtenerFichaClekeada) >= cantFichasABuscar ) {
-                        swal('Termino el juego, gano el jugador ', 'Jugador 1!!!', 'success');
+                        swal('Termino el juego, gano el jugador ', 'Jugador 2!!!', 'success');
 
                 }
                 //ACA VA EL RESETEO DEL JUEGO
