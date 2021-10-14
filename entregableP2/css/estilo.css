@@ -7,22 +7,20 @@ html{
 
 
 body{
-    background-image: url(../images/Tablero.png);
-    background-position: center center;
+    /*background-position: center center;
     background-size: 100vw 100vh; /*para que la imagen siempre tenga el 100% de la ventana*/
-    background-attachment: fixed; /*para que la imagen quede fija en el scroll*/
-    background-size: cover; /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+    /*background-attachment: fixed; /*para que la imagen quede fija en el scroll*/
+    /*background-size: cover; /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 10px;
     padding-left: 10px;
     width: 100%;
+    background-color: darkgrey;
 }
 
 #canvas{
-    
-    border-color: crimson;
     border-radius: 20px;
-    background-color: rgb(235, 207, 51, 0.3);
+    background-color: rgb(235, 207, 51, 0.2);
 }
 
 h5{
@@ -40,6 +38,7 @@ h5{
 }
 
 .contenedor{
+    background-color: darkgrey;
     width: 10%;
     border-radius: 20px;
     padding-top: 12px;
@@ -60,7 +59,6 @@ h5{
     text-align: center;
     width: 180px;
     background-color: rgb(235, 207, 51, 0.3);
-    border-color: crimson;
     float: left;
     border-radius: 10px;
 }
@@ -88,13 +86,14 @@ h5{
 }
 
 .btnRedondo{
-    width: 60px;
+    width: 30px;
 }
 
 .btnRedondeado{
-    width: 64px;
+    width: 33px;
     padding: 0;
-    margin: 10px;
+    margin: 2px;
+    margin-bottom: 9px;
     border-radius: 50px;
     background-color:white;
 }
@@ -109,7 +108,10 @@ h5{
     padding-right: 15px;
     font-weight: bolder;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.644);
-    color: white;
+    color: red;
+}
+
+.enLinea{
+    font-size: 10px;
 }
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego</title>
+    <title>4 en linea</title>
     <link rel="stylesheet" href="css/estilo.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -17,9 +17,9 @@
                 <h3 class="cuatroEnLinea"><b>4 en linea!!</b></h3>
 
                 <h5><b>MODALIDAD</b></h5>
-                <button id="5" class="btn btn-warning margen"><b>5 EN LINEA</b></button>
-                <button id="6" class="btn btn-warning margen"><b>6 EN LINEA</b></button>
-                <button id="7" class="btn btn-warning margen"><b>7 EN LINEA</b></button> 
+                <button id="5" class="btn-warning margen enLinea"><b>5 EN LINEA</b></button>
+                <button id="6" class="btn-warning margen enLinea"><b>6 EN LINEA</b></button>
+                <button id="7" class="btn-warning margen enLinea"><b>7 EN LINEA</b></button> 
 
                 <h5><b>FICHAS</b></h5>
                 <button id="fichaNegra" class="btnRedondeado"><img class="btnRedondo" src="images/fichaNegra.png" alt=""></button>
@@ -32,8 +32,8 @@
                 <button id="fichaRoja" class="btn btn-warning margen"><b>FICHA ROJA</b></button>-->
 
                 <h5><b>TURNO JUGADOR</b></h5>
-                <h5 id="jugador1" class="btn btn-warning margen"><b>JUGADOR 1</b></h5>
-                <h5 id="jugador2" class="btn btn-warning margen"><b>JUGADOR 2</b></h5>
+                <h5 id="jugador1" class="btn-warning margen enLinea"><b>JUGADOR 1</b></h5>
+                <h5 id="jugador2" class="btn-warning margen enLinea"><b>JUGADOR 2</b></h5>
 
                 <h5><b>JUEGO</b></h5>
                 <h5 id="tituloTiempo">Tiempo de juego</h5>
@@ -54,7 +54,7 @@
                 
             </div>
             <div class="divCanvas">
-                <canvas id="canvas" width="1300" height="900" style="border: #000 solid 5px"></canvas>
+                <canvas id="canvas" width="850" height="550"></canvas>
                 <img class="ocultar" src="images/casillero.png" alt="casillero" id="casillero" >
                 <img class="ocultar" src="images/zonaLanzamiento.png" alt="casillero" id="zonaLanzamiento" >
                 <img class="ocultar" src="images/fichaNegra.png" alt="negra" id="negra" >

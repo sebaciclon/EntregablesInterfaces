@@ -94,8 +94,9 @@ canvas.addEventListener('mousemove', onMouseMove, false);
 let inicializado = false;
 
 //EMPEZAMOS EL JUEGO CON EL TABLERO 4 EN LINEA
-const TAMANIO_CASILLERO = 90;
+const TAMANIO_CASILLERO = 45;
 const MARGIN_TOP_TABLERO = 90;
+const RADIO_FICHA = 15;
 let inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
 let tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
 tablero.drawTablero();
@@ -106,7 +107,7 @@ tablero.drawTablero();
 
 //METODO PARA AGREGAR UNA FICHA AL ARREGLO DE FICHAS
 function agregarFicha(posX, posY, imgFicha, jugador, num) {
-    let ficha = new FichaRedonda(posX, posY, 33, imgFicha, ctx, jugador, num);
+    let ficha = new FichaRedonda(posX, posY, RADIO_FICHA, imgFicha, ctx, jugador, num);
     fichas.push(ficha); 
 }
 
@@ -130,50 +131,56 @@ function limpiarCanvas() {
 
 //METODO DEL BOTON PARA JUGAR 5 EN LINEA
 function cincoEnLinea() {
-    inicializado = false;
-    filas ++;
-    columnas ++;
-    inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
-    tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
-    tablero.drawTablero();
-    btn4.disabled = true;
-    btn5.disabled = true;
-    btn6.disabled = true;
-    cantFichas = filas * columnas;
-    cantFichasPorJugador = cantFichas / 2;
-    cantFichasABuscar = 5;
+    if(cont == 0){
+        inicializado = false;
+        filas ++;
+        columnas ++;
+        inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
+        tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
+        tablero.drawTablero();
+        btn4.disabled = true;
+        btn5.disabled = true;
+        btn6.disabled = true;
+        cantFichas = filas * columnas;
+        cantFichasPorJugador = cantFichas / 2;
+        cantFichasABuscar = 5;
+    }
 }
 
 //METODO DEL BOTON PARA JUGAR 6 EN LINEA
 function seisEnLinea() {
-    inicializado = false;
-    filas = filas + 2;
-    columnas = columnas + 2;
-    inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
-    tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
-    tablero.drawTablero();
-    btn4.disabled = true;
-    btn5.disabled = true;
-    btn6.disabled = true;
-    cantFichas = filas * columnas;
-    cantFichasPorJugador = cantFichas / 2;
-    cantFichasABuscar = 6;
+    if(cont == 0){
+        inicializado = false;
+        filas = filas + 2;
+        columnas = columnas + 2;
+        inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
+        tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
+        tablero.drawTablero();
+        btn4.disabled = true;
+        btn5.disabled = true;
+        btn6.disabled = true;
+        cantFichas = filas * columnas;
+        cantFichasPorJugador = cantFichas / 2;
+        cantFichasABuscar = 6;
+    }
 }
 
 //METODO DEL BOTON PARA JUGAR 7 EN LINEA
 function sieteEnLinea() {
-    inicializado = false;
-    filas = filas + 3;
-    columnas = columnas + 3;
-    inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
-    tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
-    tablero.drawTablero();
-    btn4.disabled = true;
-    btn5.disabled = true;
-    btn6.disabled = true;
-    cantFichas = filas * columnas;
-    cantFichasPorJugador = cantFichas / 2;
-    cantFichasABuscar = 7;
+    if(cont == 0){
+        inicializado = false;
+        filas = filas + 3;
+        columnas = columnas + 3;
+        inicioTabX = (width - TAMANIO_CASILLERO * columnas) / 2;
+        tablero = new Tablero(ctx, width, height, filas, columnas, casillero, inicioTabX);
+        tablero.drawTablero();
+        btn4.disabled = true;
+        btn5.disabled = true;
+        btn6.disabled = true;
+        cantFichas = filas * columnas;
+        cantFichasPorJugador = cantFichas / 2;
+        cantFichasABuscar = 7;
+    }
 }
 
 
@@ -302,7 +309,7 @@ function fichaNegra() {
             cont ++;
             if(cantFichasABuscar == 4) {
                 let posX = inicioTabX / 2;
-                let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                let posY = MARGIN_TOP_TABLERO  / 2;
                 let distancia = 0;
                 for (let i = 0; i < cantFichas / 2; i++) {
                     agregarFicha(posX, posY + i + distancia, negra, jugador1, 1);
@@ -311,7 +318,7 @@ function fichaNegra() {
             } else {
                 if(cantFichasABuscar == 5) {
                     let posX = inicioTabX / 2;
-                    let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                    let posY = MARGIN_TOP_TABLERO  / 2;
                     let distancia = 0;
                     for (let i = 0; i < cantFichas / 2; i++) {
                         agregarFicha(posX, posY + i + distancia, negra, jugador1, 1);
@@ -320,7 +327,7 @@ function fichaNegra() {
                 } else {
                     if(cantFichasABuscar == 6) {
                         let posX = inicioTabX / 4;
-                        let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                        let posY = MARGIN_TOP_TABLERO  / 2;
                         let distancia = 0;
 
                         for (let i = 0; i < cantFichasPorJugador / 2; i++) {
@@ -335,7 +342,7 @@ function fichaNegra() {
                         }
                     } else {
                         let posX = inicioTabX / 4;
-                        let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                        let posY = MARGIN_TOP_TABLERO  / 2;
                         let distancia = 0;
 
                         for (let i = 0; i < cantFichasPorJugador / 2; i++) {
@@ -356,7 +363,7 @@ function fichaNegra() {
             cont ++;
             if(cantFichasABuscar == 4) {
                 let posX = (width - inicioTabX) + inicioTabX / 2;
-                let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                let posY = MARGIN_TOP_TABLERO  / 2;
                 let distancia = 0;
                 for (let i = 0; i < cantFichas / 2; i++) {
                     agregarFicha(posX, posY + i + distancia, negra, jugador2, 2);
@@ -365,7 +372,7 @@ function fichaNegra() {
             } else {
                 if(cantFichasABuscar == 5) {
                     let posX = (width - inicioTabX) + inicioTabX / 2;
-                    let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                    let posY = MARGIN_TOP_TABLERO  / 2;
                     let distancia = 0;
                     for (let i = 0; i < cantFichas / 2; i++) {
                         agregarFicha(posX, posY + i + distancia, negra, jugador2, 2);
@@ -374,7 +381,7 @@ function fichaNegra() {
                 } else {
                     if(cantFichasABuscar == 6) {
                         let posX = (width - inicioTabX) + inicioTabX / 4;
-                        let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                        let posY = MARGIN_TOP_TABLERO  / 2;
                         let distancia = 0;
 
                         for (let i = 0; i < cantFichasPorJugador / 2; i++) {
@@ -389,7 +396,7 @@ function fichaNegra() {
                         }
                     } else {
                         let posX = (width - inicioTabX) + inicioTabX / 4;
-                        let posY = MARGIN_TOP_TABLERO + MARGIN_TOP_TABLERO / 2;
+                        let posY = MARGIN_TOP_TABLERO  / 2;
                         let distancia = 0;
 
                         for (let i = 0; i < cantFichasPorJugador / 2; i++) {
