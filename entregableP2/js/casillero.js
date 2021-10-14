@@ -16,11 +16,4 @@ class Casillero{
     getYInicial(){
         return this.yInicial;
     }
-
-    getPosition() {
-        let posicion = [];
-        posicion[0] = this.getPosX;
-        posicion[1] = this.getPosY;
-        return posicion;
-    }
 }

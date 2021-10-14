@@ -526,27 +526,34 @@ function onMouseUp(e) {
     }  
 }
 
+// SETEA EL TIEMPO DE JUEGO CON EL VALOR DEL RANGO SELECCIONADO POR EL USUARIO
 function inicializarTiempoDeJuego(tiempo){
     tiempoDeJuego = tiempo;
 }
 
+// RECARGA LA PÁGINA
 function refrescar(){
     location.reload();
 }
 
+// PARA EL JUEGO, HABILITA PARA VOLVER A EMPEZAR OTRA PARTIDA
 function interrumpirJuego(){
     swal("JUEGO INTERRUMPIDO", "Inténtalo nuevamente!!");
     juegoHabilitado = false;
     setTimeout(refrescar, 5000);
 }
 
-
+// INHABILITA EL JUEGO, INFORMA QUE EL TIEMPO CULMINÓ. RECARGA LA PAGINA.
 function terminarJuego(){
     juegoHabilitado = false;
     swal("TIEMPO CUMPLIDO", "No hubo ganador!!");
     setTimeout(refrescar, 5000);
 }
 
+// SETEA TODAS LAS VARIABLES NECESARIAS PARA INICIAR EL JUEGO
+// SE ENCARGA DE BLOQUEAR O ESCONDER PARTE DE LA INTERFACE QUE NO TIENE SENTIDO MOSTRAR
+// CUANDO YA SE ESTÁ DESARROLLANDO EL JUEGO.
+// MUESTRA EL RELOJ CON LA CUENTA REGRESIVA
 function iniciarJuego(){
     if(cont == 2){
         if(tiempoDeJuego > 0){
@@ -582,6 +589,9 @@ function iniciarJuego(){
                 swal("ESCOGER FICHA PARA JUGAR", "El jugador 2 falta elegir su ficha!!");
 }
 
+// ESCONDE AL CARGAR LA PAGINA EL BOTÓN DE INTERRUMPIR JUEGO
+// ESCONDE TAMBIÉN EL RELOJ DE LA CUENTA REGRESIVA
+// CUANDO SE INICIA EL JUEGO ESTOS DOS SE MUESTRAN.
 function esconderInterrumpirJuego(){
     btn8.style.display = 'none';
     clock.style.display = 'none';

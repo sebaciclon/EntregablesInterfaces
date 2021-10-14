@@ -12,15 +12,18 @@ class Tablero{
         this.filas = filas;
         this.columnas = columnas;       
         this.imgCasillero = img;       
-        this.zonaSueltaDeFichas = [];
+        this.zonaSueltaDeFichas = []; // Se usa para obtener la columna en la cual se quiere jugar una ficha
         this.inicioTableroX = inicioTableroX;
-        this.matrizJuego = [];      //esta
-        this.matrizCoordenadas = [];
+       // Matriz para la lógica del juego. Se inicializa en 0 y se va poniendo 
+        this.matrizJuego = []; // 1 si la ficha es del jugador1 o un 2 si la ficha es del jugador2
+        // Matriz con las coordenas de inicio de cada casillero. Se usa para dibujar la ficha jugada 
+        this.matrizCoordenadas = []; 
     }
 
     //DIBUJA EL TABLERO
     //INICIALIZA EL ARREGLO DE RANGOS QUE USAREMOS PARA SABER DONDE SE SUELTA CADA FICHA
     //INICIALIZA LA MATRIS PARA LA LOGICA DEL JUEGO
+    //INICIALIZA LA MATRIZ CON LAS COORDENADAS DE CADA CASILLERO QUE SE USA PARA DIBUJAR LA FICHA JUGADA
     drawTablero(){
         
         let inicioX = this.inicioTableroX;
@@ -33,6 +36,7 @@ class Tablero{
             this.ctx.fill();
             this.ctx.closePath();
         }
+        // Dibuja el tablero
         for (let i = 0; i < this.columnas; i++) {
             let finX = TAMANIO_CASILLERO + xInicial;
             if(!inicializado){ // Para inicializar el arreglo una sola vez
@@ -54,7 +58,7 @@ class Tablero{
                 }
                 yInicial = yInicial + TAMANIO_CASILLERO;
             }
-            if(!inicializado){
+            if(!inicializado){ 
                 this.matrizJuego.push(arreFilasJuego);
                 this.matrizCoordenadas.push(arreFilasCoord);
             }
@@ -62,12 +66,14 @@ class Tablero{
             xInicial = inicioX;
         }
         inicializado = true; // Ya se inicalizaron los arreglos de tablero
-        console.log(this.matrizJuego);
-        console.log(this.matrizCoordenadas);
-        console.log(this.zonaSueltaDeFichas);
+        // Dejamos comentados los console.log por si les interesa ver los arreglos.
+        //console.log(this.matrizJuego);
+        //console.log(this.matrizCoordenadas);
+        //console.log(this.zonaSueltaDeFichas);
     }
 
-    //Devuelve la columna en la cual tiene que ir la ficha soltada. Si es un lugar inválido retorna -1
+    // DEVUELVE LA COLUMNA EN LA QUE DEBE IR LA FICHA JUGADA. 
+    // SI SE SOLTÓ EN UN LUGAR INVÁLIDO, DEVUELVE -1
     getColunmaEnJuego(ficha){
         let x = ficha.getPosicionX();
         let y = ficha.getPosicionY();
@@ -83,6 +89,7 @@ class Tablero{
         return -1;
     }
 
+    // DEVUELVE LAS COORDENADAS EN LAS QUE HAY QUE DIBUJAR LA FICHA JUGADA
     casilleroVacio(columna, ficha){
         for(let i = filas -1; i >= 0; i--){
             if(this.matrizJuego[columna][i] == 0){
@@ -91,6 +98,7 @@ class Tablero{
                 return this.matrizCoordenadas[columna][i];
             }
         }
+        // Si la columna esta completa, lo informa dibuja la ficha jugada en la posición original.
         swal("YA ESTA COMPLETA", "Prueba en otra columna" );
         obtenerFichaClekeada.setPosicion(posOriginalX, posOriginalY);
         drawFichas();
@@ -111,7 +119,6 @@ class Tablero{
                 } else {
                     contJug = 0;
                 }
-
             }
         }
         return contJug;
