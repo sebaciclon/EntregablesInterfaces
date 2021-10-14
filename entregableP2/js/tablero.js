@@ -4,6 +4,7 @@
 
 class Tablero{
 
+    //CONSTRUCTOR DE LA CLASE
     constructor(ctx, width, height, filas, columnas,img, inicioTableroX){
         this.width = width;
         this.height = height;
@@ -17,9 +18,9 @@ class Tablero{
         this.matrizCoordenadas = [];
     }
 
-    // Dibuja el tablero.
-    // Inicializa el arreglo de rangos que usaremos para saber dónde se suelta cada ficha
-    // Inicializa la matriz para la logica del juego
+    //DIBUJA EL TABLERO
+    //INICIALIZA EL ARREGLO DE RANGOS QUE USAREMOS PARA SABER DONDE SE SUELTA CADA FICHA
+    //INICIALIZA LA MATRIS PARA LA LOGICA DEL JUEGO
     drawTablero(){
         
         let inicioX = this.inicioTableroX;
@@ -96,7 +97,10 @@ class Tablero{
         return null;
     }
 
-    //BUSCA LAS FICHAS IGUALES VERTICALMENTE DE LA FICHA INGRESADA
+    //BUSCA LAS FICHAS IGUALES VERTICALMENTE 
+    //DADA UNA COLUMNA Y UNA FICHA, RECORRE DICHA COLUMNA VERTICALMENTE
+    //BUSCANDO SI HAY UN GANADOR.
+    //RETORNA LA CANTIDAD DE FICHAS IGUALES QUE ENCONTRO JUNTAS
     buscarFichasIgualesVertical(columna, ficha){
         let contJug = 0;
         
@@ -113,7 +117,10 @@ class Tablero{
         return contJug;
     }
 
-    //BUSCA LAS FICHAS IGUALES HORIZONTALMENTE
+    //BUSCA LAS FICHAS IGUALES HORIZONTALMENTE EN TODA LA MATRIZ
+    //DADA UNA FICHA, RECORRE TODA LA MATRIZ BUSCANDO FICHAS IGUALES
+    //A LA FICHA PASADA POR PARAMETRO BUSCANDO SI HAY UN GANADOR.
+    //RETORNA LA CANTIDAD DE FICHAS IGUALES QUE ENCONTRO JUNTAS
     buscarFichasIgualesHorizontal(ficha) {
         let contJug = 0;
 
@@ -139,7 +146,10 @@ class Tablero{
         return contJug;
     }
 
-    //BUSCA LAS FICHAS IGUALES EN DIAGONAL DERECHA
+    //BUSCA LAS FICHAS IGUALES EN DIAGONAL DERECHA ABAJO
+    //DADA UNA FICHA, RECORRE TODA LA MATRIZ BUSCANDO FICHAS IGUALES
+    //A LA FICHA PASADA POR PARAMETRO BUSCANDO SI HAY UN GANADOR.
+    //RETORNA LA CANTIDAD DE FICHAS IGUALES QUE ENCONTRO JUNTAS
     buscarFichasIgualesDiagDer(ficha) {
         let contJug = 0;
         let auxi = 0;
@@ -179,7 +189,10 @@ class Tablero{
         return contJug;    
     }
 
-    //BUSCA LAS FICHAS IGUALES EN DIAGONAL IZQUIERDA
+    //BUSCA LAS FICHAS IGUALES EN DIAGONAL IZQUIERDA ABAJO
+    //DADA UNA FICHA, RECORRE TODA LA MATRIZ BUSCANDO FICHAS IGUALES
+    //A LA FICHA PASADA POR PARAMETRO BUSCANDO SI HAY UN GANADOR.
+    //RETORNA LA CANTIDAD DE FICHAS IGUALES QUE ENCONTRO JUNTAS
     buscarFichasIgualesDiagIzq(ficha) {
         let contJug = 0;
         let auxi;

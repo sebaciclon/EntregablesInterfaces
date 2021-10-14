@@ -4,6 +4,7 @@
 
 class Ficha {
 
+    //CONSTRUCTOR DE LA CLASE
     constructor(posX, posY, fill, ctx, nombreJugador, numJugador) {    //posicion x e y, imagen, contexto y jugador
         this.posX = posX;
         this.posY = posY;
@@ -17,20 +18,22 @@ class Ficha {
         this.fichaJugada = false;
     }
 
+    //OBTENGO SI UNA FICHA YA ESTA JUGADA EN EL TABLERO (TRUE) O NO (FALSE)
     getFichaJugada() {
         return this.fichaJugada;
     }
 
+    //METEDO PARA CAMBIAR EL ESTADO DE UNA FICHA, JUGADA O NO
     setFichaJugada(fichaJugada) {
         this.fichaJugada = fichaJugada;
     }
 
-    //obtengo el nombre del jugador
+    //OBTENGO EL NOMBRE DEL JUGADOR
     getNombreJugador() {
         return this.nombreJugador;
     }
 
-    //obtengo el numero del jugador
+    //OBTENGO EL NUMERO DEL JUGADOR, 1 JUGADOR 1, 2 JUGADOR 2
     getNumeroJugador() {
         return this.numJugador;
     }
@@ -40,28 +43,28 @@ class Ficha {
         this.disponible = disponible
     }
 
-    //obtengo si una ficha esta disponible o no
+    //OBTENGO SI UNA FICHA ESTA DISPONIBLE O NO PARA JUGARLA
     getDisponible() {
         return this.disponible;
     }
 
-    //metodo para modificar la variable fill
+    //MOTODO PARA MODIFICAR LA VARIABLE FILL
     setFill(fill) {
         this.fill = fill;
     }
 
-    //obtengo el color que esta pintada la ficha
+    //OBTENGO EL COLOR QUE ESTA PINTADA LA FICHA
     getFill() {
         return this.fill;
     }
 
-    //setea la nueva posicion de la ficha cuando la muevo
+    //SETEA LA NUEVA POSICION DE LA FICHA CUANDO LA MUEVO
     setPosicion(x, y) {
         this.posX = x;
         this.posY = y;
     }
 
-    //obtengo las coordenadas de la ficha
+    //OBTENGO LAS COORDENADAS X E Y DE LA FICHA
     getPosicion() {
         return {
             x: this.getPosicionX(),
@@ -69,26 +72,28 @@ class Ficha {
         };
     }
 
+    //OBTENGO LA COORDENADA EN X DE LA FICHA
     getPosicionX() {
         return this.posX;
     }
 
+    //OBTENGO LA COORDENADA EN Y DE LA FICHA
     getPosicionY() {
         return this.posY;
     }
 
-    //dibuja
+    //METODO PARA DIBUJAR
     draw() {
         this.ctx.fillStyle = "white";
         this.ctx.fillStyle = this.fill;
     }
 
-    //setea si la ficha esta resaltada
+    //SETEA SI LA FICHA ESTA RESALTADA
     setResaltado(resaltado) {
         this.resaltado = resaltado;
     }
 
-    //metodo abstracto que me dice si el mouse esta adentro de la figura o no
+    //METODO ABSTRACTO QUE DICE SI EL MOUSE ESTA DENTRO DE LA FICHA O NO
     isPointInside(x, y) {
 
     }
