@@ -7,13 +7,14 @@ body {
 .man {
     width: 184px;
     height:325px;
-    margin:auto;  
-    
+    margin-top: 220px; 
+    margin-left: 50%;
+    position: absolute;
     background: url(../images/1.png) left center; 
-    animation: walk 1s steps(8) infinite;  
+    animation: caminar 3s steps(8) infinite;  
 }
 
-@keyframes walk {
+@keyframes caminar {
     0% {background-position: 0;}
     100% {background-position: -1472px;}
     
@@ -26,7 +27,7 @@ body {
     position:relative;
     top:10px;
     
-    animation: movebg 9s linear infinite;
+    animation: movebg 8s linear infinite;
 }
 
 @keyframes movebg {
