@@ -1,0 +1,37 @@
+body {
+    margin:0;
+    background:#000;
+  }
+
+
+.man {
+    width: 184px;
+    height:325px;
+    margin:auto;  
+    
+    background: url(../images/1.png) left center; 
+    animation: walk 1s steps(8) infinite;  
+}
+
+@keyframes walk {
+    0% {background-position: 0;}
+    100% {background-position: -1472px;}
+    
+}
+
+.fondo {
+    
+    height:560px;
+    background:url(../images/fondo1.png) repeat-x;
+    position:relative;
+    top:10px;
+    
+    animation: movebg 9s linear infinite;
+}
+
+@keyframes movebg {
+    0% { background-position:0;}
+    100% { background-position: -840px; }
+    
+  }
+
