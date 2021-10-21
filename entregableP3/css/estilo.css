@@ -1,4 +1,92 @@
-body {
+.fondo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #A3D6DB;
+    width: 100%;
+    height: 100%;
+}
+
+.nubes {
+    background: url(../images/nubes2.png);
+    position: absolute;
+    top: 5%;
+    left: 0px;
+    width: 100%;
+    height: 274px;
+    animation: nubes 20s linear infinite;
+}
+
+@keyframes nubes {
+    0% {background-position: 0;}
+    100% {background-position: -2772px;}
+    
+}
+
+.ciudad{
+	background-image: url(../images/ciudad.png);
+	background-repeat: repeat-x;
+	/*background-position: 0px 100%;  /*para que se ubique en la parte inferior*/
+	position: absolute; 
+	top: 10%;
+	left: 0px;
+	width: 100%;
+	height: 90%;
+    animation: ciudad 30s linear infinite;	
+	
+}
+
+@keyframes ciudad{
+	from{ background-position: 0; }
+	to{ background-position: -6396px; }
+}
+
+.man {
+    width: 120px;
+    height:269px;
+    /*margin-top: 460px;*/
+    margin-top: 24%;
+    margin-left: 50%;
+    position: absolute;
+    background: url(../images/personajeCaminando.png) left center; 
+    animation: caminar 1s steps(6) infinite;  
+}
+
+@keyframes caminar {
+    0% {background-position: 0;}
+    100% {background-position: -720px;}
+    
+}
+
+.moneda {
+    width: 78px;
+    height:87px;
+    margin-top: 22%; 
+    margin-left: 50%;
+    position: absolute;
+    
+    background: url(../images/images.png) left center; 
+    animation: girarMoneda 1s steps(6) infinite;  
+    
+}
+
+@keyframes girarMoneda {
+    0% {background-position: 0;}
+    100% {background-position: -469px;}
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/*body {
     margin:0;
     background:#000;
   }
@@ -51,5 +139,5 @@ body {
     0% { background-position:0;}
     100% { background-position: -1200px; }
     
-  }
+  }*/
 
