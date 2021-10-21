@@ -7,7 +7,7 @@ body {
 .man {
     width: 120px;
     height:269px;
-    margin-top: 220px; 
+    margin-top: 360px; 
     margin-left: 50%;
     position: absolute;
     background: url(../images/personajeCaminando.png) left center; 
@@ -20,10 +20,27 @@ body {
     
 }
 
+.moneda {
+    width: 78px;
+    height:87px;
+    margin-top: 220px; 
+    margin-left: 50%;
+    position: absolute;
+    background: url(../images/images.png) repeat-x; 
+    animation: girarMoneda 1s steps(6) infinite;  
+    
+}
+
+@keyframes girarMoneda {
+    0% {background-position: 0;}
+    100% {background-position: -469px;}
+    
+}
+
 .fondo {
     
-    height:560px;
-    background:url(../images/fondo1.png) repeat-x;
+    height:690px;
+    background:url(../images/Fondociudad.jpg) repeat-x;
     position:relative;
     top:10px;
     
@@ -32,7 +49,7 @@ body {
 
 @keyframes movebg {
     0% { background-position:0;}
-    100% { background-position: -840px; }
+    100% { background-position: -1200px; }
     
   }
 
