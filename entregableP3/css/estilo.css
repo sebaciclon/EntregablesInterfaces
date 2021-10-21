@@ -5,18 +5,18 @@ body {
 
 
 .man {
-    width: 184px;
-    height:325px;
+    width: 120px;
+    height:269px;
     margin-top: 220px; 
     margin-left: 50%;
     position: absolute;
-    background: url(../images/1.png) left center; 
-    animation: caminar 3s steps(8) infinite;  
+    background: url(../images/personajeCaminando.png) left center; 
+    animation: caminar 1s steps(6) infinite;  
 }
 
 @keyframes caminar {
     0% {background-position: 0;}
-    100% {background-position: -1472px;}
+    100% {background-position: -720px;}
     
 }
 
