@@ -116,9 +116,16 @@
     display: block;
 }
 
-.info h2{
-    top: 5%;
-    left: 10%;
+.puntos {
+    top: 0px;
+    left: 1%;
+    position: absolute;
+}
+
+.vidas {
+    top: 0px;
+    left: 15%;
+    position: absolute;
 }
 
 /*
