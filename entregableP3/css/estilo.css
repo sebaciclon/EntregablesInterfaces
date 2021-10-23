@@ -46,7 +46,7 @@
     height:269px;
     /*margin-top: 460px;*/
     margin-top: 24%;
-    margin-left: 50%;
+    margin-left: 25%;
     position: absolute;
     background: url(../images/personajeCaminando.png) left center; 
     animation: caminar 1s steps(6) infinite;  
@@ -62,7 +62,7 @@
     width: 127px;
     height:269px;
     margin-top: 24%;
-    margin-left: 50%;
+    margin-left: 25%;
     position: absolute;
     background: url(../images/personajeSaltando.png) left center no-repeat; 
     animation: saltar 1s steps(7) forwards; 
@@ -95,6 +95,24 @@
 @keyframes traslacionMoneda {
     from {background-position: 0;}
     to {background-position: -469px;}
+}
+
+.piedra {
+    width: 52px;
+    height: 53px;
+    top: 70%;
+    right: 0%;
+    position: absolute;
+    background-image:url(../images/piedras.png) ; 
+    animation: piedras 5s linear infinite;
+}
+
+@keyframes piedras {
+    to {
+        right: 100%;
+        transform: translateX(100%);
+    }
+    
 }
 
 .finJuego {
