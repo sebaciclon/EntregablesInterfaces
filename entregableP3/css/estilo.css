@@ -20,7 +20,6 @@
 @keyframes nubes {
     0% {background-position: 0;}
     100% {background-position: -2772px;}
-    
 }
 
 .ciudad{
@@ -33,7 +32,6 @@
 	width: 100%;
 	height: 90%;
     animation: ciudad 30s linear infinite;	
-	
 }
 
 @keyframes ciudad{
@@ -55,7 +53,6 @@
 @keyframes caminar {
     0% {background-position: 0;}
     100% {background-position: -720px;}
-    
 }
 
 .salta {
@@ -66,14 +63,12 @@
     position: absolute;
     background: url(../images/personajeSaltando.png) left center no-repeat; 
     animation: saltar 1s steps(7) forwards; 
-     
 }
 
 @keyframes saltar {
     35% {bottom: 40%;}
     /*50% {bottom: 50%;}*/
     100% {background-position: -893px;}
-    
 }
 
 .moneda {
@@ -84,7 +79,6 @@
     position: absolute;
     background: url(../images/images.png) left center; 
     animation: girarMoneda 1s steps(6) infinite;  
-    
 }
 
 @keyframes girarMoneda {
@@ -109,10 +103,26 @@
 
 @keyframes piedras {
     to {
-        right: 100%;
-        transform: translateX(100%);
+        right: 110%;
+        transform: translateX(120%);
     }
-    
+}
+
+.tomaDeAgua {
+    width: 73px;
+    height: 100px;
+    top: 60%;
+    right: 0%;
+    position: absolute;
+    background-image:url(../images/TomaDeAgua.png) ; 
+    animation: tomaDeAgua 9s linear infinite;
+}
+
+@keyframes tomaDeAgua {
+    to {
+        right: 110%;
+        transform: translateX(120%);
+    }
 }
 
 .finJuego {
