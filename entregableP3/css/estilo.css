@@ -82,7 +82,7 @@
     margin-top: 23%; 
     margin-left: 50%;
     position: absolute;
-    background: url(../images/images.png) left center; 
+    background: url(../images/monedas.png) left center; 
     animation: girarMoneda 1s steps(6) infinite;  
     
 }
@@ -92,9 +92,17 @@
     100% {background-position: -469px;}
 }
 
+.trasladarMoneda{
+    background-color:black;
+    width: 100%;
+    animation: traslacionMoneda linear infinite;
+}
+
 @keyframes traslacionMoneda {
-    from {background-position: 0;}
-    to {background-position: -469px;}
+    to {
+        right: 130%;
+        transform: translateX(0);
+    }
 }
 
 .piedra {
@@ -109,11 +117,28 @@
 
 @keyframes piedras {
     to {
-        right: 100%;
-        transform: translateX(100%);
+        right: 130%;
+        transform: translateX(-120%);
     }
-    
 }
+
+.camioneta {
+    width: 287px;
+    height: 200px;
+    top: 70%;
+    right: 0%;
+    position: absolute;
+    background-image:url(../images/camioneta.png) ; 
+    animation: camioneta 5s linear infinite;
+}
+
+@keyframes camioneta {
+    to {
+        right: 120%;
+        transform: translateX(-120%);
+    }
+}
+
 
 .finJuego {
     display: none;
@@ -145,52 +170,6 @@
     left: 15%;
     position: absolute;
 }
-
-/*
-.pozo{
-    background-image: url(../images/TomaDeAgua.png);
-	background-repeat: repeat-x;
-	background-position: 100% 100%;  /*para que se ubique en la parte inferior
-	position: absolute; 
-	top: 10%;
-	left: 0px;
-	width: 164px;
-	height: 110px;
-    animation: pozo 30s linear infinite;	
-	
-}
-
-@keyframes pozo{
-	from{ background-position: 0; }
-	to{ background-position: -6396px; }
-}
-*/
-.pozo{  
-    background-repeat: repeat-x;
-    width:287px;
-    height: 200px; 
-    position:absolute; 
-    bottom: 5%;    
-    background-image:url(../images/camioneta.png) ; 
-    animation: pozo 10s steps(1) infinite;
-    overflow: visible;
-   }
-   
-   
-   @keyframes pozo{
-	from{ background-position: 0; }
-	to{ background-position: -6396px; }
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
