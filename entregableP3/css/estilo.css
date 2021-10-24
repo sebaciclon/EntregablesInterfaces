@@ -20,7 +20,6 @@
 @keyframes nubes {
     0% {background-position: 0;}
     100% {background-position: -2772px;}
-    
 }
 
 .ciudad{
@@ -33,7 +32,6 @@
 	width: 100%;
 	height: 90%;
     animation: ciudad 30s linear infinite;	
-	
 }
 
 @keyframes ciudad{
@@ -55,7 +53,6 @@
 @keyframes caminar {
     0% {background-position: 0;}
     100% {background-position: -720px;}
-    
 }
 
 .salta {
@@ -66,44 +63,63 @@
     position: absolute;
     background: url(../images/personajeSaltando.png) left center no-repeat; 
     animation: saltar 1s steps(7) forwards; 
-     
 }
 
 @keyframes saltar {
     35% {bottom: 40%;}
     /*50% {bottom: 50%;}*/
     100% {background-position: -893px;}
-    
+}
+
+.muere {
+    width: 120px;
+    height:269px;
+    margin-top: 24%;
+    margin-left: 25%;
+    position: absolute;
+    background: url(../images/muerePersonaje.png) left center no-repeat; 
+    animation: morir 2s steps(15) forwards;  
+}
+
+@keyframes morir {
+    0% {background-position: 0;}
+    100% {background-position: -1810px;}
 }
 
 .moneda {
+    right: 0;
+    bottom: 50%;
+
+
     width: 78px;
     height:87px;
     margin-top: 23%; 
     margin-left: 50%;
     position: absolute;
     background: url(../images/monedas.png) left center; 
-    animation: girarMoneda 1s steps(6) infinite;  
-    
+    animation: girarMoneda 3s steps(6) infinite;  
+    overflow: visible;
 }
 
 @keyframes girarMoneda {
-    0% {background-position: 0;}
-    100% {background-position: -469px;}
+    
+
+    0%{right: 0% }
+    10%{right: 10% }
+    20%{right: 20% }
+    30%{right: 30% }
+    40%{right: 40% }
+    50%{right: 50% }
+    60%{right: 60% }
+    70%{right: 70% }
+    80%{right: 80% }
+    90%{right: 90% }
+    100%{right: 100%;background-position: -470px; }
+
+    
 }
 
-.trasladarMoneda{
-    background-color:black;
-    width: 100%;
-    animation: traslacionMoneda linear infinite;
-}
 
-@keyframes traslacionMoneda {
-    to {
-        right: 130%;
-        transform: translateX(0);
-    }
-}
 
 .piedra {
     width: 52px;
@@ -122,6 +138,9 @@
     }
 }
 
+
+
+
 .camioneta {
     width: 287px;
     height: 200px;
@@ -133,9 +152,41 @@
 }
 
 @keyframes camioneta {
-    to {
+    
+        0% {
+          
+          right: 0px;
+          transform: scaleX(1);
+        }
+        100% {
+          right: calc(100% + 100px);
+          transform: scaleX(1);
+        }
+        
+    
+    
+    /*to {
         right: 120%;
         transform: translateX(-120%);
+        right: 110%;
+        transform: translateX(120%);
+    }*/
+}
+
+.tomaDeAgua {
+    width: 73px;
+    height: 100px;
+    top: 60%;
+    right: 0%;
+    position: absolute;
+    background-image:url(../images/TomaDeAgua.png) ; 
+    animation: tomaDeAgua 9s linear infinite;
+}
+
+@keyframes tomaDeAgua {
+    to {
+        right: 110%;
+        transform: translateX(120%);
     }
 }
 
@@ -173,58 +224,45 @@
 
 
 
-/*body {
-    margin:0;
-    background:#000;
+/*
+
+@-webkit-keyframes movimiento-diagonal {
+  0% {
+    left: -100px;
+    transform: scaleX(-1);
   }
-
-
-.man {
-    width: 120px;
-    height:269px;
-    margin-top: 360px; 
-    margin-left: 50%;
-    position: absolute;
-    background: url(../images/personajeCaminando.png) left center; 
-    animation: caminar 1s steps(6) infinite;  
+  50% {
+    left: calc(100% + 100px);
+    transform: scaleX(-1);
+  }
+  50.000001% {
+    left: calc(100% + 100px);
+    transform: scaleX(1) translateY(100px);
+  }
+  100% {
+    left: -100px;
+    transform: scaleX(1) translateY(100px);
+  }
 }
 
-@keyframes caminar {
-    0% {background-position: 0;}
-    100% {background-position: -720px;}
-    
+#derecha {
+  -webkit-animation-name: movimiento-diagonal;
+  -webkit-animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  (para que vuelva a su posicion inicial) 
+  width: 40px;
+  height: 40px;
+  background-image: image("../img/segadon.png");
+  color: #fff;
+  position: relative;
 }
 
-.moneda {
-    width: 78px;
-    height:87px;
-    margin-top: 220px; 
-    margin-left: 50%;
-    position: absolute;
-    background: url(../images/images.png) left center; 
-    animation: girarMoneda 1s steps(6) infinite;  
-    
-}
+Antes tenías la animación con un to y from, eso es equivalente al estado inicial y final, pero las animaciones en CSS permiten describir porcentajes (from equivaldría a 0% y to al 100%). Entonces lo que he hecho es añadir dos estados más a la animación, aquí describo lo que hacen paso a paso:
 
-@keyframes girarMoneda {
-    0% {background-position: 0;}
-    100% {background-position: -469px;}
-    
-}
-
-.fondo {
-    
-    height:690px;
-    background:url(../images/Fondociudad.jpg) repeat-x;
-    position:relative;
-    top:10px;
-    
-    animation: movebg 8s linear infinite;
-}
-
-@keyframes movebg {
-    0% { background-position:0;}
-    100% { background-position: -1200px; }
-    
-  }*/
+0%: el estado inicial. El hombrecito apunta hacia la derecha y está colocado en la izquierda, fuera de la vista. Estos son los valores por defecto (scaleX para que no haya cambio de dirección.)
+50%: el hombrecito está a la derecha, fuera de la vista y todavía mirando a la derecha.
+50.0000001%: (esto es muy cutre lo sé, en otras ocasiones he usado step-end para evitar esto pero no lo he conseguido en esta). El hombrecito sigue a la derecha fuera de la vista, pero ahora le hemos hecho girar para que mire a la izquierda (cambiando el scaleX de valor) y lo hemos bajado un poco (con el translateY).
+100%: estado final. El hombrecito apunta hacia la izquierda y está colocado en la izquierda, fuera de la pantalla.
+Y ahora el navegador se encarga de transicionar entre estados (con el valor de 8 segundos que le puse) y repetirse infinitamente (como ya le tenías puesto). Da la impresión de ser el mismo personaje moviéndose de derecha a izquierda una y otra vez... porque de hecho es el mismo personaje haciendo eso :)*/
 
