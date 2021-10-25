@@ -20,6 +20,22 @@
     animation: sol 80s linear infinite;
 }
 
+.btnEscenario{
+    
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+}
+
+.imagen{
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
 @keyframes sol {
     0% {left: -110px; top: 30%;}
     50% {left: 50%; top: 5%;}
@@ -102,6 +118,23 @@
     100% {background-position: -893px;}
 }
 
+.chiquito {
+    width: 63px;
+    height:97px;
+    /*margin-top: 460px;*/
+    margin-top: 24%;
+    margin-left: 25%;
+    position: absolute;
+    background: url(../images/personajeChiquitoCaminando.png) left center no-repeat; 
+    animation: hacerseChiquito 1s steps(6) forwards;  
+}
+
+@keyframes hacerseChiquito {
+    35% {bottom: 40%;}
+    100% {background-position: -374px;}
+}
+
+
 .muere {
     width: 120px;
     height:269px;
@@ -157,10 +190,39 @@
     100%{right: 100%;background-position: -470px; }
 }
 
+.agarraMoneda {
+    right: 60%;
+    bottom: 55%;
+    width: 200px;
+    height: 211px;
+    margin-top: 23%;
+    margin-left: 50%;
+    position: absolute;
+    background: url(../images/estrellaAgarrada.png) left center no-repeat; 
+    animation: agarrar 0.5s steps(4) forwards;  
+}
+
+.agarraMoneda1 {
+    right: 60%;
+    bottom: 45%;
+    width: 200px;
+    height: 211px;
+    margin-top: 23%;
+    margin-left: 50%;
+    position: absolute;
+    background: url(../images/estrellaAgarrada.png) left center no-repeat; 
+    animation: agarrar 0.5s steps(4) forwards;  
+}
+
+@keyframes agarrar {
+    0% {background-position: 0;}
+    100% {background-position: -806px;}
+}
+
 .pajaro {
     width: 135px;
     height: 84px;
-    margin-top: 24%;
+    margin-top: 30%;
     margin-left: 25%;
     position: absolute;
     background: url(../images/pajaro.png) left center; 
@@ -242,15 +304,21 @@
     }
 }
 
+.divPuntos{
+    width: 10000px;
+    background-color: rgb(243, 212, 175, 0,5);
+
+}
 .puntos {
-    top: 0px;
-    left: 1%;
+    text-shadow: ghostwhite;
+    margin-top: 1%;
+    margin-left: 30%;
     position: absolute;
 }
 
 .vidas {
-    top: 0px;
-    left: 15%;
+    margin-top: 1%;
+    margin-left: 60%;
     position: absolute;
 }
 

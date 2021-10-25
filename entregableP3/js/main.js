@@ -1,10 +1,12 @@
 "use strict";
 
-//VARIABLE USADA PARA CAMBIAR CLASES ENTRE SALTAR Y CAMINAR
+//VARIABLE USADA PARA CAMBIAR CLASES ENTRE SALTAR, HACERSE CHIQUITO Y CAMINAR
 let salta = false;
+let chiquito = false;
 let caminaOSalta = document.getElementById("camina");
 //
 let muere = false;
+
 //VARIABLE USADA PARA IR SUMANDO LOS PUNTOS CADA VEZ QUE AGARRA UNA MONEDA
 let puntos = 0;
 let puntosTotal = document.getElementById("puntos");
@@ -41,23 +43,32 @@ function fondoDia() {
 document.addEventListener('keydown', function(evento) {
     if(evento.keyCode == 32) { //barra espaciadora
         salta = true;
-        cambiar(salta);
+        cambiar();
     }
+    else
+        if(evento.keyCode == 25) { //flecha abajo
+            chiquito = true;
+            cambiar();
+        }
 });
 
 //METODO QUE SE UTILIZA PARA QUE EL NENE SALTE O CAMINE
 //SI LA VARIABLE SALTA ES TRUE SE SETEA LA CLASE SALTA, Y SI ES FALSE SE SETEA LA CLASE CAMINA
-function cambiar(salta){
+function cambiar(){
     if(salta)
         caminaOSalta.setAttribute("class","salta");
     else
-        caminaOSalta.setAttribute("class","camina");
+        if(chiquito)
+            caminaOSalta.setAttribute("class","chiquito");
+        else
+            caminaOSalta.setAttribute("class","camina");
 }
 
 //
 caminaOSalta.addEventListener("animationend", function() {
     salta = false;
-    cambiar(salta);
+    chiquito = false;
+    cambiar();
 });
 
 /*function pierde(){ 
@@ -141,12 +152,16 @@ function sumarPuntosArriba() {
     if(posicionCaminar.left <= monedaW  && posicionCaminar.top <= posicicionMoneda.top && caminaW >= posicicionMoneda.left && caminaH >= posicicionMoneda.top) {
        sumar();
         //camina.setAttribute("class","muere");
-        moneda.classList.remove("moneda");
-        //hacer que aparezca la clase moneda nuevamente
+        moneda.setAttribute("class","agarraMoneda");
+        setTimeout(mostrarMonedaArriba, 2000);
         
 
     }
-    
+     
+}
+
+function mostrarMonedaArriba(){
+    moneda.setAttribute("class","moneda");
 }
 
 function sumarPuntosAbajo() {
@@ -161,11 +176,14 @@ function sumarPuntosAbajo() {
     
     if(posicionCaminar.left <= moneda1W  && posicionCaminar.top <= posicicionMoneda1.top && caminaW >= posicicionMoneda1.left && caminaH >= posicicionMoneda1.top) {
         sumar();
-        moneda1.classList.remove("moneda1");
-        //hacer que aparezca la clase moneda nuevamente
+        moneda1.setAttribute("class","agarraMoneda1");
+        setTimeout(mostrarMonedaAbajo, 2000);
     }
 }
-
+  
+function mostrarMonedaAbajo(){
+    moneda1.setAttribute("class","moneda1");
+}
 
 
 /*function sumarPuntos() {
