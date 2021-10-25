@@ -89,8 +89,6 @@
 .moneda {
     right: 0;
     bottom: 50%;
-
-
     width: 78px;
     height:87px;
     margin-top: 23%; 
@@ -102,8 +100,6 @@
 }
 
 @keyframes girarMoneda {
-    
-
     0%{right: 0% }
     10%{right: 10% }
     20%{right: 20% }
@@ -115,11 +111,7 @@
     80%{right: 80% }
     90%{right: 90% }
     100%{right: 100%;background-position: -470px; }
-
-    
 }
-
-
 
 .piedra {
     width: 52px;
@@ -138,9 +130,6 @@
     }
 }
 
-
-
-
 .camioneta {
     width: 287px;
     height: 200px;
@@ -152,9 +141,7 @@
 }
 
 @keyframes camioneta {
-    
         0% {
-          
           right: 0px;
           transform: scaleX(1);
         }
@@ -162,9 +149,6 @@
           right: calc(100% + 100px);
           transform: scaleX(1);
         }
-        
-    
-    
     /*to {
         right: 120%;
         transform: translateX(-120%);
@@ -188,26 +172,6 @@
         right: 110%;
         transform: translateX(120%);
     }
-}
-
-
-.finJuego {
-    display: none;
-}
-
-.finJuego div {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-}
-
-.obstaculo:hover ~ .finJuego {
-    display: block;
-}
-
-.finJuego:hover {
-    display: block;
 }
 
 .puntos {

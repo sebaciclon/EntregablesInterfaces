@@ -32,6 +32,28 @@ caminaOSalta.addEventListener("animationend", function() {
     }
 });
 
+function pierde(){ 
+    let caminaPos = camina.getBoundingClientRect();
+    let piedraPos = piedra.getBoundingClientRect();
+    let tomaPos = tomaDeAgua.getBoundingClientRect();
+    
+    let piedraW = piedraPos.right + piedraPos.width; 
+    let piedraH = piedraPos.top + piedraPos.height;
+    let caminaW = caminaPos.right + caminaPos.width;
+    let caminaH = caminaPos.top + caminaPos.height;
+    let tomaAguaW = tomaPos.right + caminaPos.width;
+    let tomaAguaH = tomaPos.top + tomaPos.height;
+    
+    if((caminaPos.right <= piedraW && caminaW >= piedraPos.right && caminaH >= piedraPos.top && caminaPos.top <= piedraH) 
+        || (caminaPos.right <= tomaAguaW && caminaW >= tomaPos.right && caminaH >= tomaPos.top && caminaPos.top <= tomaAguaH)) {
+        camina.setAttribute("class","muere");
+    }
+}
+
+
+
+setInterval(pierde,300);
+
 /*
 let salta = false;
 let muere = false;
