@@ -36,52 +36,87 @@ caminaOSalta.addEventListener("animationend", function() {
     //}
 });
 
-
-    //restar pixeles al muñeco
-function pierde(){ 
+//restar pixeles al muñeco
+function pierdePiedra(){ 
     let posicionCaminar = camina.getBoundingClientRect();
     let posicionPiedra = piedra.getBoundingClientRect();
+    
+    let piedraW = posicionPiedra.left + posicionPiedra.width; 
+    let piedraH = posicionPiedra.top + posicionPiedra.height;
+    let caminaW = posicionCaminar.left + posicionCaminar.width -50;
+    let caminaH = posicionCaminar.top + posicionCaminar.height - 50;
+        
+    if(posicionCaminar.left <= piedraW  && posicionCaminar.top <= piedraH && caminaW >= posicionPiedra.left && caminaH >= posicionPiedra.top) {
+        camina.setAttribute("class","muere");
+        let cantVidas = restarVidas();
+        if(cantVidas == 0) {
+            //hacer algo
+        }
+    }
+}
+
+function pierdeToma(){ 
+    let posicionCaminar = camina.getBoundingClientRect();
     let posicionToma = tomaDeAgua.getBoundingClientRect();
     
-    let piedraW = posicionPiedra.right + posicionPiedra.width; 
-    let piedraH = posicionPiedra.top + posicionPiedra.height;
-    let caminaW = posicionCaminar.right + posicionCaminar.width;
-    let caminaH = posicionCaminar.top + posicionCaminar.height;
-    let tomaAguaW = posicionToma.right + posicionToma.width;
+    let caminaW = posicionCaminar.left + posicionCaminar.width -50;
+    let caminaH = posicionCaminar.top + posicionCaminar.height - 50;
+    let tomaAguaW = posicionToma.left + posicionToma.width;
     let tomaAguaH = posicionToma.top + posicionToma.height;
     
-    if((posicionCaminar.right <= piedraW  && posicionCaminar.top <= piedraH && caminaW >= posicionPiedra.right && caminaH >= posicionPiedra.top) 
-        || (posicionCaminar.right <= tomaAguaW  && posicionCaminar.top <= tomaAguaH && caminaW >= posicionToma.right && caminaH >= posicionToma.top)) {
-            camina.setAttribute("class","muere");
-            restarVidas();
-            if(restarVidas() == 0) {
-                //hacer algo
-            }
+    if(posicionCaminar.left <= tomaAguaW  && posicionCaminar.top <= tomaAguaH && caminaW >= posicionToma.left && caminaH >= posicionToma.top) {
+        camina.setAttribute("class","muere");
+        let cantVidas = restarVidas();
+        if(cantVidas == 0) {
+            //hacer algo
+        }
+
     }
 }
 
-
-
-
-
-
-function sumarPuntos() {
+function sumarPuntosArriba() {
     let posicionCaminar = camina.getBoundingClientRect();
     let posicicionMoneda = moneda.getBoundingClientRect();
-    console.log(posicionCaminar);
-    console.log(posicicionMoneda);
     
-    let monedaW = posicicionMoneda.left + posicicionMoneda.width; 
-    let monedaH = posicicionMoneda.top + posicicionMoneda.height;
     let caminaW = posicionCaminar.left + posicionCaminar.width;
     let caminaH = posicionCaminar.top + posicionCaminar.height;
-
+    let monedaW = posicicionMoneda.left + posicicionMoneda.width; 
+    let monedaH = posicicionMoneda.top + posicicionMoneda.height;
+    
     //if(posicionCaminar.left <= monedaW  && posicionCaminar.top <= monedaH && caminaW >= posicicionMoneda.left && caminaH >= posicicionMoneda.top) {
     if(posicionCaminar.left <= monedaW  && posicionCaminar.top <= posicicionMoneda.top && caminaW >= posicicionMoneda.left && caminaH >= posicicionMoneda.top) {
-        sumar();
+       sumar();
         //camina.setAttribute("class","muere");
     }
+    
 }
+
+function sumarPuntosAbajo() {
+    let posicionCaminar = camina.getBoundingClientRect();
+    let posicicionMoneda1 = moneda1.getBoundingClientRect();
+    
+
+    let caminaW = posicionCaminar.left + posicionCaminar.width;
+    let caminaH = posicionCaminar.top + posicionCaminar.height;
+    let moneda1W = posicicionMoneda1.left + posicicionMoneda1.width; 
+    let moneda1H = posicicionMoneda1.top + posicicionMoneda1.height;
+    
+    if(posicionCaminar.left <= moneda1W  && posicionCaminar.top <= posicicionMoneda1.top && caminaW >= posicicionMoneda1.left && caminaH >= posicicionMoneda1.top) {
+        sumar();
+    
+    }
+}
+
+setInterval(pierdePiedra,250);
+setInterval(pierdeToma,1000);
+setInterval(sumarPuntosArriba, 500);
+setInterval(sumarPuntosAbajo, 500);
+
+
+
+
+
+
 
 function sumar() {
     puntos = puntos + 10;
@@ -97,8 +132,7 @@ function restarVidas() {
 
 
 
-setInterval(pierde,300);
-setInterval(sumarPuntos, 300);
+
 
 /*
 let salta = false;
