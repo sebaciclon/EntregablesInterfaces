@@ -126,6 +126,30 @@
     100%{right: 100%;background-position: -470px; }
 }
 
+.pajaro {
+    width: 135px;
+    height: 84px;
+    margin-top: 24%;
+    margin-left: 25%;
+    position: absolute;
+    background: url(../images/pajaro.png) left center; 
+    animation: volar 5s steps(4) infinite;  
+}
+
+@keyframes volar {
+    0%{right: 0% }
+    10%{right: 10% }
+    20%{right: 20% }
+    30%{right: 30% }
+    40%{right: 40% }
+    50%{right: 50% }
+    60%{right: 60% }
+    70%{right: 70% }
+    80%{right: 80% }
+    90%{right: 90% }
+    100%{right: 100%;background-position: -541px;}
+}
+
 .piedra {
     width: 52px;
     height: 53px;
