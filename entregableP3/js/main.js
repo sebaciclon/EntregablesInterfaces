@@ -245,11 +245,39 @@ function restarVidas() {
     vidasTotal.innerHTML = vidas;
 }
 
+function inicioJuego(){
+    
+    nubes.style.animationPlayState = "paused";
+    sol.style.animationPlayState = "paused";
+    ciudad.style.animationPlayState = "paused";
+    camina.style.animationPlayState = "paused";
+    camina.classList.remove("camina");
+    //camina.classList.remove("muere");
+    moneda.style.animationPlayState = "paused";
+    moneda.classList.remove("moneda");
+    moneda1.style.animationPlayState = "paused"; 
+    moneda1.classList.remove("moneda1");
+    piedra.style.animationPlayState = "paused"; 
+    piedra.classList.remove("piedra");
+    pajaro.style.animationPlayState = "paused"; 
+    pajaro.classList.remove("pajaro");
+    
+   
+}
+inicioJuego();
+
 setInterval(pierdePiedra,250);
+//setInterval(pierdeToma,1000);
+setInterval(pierdePajaro, 1000);
+setInterval(sumarPuntosArriba, 500);
+setInterval(sumarPuntosAbajo, 500);
+
+
+/*setInterval(pierdePiedra,250);
 //setInterval(pierdeToma,1000);
 setInterval(pierdePajaro, 500);
 setInterval(sumarPuntosArriba, 500);
-setInterval(sumarPuntosAbajo, 500);
+setInterval(sumarPuntosAbajo, 500);*/
 
 
 
