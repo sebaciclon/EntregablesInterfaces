@@ -97,6 +97,16 @@ function pierdePiedra(){
             //setTimeout(gameOver(),3000);
             detenerAnimaciones();
             swal('GAME OVER ', 'Perdió todos sus vidas!!!', 'success');
+            camina.classList.remove("camina");
+            moneda.classList.remove("moneda");
+            moneda1.classList.remove("moneda1");
+            piedra.classList.remove("piedra");
+            pajaro.classList.remove("pajaro");
+            salta.classList.remove("salta");
+            chiquito.classList.remove("chiquito");
+            muere.classList.remove("muere");
+            agarraMoneda.classList.remove("agarraMoneda");
+            agarraMoneda1.classList.remove("agarraMoneda1");
         }
     }
 }
@@ -120,8 +130,17 @@ function pierdePajaro(){
             //setTimeout(gameOver(),3000);
             detenerAnimaciones();
             swal('GAME OVER ', 'Perdió todos sus vidas!!!', 'success');
+            camina.classList.remove("camina");
+            moneda.classList.remove("moneda");
+            moneda1.classList.remove("moneda1");
+            piedra.classList.remove("piedra");
+            pajaro.classList.remove("pajaro");
+            salta.classList.remove("salta");
+            chiquito.classList.remove("chiquito");
+            muere.classList.remove("muere");
+            agarraMoneda.classList.remove("agarraMoneda");
+            agarraMoneda1.classList.remove("agarraMoneda1");
         }
-        
     }
 }
 
