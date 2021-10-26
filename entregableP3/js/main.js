@@ -110,10 +110,8 @@ function pierdePiedra(){
         
     if(posicionCaminar.left <= piedraW  && posicionCaminar.top <= piedraH && caminaW >= posicionPiedra.left && caminaH >= posicionPiedra.top) {
         camina.setAttribute("class","muere");
-        let cantVidas = restarVidas();
-        puntos = 0;
-        puntosTotal.innerHTML = puntos;
-        if(cantVidas == 0) {
+        restarVidas();
+        if(vidas == 0) {
             //hacer algo
         }
     }
@@ -130,15 +128,19 @@ function pierdePajaro(){
     
     //if(posicionCaminar.left <= pajaroW  && posicionCaminar.top <= pajaroH && caminaW >= posicionPajaro.left && caminaH >= posicionPajaro.top) {
     if(posicionCaminar.left <= pajaroW  && posicionCaminar.top <= posicionPajaro.top && caminaW >= posicionPajaro.left && caminaH >= posicionPajaro.top) {
+        
+        restarVidas();
         camina.setAttribute("class","muere");
-        let cantVidas = restarVidas();
-        puntos = 0;
-        puntosTotal.innerHTML = puntos;
-        if(cantVidas == 0) {
-            //hacer algo
+        if(vidas == -1) {
+            setTimeout(gameOver(),3000);
         }
 
     }
+}
+
+function gameOver(){
+    camina.setAttribute("class","muere");
+    alert("GAME OVER", "Perdió todos sus vidas");
 }
 
 /*function pierdeToma(){ 
@@ -244,7 +246,7 @@ function restarVidas() {
     vidas --;
     vidasTotal.innerHTML = vidas;
 }
-
+/*
 function inicioJuego(){
     
     nubes.style.animationPlayState = "paused";
@@ -264,7 +266,7 @@ function inicioJuego(){
     
    
 }
-inicioJuego();
+inicioJuego(); */
 
 setInterval(pierdePiedra,250);
 //setInterval(pierdeToma,1000);
