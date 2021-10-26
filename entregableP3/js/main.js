@@ -83,32 +83,23 @@ caminaOSalta.addEventListener("animationend", function() {
 function pierdePiedra(){ 
     let posicionCaminar = camina.getBoundingClientRect();
     let posicionPiedra = piedra.getBoundingClientRect();
-    
+        
     let piedraW = posicionPiedra.left + posicionPiedra.width; 
     let piedraH = posicionPiedra.top + posicionPiedra.height;
     let caminaW = posicionCaminar.left + posicionCaminar.width -50;
     let caminaH = posicionCaminar.top + posicionCaminar.height - 50;
-        
+            
     if(posicionCaminar.left <= piedraW  && posicionCaminar.top <= piedraH && caminaW >= posicionPiedra.left && caminaH >= posicionPiedra.top) {
         camina.setAttribute("class","muere");
         restarVidas();
         if(vidas == 0) {
             //hacer algo
             //setTimeout(gameOver(),3000);
-            detenerAnimaciones();
             swal('GAME OVER ', 'Perdió todos sus vidas!!!', 'success');
-            camina.classList.remove("camina");
-            moneda.classList.remove("moneda");
-            moneda1.classList.remove("moneda1");
-            piedra.classList.remove("piedra");
-            pajaro.classList.remove("pajaro");
-            salta.classList.remove("salta");
-            chiquito.classList.remove("chiquito");
-            muere.classList.remove("muere");
-            agarraMoneda.classList.remove("agarraMoneda");
-            agarraMoneda1.classList.remove("agarraMoneda1");
+            detenerAnimaciones();
+            removerClases();
         }
-    }
+    } 
 }
 
 //METODO QUE SE FIJA SI EL NENE SE CHOCA EL PAJARO PARA RESTARLE UNA VIDA
@@ -128,18 +119,9 @@ function pierdePajaro(){
         camina.setAttribute("class","muere");
         if(vidas == 0) {
             //setTimeout(gameOver(),3000);
-            detenerAnimaciones();
             swal('GAME OVER ', 'Perdió todos sus vidas!!!', 'success');
-            camina.classList.remove("camina");
-            moneda.classList.remove("moneda");
-            moneda1.classList.remove("moneda1");
-            piedra.classList.remove("piedra");
-            pajaro.classList.remove("pajaro");
-            salta.classList.remove("salta");
-            chiquito.classList.remove("chiquito");
-            muere.classList.remove("muere");
-            agarraMoneda.classList.remove("agarraMoneda");
-            agarraMoneda1.classList.remove("agarraMoneda1");
+            detenerAnimaciones();
+            removerClases();
         }
     }
 }
@@ -219,6 +201,19 @@ function detenerAnimaciones(){
     moneda1.style.animationPlayState = "paused"; 
     piedra.style.animationPlayState = "paused"; 
     pajaro.style.animationPlayState = "paused"; 
+}
+
+function removerClases() {
+    camina.classList.remove("camina");
+    moneda.classList.remove("moneda");
+    moneda1.classList.remove("moneda1");
+    piedra.classList.remove("piedra");
+    pajaro.classList.remove("pajaro");
+    salta.classList.remove("salta");
+    chiquito.classList.remove("chiquito");
+    muere.classList.remove("muere");
+    agarraMoneda.classList.remove("agarraMoneda");
+    agarraMoneda1.classList.remove("agarraMoneda1");
 }
 
 /*setInterval(pierdePiedra,250);
