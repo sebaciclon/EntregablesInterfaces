@@ -122,8 +122,9 @@
 .chiquito {
     width: 63px;
     height:97px;
-    /*margin-top: 460px;*/
-    margin-top: 24%;
+    /*margin-top: 460px;
+    margin-top: 24%;*/
+    margin-top: 33%;
     margin-left: 25%;
     position: absolute;
     background: url(../images/personajeChiquitoCaminando.png) left center no-repeat; 
@@ -131,8 +132,9 @@
 }
 
 @keyframes hacerseChiquito {
-    35% {bottom: 40%;}
-    100% {background-position: -374px;}
+    /*35% {bottom: 40%;}
+    100% {background-position: -374px;}*/
+    0% {background-position: -374px;}
 }
 
 

@@ -45,11 +45,12 @@ document.addEventListener('keydown', function(evento) {
         salta = true;
         cambiar();
     }
-    else
-        if(evento.keyCode == 25) { //flecha abajo
+    else {
+        if(evento.code == "ArrowDown") { //flecha abajo
             chiquito = true;
             cambiar();
         }
+    }
 });
 
 //METODO QUE SE UTILIZA PARA QUE EL NENE SALTE O CAMINE
