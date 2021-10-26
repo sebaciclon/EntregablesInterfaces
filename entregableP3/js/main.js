@@ -119,7 +119,29 @@ function pierdePiedra(){
     }
 }
 
-function pierdeToma(){ 
+function pierdePajaro(){ 
+    let posicionCaminar = camina.getBoundingClientRect();
+    let posicionPajaro = pajaro.getBoundingClientRect();
+    
+    let caminaW = posicionCaminar.left + posicionCaminar.width -50;
+    let caminaH = posicionCaminar.top + posicionCaminar.height - 50;
+    let pajaroW = posicionPajaro.left + posicionPajaro.width;
+    let pajaroH = posicionPajaro.top + posicionPajaro.height;
+    
+    //if(posicionCaminar.left <= pajaroW  && posicionCaminar.top <= pajaroH && caminaW >= posicionPajaro.left && caminaH >= posicionPajaro.top) {
+    if(posicionCaminar.left <= pajaroW  && posicionCaminar.top <= posicionPajaro.top && caminaW >= posicionPajaro.left && caminaH >= posicionPajaro.top) {
+        camina.setAttribute("class","muere");
+        let cantVidas = restarVidas();
+        puntos = 0;
+        puntosTotal.innerHTML = puntos;
+        if(cantVidas == 0) {
+            //hacer algo
+        }
+
+    }
+}
+
+/*function pierdeToma(){ 
     let posicionCaminar = camina.getBoundingClientRect();
     let posicionToma = tomaDeAgua.getBoundingClientRect();
     
@@ -138,7 +160,7 @@ function pierdeToma(){
         }
 
     }
-}
+}*/
 
 function sumarPuntosArriba() {
     let posicionCaminar = camina.getBoundingClientRect();
@@ -224,7 +246,8 @@ function restarVidas() {
 }
 
 setInterval(pierdePiedra,250);
-setInterval(pierdeToma,1000);
+//setInterval(pierdeToma,1000);
+setInterval(pierdePajaro, 500);
 setInterval(sumarPuntosArriba, 500);
 setInterval(sumarPuntosAbajo, 500);
 
