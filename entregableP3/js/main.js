@@ -200,6 +200,8 @@ function restarVidas() {
     vidasTotal.innerHTML = vidas;
 }
 
+//METODO QUE PONE EN PAUSA LAS ANIMACIONES DE NUBES, SOL Y CIUDAD
+//SE UTILIZA CUANDO EL PERSONAJE PIERDE TODAS LAS VIDAS
 function detenerAnimaciones(){
     
     nubes.style.animationPlayState = "paused";
@@ -212,6 +214,8 @@ function detenerAnimaciones(){
     pajaro.style.animationPlayState = "paused"; */
 }
 
+//METODO QUE OCULTA LOS ELEMENTOS CON ANIMACIONES
+//SE UTILIZA CUANDO EL PERSONAJE PIERDE TODAS LAS VIDAS
 function ocultarElementos(){
     camina.classList.add("esconder");
     moneda.classList.add("esconder");
@@ -220,6 +224,7 @@ function ocultarElementos(){
     pajaro.classList.add("esconder");
 }
 
+//METODO QUE VUELVE A MOSTRAR LAS ANIMACIONES OCULTAS CUANDO COMIENZA EL JUEGO
 function mostrarElementos(){
     camina.classList.remove("esconder");
     moneda.classList.remove("esconder");
@@ -242,10 +247,12 @@ function removerClases() {
     agarraMoneda1.classList.remove("agarraMoneda1");
 }
 
+//METODO PARA REINICIAR EL JUEGO
 function reiniciarJuego(){
     window.location.reload();
 }
 
+//METODO PARA COMENZAR EL JUEGO
 function comenzarJuego() {
     setInterval(pierdePiedra,250);
     setInterval(pierdePajaro, 500);

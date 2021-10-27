@@ -1,3 +1,7 @@
+/* LA CLASE CONTENEDOR ES LA CLASE DE FONDO
+SE LE DA UNA POSICION ABSOLUTA, QUE COMIENCE EN EL MARGEN SUPERIOR IZQUIERDO
+COLOR CELESTE Y QUE OCUPE TODA LA PANTALLA 
+ESTA CLASE NO TIENE ANIMACION*/
 .contenedor {
     position: absolute;
     top: 0px;
@@ -7,9 +11,11 @@
     height: 100%;
 }
 
+/* LA CLASE SOL ES LA QUE MUESTRA EL SOL EN PANTALLA 
+SE LE DA UN COLOR ANARANJADO, TAMANO DE 100 X 100 PIXELES, POSICION ABSOLUTA
+ARRANCA DE "AFUERA" DE LA PANTALLA E INVOCA A LA ANIMACION SOL*/
 .sol {
     background: #FFA500;
-    
     width: 100px;
     height: 100px;
     position: absolute;
@@ -20,6 +26,15 @@
     animation: sol 80s linear infinite;
 }
 
+/* ANIMACION DEL SOL
+D 0 A 50% VA SUBIENDO Y DE 50 A 94% VA BAJANDO EL SOL*/
+@keyframes sol {
+    0% {left: -110px; top: 30%;}
+    50% {left: 50%; top: 5%;}
+    100% {left: 94%; top: 30%;}
+}
+
+/* ATRIBUTOS DEL BOTON PARA CAMBIAR DE ESCENARIO */
 .btnEscenario{
     margin-left: 10px;
     margin-top: 20px;
@@ -35,31 +50,27 @@
 }
 
 .imagen{
-    
     padding: 0;
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
 
-@keyframes sol {
-    0% {left: -110px; top: 30%;}
-    50% {left: 50%; top: 5%;}
-    100% {left: 94%; top: 30%;}
-}
-
-/*para cambiar el fondo usamos esa clase y ocultamos la clase del sol*/
+/* CLASE QUE SE UTILIZA PARA CAMBIAR EL DONDE A NOCHE 
+ LE CAMBIAMOS EL BACKGROUND A UNO MAS OSCURO QUE EL QUE TIENE LA CLASE CONTENEDOR*/
 .fondoNoche {
     background: #103D42;
     position: absolute;
     top: 0px;
     left: 0px;
-    
     width: 100%;
     height: 100%;
 }
 
-
+/* CLASE QUE MUESTRA LAS NUBES CON SU ANIMACION 
+EL BACKGROUND RECIBE LA IMAGEN DE LAS NUBES CON UNA POSICION ABSOLUTA,
+COMIENZA BIEN A LA IZQUIERZA Y 5 % ABAJO, TIENE UN ANCHO DE 100%
+Y LA ALTURA DE LA IMAGEN. SE LLAMA A LA ANIMACION*/
 .nubes {
     background: url(../images/nubes2.png);
     position: absolute;
@@ -70,16 +81,22 @@
     animation: nubes 20s linear infinite;
 }
 
+/* ANIMACION DE LA NUBE
+EN 0% TIENE UNA POSICION DE 0 Y EN 100% TIENE UNA POSICION DEL
+TAMAÑO DE LA IMAGEN */
 @keyframes nubes {
     0% {background-position: 0;}
     100% {background-position: -2772px;}
 }
 
+/* CLASE QUE MUESTRA LA CIUDAD CON SU ANIMACION 
+EL BACKGROUND RECIBE LA IMAGEN DE LA CIUDAD CON UNA POSICION ABSOLUTA,
+Y LAS POSICIONES Y TAMAÑO QUE SE AJUSTAN A LAS NECESIDADES DEL JUEGO
+SE LLAMA A LA ANIMACION*/
 .ciudad{
 	background-image: url(../images/ciudad.png);
 	background-repeat: repeat-x;
-	/*background-position: 0px 100%;  /*para que se ubique en la parte inferior*/
-	position: absolute; 
+	Position: absolute; 
 	top: 10%;
 	left: 0px;
 	width: 100%;
@@ -87,11 +104,17 @@
     animation: ciudad 30s linear infinite;	
 }
 
+/* ANIMACION DE LA CIUDAD
+VA DESDE 0 HASTA EL ANCHO DE LA IMAGEN*/
 @keyframes ciudad{
 	from{ background-position: 0; }
 	to{ background-position: -6396px; }
 }
 
+/* CLASE QUE MUESTRA AL PERSONAJE CON SU ANIMACION PARA QUE CAMINE
+TIENE EL TAMAÑO DE LA IMAGEN DEL NENE, LOS MARGENES DE ARRIBA E IZQUIERDA
+ SON PUESTOS SEGUN LAS NECESIDADES DE NUESTRA PAGINA
+ SE INVOCA A LA IMAGEN DEL PERSONAJE Y SE LLAMA A SU ANIMACION*/
 .camina {
     width: 120px;
     height:269px;
@@ -103,11 +126,17 @@
     animation: caminar 1s steps(6) infinite;  
 }
 
+/* ANIMACION DEL PERSONAJE CAMINANDO */
 @keyframes caminar {
     0% {background-position: 0;}
     100% {background-position: -720px;}
 }
 
+/* CLASE QUE MUESTRA AL PERSONAJE CON SU ANIMACION PARA QUE SALTE
+TIENE EL TAMAÑO DE LA IMAGEN DEL NENE, LOS MARGENES DE ARRIBA E IZQUIERDA
+SON PUESTOS SEGUN LAS NECESIDADES DE NUESTRA PAGINA
+SE INVOCA A LA IMAGEN DEL PERSONAJE Y SE LLAMA A SU ANIMACION
+NO-REPEAT SE USA PARA QUE SOLO LO HAGA UNA VEZ*/ 
 .salta {
     width: 127px;
     height:269px;
@@ -118,17 +147,20 @@
     animation: saltar 1s steps(7) forwards; 
 }
 
+/*ANIMACION DEL PERSONAJE SALTANDO */
 @keyframes saltar {
     35% {bottom: 40%;}
-    /*50% {bottom: 50%;}*/
     100% {background-position: -893px;}
 }
 
+/* CLASE QUE MUESTRA AL PERSONAJE CON SU ANIMACION PARA QUE SE HAGA CHIQUITO
+TIENE EL TAMAÑO DE LA IMAGEN DEL NENE, LOS MARGENES DE ARRIBA E IZQUIERDA
+SON PUESTOS SEGUN LAS NECESIDADES DE NUESTRA PAGINA
+SE INVOCA A LA IMAGEN DEL PERSONAJE Y SE LLAMA A SU ANIMACION
+NO-REPEAT SE USA PARA QUE SOLO LO HAGA UNA VEZ*/ 
 .chiquito {
     width: 63px;
     height:97px;
-    /*margin-top: 460px;
-    margin-top: 24%;*/
     margin-top: 33%;
     margin-left: 25%;
     position: absolute;
@@ -136,13 +168,16 @@
     animation: hacerseChiquito 1s steps(6) forwards;  
 }
 
+/* ANIMACION DEL PERSONAJE HACIENDOSE CHIQUITO PARA ESQUIVAR EL PAJARO */
 @keyframes hacerseChiquito {
-    /*35% {bottom: 40%;}
-    100% {background-position: -374px;}*/
     0% {background-position: -374px;}
 }
 
-
+/* CLASE QUE MUESTRA AL PERSONAJE CON SU ANIMACION CUANDO MUERE
+TIENE EL TAMAÑO DE LA IMAGEN DEL NENE, LOS MARGENES DE ARRIBA E IZQUIERDA
+SON PUESTOS SEGUN LAS NECESIDADES DE NUESTRA PAGINA
+SE INVOCA A LA IMAGEN DEL PERSONAJE Y SE LLAMA A SU ANIMACION 
+NO-REPEAT SE USA PARA QUE SOLO LO HAGA UNA VEZ*/
 .muere {
     width: 120px;
     height:269px;
@@ -153,11 +188,17 @@
     animation: morir 2s steps(15) forwards;  
 }
 
+/* ANIMACION CUANDO EL PERSONAJE SE CHOCA ALGUN OBSTACULO*/
 @keyframes morir {
     0% {background-position: 0;}
     100% {background-position: -1810px;}
 }
 
+/* CLASE QUE MUESTRA LA MONEDA MAS ALTA CON SU ANIMACION
+TIENE EL TAMAÑO DE LA IMAGEN DE LA MONEDA, LOS MARGENES DE ARRIBA E IZQUIERDA
+SON PUESTOS SEGUN LAS NECESIDADES DE NUESTRA PAGINA
+SE INVOCA A LA IMAGEN DE LA MONEDA Y SE LLAMA A SU ANIMACION 
+INFINITE SE USA PARA QUE SE REPITA INDEFINIDAMENTE LE MONEDA*/
 .moneda {
     right: 0;
     bottom: 55%;
@@ -171,6 +212,11 @@
     overflow: visible;
 }
 
+/* CLASE QUE MUESTRA LA MONEDA MAS BAJA CON SU ANIMACION
+TIENE EL TAMAÑO DE LA IMAGEN DE LA MONEDA, LOS MARGENES DE ARRIBA E IZQUIERDA
+SON PUESTOS SEGUN LAS NECESIDADES DE NUESTRA PAGINA
+SE INVOCA A LA IMAGEN DE LA MONEDA Y SE LLAMA A SU ANIMACION 
+INFINITE SE USA PARA QUE SE REPITA INDEFINIDAMENTE LE MONEDA*/
 .moneda1 {
     right: 0;
     bottom: 45%;
@@ -210,6 +256,11 @@
     animation: agarrar 0.5s steps(4) forwards;  
 }
 
+/* CLASE QUE MUESTRA UNA IMAGEN CUANDO EL PERSONAJE AGARRA UNA MONEDA
+TIENE EL TAMAÑO DE LA IMAGEN REQUERIDA, LOS MARGENES DE ARRIBA E IZQUIERDA
+SON PUESTOS SEGUN LAS NECESIDADES DE NUESTRA PAGINA
+SE INVOCA A LA IMAGEN Y SE LLAMA A SU ANIMACION 
+NO-REPEAT SE USA PARA QUE SE MUESTRE SOLO CUANDO AGARRA UNA MONEDA*/
 .agarraMoneda1 {
     right: 60%;
     bottom: 45%;
@@ -222,11 +273,16 @@
     animation: agarrar 0.5s steps(4) forwards;  
 }
 
+/* ANIMACION CUANDO EL PERSONAJE AGARRA UNA MONEDA*/
 @keyframes agarrar {
     0% {background-position: 0;}
     100% {background-position: -806px;}
 }
 
+/* CLASE QUE MUESTRA EL PAJARO CON SU ANIMACION
+TIENE EL TAMAÑO DE LA IMAGEN DEL PAJARO, LOS MARGENES DE ARRIBA E IZQUIERDA
+SON PUESTOS SEGUN LAS NECESIDADES DE NUESTRA PAGINA
+SE INVOCA A LA IMAGEN DEL PAJARO Y SE LLAMA A SU ANIMACION */
 .pajaro {
     width: 135px;
     height: 84px;
@@ -237,6 +293,7 @@
     animation: volar 5s steps(4) infinite;  
 }
 
+/* ANIMACION DEL PAJARO VOLANDO*/
 @keyframes volar {
     0%{right: 0% }
     10%{right: 10% }
@@ -251,6 +308,10 @@
     100%{right: 100%;background-position: -541px;}
 }
 
+/* CLASE QUE MUESTRA LA PIEDRA CON SU ANIMACION
+TIENE EL TAMAÑO DE LA IMAGEN DE LA PIEDRA, LOS MARGENES DE ARRIBA E IZQUIERDA
+SON PUESTOS SEGUN LAS NECESIDADES DE NUESTRA PAGINA
+SE INVOCA A LA IMAGEN DE LA PIEDRA Y SE LLAMA A SU ANIMACION */
 .piedra {
     width: 52px;
     height: 53px;
@@ -261,57 +322,15 @@
     animation: piedras 5s linear infinite;
 }
 
+/* ANIMACION DE LA PIEDRA*/
 @keyframes piedras {
     to {
         right: 130%;
         transform: translateX(-120%);
     }
 }
-/*
-.camioneta {
-    width: 287px;
-    height: 200px;
-    top: 70%;
-    right: 0%;
-    position: absolute;
-    background-image:url(../images/camioneta.png) ; 
-    animation: camioneta 5s linear infinite;
-}
 
-@keyframes camioneta {
-        0% {
-          right: 0px;
-          transform: scaleX(1);
-        }
-        100% {
-          right: calc(100% + 100px);
-          transform: scaleX(1);
-        }
-    /*to {
-        right: 120%;
-        transform: translateX(-120%);
-        right: 110%;
-        transform: translateX(120%);
-    }
-}
 
-.tomaDeAgua {
-    width: 54px;
-    height: 100px;
-    top: 60%;
-    right: 0%;
-    position: absolute;
-    background-image:url(../images/TomaDeAgua.png) ; 
-    animation: tomaDeAgua 9s linear infinite;
-}
-
-@keyframes tomaDeAgua {
-    to {
-        right: 110%;
-        transform: translateX(120%);
-    }
-}
-*/
 .puntosVidas{
     margin-left: 10px;
     padding: 0px;
@@ -352,52 +371,9 @@
     background-color:rgba(238, 214, 55, 0.5);
     
   }
-  .btn:hover{
+.btn:hover{
     background-color:rgba(141, 125, 24, 0.5);
-    
-  }
-
-
-
-/*
-
-@-webkit-keyframes movimiento-diagonal {
-  0% {
-    left: -100px;
-    transform: scaleX(-1);
-  }
-  50% {
-    left: calc(100% + 100px);
-    transform: scaleX(-1);
-  }
-  50.000001% {
-    left: calc(100% + 100px);
-    transform: scaleX(1) translateY(100px);
-  }
-  100% {
-    left: -100px;
-    transform: scaleX(1) translateY(100px);
-  }
 }
 
-#derecha {
-  -webkit-animation-name: movimiento-diagonal;
-  -webkit-animation-duration: 8s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  (para que vuelva a su posicion inicial) 
-  width: 40px;
-  height: 40px;
-  background-image: image("../img/segadon.png");
-  color: #fff;
-  position: relative;
-}
 
-Antes tenías la animación con un to y from, eso es equivalente al estado inicial y final, pero las animaciones en CSS permiten describir porcentajes (from equivaldría a 0% y to al 100%). Entonces lo que he hecho es añadir dos estados más a la animación, aquí describo lo que hacen paso a paso:
-
-0%: el estado inicial. El hombrecito apunta hacia la derecha y está colocado en la izquierda, fuera de la vista. Estos son los valores por defecto (scaleX para que no haya cambio de dirección.)
-50%: el hombrecito está a la derecha, fuera de la vista y todavía mirando a la derecha.
-50.0000001%: (esto es muy cutre lo sé, en otras ocasiones he usado step-end para evitar esto pero no lo he conseguido en esta). El hombrecito sigue a la derecha fuera de la vista, pero ahora le hemos hecho girar para que mire a la izquierda (cambiando el scaleX de valor) y lo hemos bajado un poco (con el translateY).
-100%: estado final. El hombrecito apunta hacia la izquierda y está colocado en la izquierda, fuera de la pantalla.
-Y ahora el navegador se encarga de transicionar entre estados (con el valor de 8 segundos que le puse) y repetirse infinitamente (como ya le tenías puesto). Da la impresión de ser el mismo personaje moviéndose de derecha a izquierda una y otra vez... porque de hecho es el mismo personaje haciendo eso :)*/
 
