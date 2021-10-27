@@ -26,6 +26,10 @@ btn.addEventListener('click',fondoNoche);
 let btn1 = document.getElementById("fondoDia");
 btn1.addEventListener('click',fondoDia);
 
+//BOTON PARA COMENZAR EL JUEGO
+let btn2 = document.getElementById("start");
+btn2.addEventListener('click',comenzarJuego);
+
 //METODO QUE SETEA LA CLASE "FONDONOCHE" Y OCULTA LA CLASE "SOL". ESTO PARA CAMBIAR EL ESCENARIO DE DIA A NOCHE
 function fondoNoche() {
     fondo.setAttribute("class","fondoNoche");
@@ -193,6 +197,7 @@ function restarVidas() {
 }
 
 function detenerAnimaciones(){
+    
     nubes.style.animationPlayState = "paused";
     sol.style.animationPlayState = "paused";
     ciudad.style.animationPlayState = "paused";
@@ -216,20 +221,48 @@ function removerClases() {
     agarraMoneda1.classList.remove("agarraMoneda1");
 }
 
+function comenzarJuego() {
+    setInterval(pierdePiedra,250);
+    setInterval(pierdePajaro, 500);
+    setInterval(sumarPuntosArriba, 500);
+    setInterval(sumarPuntosAbajo, 500);
+
+    salta = false;
+    chiquito = false;
+    caminaOSalta = document.getElementById("camina");
+    puntos = 0;
+    puntosTotal.innerHTML = puntos;
+    vidas = 3;
+    vidasTotal.innerHTML = vidas;
+
+    camina.setAttribute("class", "camina");
+    moneda.setAttribute("class", "moneda");
+    moneda1.setAttribute("class", "moneda1");
+    piedra.setAttribute("class", "piedra");
+    pajaro.setAttribute("class", "pajaro");
+    salta.setAttribute("class", "salta");
+    chiquito.setAttribute("class", "chiquito");
+    muere.setAttribute("class", "muere");
+    agarraMoneda.setAttribute("class", "agarraMoneda");
+    agarraMoneda1.setAttribute("class", "agarraMoneda1");
+
+}
+
 /*setInterval(pierdePiedra,250);
 
 setInterval(pierdePajaro, 500);
 setInterval(sumarPuntosArriba, 500);
 setInterval(sumarPuntosAbajo, 500);*/
 
-function inicioJuego() {
+/*function inicioJuego() {
     setInterval(pierdePiedra,250);
     setInterval(pierdePajaro, 500);
     setInterval(sumarPuntosArriba, 500);
     setInterval(sumarPuntosAbajo, 500);
-}
+}*/
 
-inicioJuego();
+//inicioJuego();
+comenzarJuego();
 
 
 
