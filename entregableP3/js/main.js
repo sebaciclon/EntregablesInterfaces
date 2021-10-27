@@ -27,8 +27,12 @@ let btn1 = document.getElementById("fondoDia");
 btn1.addEventListener('click',fondoDia);
 
 //BOTON PARA COMENZAR EL JUEGO
-let btn2 = document.getElementById("start");
+let btn2 = document.getElementById("iniciar");
 btn2.addEventListener('click',comenzarJuego);
+
+//BOTON PARA REINICIAR EL JUEGO
+let btn3 = document.getElementById("jugarDeNuevo");
+btn3.addEventListener('click',reiniciarJuego);
 
 //METODO QUE SETEA LA CLASE "FONDONOCHE" Y OCULTA LA CLASE "SOL". ESTO PARA CAMBIAR EL ESCENARIO DE DIA A NOCHE
 function fondoNoche() {
@@ -101,7 +105,7 @@ function pierdePiedra(){
             //setTimeout(gameOver(),3000);
             swal('GAME OVER ', 'Perdió todos sus vidas!!!', 'success');
             detenerAnimaciones();
-            removerClases();
+            ocultarElementos();
         }
     } 
 }
@@ -125,7 +129,7 @@ function pierdePajaro(){
             //setTimeout(gameOver(),3000);
             swal('GAME OVER ', 'Perdió todos sus vidas!!!', 'success');
             detenerAnimaciones();
-            removerClases();
+            ocultarElementos();
         }
     }
 }
@@ -201,13 +205,30 @@ function detenerAnimaciones(){
     nubes.style.animationPlayState = "paused";
     sol.style.animationPlayState = "paused";
     ciudad.style.animationPlayState = "paused";
-    camina.style.animationPlayState = "paused";
+    /*camina.style.animationPlayState = "paused";
     moneda.style.animationPlayState = "paused";
     moneda1.style.animationPlayState = "paused"; 
     piedra.style.animationPlayState = "paused"; 
-    pajaro.style.animationPlayState = "paused"; 
+    pajaro.style.animationPlayState = "paused"; */
 }
 
+function ocultarElementos(){
+    camina.classList.add("esconder");
+    moneda.classList.add("esconder");
+    moneda1.classList.add("esconder"); 
+    piedra.classList.add("esconder"); 
+    pajaro.classList.add("esconder");
+}
+
+function mostrarElementos(){
+    camina.classList.remove("esconder");
+    moneda.classList.remove("esconder");
+    moneda1.classList.remove("esconder"); 
+    piedra.classList.remove("esconder"); 
+    pajaro.classList.remove("esconder"); 
+}
+
+//ver!!!!
 function removerClases() {
     camina.classList.remove("camina");
     moneda.classList.remove("moneda");
@@ -221,13 +242,21 @@ function removerClases() {
     agarraMoneda1.classList.remove("agarraMoneda1");
 }
 
+function reiniciarJuego(){
+    window.location.reload();
+}
+
 function comenzarJuego() {
     setInterval(pierdePiedra,250);
     setInterval(pierdePajaro, 500);
     setInterval(sumarPuntosArriba, 500);
     setInterval(sumarPuntosAbajo, 500);
 
-    salta = false;
+    btn2.classList.add("esconder");
+    btn3.classList.remove("esconder");
+    mostrarElementos();
+
+    /*salta = false;
     chiquito = false;
     caminaOSalta = document.getElementById("camina");
     puntos = 0;
@@ -244,12 +273,11 @@ function comenzarJuego() {
     chiquito.setAttribute("class", "chiquito");
     muere.setAttribute("class", "muere");
     agarraMoneda.setAttribute("class", "agarraMoneda");
-    agarraMoneda1.setAttribute("class", "agarraMoneda1");
+    agarraMoneda1.setAttribute("class", "agarraMoneda1");*/
 
 }
 
 /*setInterval(pierdePiedra,250);
-
 setInterval(pierdePajaro, 500);
 setInterval(sumarPuntosArriba, 500);
 setInterval(sumarPuntosAbajo, 500);*/
@@ -262,7 +290,7 @@ setInterval(sumarPuntosAbajo, 500);*/
 }*/
 
 //inicioJuego();
-comenzarJuego();
+//comenzarJuego();
 
 
 
@@ -272,7 +300,5 @@ comenzarJuego();
     
 
     
-
-
 
 
