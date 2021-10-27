@@ -111,8 +111,6 @@ function pierdePiedra(){
             swal('GAME OVER ', 'Perdió todas sus vidas!!!', 'success');
             detenerAnimaciones();
             ocultarElementos();
-            divMoneda.setAttribute("class", "esconder");
-            divMoneda1.setAttribute("class", "esconder");
         }
     } 
 }
@@ -136,8 +134,7 @@ function pierdePajaro(){
             swal('GAME OVER ', 'Perdió todas sus vidas!!!', 'success');
             detenerAnimaciones();
             ocultarElementos();
-            divMoneda.setAttribute("class", "esconder");
-            divMoneda1.setAttribute("class", "esconder");
+            
         }
     }
 }
@@ -155,9 +152,10 @@ function sumarPuntosArriba() {
     let monedaW = posicicionMoneda.left + posicicionMoneda.width; 
     
     if(posicionCaminar.left <= monedaW  && posicionCaminar.top <= posicicionMoneda.top && caminaW >= posicicionMoneda.left && caminaH >= posicicionMoneda.top) {
-       sumar();
+        sumar();
         moneda.setAttribute("class","agarraMoneda");
-        setTimeout(mostrarMonedaArriba, 2000);
+        setTimeout(mostrarMonedaArriba, 500);
+        
     }
 }
 
@@ -181,7 +179,7 @@ function sumarPuntosAbajo() {
     if(posicionCaminar.left <= moneda1W  && posicionCaminar.top <= posicicionMoneda1.top && caminaW >= posicicionMoneda1.left && caminaH >= posicicionMoneda1.top) {
         sumar();
         moneda1.setAttribute("class","agarraMoneda1");
-        setTimeout(mostrarMonedaAbajo, 2000);
+        setTimeout(mostrarMonedaAbajo, 500);
     }
 }
 
@@ -192,7 +190,7 @@ function mostrarMonedaAbajo(){
 
 //METODO QUE SUMA 10 PUNTOS Y LO MUESTRA EN PANTALLA
 function sumar() {
-    puntos += 10;
+    puntos = puntos + 10;
     puntosTotal.innerHTML = puntos;
 }
 
@@ -219,6 +217,7 @@ function ocultarElementos(){
     moneda1.classList.add("esconder"); 
     piedra.classList.add("esconder"); 
     pajaro.classList.add("esconder");
+    
 }
 
 //METODO QUE VUELVE A MOSTRAR LAS ANIMACIONES OCULTAS CUANDO COMIENZA EL JUEGO
@@ -242,16 +241,18 @@ function ganoPorPuntos(){
         swal('GANÓ!!!', 'Acumuló 100 puntos!!!', 'success');
         detenerAnimaciones();
         ocultarElementos();
-        puntos = 0;
-        puntosTotal.innerHTML = puntosGanador;
+        //puntaje.classList.add("esconder");
+        puntaje.classList.remove("camina");
+        //puntos = 0;
+        //puntosTotal.innerHTML = puntos;
 
     }
 }
 
 //METODO PARA COMENZAR EL JUEGO
 function comenzarJuego() {
-    setInterval(pierdePiedra,250);
-    setInterval(pierdePajaro, 500);
+    setInterval(pierdePiedra,500);
+    setInterval(pierdePajaro, 700);
     setInterval(sumarPuntosArriba, 500);
     setInterval(sumarPuntosAbajo, 500);
     setInterval(ganoPorPuntos, 500);

@@ -300,7 +300,7 @@ SE INVOCA A LA IMAGEN DEL PAJARO Y SE LLAMA A SU ANIMACION */
 
 /* ANIMACION DEL PAJARO VOLANDO 
 GENERA LA ANIMACION DE VOLAR Y EL DESPLAZAMIENTO EN LA PANTALLA*/
-@keyframes volar {
+/*@keyframes volar {
     0%{right: 0% }
     10%{right: 10% }
     20%{right: 20% }
@@ -310,6 +310,20 @@ GENERA LA ANIMACION DE VOLAR Y EL DESPLAZAMIENTO EN LA PANTALLA*/
     60%{right: 60% }
     70%{right: 70% }
     80%{right: 80% }
+    90%{right: 90% }
+    100%{right: 100%;background-position: -541px;}
+}*/
+
+@keyframes volar {
+    0%{right: 0%; bottom: 30%; }
+    10%{right: 10% }
+    20%{right: 20% }
+    30%{right: 30%; bottom:40%; }
+    40%{right: 40% }
+    50%{right: 50%; bottom: 30%; }
+    60%{right: 60% }
+    70%{right: 70% }
+    80%{right: 80%; bottom: 40%; }
     90%{right: 90% }
     100%{right: 100%;background-position: -541px;}
 }
@@ -325,7 +339,7 @@ SE INVOCA A LA IMAGEN DE LA PIEDRA Y SE LLAMA A SU ANIMACION */
     right: 0%;
     position: absolute;
     background-image:url(../images/piedras.png) ; 
-    animation: piedras 5s linear infinite;
+    animation: piedras 20s linear infinite;
 }
 
 /* ANIMACION DE LA PIEDRA, DESPLAZAMIENTO A TRAVÉS DE LA PANTALLA*/
