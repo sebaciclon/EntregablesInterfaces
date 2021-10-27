@@ -1,15 +1,15 @@
 "use strict";
 
-//VARIABLES USADA PARA CAMBIAR CLASES ENTRE SALTAR, HACERSE CHIQUITO Y CAMINAR
+//VARIABLES USADA PARA CAMBIAR CLASES ENTRE SALTAR, HACERSE CHIQUITO, CAMINAR y MORIR
 let salta = false;
 let chiquito = false;
 let caminaOSalta = document.getElementById("camina");
-//
 let muere = false;
 
 //VARIABLE USADA PARA IR SUMANDO LOS PUNTOS CADA VEZ QUE AGARRA UNA MONEDA
 let puntos = 0;
 let puntosTotal = document.getElementById("puntos");
+
 //VARIABLE USADA PARA IR DESCONTANDO VIDAS CADA VEZ QUE SE CHOCA UN OBSTACULO
 let vidas = 3;
 let vidasTotal = document.getElementById("vidas");
@@ -17,6 +17,12 @@ let vidasTotal = document.getElementById("vidas");
 //VARIABLES USADAS PARA CAMBIAR EL ESCENARIO, YA SEA NOCHE O DIA
 let fondo = document.getElementById("contenedor");
 let sol = document.getElementById("sol");
+
+//VARIABLE USADA PARA MOSTRAR LA AYUDA SOBRE EL JUEGO
+let ayuda = document.getElementById("mostrarAyuda");
+
+let divMoneda = document.getElementById("moneda");
+let divMoneda1 = document.getElementById("moneda1");
 
 //BOTON PARA CAMBIAR EL ESCENARIO DE DIA A NOCHE
 let btn = document.getElementById("fondoNoche");
@@ -87,7 +93,6 @@ caminaOSalta.addEventListener("animationend", function() {
 //SE OBTIENEN LAS POSCIONES DE EL NENE Y LA PIEDRA Y SE LAS COMPARA,
 //SI LAS POSICIONES COINCIDEN SIGNIFICA QUE EL NENE SE CHOCO UNA PIEDRA,
 //Y SINO SIGNIFICA QUE LA SALTO O AUN NO ESTA LA PIEDRA EN SU POSICION
-//restar pixeles al muñeco
 function pierdePiedra(){ 
     let posicionCaminar = camina.getBoundingClientRect();
     let posicionPiedra = piedra.getBoundingClientRect();
@@ -101,11 +106,11 @@ function pierdePiedra(){
         camina.setAttribute("class","muere");
         restarVidas();
         if(vidas == 0) {
-            //hacer algo
-            //setTimeout(gameOver(),3000);
-            swal('GAME OVER ', 'Perdió todos sus vidas!!!', 'success');
+            swal('GAME OVER ', 'Perdió todas sus vidas!!!', 'success');
             detenerAnimaciones();
             ocultarElementos();
+            divMoneda.setAttribute("class", "esconder");
+            divMoneda1.setAttribute("class", "esconder");
         }
     } 
 }
@@ -126,18 +131,13 @@ function pierdePajaro(){
         restarVidas();
         camina.setAttribute("class","muere");
         if(vidas == 0) {
-            //setTimeout(gameOver(),3000);
-            swal('GAME OVER ', 'Perdió todos sus vidas!!!', 'success');
+            swal('GAME OVER ', 'Perdió todas sus vidas!!!', 'success');
             detenerAnimaciones();
             ocultarElementos();
+            divMoneda.setAttribute("class", "esconder");
+            divMoneda1.setAttribute("class", "esconder");
         }
     }
-}
-
-function gameOver(){
-    camina.setAttribute("class","muere");
-    //pausarAnimaciones();
-    swal('GAME OVER ', 'Perdió todos sus vidas!!!', 'success');
 }
 
 //METODO QUE SE FIJA SI EL NENE "AGARRA" LA MONEDA MAS ALTA PARA SUMAR PUNTOS
@@ -207,11 +207,6 @@ function detenerAnimaciones(){
     nubes.style.animationPlayState = "paused";
     sol.style.animationPlayState = "paused";
     ciudad.style.animationPlayState = "paused";
-    /*camina.style.animationPlayState = "paused";
-    moneda.style.animationPlayState = "paused";
-    moneda1.style.animationPlayState = "paused"; 
-    piedra.style.animationPlayState = "paused"; 
-    pajaro.style.animationPlayState = "paused"; */
 }
 
 //METODO QUE OCULTA LOS ELEMENTOS CON ANIMACIONES
@@ -233,21 +228,8 @@ function mostrarElementos(){
     pajaro.classList.remove("esconder"); 
 }
 
-//ver!!!!
-function removerClases() {
-    camina.classList.remove("camina");
-    moneda.classList.remove("moneda");
-    moneda1.classList.remove("moneda1");
-    piedra.classList.remove("piedra");
-    pajaro.classList.remove("pajaro");
-    salta.classList.remove("salta");
-    chiquito.classList.remove("chiquito");
-    muere.classList.remove("muere");
-    agarraMoneda.classList.remove("agarraMoneda");
-    agarraMoneda1.classList.remove("agarraMoneda1");
-}
 
-//METODO PARA REINICIAR EL JUEGO
+//METODO PARA REINICIAR EL JUEGO (RECARGA LA PÁGINA PRINCIPAL)
 function reiniciarJuego(){
     window.location.reload();
 }
@@ -261,51 +243,7 @@ function comenzarJuego() {
 
     btn2.classList.add("esconder");
     btn3.classList.remove("esconder");
+    ayuda.classList.add("esconder");
     mostrarElementos();
-
-    /*salta = false;
-    chiquito = false;
-    caminaOSalta = document.getElementById("camina");
-    puntos = 0;
-    puntosTotal.innerHTML = puntos;
-    vidas = 3;
-    vidasTotal.innerHTML = vidas;
-
-    camina.setAttribute("class", "camina");
-    moneda.setAttribute("class", "moneda");
-    moneda1.setAttribute("class", "moneda1");
-    piedra.setAttribute("class", "piedra");
-    pajaro.setAttribute("class", "pajaro");
-    salta.setAttribute("class", "salta");
-    chiquito.setAttribute("class", "chiquito");
-    muere.setAttribute("class", "muere");
-    agarraMoneda.setAttribute("class", "agarraMoneda");
-    agarraMoneda1.setAttribute("class", "agarraMoneda1");*/
-
 }
-
-/*setInterval(pierdePiedra,250);
-setInterval(pierdePajaro, 500);
-setInterval(sumarPuntosArriba, 500);
-setInterval(sumarPuntosAbajo, 500);*/
-
-/*function inicioJuego() {
-    setInterval(pierdePiedra,250);
-    setInterval(pierdePajaro, 500);
-    setInterval(sumarPuntosArriba, 500);
-    setInterval(sumarPuntosAbajo, 500);
-}*/
-
-//inicioJuego();
-//comenzarJuego();
-
-
-
-
-
-
-    
-
-    
-
 

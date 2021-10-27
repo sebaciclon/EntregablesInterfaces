@@ -43,12 +43,15 @@ D 0 A 50% VA SUBIENDO Y DE 50 A 94% VA BAJANDO EL SOL*/
     height: 50px;
     border-radius: 50%;
     border: none;
+    
 }
 
+/* EFECTO DE ZOOM EN LOS BOTONES PARA ELEGIR ESCENARIO */
 .btnEscenario:hover{
     transform: scale(1.25);
 }
 
+/* ATRIBUTOS DE LA IMAGEN DE LOS BOTONES DE ESCENARIO*/
 .imagen{
     padding: 0;
     width: 50px;
@@ -230,6 +233,7 @@ INFINITE SE USA PARA QUE SE REPITA INDEFINIDAMENTE LE MONEDA*/
     overflow: visible;
 }
 
+/* GENERA EL DESPLAZAMIENTO Y ROTACION DE LAS MONEDAS */
 @keyframes girarMoneda {
     0%{right: 0% }
     10%{right: 10% }
@@ -244,6 +248,7 @@ INFINITE SE USA PARA QUE SE REPITA INDEFINIDAMENTE LE MONEDA*/
     100%{right: 100%;background-position: -470px; }
 }
 
+/* ANIMACIÓN PARA CUANDO SE AGARRA UNA MONEDA */
 .agarraMoneda {
     right: 60%;
     bottom: 55%;
@@ -293,7 +298,8 @@ SE INVOCA A LA IMAGEN DEL PAJARO Y SE LLAMA A SU ANIMACION */
     animation: volar 5s steps(4) infinite;  
 }
 
-/* ANIMACION DEL PAJARO VOLANDO*/
+/* ANIMACION DEL PAJARO VOLANDO 
+GENERA LA ANIMACION DE VOLAR Y EL DESPLAZAMIENTO EN LA PANTALLA*/
 @keyframes volar {
     0%{right: 0% }
     10%{right: 10% }
@@ -322,7 +328,7 @@ SE INVOCA A LA IMAGEN DE LA PIEDRA Y SE LLAMA A SU ANIMACION */
     animation: piedras 5s linear infinite;
 }
 
-/* ANIMACION DE LA PIEDRA*/
+/* ANIMACION DE LA PIEDRA, DESPLAZAMIENTO A TRAVÉS DE LA PANTALLA*/
 @keyframes piedras {
     to {
         right: 130%;
@@ -330,7 +336,7 @@ SE INVOCA A LA IMAGEN DE LA PIEDRA Y SE LLAMA A SU ANIMACION */
     }
 }
 
-
+/* ESTILO AL DIV QUE CONTIENE LA CANTIDAD DE VIDAS Y AL QUE CONTIENE LOS PUNTOS */
 .puntosVidas{
     margin-left: 10px;
     padding: 0px;
@@ -339,10 +345,11 @@ SE INVOCA A LA IMAGEN DE LA PIEDRA Y SE LLAMA A SU ANIMACION */
     font-size: 2em;
     background-color: rgba(238, 214, 55, 0.5);
     border-radius: 20%;
+    position: absolute;
 }
 
+/* ESTILO A LA ZONA DONDE APARECE LA MONEDA Y EL MUÑEQUITO MOSTRANDO LOS PUNTOS Y LAS VIDAS */
 .puntos {
-    text-shadow: ghostwhite;
     margin-top: 1%;
     margin-left: 30%;
     position: absolute;
@@ -354,10 +361,12 @@ SE INVOCA A LA IMAGEN DE LA PIEDRA Y SE LLAMA A SU ANIMACION */
     position: absolute;
 }
 
+/* PARA ESCONDER ELEMENTOS EN EL DOM */
 .esconder{
     display: none;
 }
 
+/* ESTILO PARA LOS BOTONES DE INICIO Y REINICIO DE JUEGO */
 .btn{
     margin-top: 30px;
     margin-left: 10px;
@@ -365,15 +374,37 @@ SE INVOCA A LA IMAGEN DE LA PIEDRA Y SE LLAMA A SU ANIMACION */
     position: absolute;
     width: 100px;
     height: 30px; 
-    text-align: center ;
+    text-align: center;
     color:black;
     font-size: 1em;
     background-color:rgba(238, 214, 55, 0.5);
     
-  }
+}
 .btn:hover{
     background-color:rgba(141, 125, 24, 0.5);
 }
 
+.btnAyuda{
+    margin-left: 115px;
+}
+
+/* ESTILO PARA EL CARTEL DE AYUDA */
+.ayuda{
+    border-radius: 10px;
+    width: auto;
+    margin: 10px;
+    margin-left: 70%;
+    padding: 10px;
+    padding-top: 0px;
+    position: absolute;
+    background-color: rgba(238, 214, 55, 0.9);
+}
+
+h3{
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 2em;
+}
 
 

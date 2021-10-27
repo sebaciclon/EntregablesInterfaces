@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entregable 3 Interfaces</title>
+    <title>Entregable 3 - Esains&Esains</title>
     <link rel="stylesheet" href="css/estilo.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
@@ -13,12 +13,10 @@
     
     <div id="contenedor" class="contenedor">
         <div class="divPuntos">
-            <!--<h2>Puntos: <input type="value" id="puntos" oninput="sumar(this.value);" value="0" ></h2>-->
             <h2 class="puntos"><img src="../entregableP3/images/moneda puntos.png" alt=""><span id="puntos" class="puntosVidas">0</span></h2>
         </div> 
         
         <div class="divVidas">
-            <!--<h2>Vidas: <input type="value" id="vida" oninput="restarVidas(this.value);" value="3" ></h2>-->
             <h2 class="vidas"><img src="../entregableP3/images/vidas.png" alt=""><span id="vidas" class="puntosVidas">3</span></h2>
         </div>
         
@@ -31,18 +29,28 @@
         <div id="piedra" class="piedra esconder"></div>
         <div id="pajaro" class="pajaro esconder"></div>
         
-        
-        
         <button id="fondoNoche" class="btnEscenario"><img class= "imagen" src="../entregableP3/images/noche.jpg"></button>
         <button id="fondoDia" class="btnEscenario"><img class= "imagen" src="../entregableP3/images/dia.jpg"></button>
         <button id="iniciar" class="btn"><b>INICIAR</b></button>
         <button id="jugarDeNuevo" class="btn esconder"><b>REINICIAR</b></button>
+        
+        <div id="mostrarAyuda" class="ayuda">
+            <h3><b>CÓMO JUGAR</b></h3>
+            <h4>El propósito del juego es sumar puntos juntando MONEDAS...</h4>
+            <h4>Evite chocar las piedras y ser atacado por los pájaros...</h4>
+            <h4>Eso le hará perder las vidas!!!</h4>
+            <h5>** Puede elegir entre dos escenarios (NOCHE / DIA) **</h5>
+            <h5><b>TECLAS A USAR</b></h5>
+            <h5>- Barra espaciadora: SALTAR</h5>
+            <h5>- Flecha abajo: ENCOGERSE</h5>
+            <h5><b>QUÉ HACER</b></h5>
+            <h5>- PARA EVITAR PIEDRA: Saltar</h5>
+            <h5>- PARA EVITAR PÁJARO: Encogerse</h5>
+            <h5>- PARA AGARRAR MONEDAS: Saltar</h5>
+        </div>
     </div>
 
-    
-
     <script src="js/main.js"></script>
-    
     
 </body>
 </html>
