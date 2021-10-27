@@ -10,6 +10,8 @@ let muere = false;
 let puntos = 0;
 let puntosTotal = document.getElementById("puntos");
 
+let puntosGanador = 100;
+
 //VARIABLE USADA PARA IR DESCONTANDO VIDAS CADA VEZ QUE SE CHOCA UN OBSTACULO
 let vidas = 3;
 let vidasTotal = document.getElementById("vidas");
@@ -234,12 +236,25 @@ function reiniciarJuego(){
     window.location.reload();
 }
 
+//METODO PARA CONTROLAR QUE GANÓ EL JUEGO POR LLEGAR A LA CANTIDAD ESTABLECIDA DE PUNTOS
+function ganoPorPuntos(){
+    if(puntos == puntosGanador){
+        swal('GANÓ!!!', 'Acumuló 100 puntos!!!', 'success');
+        detenerAnimaciones();
+        ocultarElementos();
+        puntos = 0;
+        puntosTotal.innerHTML = puntosGanador;
+
+    }
+}
+
 //METODO PARA COMENZAR EL JUEGO
 function comenzarJuego() {
     setInterval(pierdePiedra,250);
     setInterval(pierdePajaro, 500);
     setInterval(sumarPuntosArriba, 500);
     setInterval(sumarPuntosAbajo, 500);
+    setInterval(ganoPorPuntos, 500);
 
     btn2.classList.add("esconder");
     btn3.classList.remove("esconder");
