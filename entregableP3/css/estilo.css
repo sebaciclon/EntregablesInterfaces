@@ -339,7 +339,7 @@ SE INVOCA A LA IMAGEN DE LA PIEDRA Y SE LLAMA A SU ANIMACION */
     right: 0%;
     position: absolute;
     background-image:url(../images/piedras.png) ; 
-    animation: piedras 20s linear infinite;
+    animation: piedras 10s linear infinite;
 }
 
 /* ANIMACION DE LA PIEDRA, DESPLAZAMIENTO A TRAVÉS DE LA PANTALLA*/
