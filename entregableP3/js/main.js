@@ -207,6 +207,8 @@ function detenerAnimaciones(){
     nubes.style.animationPlayState = "paused";
     sol.style.animationPlayState = "paused";
     ciudad.style.animationPlayState = "paused";
+    moneda.style.animationPlayState = "paused";
+    moneda1.style.animationPlayState = "paused";
 }
 
 //METODO QUE OCULTA LOS ELEMENTOS CON ANIMACIONES
