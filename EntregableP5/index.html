@@ -10,29 +10,66 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
+    
     <div class="contenedor">
-        <div class="logo">
-            <img src="images/logo.svg" class="">
+        <img src="images/fondo huellas 1.svg" class="imagenFondo">
+        <div class="cuerpo">
+            
+            <div class="contenedorLogo">
+                <div class="logo">
+                    <img src="images/logoGrande.svg">
+                </div>
+            </div>
+
+            <form>        
+                <!--<div class="contenidoFormulario">-->
+                    <div class="logoFormulario">
+                        <img src="images/logoForm.svg">
+                    </div>
+                    <h1 class="textoInicioSesion">Iniciar sesión</h1>
+
+                    <div class="correo">
+                        <h3>Correo electrónico</h3>
+                        <div class="inputCorreo">
+                            <input type="text" required placeholder="Ingresá tu correo electrónico">
+                        </div>
+                    </div>
+
+                    <div class="contraseña">
+                        <h3>Contraseña</h3>
+                        
+
+                        <div class="inputContraseña">
+                            <input type="text" required placeholder="Ingresá tu Contraseña">
+                        </div>   
+                    </div>
+
+                    <div class="olvidasteContraseña">
+                        <p class="textoOlvidasteContraseña">Olvidé la contraseña</p>
+                    </div>
+                
+                    <div class="botonIniciarSesion">
+                        <input class="botonIniciar" type="submit" value="Iniciar sesión">
+                    </div>
+
+                    <div class="botonIniciarSesionGoogle">
+                        <img src="images/imagenGoogle.svg">
+                        <input class="botonGoogle" type="submit" value="Ingresar con Google">
+                    </div>
+                    
+                    <div class="linea">
+                        <hr class="linea1">
+                    </div>
+                
+                    <div class="registrarse">
+                        <h3 class="textoRegistrarse">Registrarse</h3>
+                    </div>
+                <!--</div>        -->
+            </form>
         </div>
-
-        <form class="formulario">
-            <img src="images/logo.svg" class="">
-            <input class="" type="text" name="correoElectronico" required placeholder="Correo Electrónico">
-            <input class="" type="text" name="contraseña" required placeholder="Contraseña">
-            <input id="boton" type="submit" value="Iniciar sesión">
-            <input id="boton" type="submit" value="Crear usuario">
-
-        </form>
-
-    </div>
-
-    <footer>
-        <div class="esains">
-            <h4>Esains&Esains Diseño Web      </h4>
-        </div>
-        <div class="vasanet">
-            <h4> Vasanet-2021</h4>
-        </div>
-    </footer>
+        <footer>
+            <h4>Esains&Esains Diseño Web | Vasanet-2021</h4>
+        </footer>
+    </div>    
 </body>
 </html>
