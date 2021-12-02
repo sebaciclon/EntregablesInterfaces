@@ -6,7 +6,6 @@
     text-decoration: none;
     border: none;
     outline: none;
-    
 }
 
 
@@ -16,7 +15,6 @@
     height: 768px;
     background: #FFFFFF;
     margin: auto;
-    
 }    
 
 footer {
@@ -32,18 +30,13 @@ footer {
 footer h4 {
     position: absolute;
     bottom: 20px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 23px;
-
     color: #C7C3C4;
 }
-
-
-/*********************************************************************************************************/
 
 .cuerpo {
     display: flex;
@@ -102,7 +95,6 @@ form .logoFormulario img {
     height: 129.08px;
     left: 515.5px;
     top: 32.23px;
-    
 }
 
 form .textoInicioSesion {
@@ -251,8 +243,6 @@ form .botonIniciarSesionGoogle input {
     /* identical to box height */
     text-align: center;
     color: #0F39CE;
-
-
 }
 
 /*position: absolute;
