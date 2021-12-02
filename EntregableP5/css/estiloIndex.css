@@ -195,7 +195,7 @@ form .olvidasteContraseña p{
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 18px;
     /* identical to box height */
     text-align: center;
@@ -213,7 +213,7 @@ form .botonIniciarSesion input {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     background: #0F39CE;
     border-radius: 9.82523px;
-
+    cursor: pointer;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -230,7 +230,7 @@ form .botonIniciarSesionGoogle input {
     height: 36px;
     left: 424.5px;
     top: 453.23px;
-
+    cursor: pointer;
     background: #FCFFFC;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 9.82523px;
@@ -251,17 +251,6 @@ height: 20px;
 left: 481.5px;
 top: 461.23px;*/
 
-
-
-
-
-
-
-
-
-
-
-
 form .linea hr{
     position: absolute;
     width: 284px;
@@ -271,17 +260,17 @@ form .linea hr{
     border: 2px solid #FFFDFD;
 }
 
-form .registrarse h3 {
+form .registrarse a {
     position: absolute;
     width: 100px;
     height: 18px;
     left: 516.5px;
     top: 539.23px;
-
+    
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 18px;
     /* identical to box height */
     text-align: center;

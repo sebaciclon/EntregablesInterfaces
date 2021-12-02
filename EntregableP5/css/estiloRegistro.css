@@ -7,3 +7,273 @@
     border: none;
     outline: none;
 }
+
+
+.contenedor {
+    position: relative;
+    width: 1024px;
+    height: 768px;
+    background: #FFFFFF;
+    margin: auto;
+}    
+
+footer {
+    position: absolute;
+    width: 1024px;
+    height: 60px;
+    top: 708px;
+    display: flex;
+    justify-content: center;
+    background: #FFFFFF;
+}
+
+footer h4 {
+    position: absolute;
+    bottom: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #C7C3C4;
+}
+
+.cuerpo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    padding: 0px;
+    position: absolute;
+    width: 784px;
+    height: 588px;
+    left: 120px;
+    top: 90px;
+}
+
+.contenedorLogo {
+    position: static;
+    left: 0.32%;
+    right: 72.39%;
+    top: 20.12%;
+    bottom: 20.12%;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 174px;
+}
+
+.contenedorLogo .logo img{
+    position: absolute;
+    width: 214px;
+    height: 252.52px;
+    left: 2.5px;
+    top: 118.32px;
+}
+
+form {
+    position: static;
+    width: 431px;
+    height: 587.55px;
+    left: 350.5px;
+    top: 0.23px;
+    background: #E1E1E4;
+    border-radius: 8px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 134px;
+    background: #E1E1E4;
+    border-radius: 8px;
+}
+
+form .logoFormulario img {
+    position: absolute;
+    width: 109.39px;
+    height: 129.08px;
+    left: 515.5px;
+    top: 32.23px;
+}
+
+form .textoInicioSesion {
+    position: absolute;
+    width: 181px;
+    height: 35px;
+    left: 424.5px;
+    top: 176.23px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #0F39CE;
+}
+
+form .correo h3 {
+    position: absolute;
+    width: 123px;
+    height: 18px;
+    left: 424.5px;
+    top: 226.23px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+form .correo .inputCorreo{
+    position: absolute;
+    left: 54.15%;
+    right: 9.63%;
+    top: 41.71%;
+    bottom: 52.17%;
+    background: #FEFEFF;
+    border-radius: 9.83008px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 33px;
+    
+    text-align: justify;
+    color: #C7C3C4;
+}
+
+form .contraseña h3 {
+    position: absolute;
+    width: 77px;
+    height: 18px;
+    left: 424.5px;
+    top: 296.23px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+form .contraseña .inputContraseña {
+    position: absolute;
+    left: 54.15%;
+    right: 9.63%;
+    top: 53.61%;
+    bottom: 40.27%;
+    background: #FEFEFF;
+    border-radius: 9.83008px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 33px;
+    /* identical to box height */
+    text-align: justify;
+    color: #C7C3C4;
+}
+
+form .olvidasteContraseña p{
+    position: absolute;
+    width: 133px;
+    height: 18px;
+    left: 500.5px;
+    top: 354.23px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: center;
+    color: #092CAA;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+form .botonIniciarSesion input {
+    position: absolute;
+    width: 284px;
+    height: 36px;
+    left: 424.5px;
+    top: 387.23px;
+    
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #0F39CE;
+    border-radius: 9.82523px;
+    cursor: pointer;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: center;
+    color: #FEFEFF;
+}
+
+form .botonIniciarSesionGoogle input {
+    position: absolute;
+    width: 284px;
+    height: 36px;
+    left: 424.5px;
+    top: 453.23px;
+    cursor: pointer;
+    background: #FCFFFC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9.82523px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: center;
+    color: #0F39CE;
+}
+
+/*position: absolute;
+width: 20px;
+height: 20px;
+left: 481.5px;
+top: 461.23px;*/
+
+form .linea hr{
+    position: absolute;
+    width: 284px;
+    height: 0px;
+    left: 425px;
+    top: 534px;
+    border: 2px solid #FFFDFD;
+}
+
+form .registrarse a {
+    position: absolute;
+    width: 100px;
+    height: 18px;
+    left: 516.5px;
+    top: 539.23px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: center;
+    color: #092CAA;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
