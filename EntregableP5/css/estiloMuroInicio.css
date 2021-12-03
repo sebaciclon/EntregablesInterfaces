@@ -149,4 +149,97 @@ header {
     background: #4969D9;
 }
 
+.sugerencias .textoSugerencias {
+    position: absolute;
+    width: 223px;
+    height: 48.38px;
+    left: 17px;
+    top: 87px;
+    background: #FFFDFD;
+    border-radius: 10px;
+}
+
+.sugerencias .textoSugerencias p {
+    position: absolute;
+    width: 162px;
+    height: 44.56px;
+    left: 44px;
+    top: 5.35px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    color: #4969D9;
+}
+
+.sugerencias .publicidad img {
+    position: absolute;
+    width: 224px;
+    height: 282.54px;
+    left: 17px;
+    top: 468px;
+}
+
+.sugerencias .bloqueSugerencias {
+    position: absolute;
+    width: 223px;
+    height: 300px;
+    left: 18px;
+    top: 149px;
+    background: #FFFDFD;
+    border-radius: 10px;
+}
+
+
+.publicaciones  button{
+    position: absolute;
+    width: 514px;
+    height: 49.65px;
+    left: 24.8%;
+    right: 25%;
+    top: 11.33%;
+    bottom: 81.9%;
+
+    background: #4969D9;
+    border: 1px solid #4969D9;
+    box-sizing: border-box;
+    border-radius: 12.2815px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFEFE;
+}
+
+.contactos .textoContactos {
+    position: absolute;
+    width: 223px;
+    height: 49.65px;
+    left: 783px;
+    top: 87px;
+    background: #FFFDFD;
+    border-radius: 10px;
+}
+
+.contactos .textoContactos p {
+    position: absolute;
+    width: 138px;
+    height: 49.65px;
+    left: 43px;
+    top: 7.35px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    color: #4969D9;
+}
+
 
