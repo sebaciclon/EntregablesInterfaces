@@ -13,7 +13,8 @@
     position: relative;
     width: 1024px;
     height: 768px;
-    background: #FFFFFF;
+    background-image: url(../images/fondohuellas1.svg);
+    
     margin: auto;
 }    
 

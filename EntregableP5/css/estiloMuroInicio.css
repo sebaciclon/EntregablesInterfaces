@@ -12,7 +12,8 @@
     position: relative;
     width: 1024px;
     height: 768px;
-    background: #FFFFFF;
+    background-image: url(../images/fondohuellas1.svg);
+    
     margin: auto;
     border: black 1px solid;
 }
@@ -69,8 +70,10 @@ header {
     position: absolute;
     width: 315.91px;
     height: 44.91px;
-    left: 691px;
+    left: 655px;
     top: 13px;
+
+    
 }
 
 .iconos .usuario {
@@ -148,6 +151,24 @@ header {
     margin: 0px 30px;
     background: #4969D9;
 }
+
+.iconos .logout {
+    /* logout */
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 275.91px;
+    top: 2.45px;
+    cursor: pointer;
+    
+    /* Inside Auto Layout */
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    margin: 0px 30px;
+    background: #4969D9;
+}
+
 
 .sugerencias .textoSugerencias {
     position: absolute;
@@ -241,5 +262,6 @@ header {
     line-height: 35px;
     color: #4969D9;
 }
+
 
 
