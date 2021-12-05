@@ -1,0 +1,250 @@
+/* Para resetear el browser */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+.contenedor {
+    position: relative;
+    width: 1024px;
+    height: 768px;
+    background-image: url(../images/fondohuellas1.svg);
+    margin: auto;
+    border: black 1px solid;
+}
+
+header {
+    position: absolute;
+    width: 1024px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+    background: #4969D9;
+}
+
+.logo1 {
+    position: absolute;
+    left: 0%;
+    right: 84.84%;
+    top: 0%;
+    bottom: 0%;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 20px;
+    cursor: pointer;
+    background: #4969D9;
+}
+
+.logo {
+    background: #4969D9;
+}
+
+.barraBusqueda {
+    position: absolute;
+    width: 271px;
+    height: 38.17px;
+    left: 82px;
+    top: 14.6px;
+    background: #FFFEFE;
+    border-radius: 18.1271px;
+}
+
+.barraBusqueda button {
+    position: absolute;
+    left: 83.09%;
+    top: 8.46%;
+    cursor: pointer;
+    background-color: white;
+}
+
+.barraBusqueda .inputBarraBusqueda input {
+    position: absolute;
+    left: 16px;
+    top: 9px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: justify;
+    color: #C7C3C4;
+}
+
+.iconos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 315.91px;
+    height: 44.91px;
+    left: 655px;
+    top: 13px;
+}
+
+.iconos .indicadorPagina {
+    position: absolute;
+    width: 37px;
+    height: 0px;
+    left: 171px;
+    top: 46px;
+    border: 2px solid rgba(255, 251, 251, 0.3);
+}
+
+.iconos .usuario {
+    position: absolute;
+    width: 44.91px;
+    height: 44.91px;
+    left: 0px;
+    top: 0px;
+    border-radius: 107.782px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 30px;
+    cursor: pointer;
+}
+
+.iconos .inicio {
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    left: 23.71%;
+    right: 64.58%;
+    top: 8.8%;
+    bottom: 8.8%;
+    background: #FFFFFF;
+    /* Inside Auto Layout */
+    cursor: pointer;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 30px;
+    background: #4969D9;
+}
+
+.iconos .chat {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    left: 141.91px;
+    top: 3.95px;
+    cursor: pointer;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 30px;
+    background: #4969D9;
+}
+
+.iconos .notificacion {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 66.13%;
+    right: 22.16%;
+    top: 8.81%;
+    bottom: 8.81%;
+    cursor: pointer;
+    background: #FFFCFC;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    margin: 0px 30px;
+    background: #4969D9;
+}
+
+.iconos .logout {
+    /* logout */
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 275.91px;
+    top: 2.45px;
+    cursor: pointer;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    margin: 0px 30px;
+    background: #4969D9;
+}
+
+.videollamada {
+    position: absolute;
+    width: 751px;
+    height: 683px;
+    left: 136px;
+    top: 78px;
+    background: #FFFEFE;
+    border-radius: 20px;
+}
+
+.videollamada .imagenChatGrande {
+    position: absolute;
+    width: 721px;
+    height: 579.8px;
+    left: 15px;
+    top: 15px;
+    background-image: url(../images/imagenChatGrande.svg);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+}
+
+.videollamada .imagenChatChica {
+    position: absolute;
+    width: 197.55px;
+    height: 155px;
+    left: 523px;
+    top: 424px;
+    background-image: url(../images/imagenChatChica.svg);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+}
+
+.videollamada .iconosLlamada .microfono {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 284.42px;
+    top: 618.3px;
+    cursor: pointer;
+}
+
+.videollamada .iconosLlamada .cortar {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 354.37px;
+    top: 617.73px;
+    cursor: pointer;
+}
+
+.videollamada .iconosLlamada .videollamada {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 425.73px;
+    top: 617.73px;
+    cursor: pointer;
+}
+

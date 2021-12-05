@@ -1,0 +1,275 @@
+/* Para resetear el browser */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+.contenedor {
+    position: relative;
+    width: 1024px;
+    height: 768px;
+    background-image: url(../images/fondohuellas1.svg);
+    
+    margin: auto;
+    border: black 1px solid;
+}
+
+header {
+    position: absolute;
+    width: 1024px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+    background: #4969D9;
+    
+}
+
+.logo1 {
+    position: absolute;
+    left: 0%;
+    right: 84.84%;
+    top: 0%;
+    bottom: 0%;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 20px;
+    cursor: pointer;
+    background: #4969D9;
+}
+
+.logo {
+    background: #4969D9;
+}
+
+.barraBusqueda {
+    position: absolute;
+    width: 271px;
+    height: 38.17px;
+    left: 82px;
+    top: 14.6px;
+    background: #FFFEFE;
+    border-radius: 18.1271px;
+}
+
+.barraBusqueda button {
+    position: absolute;
+    left: 83.09%;
+    top: 8.46%;
+    cursor: pointer;
+    background-color: white;
+}
+
+.barraBusqueda .inputBarraBusqueda input {
+    position: absolute;
+    left: 16px;
+    top: 9px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: justify;
+    color: #C7C3C4;
+}
+
+.iconos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 315.91px;
+    height: 44.91px;
+    left: 655px;
+    top: 13px;
+}
+
+.iconos .indicadorPagina {
+    position: absolute;
+    width: 37px;
+    height: 0px;
+    left: 171px;
+    top: 46px;
+    border: 2px solid rgba(255, 251, 251, 0.3);
+}
+
+.iconos .usuario {
+    position: absolute;
+    width: 44.91px;
+    height: 44.91px;
+    left: 0px;
+    top: 0px;
+    border-radius: 107.782px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 30px;
+    cursor: pointer;
+    
+}
+
+.iconos .inicio {
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    left: 23.71%;
+    right: 64.58%;
+    top: 8.8%;
+    bottom: 8.8%;
+    background: #FFFFFF;
+    
+    /* Inside Auto Layout */
+    cursor: pointer;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 30px;
+    background: #4969D9;
+}
+
+.iconos .chat {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    left: 141.91px;
+    top: 3.95px;
+    cursor: pointer;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 30px;
+    background: #4969D9;
+}
+
+
+
+.iconos .notificacion {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 66.13%;
+    right: 22.16%;
+    top: 8.81%;
+    bottom: 8.81%;
+    cursor: pointer;
+    background: #FFFCFC;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    margin: 0px 30px;
+    background: #4969D9;
+}
+
+.iconos .logout {
+    /* logout */
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 275.91px;
+    top: 2.45px;
+    cursor: pointer;
+    
+    /* Inside Auto Layout */
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    margin: 0px 30px;
+    background: #4969D9;
+}
+
+.chatGrande {
+    position: absolute;
+    width: 750px;
+    height: 664px;
+    left: 257px;
+    top: 87px;
+
+    background: #FFFCFC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.chatGrande input {
+    position: absolute;
+    width: 655.21px;
+    height: 41.8px;
+    left: 43.82px;
+    top: 612.6px;
+
+    background: #FFFBFB;
+    border: 1.86612px solid #0F39CE;
+    box-sizing: border-box;
+    border-radius: 27.9918px;
+}
+
+.chatGrande .cursor {
+    position: absolute;
+    width: 15.51px;
+    height: 0px;
+    left: 57.04px;
+    top: 631.7px;
+    border: 0.509797px solid #0F39CE;
+    transform: rotate(-90deg);
+}
+
+.chatGrande .enviar {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 92.62%;
+    top: 92.30%;
+    cursor: pointer;
+}
+
+.chatGrande .lineasChat {
+    position: absolute;
+    left: 30px;
+    top: 165px;
+}
+
+.chatGrande .panam {
+    position: absolute;
+    width: 279.09px;
+    height: 59px;
+    left: 20px;
+    top: 9px;
+}
+
+.chatGrande .filmadora {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 616px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.chatGrande .llamar {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 680px;
+    top: 24px;
+}
+
+
+

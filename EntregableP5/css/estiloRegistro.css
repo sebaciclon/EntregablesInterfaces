@@ -15,7 +15,15 @@
     height: 768px;
     background-image: url(../images/fondohuellas1.svg);
     margin: auto;
+    animation: fondo 20s linear infinite;
 }    
+
+@keyframes fondo {
+    100% {
+      background-position-x: 1024px;
+     
+    }
+}
 
 footer {
     position: absolute;
