@@ -102,7 +102,7 @@ form .textoInicioSesion {
     position: absolute;
     width: 181px;
     height: 35px;
-    left: 424.5px;
+    left: 420.5px;
     top: 176.23px;
 
     font-family: Roboto;
@@ -139,15 +139,20 @@ form .correo .inputCorreo{
     bottom: 52.17%;
     background: #FEFEFF;
     border-radius: 9.83008px;
-
+}
+form .correo .inputCorreo input {
+    position: absolute;
+    height: 18px;
+    left: 0px;
+    top: 9px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 33px;
-    
-    text-align: justify;
-    color: #C7C3C4;
+    line-height: 18px;
+    color: #a38a90;
+    /* identical to box height */
+    text-align: center;
 }
 
 form .contraseña h3 {
@@ -175,15 +180,21 @@ form .contraseña .inputContraseña {
     bottom: 40.27%;
     background: #FEFEFF;
     border-radius: 9.83008px;
+}
 
+form .contraseña .inputContraseña input {
+    position: absolute;
+    height: 18px;
+    left: 10px;
+    top: 9px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 33px;
+    line-height: 18px;
+    color: #a38a90;
     /* identical to box height */
     text-align: justify;
-    color: #C7C3C4;
 }
 
 form .olvidasteContraseña p{
@@ -225,7 +236,7 @@ form .botonIniciarSesion input {
     color: #FEFEFF;
 }
 
-form .botonIniciarSesionGoogle input {
+form .botonIniciarSesionGoogle input{
     position: absolute;
     width: 284px;
     height: 36px;
@@ -246,11 +257,16 @@ form .botonIniciarSesionGoogle input {
     color: #0F39CE;
 }
 
-/*position: absolute;
+form .botonIniciarSesionGoogle img {
+    position: absolute;
 width: 20px;
 height: 20px;
 left: 481.5px;
-top: 461.23px;*/
+top: 443px;
+}
+
+
+
 
 form .linea hr{
     position: absolute;
