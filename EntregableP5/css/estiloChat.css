@@ -900,3 +900,56 @@ body {
 }
 
 /*fin carrousel*/
+
+.ventanaDeChat {
+    position: absolute;
+    width: 282px;
+    height: 332px;
+    left: 835px;
+    top: 419px;
+    
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: aquamarine;
+}
+
+.mensaje+enviar {
+    position: absolute;
+    width: 248px;
+    height: 36px;
+    left: 835px;
+    top: 415px;
+    display: flex;
+    background-color: azure;
+}
+
+.input {
+    position: absolute;
+    width: 217.8px;
+    height: 36px;
+    left: 17px;
+    top: 288px;
+    
+    background: #FFFBFB;
+    border: 1.83026px solid #0F39CE;
+    box-sizing: border-box;
+    border-radius: 27.4539px;
+    padding-left: 10px;
+}
+
+.enviar {
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    left: 235px;
+    top: 294px;
+}
+
+.encabezado {
+    position: absolute;
+    width: 282px;
+    height: 61px;
+    left: 0px;
+    top: 0px;
+    background-color: azure;
+    
+}
