@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VasaNet</title>
     <link rel="stylesheet" href="css/estiloMuroInicio.css">
+    
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
@@ -27,27 +28,73 @@
             </div>
         </header>
 
-        <section class="sugerencias">
-            <div class="textoSugerencias">
-                <p>Sugerencias</p>
-            </div>
-
-            <div class="bloqueSugerencias">
-
-            </div>
-
-            <div class="publicidad">
-                <img src="images/Publicidad.svg">
-            </div>
-        </section>
-
-        <section class="publicaciones">
+        
+        <div class="publicaciones">
             <button class="a">Crear publicación</button>
-        </section>
+        </div>
 
-        <section class="contactos">
-            <div class="textoContactos">
-                <p>Contactos</p>
+
+        <div class="sugerenciaYpublicidad">
+            <div class="bloqueSugerencias">
+                <div class="tituloSugerencias">
+                    <div class="fondoTituloSugerencias"></div>
+                    <p class="sugerencias">Sugerencias</p>
+                </div>
+                <div class="fondoSugerencias"></div>
+                <div class="suregenciasYboton">
+                    <div class="dosSugerencias">
+                        <div class="zapata">
+                            <img class="imgZapata" src="./images/zapata.svg" alt="">
+                            <p class="draZapata">Dra Zapata Graciela</p>
+                            <p class="amigosZapata">78.235 amigos</p>
+                        </div>
+                        <div class="romero">
+                            <img class="imgRomero" src="./images/romero.svg" alt="">
+                            <p class="drRomero">Dr Romero Raúl</p>
+                            <p class="amigosRomero">63.235</p>
+                        </div>
+                    </div>
+                    <a href="" class="boton"><p class="texto">Agregar</p></a>
+                </div>
+            </div>
+            <div class="publicidad">
+
+                <div class="wrapper">
+                    <div class="slider" id="slider">
+                      <ul class="slides">
+                        <li class="slide" id="slide1">
+                          <a href="#">
+                            
+                            <img src="./images/Publicidad.svg" alt="photo 1">
+                          </a>
+                        </li>
+                        <li class="slide" id="slide2">
+                          <a href="#">
+                            <img src="./images/publicidad2.svg" alt="photo 2">
+                          </a>
+                        </li>
+                        <li class="slide" id="slide3">
+                          <a href="#">
+                            <img src="./images/publicidad3.svg" alt="photo 3">
+                          </a>
+                        </li>
+                        <li class="slide" id="slide4">
+                          <a href="#">
+                            <img src="./images/publicidad4.svg" alt="photo 4">
+                          </a>
+                        </li>
+                        
+                      </ul>
+                      
+                    </div>
+                  </div>
+
+            </div>
+        </div>
+
+        <section >
+            <div class="fondoContactos">
+                <p class="textoContactos">Contactos</p>
             </div>
         </section>
     </div>

@@ -169,6 +169,206 @@ header {
     background: #4969D9;
 }
 
+.sugerenciaYpublicidad {
+    position: absolute;
+    width: 223px;
+    height: 663.54px;
+    left: 17px;
+    top: 87px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.bloqueSugerencias {
+    position: absolute;
+    width: 223px;
+    height: 362px;
+}
+
+.tituloSugerencias {
+    position: absolute;
+    width: 223px;
+    height: 48.38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .sugerencias {
+    position: absolute;
+    width: 162px;
+    height: 44.56px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    color: #4969D9;
+    text-align: center;
+}
+
+.fondoTituloSugerencias {
+    position: absolute;
+    width: 223px;
+    height: 48.38px;
+    background: #FFFDFD;
+    border-radius: 10px;
+}
+
+.suregenciasYboton {
+    position: absolute;
+    width: 149px;
+    height: 241px;
+    left: 37px;
+    top: 92px;
+}
+
+.fondoSugerencias {
+    position: absolute;
+    width: 223px;
+    height: 300px;
+    top: 62px;
+    background: #FFFDFD;
+    border-radius: 10px;
+}
+
+.dosSugerencias {
+    position: absolute;
+    width: 149px;
+    height: 194px;
+}
+
+.zapata {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    width: 149px;
+    height: 86px;
+    top: 0px;
+}
+
+.imgZapata {
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 2px 0px;
+}
+
+.draZapata {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #877F7F;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 2px 0px;
+}
+
+.amigosZapata {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14.386px;
+    line-height: 17px;
+    text-align: center;
+  color: #9A8F8F;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 2px 0px;
+}
+
+.romero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    width: 149px;
+    height: 86px;
+    top: 108px;
+}
+
+.imgRomero {
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 2px 0px;
+}
+
+.drRomero {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #9A8F8F;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 2px 0px;
+}
+
+.amigosRomero {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14.386px;
+    line-height: 17px;
+    text-align: center;
+    color: #9A8F8F;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 2px 0px;
+}
+
+.boton {
+    position: absolute;
+    width: 104px;
+    height: 25px;
+    left: 22.5px;
+    top: 205px;
+    border-radius: 5.68px;
+    background: #0F39CE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        
+}
+
+.texto {
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #FCFDFF;
+}
+
+.publicidad {
+    position: absolute;
+    width: 224px;
+    height: 282.54px;
+    top: 381px;
+    border-radius: 10px;
+}
+
+
+
+
 
 .sugerencias .textoSugerencias {
     position: absolute;
@@ -176,8 +376,12 @@ header {
     height: 48.38px;
     left: 17px;
     top: 87px;
-    background: #FFFDFD;
+    background: bisque;
+    /*background: #FFFDFD;*/
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sugerencias .textoSugerencias p {
@@ -192,6 +396,8 @@ header {
     font-size: 30px;
     line-height: 35px;
     color: #4969D9;
+    text-align: center;
+    background: chartreuse;
 }
 
 .sugerencias .publicidad img {
@@ -208,7 +414,8 @@ header {
     height: 300px;
     left: 18px;
     top: 149px;
-    background: #FFFDFD;
+    background: bisque;
+    /*background: #FFFDFD;*/
     border-radius: 10px;
 }
 
@@ -238,30 +445,171 @@ header {
     color: #FFFEFE;
 }
 
-.contactos .textoContactos {
+
+.fondoContactos {
     position: absolute;
     width: 223px;
     height: 49.65px;
     left: 783px;
     top: 87px;
-    background: #FFFDFD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: bisque;
+        /*background: #FFFDFD;*/
     border-radius: 10px;
 }
 
-.contactos .textoContactos p {
-    position: absolute;
+.textoContactos {
+   
     width: 138px;
-    height: 49.65px;
+    height: 35px;
     left: 43px;
     top: 7.35px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
     font-size: 30px;
     line-height: 35px;
     color: #4969D9;
+    text-align: center;
+    
+    
 }
 
+/*-----------------------------*/
 
 
+
+
+/*carrousel*/
+
+@keyframes slide {
+	0% { transform: translateX(0); }
+	10% { transform: translateX(0); }
+
+	15% { transform: translateX(-100%); }
+	30% { transform: translateX(-100%); }
+
+	35% { transform: translateX(-200%); }
+	50% { transform: translateX(-200%); }
+
+	55% { transform: translateX(-300%); }
+	70% { transform: translateX(-300%); }
+
+	75% { transform: translateX(-400%); }
+	90% { transform: translateX(-400%); }
+
+	95% { transform: translateX(-500%); }
+	100% { transform: translateX(-500%); }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+	font-family: sans-serif;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.slider {
+	position: relative;
+}
+
+.slides {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+}
+
+.slide {
+	width: 100vw;
+	flex-shrink: 0;
+	animation-name: slide;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+    display: flex;
+    justify-content: center;
+}
+
+.slides:hover .slide {
+	animation-play-state: paused;
+}
+
+.slide img {
+	
+    border-radius: 10px;
+	vertical-align: center;
+    
+    
+}
+
+.slide a {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+
+.caption {
+	color: white;
+	text-shadow: 1px 1px black;
+	font-size: 8vw;
+	position: absolute;
+	bottom: 8vw;
+	right: 4vw;
+}
+
+.slide:target {
+	animation-name: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 50;
+}
+
+.slider-controler {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+}
+
+.slider-controler li {
+	margin: 0 0.5rem;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.slider-controler a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1200px) {
+	.slide {
+		width: 1200px;
+	}
+
+	.caption {
+		font-size: 96px;
+		bottom: 96px;
+		right: 50px;
+	}
+}
+
+/*fin carrousel*/
