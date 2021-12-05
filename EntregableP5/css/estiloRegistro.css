@@ -136,14 +136,20 @@ form .nombre .inputNombre {
     right: 9.69%;
     top: 32.49%;
     bottom: 61.38%;
-
     background: #FEFEFF;
     border-radius: 9.83008px;
+}
+
+form .nombre .inputNombre input {
+    position: absolute;
+    height: 18px;
+    left: 8px;
+    top: 8px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 33px;
+    line-height: 18px;
     /* identical to box height */
     text-align: justify;
     color: #C7C3C4;
@@ -172,14 +178,20 @@ form .apellido .inputApellido {
     right: 9.69%;
     top: 44.4%;
     bottom: 49.48%;
-
     background: #FEFEFF;
     border-radius: 9.83008px;
+}
+
+form .apellido .inputApellido input {
+    position: absolute;
+    height: 18px;
+    left: 8px;
+    top: 8px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 33px;
+    line-height: 18px;
     /* identical to box height */
     text-align: justify;
     color: #C7C3C4;
@@ -211,11 +223,19 @@ form .correo .inputCorreo{
 
     background: #FEFEFF;
     border-radius: 9.83008px;
+    
+}
+
+form .correo .inputCorreo input {
+    position: absolute;
+    height: 18px;
+    left: 8px;
+    top: 8px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 33px;
+    line-height: 18px;
     /* identical to box height */
     text-align: justify;
     color: #C7C3C4;
@@ -247,11 +267,19 @@ form .contraseña .inputContraseña {
 
     background: #FEFEFF;
     border-radius: 9.83008px;
+    
+}
+
+form .contraseña .inputContraseña input {
+    position: absolute;
+    height: 18px;
+    left: 8px;
+    top: 8px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 33px;
+    line-height: 18px;
     /* identical to box height */
     text-align: justify;
     color: #C7C3C4;
@@ -283,11 +311,20 @@ form .repetiContraseña .inputRepetiContraseña {
 
     background: #FEFEFF;
     border-radius: 9.83008px;
+    
+}
+
+form .repetiContraseña .inputRepetiContraseña input {
+    position: absolute;
+    width: 240px;
+    height: 18px;
+    left: 8px;
+    top: 8px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 33px;
+    line-height: 18px;
     /* identical to box height */
     text-align: justify;
     color: #C7C3C4;

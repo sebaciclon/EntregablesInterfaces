@@ -47,17 +47,37 @@ header {
     background: #4969D9;
 }
 
-.barraBusqueda img{
+.barraBusqueda {
     position: absolute;
     width: 271px;
     height: 38.17px;
-    left: 72px;
-    top: 11.6px;
-    /* Inside Auto Layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 0px 20px;
+    left: 82px;
+    top: 14.6px;
+    background: #FFFEFE;
+    border-radius: 18.1271px;
+}
+
+.barraBusqueda button {
+    position: absolute;
+    left: 83.09%;
+    top: 8.46%;
+    cursor: pointer;
+    background-color: white;
+}
+
+.barraBusqueda .inputBarraBusqueda input {
+    position: absolute;
+    left: 16px;
+    top: 9px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: justify;
+    color: #C7C3C4;
 }
 
 .iconos {

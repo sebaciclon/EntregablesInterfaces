@@ -236,7 +236,47 @@ form .botonIniciarSesion input {
     color: #FEFEFF;
 }
 
-form .botonIniciarSesionGoogle input{
+.botonIniciarSesionGoogle {
+    position: absolute;
+    width: 284px;
+    height: 36px;
+    left: 424.5px;
+    top: 453.23px;
+    cursor: pointer;
+    background: #FCFFFC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9.82523px;
+    text-align: center;
+}
+
+.botonIniciarSesionGoogle img {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 65px;
+    top: 8px;
+}
+
+.botonIniciarSesionGoogle .inputBotonIniciarSesionGoogle input {
+    position: absolute;
+    width: 150px;
+    left: 85px;
+    top: 9px;
+background: white;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+
+
+color: #0F39CE;
+}
+
+/*form .botonIniciarSesionGoogle input{
     position: absolute;
     width: 284px;
     height: 36px;
@@ -252,7 +292,7 @@ form .botonIniciarSesionGoogle input{
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
-    /* identical to box height */
+    
     text-align: center;
     color: #0F39CE;
 }
@@ -263,7 +303,7 @@ width: 20px;
 height: 20px;
 left: 481.5px;
 top: 443px;
-}
+}*/
 
 
 
