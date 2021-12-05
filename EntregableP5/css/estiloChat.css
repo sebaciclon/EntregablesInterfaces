@@ -909,7 +909,8 @@ body {
     top: 419px;
     
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    background-color: aquamarine;
+    background: #FFFCFC;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .mensaje+enviar {
@@ -950,6 +951,47 @@ body {
     height: 61px;
     left: 0px;
     top: 0px;
-    background-color: azure;
+    position: absolute;
+    background: rgba(15, 57, 206, 0.5);
+    border-radius: 15px 15px 0px 0px;
     
+}
+
+.usuarioChat {
+    position: absolute;
+    width: 104px;
+    height: 43px;
+    left: 17px;
+    top: 9px;
+}
+
+.videoLlamada {
+    position: absolute;
+    left: 175px;
+    top: 24px;
+    width: 20px;
+    height: 14px;
+}
+
+.minimizar {
+    position: absolute;
+    left: 215px;
+    top: 30px;
+    width: 15px;
+}
+
+.cerrar {
+    position: absolute;
+    width: 14px;
+    height: 15px;
+    left: 250px;
+    top: 23px;
+}
+
+.conversacion {
+    position: absolute;
+    width: 248px;
+    height: 99px;
+    left: 17px;
+    top: 170px;
 }
