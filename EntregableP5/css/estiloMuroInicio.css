@@ -387,85 +387,6 @@ header {
 }
 
 
-
-
-
-.sugerencias .textoSugerencias {
-    position: absolute;
-    width: 223px;
-    height: 48.38px;
-    left: 17px;
-    top: 87px;
-    background: bisque;
-    /*background: #FFFDFD;*/
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.sugerencias .textoSugerencias p {
-    position: absolute;
-    width: 162px;
-    height: 44.56px;
-    left: 44px;
-    top: 5.35px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 30px;
-    line-height: 35px;
-    color: #4969D9;
-    text-align: center;
-    background: chartreuse;
-}
-
-.sugerencias .publicidad img {
-    position: absolute;
-    width: 224px;
-    height: 282.54px;
-    left: 17px;
-    top: 468px;
-}
-
-.sugerencias .bloqueSugerencias {
-    position: absolute;
-    width: 223px;
-    height: 300px;
-    left: 18px;
-    top: 149px;
-    background: bisque;
-    /*background: #FFFDFD;*/
-    border-radius: 10px;
-}
-
-
-.publicaciones  button{
-    position: absolute;
-    width: 514px;
-    height: 49.65px;
-    left: 24.8%;
-    right: 25%;
-    top: 11.33%;
-    bottom: 81.9%;
-
-    background: #4969D9;
-    border: 1px solid #4969D9;
-    box-sizing: border-box;
-    border-radius: 12.2815px;
-
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    cursor: pointer;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 30px;
-    line-height: 35px;
-    text-align: center;
-    color: #FFFEFE;
-}
-
-
 .fondoContactos {
     position: absolute;
     width: 223px;
@@ -493,9 +414,280 @@ header {
     line-height: 35px;
     color: #4969D9;
     text-align: center;
+}
+
+.botonYpublicaciones {
+    position: absolute;
+    width: 524px;
+    height: 603.35px;
+    left: 254px;
+    top: 146.65px;
+    overflow:auto;
+    box-sizing: border-box;
+}
+
+.botonCrearPublicacion {
+    position: absolute;
+    width: 514px;
+    height: 49.65px;
+    left: 254px;
+    top: 87px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4969D9;
+    border: 1px solid #4969D9;
+    box-sizing: border-box;
+    border-radius: 12.2815px;
+}
+
+.texto1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    height: 40px;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFEFE;
+}
+
+.bloquePublicacion1 {
+    position: absolute;
+    width: 512px;
+    height: 525px;
+    background: #FFFEFE;
+    border-radius: 10px;
+}
+
+.encabezadoPublicacion1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
     
+    position: absolute;
+    width: 469px;
+    height: 45px;
+    left: 22px;
+    top: 12px;   
+}
+
+.tresPuntitos1 {
+    width: 24px;
+    height: 24px;
+    left: 0px;
+    top: 12px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.usuarioQuePublico1 {
+    width: 248px;
+    height: 45px;
+    left: 0px;
+    top: 12px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    background: darkgray;
+    margin-left: 24px;
+}
+
+.date {
+    position: absolute;
+    left: 10.23%;
+    right: 59.2%;
+    top: 64.44%;
+    bottom: 0%;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    
+    color: #6B6363;    
+}
+
+.nombreUsuario {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    
+    color: #0A0000;    
+}
+
+.imagenUsuario {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    left: 0px;
+    top: 0px;
     
 }
+
+.textoPublicacion {
+    position: absolute;
+    width: 472px;
+    height: 54px;
+    left: 22px;
+    top: 65px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    
+    color: #6B6363;
+    
+}
+
+.imagenesPublicacion {
+    position: absolute;
+    width: 472px;
+    height: 331px;
+    left: 22px;
+    top: 130px;
+}
+
+.suricata {
+    position: absolute;
+    width: 279.77px;
+    height: 164.97px;
+    left: 0px;
+    top: 0px;
+}
+
+.mapache {
+    position: absolute;
+    width: 279.77px;
+    height: 157.92px;
+    left: 0px;
+    top: 173px;
+    
+}
+
+.vaca {
+    position: absolute;
+    width: 176px;
+    height: 103.78px;
+    left: 296px;
+    top: 0px;
+}
+
+.perezoso {
+    position: absolute;
+    width: 176px;
+    height: 93.57px;
+    left: 296px;
+    top: 119px;
+}
+
+.tucan {
+    position: absolute;
+    width: 176px;
+    height: 103.78px;
+    left: 296px;
+    top: 228px;
+}
+
+.barraPublicacion {
+    position: absolute;
+    width: 472px;
+    height: 35px;
+    left: 21px;
+    top: 475px;
+    background-color: #C7C3C4;    
+}
+
+.meGusta {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+.meEncanta {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 42px;
+    top: 0px;
+    z-index: 1;
+}
+
+.cantidad {
+    position: absolute;
+    width: 40px;
+    height: 16px;
+    top: 10px;
+    left: 84px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    
+    color: #6B6363;
+    
+}
+
+.botones {
+    position: absolute;
+    width: 229px;
+    height: 25px;
+    left: 243px;
+    top: 5px;
+    background-color: aquamarine;
+}
+
+.bloquePublicacion2 {
+    position: absolute;
+    width: 512px;
+    height: 525px;
+    top: 535px;
+    background: cyan;
+}
+
+.botonYpublicaciones::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.botonYpublicaciones::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.botonYpublicaciones::-webkit-scrollbar-button:increment,.botonYpublicaciones::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.botonYpublicaciones::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.botonYpublicaciones::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.botonYpublicaciones::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+
+
 
 /*-----------------------------*/
 
@@ -506,22 +698,19 @@ header {
 
 @keyframes slide {
 	0% { transform: translateX(0); }
-	10% { transform: translateX(0); }
+	15% { transform: translateX(0); }
 
-	15% { transform: translateX(-100%); }
-	30% { transform: translateX(-100%); }
+	20% { transform: translateX(-100%); }
+	35% { transform: translateX(-100%); }
 
-	35% { transform: translateX(-200%); }
-	50% { transform: translateX(-200%); }
+	40% { transform: translateX(-200%); }
+	55% { transform: translateX(-200%); }
 
-	55% { transform: translateX(-300%); }
-	70% { transform: translateX(-300%); }
+	60% { transform: translateX(-300%); }
+	100% { transform: translateX(-300%); }
 
-	75% { transform: translateX(-400%); }
-	90% { transform: translateX(-400%); }
-
-	95% { transform: translateX(-500%); }
-	100% { transform: translateX(-500%); }
+    
+	
 }
 
 * { box-sizing: border-box; }
