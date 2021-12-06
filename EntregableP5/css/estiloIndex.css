@@ -357,6 +357,15 @@ form .botonIniciarSesion input {
     color: #FEFEFF;
 }
 
+.boton:hover{   
+    background: #092CAA;
+    font-weight: bold;
+}
+
+.boton {
+    transition:background 0.5s, color 0.5s, border 0.5s;
+}
+
 .botonIniciarSesionGoogle {
     position: absolute;
     width: 284px;
@@ -391,10 +400,17 @@ font-weight: normal;
 font-size: 15px;
 line-height: 18px;
 /* identical to box height */
-
-
-
 color: #0F39CE;
+}
+
+.botonIniciarSesionGoogle .boton1:hover{   
+    
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton1 {
+    transition:background 0.5s, color 0.5s, border 0.5s;
 }
 
 /*form .botonIniciarSesionGoogle input{
