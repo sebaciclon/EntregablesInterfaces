@@ -381,3 +381,15 @@ form .botonRegistrarse input {
     color: #0F39CE;
 }
 
+.boton:hover{   
+    cursor: pointer;
+    /*background: #0F39CE;
+    color: white;*/
+    font-weight: bold;
+    
+}
+
+.boton {
+    transition:background 0.5s, color 0.5s, border 0.5s;
+}
+
