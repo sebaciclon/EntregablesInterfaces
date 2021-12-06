@@ -58,7 +58,7 @@ header {
     border-radius: 18.1271px;
 }
 
-.barraBusqueda button {
+.barraBusqueda .lupa1 {
     position: absolute;
     left: 83.09%;
     top: 8.46%;
@@ -66,8 +66,14 @@ header {
     background-color: white;
 }
 
-.barraBusqueda .inputBarraBusqueda input {
+::placeholder {
+    color:darkgray;
+}
+
+.barraBusqueda input {
     position: absolute;
+    width: 122px;
+    height: 18px;
     left: 16px;
     top: 9px;
 
