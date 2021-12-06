@@ -11,8 +11,12 @@
 </head>
 <body>
     
+    
     <div class="contenedor">
-       
+        <div class="contenedorLoading">
+            <div id="loading" class="esconder"></div> 
+            <h5 id="procesando" class="esconder procesando">Aguarde...</h5>  
+        </div>
         <div class="cuerpo">
             
             <div class="contenedorLogo">
@@ -62,14 +66,19 @@
                 </div>
                
                 <div class="registrarse">
-                    <p><b><a href="registro.html">Registrarse</a></b></p>
+                    <p><b><a id="registrar">Registrarse</a></b></p>
                     <!--<h3 class="textoRegistrarse">Registrarse</h3>-->
                 </div>
             </form>
         </div>
+
+        
+
         <footer>
             <h4>Esains&Esains Diseño Web | Vasanet-2021</h4>
         </footer>
-    </div>    
+    </div>  
+    
+    <script src="js/ringLoading.js"></script>
 </body>
 </html>

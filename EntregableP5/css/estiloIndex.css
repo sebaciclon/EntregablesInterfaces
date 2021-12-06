@@ -7,6 +7,7 @@
     border: none;
     outline: none;
     font-family: Roboto;
+   
 }
 
 /*************************************************
@@ -453,10 +454,52 @@ form .registrarse a {
     text-align: center;
     color: #092CAA;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
 }
 
+.contenedorLoading {
+    width: 1024;
+    height: 768;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+   
+}
+/*
+.loading {
+    width: 120px;
+    height:269px;
+    background: url(../images/personajeCaminando.png) left center; 
+    animation: loading 1s steps(6) infinite;  
+    z-index: 9999;
+}
 
+@keyframes loading {
+    0% {background-position: 0;}
+    100% {background-position: -720px;}
+}*/
 
+.esconder{
+    display: none;
+}
 
+.loading {
+    width: 70px;
+    height:66px;
+    margin-top: 100px;
+    background: url(../images/sprite\ shet\ loading.png) left center no-repeat; 
+    animation: loading 5s steps(12) infinite;  
+    z-index: 9999;
+}
 
+@keyframes loading {
+    0% {background-position: 0;}
+    100% {background-position: -819px;}
+}
+
+.procesando {
+    position: relative;
+    margin-right: 230px;
+}
 
