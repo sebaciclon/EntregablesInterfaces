@@ -8,6 +8,9 @@
     outline: none;
 }
 
+::placeholder {
+    color:darkgray;
+}
 
 .contenedor {
     position: relative;
@@ -158,9 +161,7 @@ form .nombre .inputNombre input {
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
-    /* identical to box height */
-    text-align: justify;
-    color: #C7C3C4;
+    
 }
 
 form .apellido h3 {
@@ -200,9 +201,7 @@ form .apellido .inputApellido input {
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
-    /* identical to box height */
-    text-align: justify;
-    color: #C7C3C4;
+    
 }
 
 form .correo h3 {
@@ -244,9 +243,7 @@ form .correo .inputCorreo input {
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
-    /* identical to box height */
-    text-align: justify;
-    color: #C7C3C4;
+    
 }
 
 form .contraseña h3 {
@@ -288,9 +285,7 @@ form .contraseña .inputContraseña input {
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
-    /* identical to box height */
-    text-align: justify;
-    color: #C7C3C4;
+    
 }
 
 form .repetiContraseña h3 {
@@ -333,9 +328,7 @@ form .repetiContraseña .inputRepetiContraseña input {
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
-    /* identical to box height */
-    text-align: justify;
-    color: #C7C3C4;
+    
 }
 
 

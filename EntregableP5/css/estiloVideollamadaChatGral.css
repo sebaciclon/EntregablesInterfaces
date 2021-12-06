@@ -94,11 +94,10 @@ header {
 
 .iconos .indicadorPagina {
     position: absolute;
-    width: 37px;
-    height: 0px;
-    left: 171px;
-    top: 46px;
-    border: 2px solid rgba(255, 251, 251, 0.3);
+    width: 50px;
+    height: 10px;
+    left: 166px;
+    top: 43px;
 }
 
 .iconos .usuario {
