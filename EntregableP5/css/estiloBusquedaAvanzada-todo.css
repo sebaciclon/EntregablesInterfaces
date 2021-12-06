@@ -477,3 +477,22 @@ top: 123px;
     left: 475px;
     top: 348px;
 }
+
+.bloquePublicacion3 {
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    left: 375px;
+    top: 721px;
+
+    background: #FFFEFE;
+    border-radius: 10px;
+}
+
+.bloquePublicacion3 .textoPublicacion3 img {
+    position: absolute;
+    width: 384.17px;
+    height: 150px;
+    left: 108px;
+    top: 163px;
+}
