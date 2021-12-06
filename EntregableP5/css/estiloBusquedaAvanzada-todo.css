@@ -1,0 +1,479 @@
+/* Para resetear el browser */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+.contenedor {
+    position: relative;
+    width: 1024px;
+    height: 768px;
+    background-image: url(../images/fondohuellas1.svg);
+    
+    margin: auto;
+    border: black 1px solid;
+}
+
+header {
+    position: absolute;
+    width: 1024px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+    background: #4969D9;
+    
+}
+
+.logo1 {
+    position: absolute;
+    left: 0%;
+    right: 84.84%;
+    top: 0%;
+    bottom: 0%;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 20px;
+    cursor: pointer;
+    background: #4969D9;
+}
+
+.logo {
+    background: #4969D9;
+}
+
+.barraBusqueda {
+    position: absolute;
+    width: 271px;
+    height: 38.17px;
+    left: 82px;
+    top: 14.6px;
+    background: #FFFEFE;
+    border-radius: 18.1271px;
+}
+
+.barraBusqueda .lupa1 {
+    position: absolute;
+    left: 83.09%;
+    top: 8.46%;
+    cursor: pointer;
+    background-color: white;
+}
+
+::placeholder {
+    color:darkgray;
+}
+
+.barraBusqueda input {
+    position: absolute;
+    width: 122px;
+    height: 18px;
+    left: 16px;
+    top: 9px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: justify;
+    color: #C7C3C4;
+}
+
+.iconos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 315.91px;
+    height: 44.91px;
+    left: 655px;
+    top: 13px;
+
+    
+}
+
+.iconos .usuario {
+    position: absolute;
+    width: 44.91px;
+    height: 44.91px;
+    left: 0px;
+    top: 0px;
+    border-radius: 107.782px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 30px;
+    cursor: pointer;
+    
+}
+
+.iconos .inicio {
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    left: 23.71%;
+    right: 64.58%;
+    top: 8.8%;
+    bottom: 8.8%;
+    background: #FFFFFF;
+    
+    /* Inside Auto Layout */
+    cursor: pointer;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 30px;
+    background: #4969D9;
+}
+
+
+
+.iconos .chat {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    left: 141.91px;
+    top: 3.95px;
+    cursor: pointer;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 30px;
+    background: #4969D9;
+}
+
+.iconos .notificacion {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 66.13%;
+    right: 22.16%;
+    top: 8.81%;
+    bottom: 8.81%;
+    cursor: pointer;
+    background: #FFFCFC;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    margin: 0px 30px;
+    background: #4969D9;
+}
+
+.iconos .logout {
+    /* logout */
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 275.91px;
+    top: 2.45px;
+    cursor: pointer;
+    
+    /* Inside Auto Layout */
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    margin: 0px 30px;
+    background: #4969D9;
+}
+
+.resultados {
+    position: absolute;
+    width: 330px;
+    height: 640px;
+    left: 17px;
+    top: 99px;
+
+    background: #FFFCFC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.resultados .resultadoBusqueda {
+    position: absolute;
+    width: 320px;
+    height: 42.67px;
+    left: 14.85px;
+    top: 5px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #8F8787;
+}
+
+.linea {
+    position: absolute;
+    width: 311.5px;
+    height: 0px;
+    left: 9.2px;
+    top: 73px;
+    border: 0.5px solid #4969D9;
+}
+
+.resultados .filtros {
+    position: absolute;
+    width: 247.93px;
+    height: 23px;
+    left: 16px;
+    top: 104px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #948989;
+}
+
+.resultados .foto1 {
+    position: absolute;
+    width: 223.14px;
+    height: 21.94px;
+    left: 16px;
+    top: 328px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.resultados .publicaciones {
+    position: absolute;
+    width: 206.61px;
+    height: 21.94px;
+    left: 16px;
+    top: 214px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.resultados .personas {
+    position: absolute;
+    width: 223.14px;
+    height: 21.94px;
+    left: 16px;
+    top: 271px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.resultados .todo {
+    position: absolute;
+    width: 60px;
+    height: 21.94px;
+    left: 4px;
+    top: 3px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.resultados .todo1 {
+    position: absolute;
+    width: 65px;
+    height: 28px;
+    left: 16px;
+    top: 153px;
+    background: #C4C4C4;
+    border-radius: 5px;
+}
+
+.bloquePublicacion1 {
+    position: absolute;
+    width: 600px;
+    height: 202px;
+    left: 375px;
+    top: 99px;
+
+    background: #FFFEFE;
+    border-radius: 10px;
+}
+
+.tresPuntitos1 {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 565px;
+    top: 21px;
+}
+
+.imagenUsuario1 {
+    position: absolute;
+    width: 250px;
+    height: 45px;
+    left: 21px;
+    top: 12px;  
+}
+
+.textoPublicacion3 p {
+    position: absolute;
+    width: 550px;
+    height: 54px;
+    left: 21px;
+    top: 76px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.meGusta {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 21px;
+    top: 149px;
+}
+
+.meEncanta {
+    position: absolute;
+    left: 63px;
+    top: 149px;
+}
+
+.cantidad {
+    position: absolute;
+    left: 109px;
+    top: 158px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #6B6363;
+}
+
+.botonComentar {
+    position: absolute;
+    width: 104px;
+    height: 25px;
+    left: 350px;
+    top: 153px;
+}
+
+.botonCompartir {
+    position: absolute;
+    width: 104px;
+    height: 25px;
+    left: 475px;
+    top: 153px;
+}
+
+.bloquePublicacion2 {
+    position: absolute;
+width: 600px;
+height: 400px;
+left: 375px;
+top: 311px;
+
+background: #FFFEFE;
+border-radius: 10px;
+}
+
+.textoPublicacion3 img {
+    position: absolute;
+width: 384.17px;
+height: 202px;
+left: 108px;
+top: 123px;
+}
+
+.meGusta1 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 21px;
+    top: 344px;
+}
+
+.meEncanta1 {
+    position: absolute;
+    left: 63px;
+    top: 344px;
+}
+
+.cantidad1 {
+    position: absolute;
+    left: 109px;
+    top: 353px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #6B6363;
+}
+
+.botonComentar1 {
+    position: absolute;
+    width: 104px;
+    height: 25px;
+    left: 350px;
+    top: 348px;
+}
+
+.botonCompartir1 {
+    position: absolute;
+    width: 104px;
+    height: 25px;
+    left: 475px;
+    top: 348px;
+}

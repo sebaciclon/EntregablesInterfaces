@@ -57,6 +57,35 @@ header {
     border-radius: 18.1271px;
 }
 
+.barraBusqueda .lupa1 {
+    position: absolute;
+    left: 83.09%;
+    top: 8.46%;
+    cursor: pointer;
+    background-color: white;
+}
+
+::placeholder {
+    color:darkgray;
+}
+
+.barraBusqueda input {
+    position: absolute;
+    width: 122px;
+    height: 18px;
+    left: 16px;
+    top: 9px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: justify;
+    color: #C7C3C4;
+}
+/*
 .barraBusqueda button {
     position: absolute;
     left: 83.09%;
@@ -75,10 +104,10 @@ header {
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
-    /* identical to box height */
+    
     text-align: justify;
     color: #C7C3C4;
-}
+}*/
 
 .iconos {
     display: flex;

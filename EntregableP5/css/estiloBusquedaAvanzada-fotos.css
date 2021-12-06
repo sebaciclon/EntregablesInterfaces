@@ -13,6 +13,7 @@
     width: 1024px;
     height: 768px;
     background-image: url(../images/fondohuellas1.svg);
+    
     margin: auto;
     border: black 1px solid;
 }
@@ -24,6 +25,7 @@ header {
     left: 0px;
     top: 0px;
     background: #4969D9;
+    
 }
 
 .logo1 {
@@ -96,14 +98,8 @@ header {
     height: 44.91px;
     left: 655px;
     top: 13px;
-}
 
-.iconos .indicadorPagina {
-    position: absolute;
-    width: 50px;
-    height: 10px;
-    left: 166px;
-    top: 43px;
+    
 }
 
 .iconos .usuario {
@@ -119,6 +115,7 @@ header {
     flex-grow: 0;
     margin: 0px 30px;
     cursor: pointer;
+    
 }
 
 .iconos .inicio {
@@ -130,6 +127,7 @@ header {
     top: 8.8%;
     bottom: 8.8%;
     background: #FFFFFF;
+    
     /* Inside Auto Layout */
     cursor: pointer;
     flex: none;
@@ -138,6 +136,8 @@ header {
     margin: 0px 30px;
     background: #4969D9;
 }
+
+
 
 .iconos .chat {
     display: flex;
@@ -186,6 +186,7 @@ header {
     left: 275.91px;
     top: 2.45px;
     cursor: pointer;
+    
     /* Inside Auto Layout */
     flex: none;
     order: 4;
@@ -194,62 +195,165 @@ header {
     background: #4969D9;
 }
 
-.videollamada {
+.fotos {
     position: absolute;
-    width: 751px;
-    height: 683px;
-    left: 136px;
-    top: 78px;
-    background: #FFFEFE;
-    border-radius: 20px;
-}
-
-.videollamada .imagenChatGrande {
-    position: absolute;
-    width: 721px;
-    height: 579.8px;
-    left: 15px;
-    top: 15px;
-    background-image: url(../images/imagenChatGrande.svg);
+    width: 609px;
+    height: 610.05px;
+    left: 398px;
+    top: 128px;
+    background-image: url(../images/fotosPublicas.svg);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
-.videollamada .imagenChatChica {
+.fotosPublicas {
     position: absolute;
-    width: 197.55px;
-    height: 155px;
-    left: 523px;
-    top: 424px;
-    background-image: url(../images/imagenChatChica.svg);
+    width: 164px;
+    height: 29px;
+    left: 400px;
+    top: 99px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.resultados {
+    position: absolute;
+    width: 330px;
+    height: 640px;
+    left: 17px;
+    top: 99px;
+
+    background: #FFFCFC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.resultados .resultadoBusqueda {
+    position: absolute;
+    width: 320px;
+    height: 42.67px;
+    left: 14.85px;
+    top: 5px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #8F8787;
+}
+
+.linea {
+    position: absolute;
+    width: 311.5px;
+    height: 0px;
+    left: 9.2px;
+    top: 73px;
+    border: 0.5px solid #4969D9;
+}
+
+.resultados .filtros {
+    position: absolute;
+    width: 247.93px;
+    height: 23px;
+    left: 16px;
+    top: 103px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #948989;
+}
+
+.resultados .todo {
+    position: absolute;
+    width: 223.14px;
+    height: 21.94px;
+    left: 16px;
+    top: 156px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.resultados .publicaciones {
+    position: absolute;
+    width: 206.61px;
+    height: 21.94px;
+    left: 16px;
+    top: 213px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.resultados .personas {
+    position: absolute;
+    width: 223.14px;
+    height: 21.94px;
+    left: 16px;
+    top: 270px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.resultados .fotos2 {
+    position: absolute;
+    width: 65px;
+    height: 21.94px;
+    left: 3px;
+    top: 2px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.8);
 }
 
-.videollamada .iconosLlamada .microfono {
+.resultados .fotos1 {
     position: absolute;
-    width: 45px;
-    height: 45px;
-    left: 284.42px;
-    top: 618.3px;
-    cursor: pointer;
+    width: 70px;
+    height: 28px;
+    left: 14px;
+    top: 320px;
+    background: #C4C4C4;
+    border-radius: 5px;
 }
-
-.videollamada .iconosLlamada .cortar {
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    left: 354.37px;
-    top: 617.73px;
-    cursor: pointer;
-}
-
-.videollamada .iconosLlamada .videollamada {
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    left: 425.73px;
-    top: 617.73px;
-    cursor: pointer;
-}
-
