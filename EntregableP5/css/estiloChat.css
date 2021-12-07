@@ -1020,3 +1020,28 @@ body {
     z-index: 1;
     cursor: pointer;
 }
+
+.meEncanta {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 131px;
+    top: 0px;
+    z-index: 1;
+}
+
+.cantMeEncanta {
+    position: absolute;
+    width: 40px;
+    height: 16px;
+    top: 10px;
+    left: 173px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    
+    color: #6B6363;
+    
+}
