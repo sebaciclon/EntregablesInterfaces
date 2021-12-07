@@ -241,6 +241,15 @@ header {
     cursor: pointer;
 }
 
+.chatGrande .enviar1 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 680px;
+    top: 616px;
+    /*cursor: pointer;*/
+}
+
 .chatGrande .lineasChat {
     position: absolute;
     left: 30px;
@@ -261,7 +270,7 @@ header {
     height: 27px;
     left: 616px;
     top: 25px;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 .chatGrande .llamar {
@@ -320,3 +329,8 @@ header {
     border-radius: 10px;  
 }
 
+.seleccionaContacto {
+    margin-top: 290px;
+    margin-left: 90px;
+    color: #C7C3C4;
+}

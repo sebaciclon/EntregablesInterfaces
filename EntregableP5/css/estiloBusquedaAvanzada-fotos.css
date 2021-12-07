@@ -197,20 +197,21 @@ header {
 
 .fotos {
     position: absolute;
-    width: 609px;
+    width: 620px;
     height: 610.05px;
-    left: 398px;
+    left: 380px;
     top: 128px;
     background-image: url(../images/fotosPublicas.svg);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
+    
 }
 
 .fotosPublicas {
     position: absolute;
     width: 164px;
     height: 29px;
-    left: 400px;
+    left: 385px;
     top: 99px;
 
     font-family: Roboto;
