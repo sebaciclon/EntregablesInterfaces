@@ -1010,3 +1010,13 @@ body {
     left: 16px;
     top: 120px;
 }
+
+.noMeGusta {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 42px;
+    top: 0px;
+    z-index: 1;
+    cursor: pointer;
+}
