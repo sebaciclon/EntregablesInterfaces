@@ -7,8 +7,8 @@
     border: none;
     outline: none;
     font-family: Roboto;
+   
 }
-
 
 ::placeholder {
     color:darkgray;
@@ -16,56 +16,11 @@
 
 .contenedor {
     position: relative;
-    
     width: 1024px;
     height: 768px;
     background-image: url(../images/fondohuellas1.svg);
     animation: fondo 20s linear infinite;
     margin: auto;
-}
-
-
-@media screen and (max-width:768px) {
-    .contenedor {
-        width: 100%;
-		height: 100%;			
-		flex-direction: column;
-		
-		background-color: #ffffff;
-		margin-bottom: auto;
-    }
-
-    .contenedor footer {
-        width: 100%;
-    }
-
-    .contenedor footer h4 {
-        text-align: center;
-        font-size: 15px;
-    }
-
-    
-
-    .contenedor .contenedorLogo .logo{
-        display: none !important;
-    }
-
-    .contenedor form {
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        border-radius: 0px;
-        
-    }
-
-    .contenedor .logoFormulario img {
-        align-items: center;
-        height: 129.08px;
-        left: 40%;
-        top: 32px;
-    }
-    
-
 }
 
 @keyframes fondo {
@@ -74,8 +29,6 @@
      
     }
 }
-
-
 
 footer {
     position: absolute;
@@ -98,6 +51,18 @@ footer h4 {
     color: #C7C3C4;
 }
 
+.cuerpo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    padding: 0px;
+    position: absolute;
+    width: 784px;
+    height: 588px;
+    left: 120px;
+    top: 90px;
+}
 
 .contenedorLogo {
     position: static;
@@ -116,42 +81,40 @@ footer h4 {
     position: absolute;
     width: 214px;
     height: 252.52px;
-    left: 122px;
-    top: 208.32px;
+    left: 2.5px;
+    top: 118.32px;
 }
 
-
 form {
-    position: absolute;
     width: 431px;
     height: 587.55px;
-    left: 470.5px;
-    top: 90.23px;
+    left: 350.5px;
+    top: 0.23px;
     background: #E1E1E4;
     border-radius: 8px;
     /* Inside Auto Layout */
     flex: none;
     order: 1;
     flex-grow: 0;
-    
+    margin: 0px 134px;
     background: #E1E1E4;
     border-radius: 8px;
 }
 
-.logoFormulario img {
+form .logoFormulario img {
     position: absolute;
     width: 109.39px;
     height: 129.08px;
-    left: 162px;
-    top: 32px;
+    left: 515.5px;
+    top: 32.23px;
 }
 
-.textoInicioSesion {
+form .textoInicioSesion {
     position: absolute;
     width: 181px;
     height: 35px;
-    left: 70px;
-    top: 176px;
+    left: 420.5px;
+    top: 176.23px;
 
     font-family: Roboto;
     font-style: normal;
@@ -162,13 +125,12 @@ form {
     color: #0F39CE;
 }
 
-
-.correo h3 {
+form .correo h3 {
     position: absolute;
     width: 123px;
     height: 18px;
-    left: 74px;
-    top: 226px;
+    left: 424.5px;
+    top: 226.23px;
 
     font-family: Roboto;
     font-style: normal;
@@ -180,17 +142,16 @@ form {
     color: rgba(0, 0, 0, 0.5);
 }
 
-.correo .inputCorreo{
+form .correo .inputCorreo{
     position: absolute;
-    left: 74px;
-    
-    top: 245px;
-    width: 284px;
-height: 36px;
+    left: 54.15%;
+    right: 9.63%;
+    top: 41.71%;
+    bottom: 52.17%;
     background: #FEFEFF;
     border-radius: 9.83008px;
 }
-.correo .inputCorreo input {
+form .correo .inputCorreo input {
     position: absolute;
     height: 18px;
     left: 0px;
@@ -201,14 +162,14 @@ height: 36px;
     font-size: 15px;
     line-height: 18px;
     padding-left: 10px;
-    color:darkgray;
+    
 }
 
-.contraseña h3 {
+form .contraseña h3 {
     position: absolute;
     width: 77px;
     height: 18px;
-    left: 74px;
+    left: 424.5px;
     top: 296.23px;
 
     font-family: Roboto;
@@ -221,13 +182,12 @@ height: 36px;
     color: rgba(0, 0, 0, 0.5);
 }
 
-.contraseña .inputContraseña {
+form .contraseña .inputContraseña {
     position: absolute;
-    left: 74px;
-    
-    top: 315px;
-    width: 284px;
-height: 36px;
+    left: 54.15%;
+    right: 9.63%;
+    top: 53.61%;
+    bottom: 40.27%;
     background: #FEFEFF;
     border-radius: 9.83008px;
 }
@@ -249,7 +209,7 @@ form .olvidasteContraseña p{
     position: absolute;
     width: 133px;
     height: 18px;
-    left: 150px;
+    left: 500.5px;
     top: 354.23px;
 
     font-family: Roboto;
@@ -267,7 +227,7 @@ form .botonIniciarSesion input {
     position: absolute;
     width: 284px;
     height: 36px;
-    left: 74px;
+    left: 424.5px;
     top: 387.23px;
     
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -287,7 +247,6 @@ form .botonIniciarSesion input {
 .boton:hover{   
     background: #092CAA;
     font-weight: bold;
-    
 }
 
 .boton {
@@ -298,7 +257,7 @@ form .botonIniciarSesion input {
     position: absolute;
     width: 284px;
     height: 36px;
-    left: 74px;
+    left: 424.5px;
     top: 453.23px;
     cursor: pointer;
     background: #FCFFFC;
@@ -321,6 +280,7 @@ form .botonIniciarSesion input {
     left: 85px;
     top: 9px;
     background: white;
+
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -331,6 +291,7 @@ form .botonIniciarSesion input {
 }
 
 .botonIniciarSesionGoogle .boton1:hover{   
+    
     font-weight: bold;
     cursor: pointer;
 }
@@ -344,7 +305,7 @@ form .linea hr{
     position: absolute;
     width: 284px;
     height: 0px;
-    left: 74.5px;
+    left: 425px;
     top: 534px;
     border: 2px solid #FFFDFD;
 }
@@ -353,9 +314,9 @@ form .registrarse a {
     position: absolute;
     width: 100px;
     height: 18px;
-    left: 166px;
+    left: 516.5px;
     top: 539.23px;
-    cursor: pointer;
+    
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
@@ -365,6 +326,7 @@ form .registrarse a {
     text-align: center;
     color: #092CAA;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
 }
 
 .contenedorLoading {
@@ -381,7 +343,7 @@ form .registrarse a {
     display: none;
 }
 
-#loading {
+.loading {
     width: 70px;
     height:66px;
     background: url(../images/sprite\ shet\ loading.png) left center no-repeat; 
@@ -397,31 +359,11 @@ form .registrarse a {
     100% {background-position: -819px;}
 }
 
-#procesando {
+.procesando {
     margin-top: 325px;
     margin-right: 250px;
     color: rgba(0, 0, 0, 0.5);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     font-size: 20px;
 }
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-	
-
-
-
-
-
-
 

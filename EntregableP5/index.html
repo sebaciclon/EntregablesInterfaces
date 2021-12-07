@@ -10,13 +10,74 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
-    
-    
     <div class="contenedor">
         <div class="contenedorLoading">
             <div id="loading" class="esconder"></div> 
             <h5 id="procesando" class="esconder procesando">Aguarde...</h5>  
         </div>
+        
+        <div class="contenedorLogo">
+            <div class="logo">
+                <img src="images/logoGrande.svg">
+            </div>
+        </div>
+
+        <form>        
+            <div class="logoFormulario">
+                <img src="images/logoForm.svg">
+            </div>
+            <h1 class="textoInicioSesion">Iniciar sesión</h1>
+
+            <div class="correo">
+                <h3><b>Correo electrónico</b></h3>
+                <div class="inputCorreo">
+                    <input type="text" placeholder="Ingresá tu correo electrónico">
+                </div>
+            </div>
+
+            <div class="contraseña">
+                <h3><b>Contraseña</b></h3>
+                <div class="inputContraseña">
+                    <input type="text" placeholder="Ingresá tu Contraseña">
+                </div>   
+            </div>
+
+            <div class="olvidasteContraseña">
+                <p class="textoOlvidasteContraseña">Olvidé la contraseña</p>
+            </div>
+            
+            <div class="botonIniciarSesion">
+                <input class="boton" type="button" value="Iniciar sesión" onclick = "location='muroInicio.html'">
+            </div>
+
+            <div class="botonIniciarSesionGoogle">
+                <img src="images/imagenGoogle.svg">
+                <div class="inputBotonIniciarSesionGoogle">
+                    <input class="boton1" type="button" value="Ingresar con Google" onclick = "location='muroInicio.html'">
+                </div>
+                
+            </div>
+                
+            <div class="linea">
+                <hr class="linea1">
+            </div>
+           
+            <div class="registrarse">
+                
+                <p><b><a id="registrar">Registrarse</a></b></p>
+            </div>
+        </form>
+    
+        <footer>
+            <h4>Esains&Esains Diseño Web | Vasanet-2021</h4>
+        </footer>
+        
+
+
+
+
+        <!--
+        
         <div class="cuerpo">
             
             <div class="contenedorLogo">
@@ -67,7 +128,7 @@
                
                 <div class="registrarse">
                     <p><b><a id="registrar">Registrarse</a></b></p>
-                    <!--<h3 class="textoRegistrarse">Registrarse</h3>-->
+                    
                 </div>
             </form>
         </div>
@@ -76,7 +137,7 @@
 
         <footer>
             <h4>Esains&Esains Diseño Web | Vasanet-2021</h4>
-        </footer>
+        </footer>-->
     </div>  
     
     <script src="js/ringLoading.js"></script>
