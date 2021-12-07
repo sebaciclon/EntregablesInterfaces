@@ -198,7 +198,6 @@ footer h4 {
 }
 
 form {
-    position: static;
     width: 431px;
     height: 587.55px;
     left: 350.5px;
@@ -392,15 +391,15 @@ form .botonIniciarSesion input {
     width: 150px;
     left: 85px;
     top: 9px;
-background: white;
+    background: white;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 15px;
-line-height: 18px;
-/* identical to box height */
-color: #0F39CE;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    color: #0F39CE;
 }
 
 .botonIniciarSesionGoogle .boton1:hover{   
@@ -412,37 +411,6 @@ color: #0F39CE;
 .boton1 {
     transition:background 0.5s, color 0.5s, border 0.5s;
 }
-
-/*form .botonIniciarSesionGoogle input{
-    position: absolute;
-    width: 284px;
-    height: 36px;
-    left: 424.5px;
-    top: 453.23px;
-    cursor: pointer;
-    background: #FCFFFC;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 9.82523px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 18px;
-    
-    text-align: center;
-    color: #0F39CE;
-}
-
-form .botonIniciarSesionGoogle img {
-    position: absolute;
-width: 20px;
-height: 20px;
-left: 481.5px;
-top: 443px;
-}*/
-
-
 
 
 form .linea hr{
@@ -482,19 +450,6 @@ form .registrarse a {
     vertical-align: middle;
    
 }
-/*
-.loading {
-    width: 120px;
-    height:269px;
-    background: url(../images/personajeCaminando.png) left center; 
-    animation: loading 1s steps(6) infinite;  
-    z-index: 9999;
-}
-
-@keyframes loading {
-    0% {background-position: 0;}
-    100% {background-position: -720px;}
-}*/
 
 .esconder{
     display: none;
@@ -503,10 +458,12 @@ form .registrarse a {
 .loading {
     width: 70px;
     height:66px;
-    margin-top: 100px;
     background: url(../images/sprite\ shet\ loading.png) left center no-repeat; 
     animation: loading 5s steps(12) infinite;  
     z-index: 9999;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: 325px;
+    
 }
 
 @keyframes loading {
@@ -515,7 +472,10 @@ form .registrarse a {
 }
 
 .procesando {
-    position: relative;
-    margin-right: 230px;
+    margin-top: 325px;
+    margin-right: 250px;
+    color: rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    font-size: 20px;
 }
 
