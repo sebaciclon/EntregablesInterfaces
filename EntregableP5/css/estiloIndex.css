@@ -37,14 +37,13 @@
 
     .contenedor footer {
         width: 100%;
+        top: 580px;
     }
 
     .contenedor footer h4 {
         text-align: center;
         font-size: 15px;
     }
-
-    
 
     .contenedor .contenedorLogo .logo{
         display: none !important;
@@ -55,7 +54,6 @@
         top: 0px;
         width: 100%;
         border-radius: 0px;
-        
     }
 
     .contenedor .logoFormulario img {
@@ -65,7 +63,45 @@
         top: 32px;
     }
     
+    .contenedor .textoInicioSesion {
+        left: 10%;
+    }
+    
+    .contenedor .correo h3 {
+        left: 10%;
+    }
 
+    .contenedor .correo .inputCorreo {
+        left: 10%;
+    }
+
+    .contenedor .contraseña h3 {
+        left: 10%;
+    }
+
+    .contenedor .contraseña .inputContraseña {
+        left: 10%;
+    }
+
+    .contenedor .olvidasteContraseña .textoOlvidasteContraseña{
+        left: 30%;
+    }
+
+    .contenedor .botonIniciarSesion input {
+        left: 10%;
+    }
+
+    .contenedor .botonIniciarSesionGoogle {
+        left: 10%;
+    }
+
+    .contenedor .linea hr{
+        left: 10%;
+    }
+    
+    .contenedor .registrarse a {
+        left: 36%;
+    }
 }
 
 @keyframes fondo {
