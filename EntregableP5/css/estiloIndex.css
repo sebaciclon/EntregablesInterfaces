@@ -6,7 +6,7 @@
     text-decoration: none;
     border: none;
     outline: none;
-    font-family: Roboto;
+    
 }
 
 
@@ -22,6 +22,7 @@
     background-image: url(../images/fondohuellas1.svg);
     animation: fondo 20s linear infinite;
     margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
@@ -126,7 +127,7 @@ footer {
 footer h4 {
     position: absolute;
     bottom: 20px;
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -184,12 +185,12 @@ form {
 
 .textoInicioSesion {
     position: absolute;
-    width: 181px;
+    width: 281px;
     height: 35px;
     left: 70px;
     top: 176px;
 
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -201,18 +202,18 @@ form {
 
 .correo h3 {
     position: absolute;
-    width: 123px;
+    width: 223px;
     height: 18px;
     left: 74px;
     top: 226px;
 
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
     /* identical to box height */
-    text-align: center;
+    text-align: justify;
     color: rgba(0, 0, 0, 0.5);
 }
 
@@ -231,7 +232,7 @@ height: 36px;
     height: 18px;
     left: 0px;
     top: 9px;
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -247,7 +248,7 @@ height: 36px;
     left: 74px;
     top: 296.23px;
 
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -263,7 +264,7 @@ height: 36px;
     
     top: 315px;
     width: 284px;
-height: 36px;
+    height: 36px;
     background: #FEFEFF;
     border-radius: 9.83008px;
 }
@@ -273,7 +274,7 @@ form .contraseña .inputContraseña input {
     height: 18px;
     left: 0px;
     top: 9px;
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -283,12 +284,12 @@ form .contraseña .inputContraseña input {
 
 form .olvidasteContraseña p{
     position: absolute;
-    width: 133px;
+    width: 233px;
     height: 18px;
     left: 150px;
     top: 354.23px;
 
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -310,7 +311,7 @@ form .botonIniciarSesion input {
     background: #0F39CE;
     border-radius: 9.82523px;
     cursor: pointer;
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -357,7 +358,7 @@ form .botonIniciarSesion input {
     left: 85px;
     top: 9px;
     background: white;
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -392,7 +393,7 @@ form .registrarse a {
     left: 166px;
     top: 539.23px;
     cursor: pointer;
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: 300;
     font-size: 20px;

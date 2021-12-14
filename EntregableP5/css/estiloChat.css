@@ -13,7 +13,7 @@
     width: 1024px;
     height: 768px;
     background-image: url(../images/fondohuellas1.svg);
-    
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: auto;
     /*border: black 1px solid;*/
 }
@@ -76,7 +76,7 @@ header {
     left: 16px;
     top: 9px;
 
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -234,7 +234,7 @@ header {
     position: absolute;
     width: 162px;
     height: 44.56px;
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: 300;
     font-size: 30px;
@@ -294,7 +294,7 @@ header {
 }
 
 .draZapata {
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -308,7 +308,7 @@ header {
 }
 
 .amigosZapata {
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: 300;
     font-size: 14.386px;
@@ -341,7 +341,7 @@ header {
 }
 
 .drRomero {
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -355,7 +355,7 @@ header {
 }
 
 .amigosRomero {
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: 300;
     font-size: 14.386px;
@@ -384,7 +384,7 @@ header {
 
 .texto {
     text-decoration: none;
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -426,7 +426,7 @@ header {
     height: 35px;
     left: 43px;
     top: 7.35px;
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: 300;
     font-size: 30px;
@@ -463,7 +463,7 @@ header {
 }
 
 .texto1 {
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: 300;
     height: 40px;
@@ -521,7 +521,7 @@ header {
     left: 22px;
     top: 65px;
     
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -614,7 +614,7 @@ header {
     height: 16px;
     top: 10px;
     left: 84px;
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -653,7 +653,7 @@ header {
     left: 22px;
     top: 65px;
     
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -690,7 +690,7 @@ header {
     left: 22px;
     top: 65px;
     
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -809,9 +809,9 @@ header {
 
 html { scroll-behavior: smooth; }
 
-body {
+/*body {
 	font-family: sans-serif;
-}
+}*/
 
 .wrapper {
 	max-width: 1200px;
