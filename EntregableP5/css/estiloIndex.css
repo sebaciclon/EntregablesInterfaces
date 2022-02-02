@@ -167,14 +167,6 @@ form {
     order: 1;
     flex-grow: 0;
 }
-/*
-.logoFormulario img {
-    position: absolute;
-    width: 109.39px;
-    height: 129.08px;
-    left: 162px;
-    top: 32px;
-}*/
 
 .textoInicioSesion {
     position: absolute;
@@ -210,7 +202,7 @@ form {
     color: rgba(0, 0, 0, 0.5);
 }
 
-.correo .inputCorreo{
+.correo input {
     position: absolute;
     left: 74px;
     
@@ -220,20 +212,6 @@ form {
     background: #FEFEFF;
     border-radius: 9.83008px;
 }
-/*
-.correo .inputCorreo input {
-    position: absolute;
-    height: 18px;
-    left: 0px;
-    top: 9px;
-    
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 18px;
-    padding-left: 10px;
-    color:darkgray;
-}*/
 
 .contraseña h3 {
     position: absolute;
@@ -252,7 +230,7 @@ form {
     color: rgba(0, 0, 0, 0.5);
 }
 
-.contraseña .inputContraseña {
+.contraseña input {
     position: absolute;
     left: 74px;
     
@@ -262,21 +240,8 @@ form {
     background: #FEFEFF;
     border-radius: 9.83008px;
 }
-/*
-.contraseña .inputContraseña input {
-    position: absolute;
-    height: 18px;
-    left: 0px;
-    top: 9px;
-    
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 18px;
-    padding-left: 10px;
-}*/
 
-form .olvidasteContraseña p{
+.olvidasteContraseña p{
     position: absolute;
     width: 100%;
     height: 18px;
@@ -294,7 +259,7 @@ form .olvidasteContraseña p{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-form .botonIniciarSesion input {
+.botonIniciarSesion input {
     position: absolute;
     width: 284px;
     height: 36px;
@@ -346,7 +311,7 @@ form .botonIniciarSesion input {
     top: 8px;
 }
 
-.botonIniciarSesionGoogle .inputBotonIniciarSesionGoogle input {
+.botonIniciarSesionGoogle input {
     position: absolute;
     width: 150px;
     left: 85px;
