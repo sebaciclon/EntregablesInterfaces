@@ -114,16 +114,21 @@ footer {
     position: absolute;
     width: 1024px;
     height: 60px;
+    left: 0px;
     top: 708px;
     display: flex;
     justify-content: center;
-    background: #FFFFFF;
+    background: #FFFFFE;
 }
 
 footer h4 {
     position: absolute;
-    bottom: 20px;
-    /*font-family: Roboto;*/
+    width: 385px;
+    height: 13.8px;
+    left: 319px;
+    top: 23px;
+
+    font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -131,148 +136,171 @@ footer h4 {
     color: #C7C3C4;
 }
 
-
-.contenedorLogo {
-    position: static;
-    left: 0.32%;
-    right: 72.39%;
-    top: 20.12%;
-    bottom: 20.12%;
-    /* Inside Auto Layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 174px;
-}
-
-.contenedorLogo .logo img{
+.contenedorLogo img{
     position: absolute;
     width: 214px;
     height: 252.52px;
-    left: 122px;
-    top: 208.32px;
+    left: 122.5px;
+    top: 198.32px;
 }
 
+.contenedorLogo .vasanet {
+    position: absolute;
+    left: 152.46px;
+    top: 401.62px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42.8px;
+    line-height: 50px;
+    text-align: center;
+    color: #4969D9;
+}
+
+.contenedorLogo p {
+    position: absolute;
+    width: 156px;
+    height: 92px;
+    left: 151.5px;
+    top: 477.68px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #4969D9;
+}
 
 form {
     position: absolute;
     width: 431px;
-    height: 587px;
-    left: 470px;
-    top: 90px;
-    background: #E1E1E4;
-    border-radius: 8px;
-    /* Inside Auto Layout */
+    height: 520px;
+    left: 350.5px;
+    top: 124px;
+    /* Inside auto layout */
     flex: none;
     order: 1;
     flex-grow: 0;
+    margin: 0px 134px;
+    background: #FCFDFF;
+    border-radius: 8px;
 }
 
 .textoInicioSesion {
     position: absolute;
-    width: 100%;
+    width: 177px;
     height: 35px;
-    
-    top: 50px;
+    left: 73.5px;
+    top: 53px;
 
-    /*font-family: Roboto;*/
+    font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 30px;
     line-height: 35px;
     text-align: center;
-    color: #0F39CE;
+    color: #252626;
 }
 
 
-.correo h3 {
+.correo .textoCorreo {
     position: absolute;
-    width: 223px;
+    width: 123px;
     height: 18px;
-    left: 74px;
-    top: 112.8px;
+    left: 73.5px;
+    top: 103px;
 
-    /*font-family: Roboto;*/
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
     /* identical to box height */
-    text-align: justify;
-    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: rgba(37, 38, 38, 0.5);
 }
 
 .correo input {
     position: absolute;
-    left: 74px;
-    
-    top: 135.8px;
     width: 284px;
     height: 36px;
-    background: #FEFEFF;
-    border-radius: 9.83008px;
+    left: 73.5px;
+    top: 122px;
+    background: rgba(217, 220, 222, 0.5);
+    border-radius: 5px;
 }
 
-.contraseña h3 {
+.contraseña .textoContraseña {
     position: absolute;
     width: 77px;
     height: 18px;
-    left: 74px;
-    top: 199.6px;
+    left: 73.5px;
+    top: 183px;
 
-    /*font-family: Roboto;*/
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
     /* identical to box height */
     text-align: center;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(37, 38, 38, 0.5);
 }
 
 .contraseña input {
     position: absolute;
-    left: 74px;
-    
-    top: 222.6px;
     width: 284px;
     height: 36px;
-    background: #FEFEFF;
-    border-radius: 9.83008px;
+    left: 73.5px;
+    top: 202px;
+    background: rgba(217, 220, 222, 0.6);
+    border-radius: 5px;
 }
 
 .olvidasteContraseña p{
     position: absolute;
-    width: 100%;
+    width: 136px;
     height: 18px;
-    
-    top: 268.6px;
+    left: 147.5px;
+    top: 263px;
 
-    /*font-family: Roboto;*/
+    font-family: Roboto;
     font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: normal;
+    font-size: 15px;
     line-height: 18px;
     /* identical to box height */
     text-align: center;
-    color: #092CAA;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    color: #4969D9;
 }
 
-.botonIniciarSesion input {
+#botonIniciarSesion {
     position: absolute;
     width: 284px;
     height: 36px;
-    left: 74px;
-    top: 314.4px;
-    
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    background: #0F39CE;
-    border-radius: 9.82523px;
+    left: 73.5px;
+    top: 296px;
+    background: #4969D9;
+    border-radius: 5px;
     cursor: pointer;
-    /*font-family: Roboto;*/
+}
+
+#botonIniciarSesion p {
+    position: absolute;
+    width: 119px;
+    height: 18px;
+    left: 82.5px;
+    top: 9px;
+
+    font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-size: 15px;
     line-height: 18px;
     /* identical to box height */
@@ -280,87 +308,74 @@ form {
     color: #FEFEFF;
 }
 
-.boton:hover{   
+#botonIniciarSesion:hover{   
     background: #092CAA;
     font-weight: bold;
     
 }
 
-.boton {
+#botonIniciarSesion {
     transition:background 0.5s, color 0.5s, border 0.5s;
 }
 
-.botonIniciarSesionGoogle {
+#botonIniciarSesionGoogle p {
     position: absolute;
-    width: 284px;
-    height: 36px;
-    left: 74px;
-    top: 396.2px;
-    cursor: pointer;
-    background: #FCFFFC;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 9.82523px;
-    text-align: center;
-}
+    left: 150.5px;
+    top: 382px;
 
-.botonIniciarSesionGoogle img {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 65px;
-    top: 8px;
-}
-
-.botonIniciarSesionGoogle input {
-    position: absolute;
-    width: 150px;
-    left: 85px;
-    top: 9px;
-    background: white;
-    /*font-family: Roboto;*/
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
     /* identical to box height */
+    cursor: pointer;
+    text-align: center;
     color: #0F39CE;
 }
 
-.botonIniciarSesionGoogle .boton1:hover{   
+#botonIniciarSesionGoogle img {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 130.5px;
+    top: 381px;
+    cursor: pointer;
+}
+
+#botonIniciarSesionGoogle .boton1:hover{   
     font-weight: bold;
     cursor: pointer;
 }
 
-.boton1 {
+#botonIniciarSesionGoogle {
     transition:background 0.5s, color 0.5s, border 0.5s;
 }
 
-
-form .linea hr{
+.linea hr{
     position: absolute;
     width: 284px;
     height: 0px;
-    left: 74.5px;
-    top: 483px;
-    border: 2px solid #FFFDFD;
+    left: 74px;
+    top: 415.77px;
+    border: 3px solid #4969D9;
 }
 
-form .registrarse a {
+.registrarse p {
     position: absolute;
-    width: 100%;
-    height: 18px;
-    
-    bottom: 50px;
-    cursor: pointer;
-    /*font-family: Roboto;*/
+    width: 145px;
+    height: 23px;
+    left: 143px;
+    top: 443.77px;
+
+    font-family: Roboto;
     font-style: normal;
-    font-weight: 300;
+    font-weight: bold;
     font-size: 20px;
-    line-height: 18px;
-    /* identical to box height */
+    line-height: 23px;
     text-align: center;
-    color: #092CAA;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    color: #4969D9;
 }
 
 .contenedorLoading {
@@ -385,7 +400,6 @@ form .registrarse a {
     z-index: 9999;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin-top: 325px;
-    
 }
 
 @keyframes loading {
@@ -401,11 +415,33 @@ form .registrarse a {
     font-size: 20px;
 }
 
+.error {
+	border: #4969D9 solid 1px;
+}
 
+.mensajeOculto {
+    display: none;
+}
 
+.mensajeInputCorreo {
+	position:absolute;
+	top: 163px;
+    left: 73.5px;
+    margin: 0px 0px 0px 5px;
+    display: flex;
+    color: #4969D9;
+    font-size: 10px;
+}
 
-
-
+.mensajeInputContraseña {
+	position:absolute;
+	top:243px;
+    left: 73.5px;
+    margin: 0px 0px 0px 5px;
+    display: flex;
+    color: #4969D9;
+    font-size: 10px;
+}
 
   
 

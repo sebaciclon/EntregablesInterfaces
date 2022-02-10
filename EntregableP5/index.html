@@ -20,37 +20,40 @@
         </div>
         
         <div class="contenedorLogo">
-            <div class="logo">
-                <img src="images/logoGrande.svg">
-            </div>
+            <img src="images/logoNuevo.svg">
+            <p class="vasanet">VasaNet</p>
+            <p>Red de la Comunidad Sanitaria Animal de Argentina</p>
         </div>
 
         <form>        
-            <h1 class="textoInicioSesion">Iniciar sesión</h1>
+            <p class="textoInicioSesion">Iniciar sesión</p>
 
             <div class="correo">
-                <h3><b>Correo electrónico</b></h3>
-                <input type="text" name="correo">
+                <p class="textoCorreo">Correo electrónico</p>
+                <input id="inputCorreo" type="text" name="correo">
                 <p id="errorCorreo" class="mensajeOculto"></p>
             </div>
 
             <div class="contraseña">
-                <h3><b>Contraseña</b></h3>
-                <input type="text" name="contraseña">
+                <p class="textoContraseña">Contraseña</p>
+                <input id="inputContraseña" type="password" name="contraseña">
                 <p id="errorContraseña" class="mensajeOculto"></p>
             </div>
 
             <div class="olvidasteContraseña">
-                <p class="textoOlvidasteContraseña">Olvidé la contraseña</p>
+                <!--<p class="textoOlvidasteContraseña">Olvidé la contraseña</p>
+                <p><b><a>Olvidé la contraseña</a></b></p>-->
+                <p><a>Olvidé la contraseña</a></p>
             </div>
             
-            <div class="botonIniciarSesion">
-                <input class="boton" type="button" value="Iniciar sesión" onclick = "location='muroInicio.html'">
+            <div id="botonIniciarSesion">
+                <p class="textoIniciarSesion">Iniciar sesión</p>
             </div>
 
-            <div class="botonIniciarSesionGoogle">
+            <div id="botonIniciarSesionGoogle">
                 <img src="images/imagenGoogle.svg">
-                <input class="boton1" type="button" value="Ingresar con Google" onclick = "location='muroInicio.html'">
+                <p class="textoIniciarSesionGoogle">Ingresar con Google</p>
+                <!--<input class="boton1" type="button" value="Ingresar con Google" onclick = "location='muroInicio.html'">-->
             </div>
                 
             <div class="linea">
@@ -58,7 +61,8 @@
             </div>
            
             <div class="registrarse">
-                <p><b><a id="registrar">Registrarse</a></b></p>
+                <!--<p><b><a id="registrar">Registrarse</a></b></p>-->
+                <p><a id="registrar">Registrarse</a></p>
             </div>
         </form>
 

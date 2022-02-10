@@ -6,78 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VasaNet</title>
     <link rel="stylesheet" href="css/estiloRegistro.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="contenedor">
-        
-        <div class="cuerpo">
-            
-            <div class="contenedorLogo">
-                <div class="logo">
-                    <img src="images/logoGrande.svg">
-                </div>
+        <div class="contenedorLogo">
+            <img src="images/logoNuevo.svg">
+            <p class="vasanet">VasaNet</p>
+            <p>Red de la Comunidad Sanitaria Animal de Argentina</p>
+        </div>
+
+        <form>        
+            <p class="registrarse">Registrarse</p>
+
+            <div class="nombre">
+                <p class="textoNombre">Nombre</p>
+                <input id="inputNombre" type="text" name="nombre">
+                <p id="errorNombre" class="mensajeOculto"></p>
             </div>
 
-            <form>        
-                <div class="logoFormulario">
-                    <img src="images/logoForm.svg">
-                </div>
-                <h1 class="registrarse">Registrarse</h1>
+            <div class="apellido">
+                <p class="textoApellido">Apellido</p>
+                <input id="inputApellido" type="text" name="apellido">
+                <p id="errorApellido" class="mensajeOculto"></p>
+            </div>
 
-                <div class="nombre">
-                    <h3><b>Nombre</b></h3>
-                    <div class="inputNombre">
-                        <input type="text" required>
-                    </div>
-                </div>
+            <div class="correo">
+                <p class="textoCorreo">Correo electrónico</p>
+                <input id="inputCorreo" type="email" name="correo">
+                <p id="errorCorreo" class="mensajeOculto"></p>
+            </div>
 
-                <div class="apellido">
-                    <h3><b>Apellido</b></h3>
-                    <div class="inputApellido">
-                        <input type="text">
-                    </div>
-                </div>
+            <div class="contraseña">
+                <p class="textoContraseña">Contraseña</p>
+                <input id="inputContraseña" type="password" name="contraseña">
+                <p id="errorContraseña" class="mensajeOculto"></p>   
+            </div>
 
-                <div class="correo">
-                    <h3><b>Correo electrónico</b></h3>
-                    <div class="inputCorreo">
-                        <input type="text">
-                    </div>
-                </div>
+            <div class="repetiContraseña">
+                <p class="textoRepetiContraseña">Repetí la contraseña</p>
+                <input id="inputRepetiContraseña" type="password" name="repetiContraseña">
+                <p id="errorRepetirContraseña" class="mensajeOculto"></p>   
+            </div>
 
-                <div class="contraseña">
-                    <h3><b>Contraseña</b></h3>
-                    <div class="inputContraseña">
-                        <input type="text">
-                    </div>   
-                </div>
+            <div id="botonCancelar">
+                <p class="textoBotonCancelar">Cancelar</p>
+                <!--<h3 class="textoCancelar">Cancelar</h3>-->
+                <!--<input type="button" value="Cancelar" onclick = "location='index.html'">-->
+            </div>
 
-                <div class="repetiContraseña">
-                    <h3><b>Repetí la contraseña</b></h3>
-                    <div class="inputRepetiContraseña">
-                        <input type="text">
-                    </div>   
-                </div>
-
-                <div class="botonCancelar">
-                    <input type="button" value="Cancelar" onclick = "location='index.html'">
-                </div>
-
-                <div class="botonRegistrarse">
-                    <input class="boton" type="button" value="Registrarse" onclick = "location='muroInicio.html'">
-                    
-                </div>
-            </form>
-        </div>
+            <div id="botonRegistrarse">
+                <p class="textoBotonRegistrarse">Registrarse</p>
+                <!--<h3 class="textoRegistrarse">Registrarse</h3>-->
+                <!--<input class="boton" type="button" value="Registrarse" onclick = "location='muroInicio.html'">-->
+            </div>
+        </form>
+        
         <footer>
             <h4>Esains&Esains Diseño Web | Vasanet-2021</h4>
         </footer>
     </div>    
-    
+    <script src="js/registro.js"></script>
 </body>
 </html>

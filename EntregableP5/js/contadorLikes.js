@@ -54,3 +54,4 @@ function restar3(){
     cant3--;
     cantidad3.textContent = cant3;
 }
+
