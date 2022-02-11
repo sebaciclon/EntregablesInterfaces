@@ -6,127 +6,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VasaNet</title>
     <link rel="stylesheet" href="css/estiloBusquedaAvanzada-todo.css">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="contenedor">
+        <!--HEADER-->
         <header>
-            <button class="logo"><img class="logo1" src="images/logo.svg" alt=""></button>
+            <button class="logo"><img class="logo1" src="images/logoHeader.svg" alt=""></button>
+            <p class="vasanet">VasaNet</p>
             <div class="barraBusqueda">
+                
                 <input type="text" placeholder="Buscá en VasaNet">
                 <a href="busquedaAvanzada-todo.html" class="lupa">
                     <img class="lupa1" src="./images/lupa.svg" alt="">
                 </a>
             </div>
             <div class="iconos">
-                <button href=""><img class="usuario" src="images/Muro personal.svg" alt=""></button>
-                <a href="muroInicio.html"><img class="inicio" src="images/Inicio blanco.svg" alt=""></a>
-                <a href="chatGrandeEnBlanco.html"><img class="chat" src="images/chat blanco.svg" alt=""></a>
-                <button><img class="notificacion" src="images/Notificacion blanco.svg" alt=""></button>
-                <a href="index.html"><img class="logout" src="images/logout blanco.svg" alt=""></a>
-                
-                
+                <button><img class="inicio" src="images/InicioNuevo.svg" alt=""></button>
+                <a href="chatGrandeEnBlanco.html"><img class="chat" src="images/ChatNuevo.svg" alt=""></a>
+                <button><img class="notificacion" src="images/notificacionesNuevo.svg" alt=""></button>
+                <button href="muroPersonal.html"><img class="usuario" src="images/Muro personal.svg" alt=""></button>
+                <p>Leo Esains</p>
+                <!--<img class="indicadorPagina" src="./images/IndicadorPaginaNuevo.svg" alt="">-->
             </div>
         </header>
 
-        <div class="resultados">
-            <p class="resultadoBusqueda">Resultados de la búsqueda</p>
-            <hr class="linea">
-            <p class="filtros">Filtros</p>
-            <div class="todo1">
+        <div class="cuerpo">
+            <!--RESULTADO DE LA BUSQUEDA-->
+            <div class="resultados">
+                <p class="resultadoBusqueda">Resultados de la búsqueda</p>
+                <hr class="linea">
+                <p class="filtros">Filtros</p>
+                <p class="textoProfesion">Profesión</p>
+                <input class="inputProfesion" type="password" name="contraseña">
+                <p class="textoCiudad">Ciudad</p>
+                <input class="inputCiudad" type="password" name="contraseña">
+                <div class="botonBuscar">
+                    <p class="textoBuscar">Buscar</p>
+                </div>
+                <hr class="linea1">
+                <p class="ver">Ver</p>
                 <p class="todo">Todo</p>
+                <p class="publicaciones">Publicaciones</p>
+                <p class="personas">Personas</p>
+                <p class="fotos">Fotos</p>
             </div>
-            <p class="publicaciones">Publicaciones</p>
-            <p class="personas">Personas</p>
-            <a class="foto1" href="busquedaAvanzada-fotos.html">Fotos</a>
+
+            <!--BLOQUE DE PUBLICACIONES-->
+            <div class="bloquePublicaciones">
+                <div class="bloquePublicacion1">
+                    <div class="encabezadoPublicacion1">
+                        <img class="imagenUsuario1" src="./images/davinci.svg">
+                        <p class="usuario1">Leonardo davinci</p>
+                        <p class="hs1">2 d</p>
+                        <img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">
+                    </div>
+
+                    <div class="textoPublicacion3">
+                        <p>🐹Francia aprobó una propuesta de ley para luchar contra el maltrato animal, que prohíbe la venta de crías de perros y gatos en las tiendas de animales y también la presencia de animales salvajes en circos... Ver más </p>
+                    </div>
+
+                    <div class="barraPublicacion">
+                        <button><img class="meGusta" id="meGusta1" src="./images/Me gusta.svg" alt=""></button>
+                        <button><img class="noMeGusta" id="noMeGusta1" src="./images/No me gusta.svg" alt=""></button>
+                        <p class="cantidad" id="cantidad1">161</p>
+                        <img class="meEncanta" src="./images/Me encanta.svg" alt="">
+                        <p class="cantMeEncanta">41</p>
+                        <button><img class="comentar" src="./images/comentar1.svg" alt=""></button>
+                        <p class="cantComentarios">5</p>
+
+                        <div class="botones">
+                            <a href="" class="botonComentar">
+                                <img class="comentar1" src="./images/BotonComentar.svg" alt="">
+                            </a>
+                            <a href="" class="botonCompartir">
+                                <img class="compartir" src="./images/BotonCompartir.svg" alt="">
+                            </a>        
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bloquePublicacion2">
+                    <div class="encabezadoPublicacion1">
+                        <img class="imagenUsuario1" src="./images/sanlo.svg">
+                        <p class="usuario1">San Lorenzo de Rauch</p>
+                        <p class="hs1">11 de marzo de 2019</p>
+                        <img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">
+                    </div>
+
+                    <div class="textoPublicacion3A">
+                        <p>Se busca! se perdio por el area del club San Lorenzo. Se ofrece recompensa!!! Si sabes algo comunicate al 123 456789. Gracias!</p>
+                        <img src="images/perrito.svg" alt="">
+                    </div>
+                    
+                    <div class="barraPublicacion2">
+                        <button><img class="meGusta" id="meGusta1" src="./images/Me gusta.svg" alt=""></button>
+                        <button><img class="noMeGusta" id="noMeGusta1" src="./images/No me gusta.svg" alt=""></button>
+                        <p class="cantidad" id="cantidad1">161</p>
+                        <img class="meEncanta" src="./images/Me encanta.svg" alt="">
+                        <p class="cantMeEncanta">41</p>
+                        <button><img class="comentar" src="./images/comentar1.svg" alt=""></button>
+                        <p class="cantComentarios">5</p>
+
+                        <div class="botones">
+                            <a href="" class="botonComentar">
+                                <img class="comentar1" src="./images/BotonComentar.svg" alt="">
+                            </a>
+                            <a href="" class="botonCompartir">
+                                <img class="compartir" src="./images/BotonCompartir.svg" alt="">
+                            </a>        
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="bloquePublicacion3">
+                    <div class="encabezadoPublicacion1">
+                        <img class="imagenUsuario1" src="./images/gatitos.svg">
+                        <p class="usuario1">Fanatica de los gatos</p>
+                        <p class="hs1">19 de noviembre de 2018</p>
+                        <img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">
+                    </div>
+
+                    <div class="textoPublicacion3B">
+                        <p>Sorpresa, la vaca de la cabaña La Lilia de la familia Barberis, aportó 151,570 litros en cuatro extracciones y se quedó con el mejor lugar del Concurso de Vacas Lecheras.</p>
+                        <img src="images/vaca.svg" alt="">
+                    </div>
+
+                    <div class="barraPublicacion3">
+                        <button><img class="meGusta" id="meGusta1" src="./images/Me gusta.svg" alt=""></button>
+                        <button><img class="noMeGusta" id="noMeGusta1" src="./images/No me gusta.svg" alt=""></button>
+                        <p class="cantidad" id="cantidad1">161</p>
+                        <img class="meEncanta" src="./images/Me encanta.svg" alt="">
+                        <p class="cantMeEncanta">41</p>
+                        <button><img class="comentar" src="./images/comentar1.svg" alt=""></button>
+                        <p class="cantComentarios">5</p>
+
+                        <div class="botones">
+                            <a href="" class="botonComentar">
+                                <img class="comentar1" src="./images/BotonComentar.svg" alt="">
+                            </a>
+                            <a href="" class="botonCompartir">
+                                <img class="compartir" src="./images/BotonCompartir.svg" alt="">
+                            </a>        
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+    
+                <div class="bloquePublicacion4">
+                    <p class="fotosPublicas">Fotos públicas</p>
+                    <img class="imagenBusqueda" src="./images/fotosPublicas.svg" alt="">
+                </div>
+            </div>
         </div>
-
-        <div class="bloquePublicaciones">
-            <div class="bloquePublicacion1">
-                <div class="encabezadoPublicacion1">
-                    <img class="imagenUsuario1" src="./images/Usuario que publico3.svg" alt="">
-                    <img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">
-                </div>
-                <div class="textoPublicacion3">
-                    <p>🐹Francia aprobó una propuesta de ley para luchar contra el maltrato animal, que prohíbe la venta de crías de perros y gatos en las tiendas de animales y también la presencia de animales salvajes en circos... Ver más </p>
-                </div>
-                
-                <img class="meGusta" src="./images/Me gusta.svg" alt="">
-                <img class="meEncanta" src="./images/Me encanta.svg" alt="">
-                <p class="cantidad">15 M</p>
-                <div class="botones">
-                    <a href="" class="botonComentar">
-                        <img class="comentar" src="./images/Boton comentar.svg" alt="">
-                    </a>
-                    <a href="" class="botonCompartir">
-                        <img class="compartir" src="./images/Boton compartir.svg" alt="">
-                    </a>        
-                </div>
-            </div>
-
-            <div class="bloquePublicacion2">
-                <div class="encabezadoPublicacion1">
-                    <img class="imagenUsuario1" src="./images/Usuario que publico1.svg" alt="">
-                    <img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">
-                </div>
-                <div class="textoPublicacion3A">
-                    <p>Se busca! se perdio por el area del club San Lorenzo. Se ofrece recompensa!!! Si sabes algo comunicate al 123 456789. Gracias!</p>
-                    <img src="images/perrito.svg" alt="">
-                </div>
-                
-                <img class="meGusta1" src="./images/Me gusta.svg" alt="">
-                <img class="meEncanta1" src="./images/Me encanta.svg" alt="">
-                <p class="cantidad1">294</p>
-                <div class="botones">
-                    <a href="" class="botonComentar1">
-                        <img class="comentar" src="./images/Boton comentar.svg" alt="">
-                    </a>
-                    <a href="" class="botonCompartir1">
-                        <img class="compartir" src="./images/Boton compartir.svg" alt="">
-                    </a>        
-                </div>
-            </div>
-
-            <div class="bloquePublicacion3B">
-                <div class="encabezadoPublicacion1">
-                    <img class="imagenUsuario1" src="./images/Usuario que publico2.svg" alt="">
-                    <img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">
-                </div>
-                <div class="textoPublicacion3B">
-                    <p>Sorpresa, la vaca de la cabaña La Lilia de la familia Barberis, aportó 151,570 litros en cuatro extracciones y se quedó con el mejor lugar del Concurso de Vacas Lecheras.</p>
-                    <img src="images/vaca.svg" alt="">
-                </div>
-                
-                <img class="meGusta1" src="./images/Me gusta.svg" alt="">
-                <img class="meEncanta1" src="./images/Me encanta.svg" alt="">
-                <p class="cantidad1">294</p>
-                <div class="botones">
-                    <a href="" class="botonComentar1">
-                        <img class="comentar" src="./images/Boton comentar.svg" alt="">
-                    </a>
-                    <a href="" class="botonCompartir1">
-                        <img class="compartir" src="./images/Boton compartir.svg" alt="">
-                    </a>        
-                </div>
-            </div>
-
-            <div class="bloquePublicacion4">
-                <p class="fotosPublicas">Fotos públicas</p>
-                <img class="imagenBusqueda" src="./images/fotosPublicas.svg" alt="">
-            </div>
-        </div>
-        
-        
-       
-
-        
-
-        
-        
-        
     </div>
 </body>
 </html>
