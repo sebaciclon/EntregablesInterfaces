@@ -542,10 +542,63 @@ header {
 
 .conversacionChat {
     position: absolute;
-width: 690px;
-height: 488px;
-left: 30px;
-top: 109px;
+    width: 690px;
+    height: 488px;
+    left: 30px;
+    top: 109px;
+}
+
+.adjuntar1 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 30px;
+    top: 636px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    
+}
+
+.carita1 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 73px;
+    top: 636px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    
+}
+
+.escribir {
+    position: absolute;
+    width: 561px;
+    height: 35px;
+    left: 116px;
+    top: 636px;
+    background: rgba(217, 220, 222, 0.5);
+    border-radius: 10px;
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    
+}
+
+.enviar1 {
+    position: absolute;
+    left: 685px;
+    top: 636px;
+    /* Inside auto layout */
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    
 }
 
 
