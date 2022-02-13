@@ -378,7 +378,7 @@ header {
     position: absolute;
     width: 24px;
     height: 24px;
-    left: 466px;
+    left: 476px;
     top: 19px;
     cursor: pointer;
     /* Inside auto layout */
@@ -518,7 +518,7 @@ header {
 
 .botonCompartir img{
     position: absolute;
-    left: 124px;
+    left: 120px;
 }
 
 .bloquePublicacion2 {
@@ -536,7 +536,7 @@ header {
     width: 472px;
     height: 72px;
     left: 21px;
-    top: 60px;
+    top: 58px;
 
     font-family: Roboto;
     font-style: normal;
@@ -548,12 +548,14 @@ header {
     color: #000000;
 }
 
+
+
 .textoPublicacion2 .rana {
     position: absolute;
     width: 472px;
     height: 248.18px;
     left: 0px;
-    top: 60px;
+    top: 58px;
 }
 
 .barraPublicacion2 {
@@ -561,5 +563,86 @@ header {
     width: 416px;
     height: 35px;
     left: 21px;
-    top: 390px;
+    top: 388px;
 }
+
+/**********************************************************************************************/
+
+.menuChat1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    width: 166px;
+    height: 129px;
+    left: 577px;
+    top: 145px;
+    background: #FFFFFE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+
+
+.editar1 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 19px;
+    top: 23px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.editarTexto {
+    position: absolute;
+    left: 73px;
+    top: 26.5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.3);
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    cursor: pointer;
+}
+
+.eliminar {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 19px;
+    top: 76px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.eliminarTexto {
+    position: absolute;
+    left: 73px;
+    top: 79.5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.3);
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    cursor: pointer;
+}
+
