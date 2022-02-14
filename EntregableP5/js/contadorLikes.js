@@ -1,5 +1,7 @@
 "use strict";
 
+
+
 let cant1 = 161;
 let cant2 = 68;
 let cant3 = 139;
@@ -54,4 +56,24 @@ function restar3(){
     cant3--;
     cantidad3.textContent = cant3;
 }
+
+document.getElementById("ir").addEventListener("click", () => {
+    document.location.href ="muroInicio-clickUsuario.html";
+});
+
+
+
+document.getElementById("silenciarTexto").addEventListener("click", () => {
+    document.location.href ="muroPersonal.html";
+});
+
+document.getElementById("verTexto").addEventListener("click", () => {
+    document.location.href ="perfil.html";
+});
+
+document.getElementById("eliminarTexto").addEventListener("click", () => {
+    document.location.href ="index.html";
+});
+
+
 

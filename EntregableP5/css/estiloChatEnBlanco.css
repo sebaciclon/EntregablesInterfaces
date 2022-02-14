@@ -141,6 +141,7 @@ header {
     order: 1;
     flex-grow: 0;
     margin: 0px 9.28602px;
+    cursor: pointer;
 }
 
 .iconos .inicio {
