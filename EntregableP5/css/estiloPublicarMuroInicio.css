@@ -176,11 +176,6 @@
 
 /************************************************************************/
 
-::placeholder {
-    color:darkgray;
-    background: rgba(217, 220, 222, 0.5);
-}
-
 .cuerpo {
     position: absolute;
     width: 1024px;
@@ -226,7 +221,16 @@ header {
     color: #4969D9;
 }
 
-.barraBusqueda {
+.lupa1 {
+    position: absolute;
+    width: 20px;
+    height: 16px;
+    left: 349px;
+    top: 27px;
+    cursor: pointer;
+}
+
+.inputBuscador {
     position: absolute;
     width: 300px;
     height: 31px;
@@ -234,25 +238,7 @@ header {
     top: 19.5px;
     background: rgba(217, 220, 222, 0.5);
     border-radius: 5px;
-}
-
-.barraBusqueda .lupa1 {
-    position: absolute;
-    width: 20px;
-    height: 16px;
-    left: 260px;
-    top: 7.5px;
-    cursor: pointer;
     
-}
-
-.barraBusqueda input {
-    position: absolute;
-    width: 136px;
-    height: 14px;
-    left: 19.93px;
-    top: 8.32px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -260,6 +246,22 @@ header {
     line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
 }
+
+.inputBuscador::-webkit-input-placeholder {
+    position: absolute;
+    left: 20px;
+    top: 6.5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
+}
+
 
 .iconos {
     display: flex;
