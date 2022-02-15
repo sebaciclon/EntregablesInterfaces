@@ -336,7 +336,7 @@ form {
 }
 
 .error {
-	border: #4969D9 solid 1px;
+	border: rgba(230, 36, 36, 0.8) solid 1px;
 }
 
 .mensajeOculto {
@@ -349,7 +349,7 @@ form {
     left: 73.61px;
     margin: 0px 0px 0px 5px;
     display: flex;
-    color: #4969D9;
+    color: rgba(230, 36, 36, 0.8);
     font-size: 10px;
 }
 
@@ -360,7 +360,7 @@ form {
     left: 73.61px;
     margin: 0px 0px 0px 5px;
     display: flex;
-    color: #4969D9;
+    color: rgba(230, 36, 36, 0.8);
     font-size: 10px;
 }
 
@@ -370,7 +370,7 @@ form {
     left: 73.61px;
     margin: 0px 0px 0px 5px;
     display: flex;
-    color: #4969D9;
+    color: rgba(230, 36, 36, 0.8);
     font-size: 10px;
 }
 
@@ -381,7 +381,7 @@ form {
     left: 73.61px;
     margin: 0px 0px 0px 5px;
     display: flex;
-    color: #4969D9;
+    color: rgba(230, 36, 36, 0.8);
     font-size: 10px;
 }
 
@@ -391,7 +391,7 @@ form {
     left: 73.61px;
     margin: 0px 0px 0px 5px;
     display: flex;
-    color: #4969D9;
+    color: rgba(230, 36, 36, 0.8);
     font-size: 10px;
 }
 
@@ -401,6 +401,6 @@ form {
     left: 73.61px;
     margin: 0px 0px 0px 5px;
     display: flex;
-    color: #4969D9;
+    color: rgba(230, 36, 36, 0.8);
     font-size: 10px;
 }
