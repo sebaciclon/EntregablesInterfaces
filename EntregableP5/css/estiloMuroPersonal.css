@@ -253,7 +253,7 @@ header {
 
 /*******************************BOTON CREAR PUBLICACION Y LINEA**********************************************/
 
-#botonCrearPublicacion {
+#botonCrearPublicacion1 {
     position: absolute;
     width: 514px;
     height: 52px;
@@ -266,7 +266,7 @@ header {
     cursor: pointer;
 }
 
-#botonCrearPublicacion p {
+#botonCrearPublicacion1 p {
     position: absolute;
     width: 330.24px;
     height: 26px;
@@ -377,7 +377,7 @@ header {
     color: #6B6363;
 }
 
-.tresPuntitos1 {
+#tresPuntitos1 {
     position: absolute;
     width: 24px;
     height: 24px;
@@ -572,7 +572,7 @@ header {
 
 /**********************************************************************************************/
 
-.menuChat1 {
+#menuChat1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -580,7 +580,7 @@ header {
     width: 139px;
     height: 105px;
     left: 603px;
-    top: 145px;
+    top: 217px;
     background: #FFFFFE;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -649,4 +649,177 @@ header {
     flex-grow: 0;
     cursor: pointer;
 }
+
+/******************************************************************************************/
+
+#publicacion {
+    position: absolute;
+    width: 451px;
+    height: 525px;
+    left: 286px;
+    top: 169px;
+    background: #FFFCFC;
+    /*background: beige;*/
+}
+
+.oculto {
+	opacity: 0;
+	z-index: -2;
+}
+  
+.noOculto {
+	opacity: 1;
+	z-index: 2;
+}
+
+.encabezado {
+    position: absolute;
+    width: 451px;
+    height: 61px;
+    left: 0px;
+    top: 0px;
+    background: #4969D9;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.imagenUsuario1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    left: 17px;
+    top: 9px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.texto {
+    position: absolute;
+    width: 257px;
+    height: 35px;
+    left: 71px;
+    top: 13px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+
+.cerrar {
+    position: absolute;
+    width: 12px;
+    height: 14.26px;
+    left: 423px;
+    top: 23px;
+}
+
+
+
+.linea2 {
+    position: absolute;
+    width: 26.02px;
+    height: 0px;
+    left: 0px;
+    top: 100px;
+    border: 1px solid #000000;
+    transform: rotate(-90deg);
+}
+
+.pensando {
+    position: absolute;
+    width: 200px;
+    height: 18px;
+    left: 18px;
+    top: 91px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.galeria {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 25px;
+    top: 470px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 12px;
+    cursor: pointer;
+}
+
+.videoLlamada {
+    position: absolute;
+    left: 67px;
+    top: 475.2px;
+    cursor: pointer;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 12px;
+}
+
+.adjuntar {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 107px;
+    top: 471px;
+    cursor: pointer;
+    /* Inside auto layout */
+ 
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 12px;
+}
+
+#botonPublicar {
+    position: absolute;
+    width: 104px;
+    height: 25px;
+    left: 322px;
+    top: 472.5px;
+
+    background: #4969D9;
+    border-radius: 5px;
+}
+
+.textoPublicar {
+    position: absolute;
+    left: 22.2px;
+    top: 3.7px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FCFDFF;
+}
+
+/********************/
+
+
+
 

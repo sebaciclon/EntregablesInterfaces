@@ -24,8 +24,10 @@
                 <button><img class="inicio" src="images/InicioNuevo.svg" alt=""></button>
                 <a href="chatGrandeEnBlanco.html"><img class="chat" src="images/ChatNuevo.svg" alt=""></a>
                 <button><img class="notificacion" src="images/notificacionesNuevo.svg" alt=""></button>
-                <a href="muroInicio-clickUsuario.html"><img class="usuario" src="images/Muro personal.svg" alt=""></a>
-                <a href="muroInicio-clickUsuario.html" class="leoEsains">Leo Esains</a>
+                <img id="usuario" src="images/Muropersonal.svg">
+                <div  id="leoEsains"class="leoEsains">
+                    <p id="leoEsains1">Leo Esains</p>
+                </div>
                 <img class="indicadorPagina" src="./images/IndicadorPaginaNuevo.svg" alt="">
             </div>
         </header>
@@ -120,9 +122,8 @@
 
             <!--BOTON CREAR PUBLICACION Y LINEA-->
             <div id="botonCrearPublicacion">
-                <a href="publicarMuroInicio.html" target="_top" class="textoCrearPublicacion">Crea tu publicación</a>
-                <!--<p class="textoCrarPublicacion">Crea tu publicación</p>-->
-                
+                <p id="textoCrearPublicacion">Crea tu publicación</p>
+                <!--<a href="publicarMuroInicio.html" target="_top" class="textoCrearPublicacion">Crea tu publicación</a>-->
             </div>
 
             <div class="linea">
@@ -138,8 +139,9 @@
                         <img class="imagenUsuario1" src="./images/ImagenBeatriz.svg">
                         <p class="usuario1">Beatriz Salomón</p>
                         <p class="hs1">4 hs</p>
-                        <a href="muroInicio-click3puntitos.html"><img class="tresPuntitos1" src="images/3 puntitos.svg" alt=""></a>
-                        <!--<img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">-->
+                        <img id="tresPuntitos1" src="images/3 puntitos.svg">
+                        <!--<a href="muroInicio-click3puntitos.html"><img class="tresPuntitos1" src="images/3 puntitos.svg" alt=""></a>
+                        <img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">-->
                     </div>
                     <div class="textoPublicacion">
                         <p>Quería compartir estas hermosas fotos de animalitos!! Las encontré y me parecieron re tiernas y quise compartirlas con ustedes!!! Espero sean de su agrado!! Si les gusta por favor compartan...</p>
@@ -175,7 +177,7 @@
                         <img class="imagenUsuario1" src="./images/imagePaz.svg">
                         <p class="usuario1">Lilita Corrió</p>
                         <p class="hs1">5 hs</p>
-                        <img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">
+                        <img id="tresPuntitos1" src="images/3 puntitos.svg">
                        <!--<img class="imagenUsuario1" src="./images/Usuario que publico2.svg" alt="">
                        <img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">-->
                    </div>
@@ -207,7 +209,7 @@
                         <img class="imagenUsuario1" src="./images/seba.svg">
                         <p class="usuario1">Seba Esains</p>
                         <p class="hs1">6 hs</p>
-                        <img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">
+                        <img id="tresPuntitos1" src="images/3 puntitos.svg">
                         <!--<img class="imagenUsuario1" src="./images/Usuario que publico3.svg" alt="">
                         <img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">-->
                     </div>
@@ -305,6 +307,49 @@
                     </div>
                   </div>
            </div>
+           <div id="menuChat" class="oculto">
+                <a href="muroPersonal.html"><img class="silenciar" src="images/misPublicaciones1.svg"></a>
+                <p id="silenciarTexto">Mis publicaciones</p>
+                <a href="perfil.html"><img class="verPerfil" src="images/verPerfil1.svg"></a>
+                <p id="verTexto">Perfil</p>
+                <a href="index.html"><img class="eliminarChat" src="images/salir2.svg"></a>
+                <p id="eliminarTexto">Salir</p>
+            </div>
+
+            <div id="menuChat1" class="oculto">
+                <img class="guardar" src="images/guardar2.svg">
+                <p class="guardarTexto">Guardar</p>
+                <img class="denunciar" src="images/denunciar2.svg">
+                <p class="denunciarTexto">Denunciar</p>
+                
+            </div>
+            
+            <div id="publicacion1" class="oculto">
+                <div class="encabezado1">
+                    <img class="imagenUsuario1" src="./images/Muropersonal.svg">
+                    <p class="texto">Crea tu publicación</p>
+                    <a href="muroInicio.html"><img class="cerrar" src="./images/Cerrar1.svg" alt=""></a>
+                </div>
+    
+                <div class="publicar">
+                    <div class="linea2">
+                        <hr>
+                    </div>
+                    <p class="pensando">¿Qué estás pensando ahora?</p>
+    
+                    <img class="galeria" src="./images/galeria.svg">
+                    <img class="videoLlamada" src="./images/Video llamadaNuevo.svg">
+                    <img class="adjuntar" src="./images/adjuntar.svg">
+    
+                    <div id="botonPublicar">
+                        <p class="textoPublicar">Publicar</p>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            
         </div>
     <script src="js/contadorLikes.js"></script>
 </body>

@@ -24,8 +24,8 @@
                 <a href="muroInicio.html"><img class="inicio" src="images/InicioNuevo.svg" alt=""></a>
                 <a href="chatGrandeEnBlanco.html"><img class="chat" src="images/ChatNuevo.svg" alt=""></a>
                 <button><img class="notificacion" src="images/notificacionesNuevo.svg" alt=""></button>
-                <a><img class="usuario" src="images/Muro personal.svg" alt=""></a>
-                <p>Leo Esains</p>
+                <a><img class="usuario" src="images/Muropersonal.svg" alt=""></a>
+                <p class="leoEsains">Leo Esains</p>
                 <!--<a href="muroInicio-clickUsuario.html"><img class="usuario" src="images/Muro personal.svg" alt=""></a>
                 <p id="ir">Leo Esains</p>-->
                 <img class="indicadorPagina" src="./images/IndicadorPaginaNuevo.svg" alt="">
@@ -42,8 +42,8 @@
             </div>
 
             <!--BOTON CREAR PUBLICACION Y LINEA-->
-            <div id="botonCrearPublicacion">
-                <p class="textoCrarPublicacion">Crea tu publicación</p>
+            <div id="botonCrearPublicacion1">
+                <p id="textoCrarPublicacion">Crea tu publicación</p>
             </div>
 
             <div class="linea">
@@ -54,11 +54,11 @@
             <div class="botonYpublicaciones">
                 <div class="bloquePublicacion1">
                     <div class="encabezadoPublicacion1">
-                        <img class="imagenUsuario1" src="./images/Muro personal.svg">
+                        <img class="imagenUsuario1" src="./images/Muropersonal.svg">
                         <p class="usuario1">Leonardo Esains</p>
                         <p class="tiempo1">19 de noviembre de 2021</p>
-                        <!--<img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">-->
-                        <a href="muroPersonal-click3puntitos.html"><img class="tresPuntitos1" src="images/3 puntitos.svg" alt=""></a>
+                        <img id="tresPuntitos1" src="./images/3 puntitos.svg" alt="">
+                        <!--<a href="muroPersonal-click3puntitos.html"><img class="tresPuntitos1" src="images/3 puntitos.svg" alt=""></a>-->
                     </div>
 
                     <div class="textoPublicacion">
@@ -88,11 +88,12 @@
 
                 <div class="bloquePublicacion2">
                     <div class="encabezadoPublicacion1">
-                        <img class="imagenUsuario1" src="./images/Muro personal.svg">
+                        <img class="imagenUsuario1" src="./images/Muropersonal.svg">
                         <p class="usuario1">Leonardo Esains</p>
                         <p class="tiempo1">15 de noviembre de 2021</p>
-                        <!--<img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">-->
-                        <a href="muroPersonal-click3puntitos.html"><img class="tresPuntitos1" src="images/3 puntitos.svg" alt=""></a>
+                        <img id="tresPuntitos1" src="./images/3 puntitos.svg" alt="">
+                        <!--<img class="tresPuntitos1" src="./images/3 puntitos.svg" alt="">
+                        <a href="muroPersonal-click3puntitos.html"><img class="tresPuntitos1" src="images/3 puntitos.svg" alt=""></a>-->
                     </div>
 
                     <div class="textoPublicacion2">
@@ -120,8 +121,42 @@
                     </div>
                 </div>
             </div>
+            
+        </div>
+
+        <div id="menuChat1" class="oculto">
+            <img class="editar1" src="images/editar2.svg">
+            <p class="editarTexto">Guardar</p>
+            <img class="eliminar" src="images/eliminarChat1.svg">
+            <p class="eliminarTexto">Eliminar</p>
+            
+        </div>
+
+        <div id="publicacion" class="oculto">
+            <div class="encabezado">
+                <img class="imagenUsuario1" src="./images/Muropersonal.svg">
+                <p class="texto">Crea tu publicación</p>
+                <a href="muroPersonal.html"><img class="cerrar" src="./images/Cerrar1.svg" alt=""></a>
+            </div>
+
+            <div class="publicar">
+                <div class="linea2">
+                    <hr >
+                </div>
+                <p class="pensando">¿Qué estás pensando ahora?</p>
+
+                <img class="galeria" src="./images/galeria.svg">
+                <img class="videoLlamada" src="./images/Video llamadaNuevo.svg">
+                <img class="adjuntar" src="./images/adjuntar.svg">
+
+                <div id="botonPublicar">
+                    <p class="textoPublicar">Publicar</p>
+                </div>
+            </div>
+
+            
         </div>
     </div>
-    <script src="js/contadorLikes.js"></script>
+    <script src="js/muroPersonal.js"></script>
 </body>
 </html>

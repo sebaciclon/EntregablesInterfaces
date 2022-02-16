@@ -57,9 +57,7 @@ function restar3(){
     cantidad3.textContent = cant3;
 }
 
-document.getElementById("ir").addEventListener("click", () => {
-    document.location.href ="muroInicio-clickUsuario.html";
-});
+
 
 
 
@@ -74,6 +72,74 @@ document.getElementById("verTexto").addEventListener("click", () => {
 document.getElementById("eliminarTexto").addEventListener("click", () => {
     document.location.href ="index.html";
 });
+
+/****************CLICK USUARIO****************************** */
+
+let menuDesplegable = document.getElementById("menuChat");
+let desplegado = true;
+
+let usuario = document.getElementById("usuario");
+    usuario.addEventListener("click",mostrarDesplegable);
+
+let nombreUsuario = document.getElementById("leoEsains");
+    nombreUsuario.addEventListener("click",mostrarDesplegable);
+
+function mostrarDesplegable() {
+    if(desplegado){
+        menuDesplegable.classList.remove("oculto");
+        menuDesplegable.classList.add("noOculto");
+        desplegado=false;
+    }
+    else{
+        menuDesplegable.classList.add("oculto");
+        menuDesplegable.classList.remove("noOculto");
+        desplegado=true;
+    }
+}
+
+/****************CLICK 3 PUNTITOS PUBLICACION USUARIO****************************** */
+
+let menuDesplegable1 = document.getElementById("menuChat1");
+let desplegado1 = true;
+
+let usuario1 = document.getElementById("tresPuntitos1");
+    usuario1.addEventListener("click",mostrarDesplegable1);
+
+function mostrarDesplegable1() {
+    if(desplegado1){
+        menuDesplegable1.classList.remove("oculto");
+        menuDesplegable1.classList.add("noOculto");
+        desplegado1=false;
+    }
+    else{
+        menuDesplegable1.classList.add("oculto");
+        menuDesplegable1.classList.remove("noOculto");
+        desplegado1=true;
+    }
+}
+
+/****************CLICK CREA TU PUBLICACION MURO INICIO****************************** */
+
+let menuDesplegable2 = document.getElementById("publicacion1");
+let desplegado2 = true;
+
+let usuario2 = document.getElementById("botonCrearPublicacion");
+    usuario2.addEventListener("click",mostrarDesplegable2);
+
+function mostrarDesplegable2() {
+    if(desplegado2){
+        menuDesplegable2.classList.remove("oculto");
+        menuDesplegable2.classList.add("noOculto");
+        desplegado2=false;
+    }
+    else{
+        menuDesplegable2.classList.add("oculto");
+        menuDesplegable2.classList.remove("noOculto");
+        desplegado2=true;
+    }
+}
+
+
 
 
 

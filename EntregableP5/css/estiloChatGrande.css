@@ -574,7 +574,7 @@ header {
     cursor: pointer;
 }
 
-.tresPuntitosChat {
+#tresPuntitosChat {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -584,6 +584,7 @@ header {
     flex: none;
     order: 2;
     flex-grow: 0;
+    cursor: pointer;
 }
 
 .conversacionChat {
@@ -649,7 +650,7 @@ header {
 
 /*******************************************MENU DEL CHAT************************/
 
-.menuChat {
+#menuChat2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -661,6 +662,16 @@ header {
     background: #FFFFFE;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
+}
+
+.oculto {
+	opacity: 0;
+	z-index: -2;
+}
+  
+.noOculto {
+	opacity: 1;
+	z-index: 2;
 }
 
 .silenciar {
