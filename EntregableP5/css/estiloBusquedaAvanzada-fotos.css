@@ -122,7 +122,7 @@ header {
     position: absolute;
     width: 41.7px;
     height: 41.7px;
-    left: 346.72px;
+    left: 336.72px;
     top: 0px;
     border-radius: 100.087px;
     /* Inside auto layout */
@@ -137,7 +137,7 @@ header {
     position: absolute;
     width: 67.79px;
     height: 16.71px;
-    left: 397.71px;
+    left: 387.71px;
     top: 12.49px;
     font-family: Roboto;
     font-style: normal;
@@ -326,7 +326,7 @@ header {
     width: 303px;
     height: 25px;
     left: 16px;
-    top: 279px;
+    top: 298px;
     background: #4969D9;
     border-radius: 5px;
 }
@@ -336,7 +336,7 @@ header {
     width: 174.81px;
     height: 12.54px;
     left: 130.1px;
-    top: 6.7px;
+    top: 5.7px;
     cursor: pointer;
     font-family: Roboto;
     font-style: normal;
@@ -354,7 +354,7 @@ header {
     width: 328px;
     height: 0px;
     left: 0px;
-    top: 334px;
+    top: 356px;
     border: 1px solid #4969D9;
 }
 
@@ -363,7 +363,7 @@ header {
     width: 50px;
     height: 23px;
     left: 16px;
-    top: 364px;
+    top: 386px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -383,7 +383,7 @@ header {
     width: 38px;
     height: 18px;
     left: 16px;
-    top: 401px;
+    top: 423px;
     
 
     font-family: Roboto;
@@ -403,7 +403,7 @@ header {
     width: 150px;
     height: 21.94px;
     left: 16px;
-    top: 433px;
+    top: 455px;
 
     font-family: Roboto;
     font-style: normal;
@@ -424,7 +424,7 @@ header {
     width: 150px;
     height: 21.94px;
     left: 16px;
-    top: 469px;
+    top: 491px;
 
     font-family: Roboto;
     font-style: normal;
@@ -445,7 +445,7 @@ header {
     width: 39px;
     height: 18px;
     left: 16px;
-    top: 504.89px;
+    top: 526px;
     background: #C4C4C4;
     border-radius: 2px;
 

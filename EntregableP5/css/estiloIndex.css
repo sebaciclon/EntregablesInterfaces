@@ -267,7 +267,7 @@ form {
     width: 136px;
     height: 18px;
     left: 147.5px;
-    top: 263px;
+    top: 258px;
 
     font-family: Roboto;
     font-style: normal;
@@ -320,7 +320,7 @@ form {
 
 #botonIniciarSesionGoogle p {
     position: absolute;
-    left: 150.5px;
+    left: 155.5px;
     top: 382px;
 
     font-family: Roboto;
@@ -357,8 +357,8 @@ form {
     width: 284px;
     height: 0px;
     left: 74px;
-    top: 415.77px;
-    border: 3px solid #4969D9;
+    top: 421.5px;
+    border: 2px solid #4969D9;
 }
 
 .registrarse p {

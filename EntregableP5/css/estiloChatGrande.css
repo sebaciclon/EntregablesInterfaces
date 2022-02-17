@@ -113,7 +113,7 @@ header {
     position: absolute;
     width: 41.7px;
     height: 41.7px;
-    left: 346.72px;
+    left: 336.72px;
     top: 0px;
     border-radius: 100.087px;
     /* Inside auto layout */
@@ -128,7 +128,7 @@ header {
     position: absolute;
     width: 67.79px;
     height: 16.71px;
-    left: 397.71px;
+    left: 387.71px;
     top: 12.49px;
     font-family: Roboto;
     font-style: normal;
@@ -269,40 +269,6 @@ header {
     
 }
 
-/*
-.barraBusqueda2 {
-    position: absolute;
-    width: 203px;
-    height: 31px;
-    left: 10px;
-    top: 51px;
-    background: rgba(217, 220, 222, 0.5);
-    border-radius: 5px;
-}
-
-.barraBusqueda2 .lupa2 {
-    position: absolute;
-    width: 20px;
-    height: 16px;
-    left: 163px;
-    top: 7.5px;
-    cursor: pointer;
-}
-
-.barraBusqueda2 input {
-    position: absolute;
-    width: 136px;
-    height: 14px;
-    left: 19.93px;
-    top: 8.32px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    color: rgba(0, 0, 0, 0.3);
-}*/
 
 .carlosO {
     position: absolute;
@@ -494,7 +460,7 @@ header {
     top: 8.5px;
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 20px;
     line-height: 23px;
     color: #877F7F;

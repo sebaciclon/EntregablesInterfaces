@@ -116,13 +116,14 @@ header {
     height: 41.7px;
     left: 542px;
     top: 14px;
+    
 }
 
 .iconos #usuario {
     position: absolute;
     width: 41.7px;
     height: 41.7px;
-    left: 346.72px;
+    left: 336.72px;
     top: 0px;
     border-radius: 100.087px;
     /* Inside auto layout */
@@ -137,7 +138,7 @@ header {
     position: absolute;
     width: 67.79px;
     height: 16.71px;
-    left: 397.71px;
+    left: 387.71px;
     top: 12.49px;
     font-family: Roboto;
     font-style: normal;
@@ -258,11 +259,13 @@ header {
 
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
+    /*font-weight: bold;*/
+    font-weight: 600;
     font-size: 15px;
     line-height: 18px;
     color: #877F7F;
 }
+
 
 .imagenSeba .semanas {
     position: absolute;
@@ -344,7 +347,7 @@ header {
 
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 15px;
     line-height: 18px;
     color: #877F7F;
@@ -430,7 +433,7 @@ header {
 
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 15px;
     line-height: 18px;
     color: #877F7F;
@@ -516,7 +519,7 @@ header {
 
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 15px;
     line-height: 18px;
     color: #877F7F;
@@ -818,12 +821,12 @@ header {
     cursor: pointer;
 }
 
-#botonCrearPublicacion #textoCrearPublicacion {
+#botonCrearPublicacion p {
     position: absolute;
     width: 330.24px;
-    height: 26px;
+    height: 30px;
     left: 92px;
-    top: 8px;
+    top: 6px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -856,11 +859,6 @@ header {
 
 }
 
-.cont {
-    margin-left: 5px;
-}
-
-
 
 .bloquePublicacion1 {
     position: absolute;
@@ -868,6 +866,7 @@ header {
     height: 525px;
     background: #FFFEFE;
     border-radius: 10px;
+    
 }
 
 
@@ -884,11 +883,11 @@ header {
 .usuario1 {
     position: absolute;
     left: 69px;
-    top: 19px;
+    top: 17px;
 
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 15px;
     line-height: 18px;
     color: #0A0000;
@@ -897,7 +896,7 @@ header {
 .hs1 {
     position: absolute;
     left: 69px;
-    top: 35px;
+    top: 33px;
 
     font-family: Roboto;
     font-style: normal;
@@ -912,7 +911,7 @@ header {
     width: 24px;
     height: 24px;
     left: 476px;
-    top: 19px;
+    top: 17.5px;
     cursor: pointer;
     /* Inside auto layout */
     flex: none;
@@ -924,8 +923,8 @@ header {
     position: absolute;
     width: 472px;
     height: 54px;
-    left: 22px;
-    top: 65px;
+    left: 21px;
+    top: 72px;
     
     /*font-family: Roboto;*/
     font-style: normal;
@@ -943,8 +942,8 @@ header {
     position: absolute;
     width: 472px;
     height: 331px;
-    left: 22px;
-    top: 130px;
+    left: 21px;
+    top: 138px;
 }
 
 .suricata {
@@ -993,7 +992,7 @@ header {
     width: 472px;
     height: 30px;
     left: 21px;
-    top: 478px;
+    top: 482px;
 }
 
 .meGusta {
@@ -1120,7 +1119,7 @@ header {
     position: absolute;
     width: 472px;
     height: 54px;
-    left: 22px;
+    left: 21px;
     top: 80px;
     
     /*font-family: Roboto;*/
@@ -1158,7 +1157,7 @@ header {
     position: absolute;
     width: 472px;
     height: 54px;
-    left: 22px;
+    left: 21px;
     top: 80px;
     
     /*font-family: Roboto;*/
@@ -1246,7 +1245,7 @@ header {
 
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 15px;
     line-height: 18px;
     color: #877F7F;
@@ -1307,7 +1306,7 @@ header {
 
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 15px;
     line-height: 18px;
     color: #877F7F;
@@ -1368,7 +1367,7 @@ header {
 
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 15px;
     line-height: 18px;
     color: #877F7F;
@@ -1429,7 +1428,7 @@ header {
 
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 15px;
     line-height: 18px;
     color: #877F7F;
@@ -2012,7 +2011,7 @@ html { scroll-behavior: smooth; }
     position: absolute;
     width: 30px;
     height: 30px;
-    left: 25px;
+    left: 0px;
     top: 470px;
     /* Inside auto layout */
     flex: none;
@@ -2024,7 +2023,7 @@ html { scroll-behavior: smooth; }
 
 .videoLlamada {
     position: absolute;
-    left: 67px;
+    left: 42px;
     top: 475.2px;
     cursor: pointer;
     /* Inside auto layout */
@@ -2038,7 +2037,7 @@ html { scroll-behavior: smooth; }
     position: absolute;
     width: 28px;
     height: 28px;
-    left: 107px;
+    left: 82px;
     top: 471px;
     cursor: pointer;
     /* Inside auto layout */
@@ -2053,8 +2052,8 @@ html { scroll-behavior: smooth; }
     position: absolute;
     width: 104px;
     height: 25px;
-    left: 322px;
-    top: 472.5px;
+    left: 330px;
+    top: 471px;
 
     background: #4969D9;
     border-radius: 5px;
