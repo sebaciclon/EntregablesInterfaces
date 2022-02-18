@@ -316,13 +316,6 @@ header {
 
 
 .botonYpublicaciones {
-    /*position: absolute;
-    width: 10px;
-    height: 263px;
-    left: 997px;
-    top: 178px;
-    background: rgba(163, 155, 155, 0.7);
-    border-radius: 20px;*/
     position: absolute;
     width: 520px;
     height: 599px;
@@ -342,7 +335,7 @@ header {
     border-radius: 5px;
 }
 
-.imagenUsuario1 {
+.imagenUsuario2 {
     position: absolute;
     width: 43px;
     height: 43px;
@@ -351,10 +344,10 @@ header {
     border-radius: 100px;
 }
 
-.usuario1 {
+.usuario2 {
     position: absolute;
-    left: 71px;
-    top: 17px;
+    left: 69px;
+    top: 15px;
 
     font-family: Roboto;
     font-style: normal;
@@ -364,10 +357,10 @@ header {
     color: #0A0000;
 }
 
-.tiempo1 {
+.tiempo2 {
     position: absolute;
-    left: 71px;
-    top: 33px;
+    left: 69px;
+    top: 38px;
 
     font-family: Roboto;
     font-style: normal;

@@ -871,7 +871,7 @@ header {
 
 
 
-.imagenUsuario1 {
+.imagenUsuario2 {
     position: absolute;
     width: 43px;
     height: 43px;
@@ -880,10 +880,10 @@ header {
     border-radius: 100px;
 }
 
-.usuario1 {
+.usuario2 {
     position: absolute;
     left: 69px;
-    top: 17px;
+    top: 12px;
 
     font-family: Roboto;
     font-style: normal;
@@ -893,10 +893,10 @@ header {
     color: #0A0000;
 }
 
-.hs1 {
+.hs2 {
     position: absolute;
     left: 69px;
-    top: 33px;
+    top: 38px;
 
     font-family: Roboto;
     font-style: normal;
