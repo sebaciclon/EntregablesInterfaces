@@ -486,7 +486,7 @@ header {
     position: absolute;
     width: 27.49px;
     height: 27.41px;
-    left: 165px;
+    left: 372px;
     top: 2.3px;
     /* Inside auto layout */
     flex: none;
@@ -499,9 +499,39 @@ header {
     position: absolute;
     width: 40px;
     height: 16px;
-    left: 197.49px;
+    left: 407px;
     top: 7px;
 
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #6B6363;
+    /* Inside auto layout */
+    
+}
+
+.compartir {
+    position: absolute;
+    width: 27.49px;
+    height: 27.41px;
+    left: 427px;
+    top: 2.3px;
+    /* Inside auto layout */
+    flex: none;
+    order: 5;
+    flex-grow: 0;
+    
+}
+
+.cantCompartir {
+    position: absolute;
+    
+    height: 16px;
+    /*left: 457px;*/
+    top: 7px;
+    left: 462px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;

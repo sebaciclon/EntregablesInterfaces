@@ -209,12 +209,12 @@ header {
     border: 3px solid #4969D9;
 }
 
-/***********************************SOLICITUDES PENDIENTES**************************************/
+/***********************************GRUPOS RECOMENDADOS**************************************/
 
 .solicitudes {
     position: absolute;
     width: 223px;
-    height: 350px;
+    height: 283px;
     left: 17px;
     top: 17px;
     /* Inside auto layout */
@@ -248,14 +248,14 @@ header {
     width: 43px;
     height: 43px;
     left: 15px;
-    top: 47px;
-    border-radius: 320px;
+    top: 62.83px;
+    border-radius: 100px;
 }
 
 .imagenSeba .nombre {
     position: absolute;
     left: 63px;
-    top: 49.5px;
+    top: 59px;
 
     font-family: Roboto;
     font-style: normal;
@@ -270,7 +270,7 @@ header {
 .imagenSeba .semanas {
     position: absolute;
     left: 63px;
-    top: 70.5px;
+    top: 79px;
 
     font-family: Roboto;
     font-style: normal;
@@ -285,8 +285,8 @@ header {
     position: absolute;
     width: 50px;
     height: 13px;
-    left: 158px;
-    top: 88px;
+    left: 63px;
+    top: 100px;
     background: #4969D9;
     border-radius: 3px;
 }
@@ -311,14 +311,14 @@ header {
     width: 43px;
     height: 43px;
     left: 15px;
-    top: 126px;
-    border-radius: 320px;
+    top: 141.6px;
+    border-radius: 100px;
 }
 
 .imagenCuervo .nombre {
     position: absolute;
     left: 63px;
-    top: 128.5px;
+    top: 138px;
 
     font-family: Roboto;
     font-style: normal;
@@ -331,7 +331,7 @@ header {
 .imagenCuervo .semanas {
     position: absolute;
     left: 63px;
-    top: 149.5px;
+    top: 157px;
 
     font-family: Roboto;
     font-style: normal;
@@ -342,37 +342,12 @@ header {
     color: #9A8F8F;
 }
 
-.imagenCuervo .botonEliminar {
-    position: absolute;
-    width: 50px;
-    height: 13px;
-    left: 103px;
-    top: 167px;
-    background: rgba(229, 36, 36, 0.8);
-    border-radius: 3px;
-}
-
-.imagenCuervo .botonEliminar .textoEliminar {
-    position: absolute;
-    left: 7px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 12px;
-    display: flex;
-    align-items: flex-end;
-    text-align: center;
-    color: #FFFBFB;
-}
-
 .imagenCuervo .botonAceptar {
     position: absolute;
     width: 50px;
     height: 13px;
-    left: 158px;
-    top: 167px;
+    left: 63px;
+    top: 177px;
     background: #4969D9;
     border-radius: 3px;
 }
@@ -397,14 +372,14 @@ header {
     width: 43px;
     height: 43px;
     left: 15px;
-    top: 205.5px;
+    top: 218.72px;
     border-radius: 320px;
 }
 
 .imagenOmar .nombre {
     position: absolute;
     left: 63px;
-    top: 207px;
+    top: 215.5px;
 
     font-family: Roboto;
     font-style: normal;
@@ -417,7 +392,7 @@ header {
 .imagenOmar .semanas {
     position: absolute;
     left: 63px;
-    top: 228px;
+    top: 234.5px;
 
     font-family: Roboto;
     font-style: normal;
@@ -426,347 +401,19 @@ header {
     line-height: 17px;
     /* identical to box height */
     color: #9A8F8F;
-}
-
-.imagenOmar .botonEliminar {
-    position: absolute;
-    width: 50px;
-    height: 13px;
-    left: 103px;
-    top: 245.5px;
-    background: rgba(229, 36, 36, 0.8);
-    border-radius: 3px;
-}
-
-.imagenOmar .botonEliminar .textoEliminar {
-    position: absolute;
-    left: 7px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 12px;
-    display: flex;
-    align-items: flex-end;
-    text-align: center;
-    color: #FFFBFB;
 }
 
 .imagenOmar .botonAceptar {
     position: absolute;
     width: 50px;
     height: 13px;
-    left: 158px;
-    top: 245.5px;
+    left: 63px;
+    top: 254.5px;
     background: #4969D9;
     border-radius: 3px;
 }
 
 .imagenOmar .botonAceptar .textoAceptar {
-    position: absolute;
-    left: 9px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 12px;
-    display: flex;
-    align-items: flex-end;
-    text-align: center;
-    color: #FFFBFB;
-}
-
-.imagenPaz img {
-    position: absolute;
-    width: 43px;
-    height: 43px;
-    left: 15px;
-    top: 283.25px;
-    border-radius: 320px;
-}
-
-.imagenPaz .nombre {
-    position: absolute;
-    left: 63px;
-    top: 287.25px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 18px;
-    color: #877F7F;
-}
-
-.imagenPaz .semanas {
-    position: absolute;
-    left: 63px;
-    top: 308.25px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14.386px;
-    line-height: 17px;
-    /* identical to box height */
-    color: #9A8F8F;
-}
-
-.imagenPaz .botonEliminar {
-    position: absolute;
-    width: 50px;
-    height: 13px;
-    left: 103px;
-    top: 325.75px;
-    background: rgba(229, 36, 36, 0.8);
-    border-radius: 3px;
-}
-
-.imagenPaz .botonEliminar .textoEliminar {
-    position: absolute;
-    left: 7px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 12px;
-    display: flex;
-    align-items: flex-end;
-    text-align: center;
-    color: #FFFBFB;
-}
-
-.imagenPaz .botonAceptar {
-    position: absolute;
-    width: 50px;
-    height: 13px;
-    left: 158px;
-    top: 325.75px;
-    background: #4969D9;
-    border-radius: 3px;
-}
-
-.imagenPaz .botonAceptar .textoAceptar {
-    position: absolute;
-    left: 9px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 12px;
-    display: flex;
-    align-items: flex-end;
-    text-align: center;
-    color: #FFFBFB;
-}
-
-/*********************************GRUPOS RECOMENDADOS********************************************/
-
-.grupos {
-    position: absolute;
-    width: 223px;
-    height: 283px;
-    left: 17px;
-    top: 398px;
-    background: #FFFDFD;
-    border-radius: 5px;
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
-
-.grupos .textoGrupos {
-    position: absolute;
-    width: 193px;
-    height: 21px;
-    left: 15px;
-    top: 15px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
-    /* identical to box height */
-    display: flex;
-    align-items: center;
-    color: #252626;
-}
-
-.pequeñosAnimales img {
-    position: absolute;
-    width: 43px;
-    height: 43px;
-    left: 15px;
-    top: 59.62px;
-    border-radius: 100px;
-}
-
-.pequeñosAnimales .nombre {
-    position: absolute;
-    left: 63px;
-    top: 62.17px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    color: #877F7F;
-}
-
-.pequeñosAnimales .miembros {
-    position: absolute;
-    left: 63px;
-    top: 83.17px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14.386px;
-    line-height: 17px;
-    /* identical to box height */
-    color: #9A8F8F;
-}
-
-.pequeñosAnimales .botonUnirme {
-    position: absolute;
-    width: 50px;
-    height: 13px;
-    left: 158px;
-    top: 99.01px;
-    background: #4969D9;
-    border-radius: 3px;
-}
-
-.pequeñosAnimales .botonUnirme .textoUnirme {
-    position: absolute;
-    left: 9px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 12px;
-    display: flex;
-    align-items: flex-end;
-    text-align: center;
-    color: #FFFBFB;
-}
-
-.perrosPequeños img {
-    position: absolute;
-    width: 43px;
-    height: 43px;
-    left: 15px;
-    top: 137px;
-    border-radius: 100px;
-}
-
-.perrosPequeños .nombre {
-    position: absolute;
-    left: 63px;
-    top: 139.62px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    color: #877F7F;
-}
-
-.perrosPequeños .miembros {
-    position: absolute;
-    left: 63px;
-    top: 160.62px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14.386px;
-    line-height: 17px;
-    /* identical to box height */
-    color: #9A8F8F;
-}
-
-.perrosPequeños .botonUnirme {
-    position: absolute;
-    width: 50px;
-    height: 13px;
-    left: 158px;
-    top: 177.01px;
-    background: #4969D9;
-    border-radius: 3px;
-}
-
-.perrosPequeños .botonUnirme .textoUnirme {
-    position: absolute;
-    left: 9px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 12px;
-    display: flex;
-    align-items: flex-end;
-    text-align: center;
-    color: #FFFBFB;
-}
-
-.gatitos img {
-    position: absolute;
-    width: 43px;
-    height: 43px;
-    left: 15px;
-    top: 214.23px;
-    border-radius: 100px;
-}
-
-.gatitos .nombre {
-    position: absolute;
-    left: 63px;
-    top: 218.34px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    color: #877F7F;
-}
-
-.gatitos .miembros {
-    position: absolute;
-    left: 63px;
-    top: 239.34px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14.386px;
-    line-height: 17px;
-    /* identical to box height */
-    color: #9A8F8F;
-}
-
-.gatitos .botonUnirme {
-    position: absolute;
-    width: 50px;
-    height: 13px;
-    left: 158px;
-    top: 255.79px;
-    background: #4969D9;
-    border-radius: 3px;
-}
-
-.gatitos .botonUnirme .textoUnirme {
     position: absolute;
     left: 9px;
 
@@ -830,8 +477,6 @@ header {
     top: 99px;
     overflow:auto;
     box-sizing: border-box;
-    
-
 }
 
 
@@ -841,10 +486,7 @@ header {
     height: 525px;
     background: #FFFEFE;
     border-radius: 10px;
-    
 }
-
-
 
 .imagenUsuario2 {
     position: absolute;
@@ -1035,7 +677,7 @@ header {
     position: absolute;
     width: 27.49px;
     height: 27.41px;
-    left: 165px;
+    left: 372px;
     top: 2.3px;
     /* Inside auto layout */
     flex: none;
@@ -1048,9 +690,39 @@ header {
     position: absolute;
     width: 40px;
     height: 16px;
-    left: 197.49px;
+    left: 407px;
     top: 7px;
 
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #6B6363;
+    /* Inside auto layout */
+    
+}
+
+.compartir {
+    position: absolute;
+    width: 27.49px;
+    height: 27.41px;
+    left: 427px;
+    top: 2.3px;
+    /* Inside auto layout */
+    flex: none;
+    order: 5;
+    flex-grow: 0;
+    
+}
+
+.cantCompartir {
+    position: absolute;
+    
+    height: 16px;
+    /*left: 457px;*/
+    top: 7px;
+    left: 462px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -1179,7 +851,7 @@ header {
 .sugerencias {
     position: absolute;
     width: 223px;
-    height: 350px;
+    height: 365px;
     left: 784px;
     top: 17px;
     background: #FFFDFD;
@@ -1209,14 +881,14 @@ header {
     width: 43px;
     height: 43px;
     left: 15px;
-    top: 44.09px;
+    top: 63.75px;
     border-radius: 100px;
 }
 
 .imagenZapata .nombre {
     position: absolute;
     left: 63px;
-    top: 46.6px;
+    top: 59.5px;
 
     font-family: Roboto;
     font-style: normal;
@@ -1229,7 +901,7 @@ header {
 .imagenZapata .amigos {
     position: absolute;
     left: 63px;
-    top: 67.6px;
+    top: 79.5px;
 
     font-family: Roboto;
     font-style: normal;
@@ -1244,8 +916,8 @@ header {
     position: absolute;
     width: 50px;
     height: 13px;
-    left: 158px;
-    top: 84.9px;
+    left: 63px;
+    top: 100.5px;
     background: #4969D9;
     border-radius: 3px;
 }
@@ -1270,14 +942,14 @@ header {
     width: 43px;
     height: 43px;
     left: 15px;
-    top: 123px;
+    top: 142.75px;
     border-radius: 100px;
 }
 
 .imagenRomero .nombre {
     position: absolute;
     left: 63px;
-    top: 125.25px;
+    top: 138px;
 
     font-family: Roboto;
     font-style: normal;
@@ -1290,7 +962,7 @@ header {
 .imagenRomero .amigos {
     position: absolute;
     left: 63px;
-    top: 146.25px;
+    top: 158px;
 
     font-family: Roboto;
     font-style: normal;
@@ -1305,8 +977,8 @@ header {
     position: absolute;
     width: 50px;
     height: 13px;
-    left: 158px;
-    top: 163.63px;
+    left: 63px;
+    top: 179px;
     background: #4969D9;
     border-radius: 3px;
 }
@@ -1331,14 +1003,14 @@ header {
     width: 43px;
     height: 43px;
     left: 15px;
-    top: 202px;
+    top: 221.75px;
     border-radius: 100px;
 }
 
 .imagenPerros .nombre {
     position: absolute;
     left: 63px;
-    top: 204.5px;
+    top: 217px;
 
     font-family: Roboto;
     font-style: normal;
@@ -1351,7 +1023,7 @@ header {
 .imagenPerros .amigos {
     position: absolute;
     left: 63px;
-    top: 225.5px;
+    top: 237px;
 
     font-family: Roboto;
     font-style: normal;
@@ -1366,8 +1038,8 @@ header {
     position: absolute;
     width: 50px;
     height: 13px;
-    left: 158px;
-    top: 242.25px;
+    left: 63px;
+    top: 258px;
     background: #4969D9;
     border-radius: 3px;
 }
@@ -1392,14 +1064,14 @@ header {
     width: 43px;
     height: 43px;
     left: 15px;
-    top: 280.63px;
+    top: 300.5px;
     border-radius: 100px;
 }
 
 .imagenQuintana .nombre {
     position: absolute;
     left: 63px;
-    top: 283.13px;
+    top: 296px;
 
     font-family: Roboto;
     font-style: normal;
@@ -1412,7 +1084,7 @@ header {
 .imagenQuintana .amigos {
     position: absolute;
     left: 63px;
-    top: 304.13px;
+    top: 316px;
 
     font-family: Roboto;
     font-style: normal;
@@ -1427,8 +1099,8 @@ header {
     position: absolute;
     width: 50px;
     height: 13px;
-    left: 158px;
-    top: 321.63px;
+    left: 63px;
+    top: 337px;
     background: #4969D9;
     border-radius: 3px;
 }
@@ -1910,7 +1582,7 @@ html { scroll-behavior: smooth; }
     height: 61px;
     left: 0px;
     top: 0px;
-    background: #4969D9;
+    background: #B5B7BC;
     border-radius: 5px 5px 0px 0px;
 }
 

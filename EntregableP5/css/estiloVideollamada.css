@@ -203,18 +203,18 @@ header {
 
 .videollamada {
     position: absolute;
-    width: 751px;
-    height: 683px;
-    left: 136px;
-    top: 77px;
+    width: 750px;
+    height: 673px;
+    left: 137px;
+    top: 95px;
     background: #FFFEFE;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .imagenGrande {
     position: absolute;
-    width: 721px;
-    height: 579.8px;
+    width: 720px;
+    height: 579px;
     left: 15px;
     top: 15px;
     border-radius: 20px;
@@ -224,8 +224,8 @@ header {
     position: absolute;
     width: 197.55px;
     height: 155px;
-    left: 523px;
-    top: 424px;
+    left: 522px;
+    top: 407px;
     border-radius: 20px;
 }
 
@@ -233,8 +233,8 @@ header {
     position: absolute;
     width: 45px;
     height: 45px;
-    left: 284.42px;
-    top: 618.3px;
+    left: 276px;
+    top: 618px;
     cursor: pointer;
 }
 
@@ -242,8 +242,8 @@ header {
     position: absolute;
     width: 45px;
     height: 45px;
-    left: 354.37px;
-    top: 617.73px;
+    left: 357.5px;
+    top: 619px;
     cursor: pointer;
 }
 
@@ -251,8 +251,8 @@ header {
     position: absolute;
     width: 45px;
     height: 45px;
-    left: 425.73px;
-    top: 617.73px;
+    left: 437px;
+    top: 618px;
     cursor: pointer;
 }
 
