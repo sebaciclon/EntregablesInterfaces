@@ -43,22 +43,22 @@
 
     .contenedor .contenedorLogo img{
 		left: 35%;
-		top:-12%;
+		top:-10%;
         width: 30%;
         height: 30%;
         
 	}
 
-    .contenedorLogo .vasanet {
+    .contenedor .contenedorLogo .vasanet {
         left: 27%;
-        top: 5.5%;
+        top: 8.5%;
         width: 20%;
         height: 50px;
     }
 
-    .contenedorLogo .vasanet1 {
+    .contenedor .contenedorLogo .vasanet1 {
         left: 30%;
-        top: 9%;
+        top: 14%;
         width: 40%;
         height: 50px;
     }
@@ -67,18 +67,18 @@
 		z-index:2;		
 		/*left: -134px;*/
         left: -163px;
-		top: 13%;
+		top: 20%;
 		display: flex;		
 		position: absolute;		
 		width: 100%;
-		
+		height: 150px;
 	}
     
     .aaa .textoInicioSesion {
         top: 10px;
     }
 
-    .aaa .textoCorreo {
+    .contenedor .aaa .textoCorreo {
         top: 60px;
     }
 
@@ -86,12 +86,20 @@
         top: 79px;
     }
 
-    .aaa .textoContraseña {
+    .aaa #errorCorreo {
+        top: 119px;
+    }
+
+    .contenedor .aaa .textoContraseña {
         top: 140px;
     }
 
     .aaa #inputContraseña {
         top: 159px;
+    }
+
+    .aaa #errorContraseña {
+        top: 199px;
     }
 
     .aaa .olvidasteContraseña p {
@@ -120,7 +128,7 @@
 
     .contenedor footer {
         width: 100%;
-        top: 775px;
+        top: 700px;
         left: -324px;
     }
 
