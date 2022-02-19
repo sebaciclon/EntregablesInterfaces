@@ -6,9 +6,7 @@
     text-decoration: none;
     border: none;
     outline: none;
-    
 }
-
 
 ::placeholder {
     color:darkgray;
@@ -31,84 +29,108 @@
     }
 }
 
-@media screen and (max-width:768px) {
-    .contenedor {
-        width: 100%;
-		height: 100%;			
+/*----------------------------------RESPONSIVE----------------------------------------------*/
+  
+@media screen and (max-width: 375px) {
+	.contenedor{
+		width: 100%;
+		height: 200vh;
 		flex-direction: column;
+		left: 0%;
+        /*background: rgba(217, 220, 222, 0.3);*/
+        background: #FFFFFF;
+	}
+
+    .contenedor .contenedorLogo img{
+		left: 35%;
+		top:-12%;
+        width: 30%;
+        height: 30%;
+        
+	}
+
+    .contenedorLogo .vasanet {
+        left: 27%;
+        top: 5.5%;
+        width: 20%;
+        height: 50px;
+    }
+
+    .contenedorLogo .vasanet1 {
+        left: 30%;
+        top: 9%;
+        width: 40%;
+        height: 50px;
+    }
+
+    .contenedor .aaa {
+		z-index:2;		
+		/*left: -134px;*/
+        left: -163px;
+		top: 13%;
+		display: flex;		
+		position: absolute;		
+		width: 100%;
 		
-		background-color: #ffffff;
-		margin-bottom: auto;
+	}
+    
+    .aaa .textoInicioSesion {
+        top: 10px;
+    }
+
+    .aaa .textoCorreo {
+        top: 60px;
+    }
+
+    .aaa #inputCorreo {
+        top: 79px;
+    }
+
+    .aaa .textoContraseña {
+        top: 140px;
+    }
+
+    .aaa #inputContraseña {
+        top: 159px;
+    }
+
+    .aaa .olvidasteContraseña p {
+        top: 215px;
+    }
+
+    .aaa #botonIniciarSesion {
+        top: 253px;
+    }
+
+    .aaa #botonIniciarSesionGoogle img {
+        top: 338px;
+    }
+
+    .aaa #botonIniciarSesionGoogle p {
+        top: 339px;
+    }
+
+    .aaa .linea hr {
+        top: 378.5px;
+    }
+
+    .aaa .registrarse p {
+        top: 400.77px;
     }
 
     .contenedor footer {
         width: 100%;
-        top: 580px;
+        top: 775px;
+        left: -324px;
     }
 
     .contenedor footer h4 {
         text-align: center;
         font-size: 15px;
     }
-
-    .contenedor .contenedorLogo .logo{
-        display: none !important;
-    }
-
-    .contenedor form {
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        border-radius: 0px;
-    }
-
-    .contenedor .logoFormulario img {
-        align-items: center;
-        height: 129.08px;
-        left: 35%;
-        top: 32px;
-    }
-    
-    .contenedor .textoInicioSesion {
-        left: 10%;
-    }
-    
-    .contenedor .correo h3 {
-        left: 10%;
-    }
-
-    .contenedor .correo .inputCorreo {
-        left: 10%;
-    }
-
-    .contenedor .contraseña h3 {
-        left: 10%;
-    }
-
-    .contenedor .contraseña .inputContraseña {
-        left: 10%;
-    }
-
-    .contenedor .olvidasteContraseña .textoOlvidasteContraseña{
-        left: 30%;
-    }
-
-    .contenedor .botonIniciarSesion input {
-        left: 10%;
-    }
-
-    .contenedor .botonIniciarSesionGoogle {
-        left: 10%;
-    }
-
-    .contenedor .linea hr{
-        left: 10%;
-    }
-    
-    .contenedor .registrarse a {
-        left: 36%;
-    }
 }
+
+/**********************************************FOOTER**************************/
 
 footer {
     position: absolute;
