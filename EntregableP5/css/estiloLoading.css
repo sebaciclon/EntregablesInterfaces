@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+
+.contenedorLoading {
+    position: relative;
+   
+    width: 1024px;
+    height: 768px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(236, 232, 232);
+
+}
+
+.esconder{
+    display: none;
+}
+
+#loading {
+    width: 70px;
+    height:66px;
+    
+    background: url(../images/sprite\ shet\ loading.png) left center no-repeat; 
+    animation: loading 5s steps(12) infinite;  
+    z-index: 9999;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+    margin: 0px auto;
+}
+
+@keyframes loading {
+    0% {background-position: 0;}
+    100% {background-position: -819px;}
+}
+
+#procesando {
+    margin: 0px auto;
+    color: rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    font-size: 25px;
+}

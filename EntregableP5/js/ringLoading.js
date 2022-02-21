@@ -9,11 +9,17 @@ let registrar = document.getElementById("registrar");
 registrar.addEventListener("click",realizarLoading);
 
 function realizarLoading(){
-    loading.classList.remove("esconder");
+    window.location.href = "registro.html";
+    mostrarLoading();
+} 
+
+function mostrarLoading(){
+    /*loading.classList.remove("esconder");
     loading.classList.add("loading");
-    procesando.classList.remove("esconder")
+    procesando.classList.remove("esconder")*/
     setTimeout(registrarCuenta,4800);
-}  
+    
+}
 
 function registrarCuenta(){
     window.location.href = "registro.html";

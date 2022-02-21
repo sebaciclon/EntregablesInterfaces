@@ -40,12 +40,12 @@
 
 .capa2{
     position: absolute;
-    top: 0;
+    margin-top: 430px;
     z-index: 0;
     height: 100%;
     width: 100%;
     animation: movimientoFondo2 40s linear infinite;
-    background: url(../images/capa2Completo.png) repeat-X;
+    background: url(../images/capa2.png) repeat-X;
 }
 
 @keyframes movimientoFondo2 {

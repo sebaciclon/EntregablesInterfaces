@@ -297,7 +297,7 @@ header {
 }
 
 .botonYpublicaciones::-webkit-scrollbar:vertical {
-    width:5px;
+    width: 6px;
 }
 
 .botonYpublicaciones::-webkit-scrollbar-button:increment,.botonYpublicaciones::-webkit-scrollbar-button {
@@ -313,7 +313,9 @@ header {
     border-radius: 20px;
 }
 
-
+.botonYpublicaciones::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
 
 .botonYpublicaciones {
     position: absolute;
@@ -321,6 +323,7 @@ header {
     height: 599px;
     left: 254px;
     top: 99px;
+    margin-right: 5px;
     overflow:auto;
     box-sizing: border-box;
 }
