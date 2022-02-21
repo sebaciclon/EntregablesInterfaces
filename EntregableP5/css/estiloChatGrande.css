@@ -420,7 +420,7 @@ header {
 
 .cantMsj {
     position: absolute;
-    left: 189px;
+    left: 179px;
     top: 14.77px;
     /* Inside auto layout */
     flex: none;

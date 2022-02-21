@@ -441,6 +441,7 @@ header {
     box-sizing: border-box;
     border-radius: 5px;
     cursor: pointer;
+    transition:background 1s, color 1s;
 }
 
 #botonCrearPublicacion p {
@@ -456,6 +457,7 @@ header {
     line-height: 35px;
     text-align: center;
     color: #FFFEFE;
+    transition:background 1s, color 1s;
 }
 
 .linea hr {
@@ -465,6 +467,16 @@ header {
     left: 254px;
     top: 82.5px;
     border: 1px solid #4969D9;
+}
+
+#botonCrearPublicacion:hover{   /*seudoclase usada para dar animacion al posicionarme sobre el boton*/
+    background: #092CAA;
+}
+
+#botonCrearPublicacion p:hover {
+    font-weight: bold;
+    font-size: 33px;
+    line-height: 38px;
 }
 
 /*************************************PUBLICACIONES*************************/

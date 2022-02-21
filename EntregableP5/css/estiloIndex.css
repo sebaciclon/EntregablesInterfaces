@@ -54,7 +54,7 @@
 }
 
 /*----------------------------------RESPONSIVE----------------------------------------------*/
-  
+
 @media screen and (max-width: 375px) {
 	.contenedor{
 		width: 100%;
@@ -62,6 +62,123 @@
 		flex-direction: column;
 		left: 0%;
         /*background: rgba(217, 220, 222, 0.3);*/
+        background: #FFFFFF;
+	}
+
+    .contenedor .contenedorLogo img{
+		left: 35%;
+		top:-10%;
+        width: 30%;
+        height: 30%;
+        
+	}
+
+    .contenedor .contenedorLogo .vasanet {
+        left: 27%;
+        top: 8.5%;
+        width: 50%;
+        height: 50px;
+    }
+
+    .contenedor .contenedorLogo .vasanet1 {
+        left: 30%;
+        top: 12.5%;
+        width: 40%;
+        height: 90px;
+    }
+
+    .contenedor .aaa {
+		z-index:2;		
+		/*left: -134px;*/
+        left: -163px;
+		top: 20%;
+		display: flex;		
+		position: absolute;		
+		width: 100%;
+		height: 450px;
+        background: #FFFFFF;
+	}
+    
+    .aaa .textoInicioSesion {
+        top: 10px;
+    }
+
+    .contenedor .aaa .textoCorreo {
+        top: 60px;
+    }
+
+    .aaa #inputCorreo {
+        top: 79px;
+    }
+
+    .aaa #errorCorreo {
+        top: 119px;
+    }
+
+    .contenedor .aaa .textoContraseña {
+        top: 140px;
+    }
+
+    .aaa #inputContraseña {
+        top: 159px;
+    }
+
+    .aaa #errorContraseña {
+        top: 199px;
+    }
+
+    .aaa .olvidasteContraseña p {
+        top: 215px;
+    }
+
+    .aaa #botonIniciarSesion {
+        top: 253px;
+    }
+
+    .aaa #botonIniciarSesionGoogle img {
+        top: 338px;
+    }
+
+    .aaa #botonIniciarSesionGoogle p {
+        top: 339px;
+    }
+
+    .aaa .linea hr {
+        top: 378.5px;
+    }
+
+    .aaa .registrarse p {
+        top: 400.77px;
+    }
+
+    .contenedor footer {
+        width: 100%;
+        top: 700px;
+        left: -324px;
+    }
+
+    .contenedor footer h4 {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .capa1{
+		display:none;
+	}
+	.capa2{
+		display:none;
+	}
+}
+
+
+/*  
+@media screen and (max-width: 375px) {
+	.contenedor{
+		width: 100%;
+		height: 200vh;
+		flex-direction: column;
+		left: 0%;
+        
         background: #FFFFFF;
 	}
 
@@ -89,7 +206,7 @@
 
     .contenedor .aaa {
 		z-index:2;		
-		/*left: -134px;*/
+		
         left: -163px;
 		top: 20%;
 		display: flex;		
@@ -160,7 +277,7 @@
         text-align: center;
         font-size: 15px;
     }
-}
+}*/
 
 /**********************************************FOOTER**************************/
 
@@ -195,17 +312,18 @@ footer h4 {
 .contenedorLogo img{
     position: absolute;
     width: 214px;
-    height: 252.52px;
+    height: 214px;
     left: 122.5px;
-    top: 198.32px;
+    top: 208.32px;
     overflow: hidden;
     z-index:2;
 }
 
 .contenedorLogo .vasanet {
     position: absolute;
-    left: 152.46px;
-    top: 401.62px;
+    left: 147.5px;
+    top: 391.62px;
+    width: 165px;
 
     font-family: Roboto;
     font-style: normal;
@@ -223,7 +341,7 @@ footer h4 {
     width: 156px;
     height: 92px;
     left: 151.5px;
-    top: 477.68px;
+    top: 467.68px;
 
     font-family: Roboto;
     font-style: normal;
