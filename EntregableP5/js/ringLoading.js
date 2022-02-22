@@ -6,27 +6,10 @@ let loading = document.getElementById("loading");
 let procesando = document.getElementById("procesando");
 let registrar = document.getElementById("registrar");
 
-registrar.addEventListener("click",realizarLoading);
+registrar.addEventListener("click",mostrarPaginaLoading);
 
-function realizarLoading(){
-    window.location.href = "registro.html";
-    mostrarLoading();
-} 
-
-function mostrarLoading(){
-    /*loading.classList.remove("esconder");
-    loading.classList.add("loading");
-    procesando.classList.remove("esconder")*/
-    setTimeout(registrarCuenta,4800);
-    
-}
-
-function registrarCuenta(){
-    window.location.href = "registro.html";
-}
-
-function iniciarSesion(){
-    realizarLoading();
+function mostrarPaginaLoading(){
+    window.location.href = "loading.html";
 }
 
 /*--------------------------INICIAR SESION----------------------------*/
