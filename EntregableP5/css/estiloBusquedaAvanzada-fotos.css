@@ -236,6 +236,7 @@ header {
     left: 0px;
     top: 74px;
     border: 1px solid #4969D9;
+    background: #4969D9;
 }
 
 .resultados .filtros {
@@ -356,6 +357,7 @@ header {
     left: 0px;
     top: 356px;
     border: 1px solid #4969D9;
+    background: #4969D9;
 }
 
 .ver {

@@ -295,6 +295,7 @@ header {
     left: 254px;
     top: 82.5px;
     border: 1px solid #4969D9;
+    background: #4969D9;
 }
 
 #botonCrearPublicacion:hover{   /*seudoclase usada para dar animacion al posicionarme sobre el boton*/

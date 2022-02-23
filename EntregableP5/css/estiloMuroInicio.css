@@ -468,6 +468,7 @@ header {
     left: 254px;
     top: 82.5px;
     border: 1px solid #4969D9;
+    background: #4969D9;
 }
 
 #botonCrearPublicacion:hover{   /*seudoclase usada para dar animacion al posicionarme sobre el boton*/
@@ -1587,6 +1588,8 @@ html { scroll-behavior: smooth; }
     top: 99px;
     background: #FFFCFC;
     /*background: beige;*/
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .encabezado1 {
