@@ -465,6 +465,46 @@ header {
 
 /*************************************PUBLICACIONES**************************/
 
+.contenedorFotos{
+    position: absolute;
+    width: 620px;
+    height: 600px;
+    background-color: aqua;
+    margin-left: 385px;
+    margin-top: 68px;
+    overflow:auto;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+}
+
+
+.contenedorFotos::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.contenedorFotos::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+
+.contenedorFotos::-webkit-scrollbar-button:increment,.contenedorFotos::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.contenedorFotos::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.contenedorFotos::-webkit-scrollbar-thumb {
+    background-color: #d1cece;
+    border-radius: 20px;
+}
+
+.contenedorFotos::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+
+
 .fotosPublicas {
     position: absolute;
     width: 164px;
@@ -485,10 +525,11 @@ header {
 
 .imagenFotosPublicas {
     position: absolute;
-    width: 600px;
+    width: 610px;
     height: 664.25px;
-    left: 380px;
-    top: 53px;
+    /*left: 380px;
+    top: 53px;*/
+    margin-top: 0px;
 }
 
 
