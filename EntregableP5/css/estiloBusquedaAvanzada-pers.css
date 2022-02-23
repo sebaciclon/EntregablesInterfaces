@@ -468,6 +468,16 @@ header {
 
 /*************************************PUBLICACIONES**************************/
 
+.contenedorPersonas{
+    position: absolute;
+    width: 620px;
+    height: 600px;
+    /*background-color: aqua;*/
+    margin-left: 385px;
+    margin-top: 68px;
+    overflow:auto;
+    box-sizing: border-box;
+}
 .fotosPublicas {
     position: absolute;
     width: 106px;
@@ -488,10 +498,10 @@ header {
 
 .juan {
     position: absolute;
-    width: 603px;
+    width: 600px;
     height: 72px;
-    left: 380px;
-    top: 67.5px;
+    /*left: 380px;
+    top: 67.5px;*/
     background: #FFFFFE;
     border-radius: 5px;
 }
@@ -512,30 +522,30 @@ header {
 
 .mario {
     position: absolute;
-    width: 603px;
+    width: 600px;
     height: 72px;
-    left: 380px;
-    top: 165.5px;
+    /*left: 380px;*/
+    top: 98px;
     background: #FFFFFE;
     border-radius: 5px;
 }
 
 .alfonsina {
     position: absolute;
-    width: 603px;
+    width: 600px;
     height: 72px;
-    left: 380px;
-    top: 263.5px;
+    /*left: 380px;*/
+    top: 196px;
     background: #FFFFFE;
     border-radius: 5px;
 }
 
 .valeria {
     position: absolute;
-    width: 603px;
+    width: 600px;
     height: 90px;
-    left: 380px;
-    top: 361.5px;
+    /*left: 380px;*/
+    top: 294px;
     background: #FFFFFE;
     border-radius: 5px;
 }
@@ -555,10 +565,10 @@ header {
 
 .mauricio {
     position: absolute;
-    width: 603px;
+    width: 600px;
     height: 66px;
-    left: 380px;
-    top: 476.5px;
+    /*left: 380px;*/
+    top: 409px;
     background: #FFFFFE;
     border-radius: 5px;
 }
@@ -578,20 +588,20 @@ header {
 
 .juand {
     position: absolute;
-    width: 603px;
+    width: 600px;
     height: 72px;
-    left: 380px;
-    top: 567.5px;
+    /*left: 380px;*/
+    top: 500px;
     background: #FFFFFE;
     border-radius: 5px;
 }
 
 .graciela {
     position: absolute;
-    width: 603px;
+    width: 600px;
     height: 72px;
-    left: 380px;
-    top: 665.5px;
+    /*left: 380px;*/
+    top: 598px;
     background: #FFFFFE;
     border-radius: 5px;
 }
@@ -604,9 +614,43 @@ header {
     padding: 0px;
     position: absolute;
     width: 559px;
-    height: 34px;
+    height: 43px;
     left: 22px;
     top: 0.5px;
 }
 
+.juan1 {
+    position: absolute;
+    width: 600px;
+    height: 72px;
+    /*left: 380px;*/
+    top: 598px;
+    background: #FFFFFE;
+    border-radius: 5px;
+}
 
+
+.contenedorPersonas::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.contenedorPersonas::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+
+.contenedorPersonas::-webkit-scrollbar-button:increment,.contenedorPersonas::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.contenedorPersonas::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.contenedorPersonas::-webkit-scrollbar-thumb {
+    background-color: #d1cece;
+    border-radius: 20px;
+}
+
+.contenedorPersonas::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
