@@ -471,7 +471,6 @@ header {
     position: absolute;
     width: 620px;
     height: 600px;
-    background-color: aqua;
     margin-left: 385px;
     margin-top: 68px;
     overflow:auto;
@@ -526,12 +525,12 @@ header {
 }
 
 .imagenFotosPublicas {
-    position: absolute;
-    width: 610px;
+    
+    /*width: 630px;
     height: 664.25px;
     /*left: 380px;
-    top: 53px;*/
-    margin-top: 0px;
+    top: 53px;
+    margin-top: 0px;*/
 }
 
 

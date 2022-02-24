@@ -352,7 +352,7 @@ header {
 
 .bloquePublicacion1 {
     position: absolute;
-    width: 514px;
+    width: 512px;
     height: 202px;
     left: 0px;
     top: 0px;
@@ -576,7 +576,7 @@ header {
 
 .bloquePublicacion2 {
     position: absolute;
-    width: 514px;
+    width: 512px;
     height: 437px;
     left: 0px;
     /*top: 232px;*/
@@ -705,7 +705,7 @@ header {
 
 .sectorMensajes {
     position: absolute;
-    width: 514px;
+    width: 512px;
     height: 202px;
     left: 0px;
     top: 207px;

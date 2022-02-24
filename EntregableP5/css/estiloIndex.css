@@ -417,6 +417,7 @@ form {
     top: 122px;
     background: rgba(217, 220, 222, 0.5);
     border-radius: 5px;
+    padding-left: 15px;
 }
 
 .contraseña .textoContraseña {
@@ -444,6 +445,7 @@ form {
     top: 202px;
     background: rgba(217, 220, 222, 0.6);
     border-radius: 5px;
+    padding-left: 15px;
 }
 
 .olvidasteContraseña p{

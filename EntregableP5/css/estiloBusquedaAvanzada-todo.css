@@ -802,11 +802,12 @@ header {
 .bloquePublicacion4 {
     position: absolute;
     width: 600px;
-    height: 640px;
+    height: 450px;
     left: 0px;
     top: 1112px;
     border-radius: 5px;
     background: #FFFDFD;
+    
 }
 
 .imagenBusqueda {

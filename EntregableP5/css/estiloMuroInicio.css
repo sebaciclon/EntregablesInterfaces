@@ -86,7 +86,7 @@ header {
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
-    
+    padding-left: 20px;
 }
 
 .inputBuscador::-webkit-input-placeholder {
@@ -1143,7 +1143,7 @@ header {
     height: 282.54px;
     left: 783px;
     top: 398px;
-    
+    /*background: #FFFDFD;*/
     border-radius: 5px;
 }
 
