@@ -771,6 +771,7 @@ header {
     left: 0px;
     top: 100px;
     border: 1px solid #000000;
+    background: #000000;
     transform: rotate(-90deg);
 }
 

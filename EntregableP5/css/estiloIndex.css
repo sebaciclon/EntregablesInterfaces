@@ -79,19 +79,23 @@
         width: 50%;
         height: 50px;
     }
-
+    /*
     .contenedor .contenedorLogo .vasanet1 {
         left: 30%;
         top: 12.5%;
         width: 40%;
         height: 90px;
+    }*/
+    .contenedor .contenedorLogo .vasanet1 {
+        display: none;
     }
 
     .contenedor .aaa {
 		z-index:2;		
 		/*left: -134px;*/
         left: -163px;
-		top: 20%;
+		/*top: 20%;*/
+        top: 13%;
 		display: flex;		
 		position: absolute;		
 		width: 100%;
@@ -153,7 +157,7 @@
 
     .contenedor footer {
         width: 100%;
-        top: 700px;
+        top: 600px;
         left: -324px;
     }
 
