@@ -295,7 +295,7 @@ header {
 .imagenSeba .botonAceptar .textoAceptar {
     position: absolute;
     left: 9px;
-    top: 0px;
+    top: 0.5px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -356,7 +356,7 @@ header {
 .imagenCuervo .botonAceptar .textoAceptar {
     position: absolute;
     left: 9px;
-
+    top: 0.5px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -417,6 +417,7 @@ header {
 .imagenOmar .botonAceptar .textoAceptar {
     position: absolute;
     left: 9px;
+    top: 0.5px;
 
     font-family: Roboto;
     font-style: normal;
